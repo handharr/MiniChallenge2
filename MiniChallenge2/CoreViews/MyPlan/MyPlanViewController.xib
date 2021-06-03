@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="MiniChallenge2" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyPlanViewController" customModule="MiniChallenge2" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -18,8 +18,8 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Michelle's Guardian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Rz-L8-KT7">
-                    <rect key="frame" x="132.5" y="437.5" width="149.5" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Plan View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74I-cc-lcK">
+                    <rect key="frame" x="156" y="437.5" width="102" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -28,10 +28,10 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="8Rz-L8-KT7" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="3H1-cO-8OF"/>
-                <constraint firstItem="8Rz-L8-KT7" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="UK4-Wi-KJD"/>
+                <constraint firstItem="74I-cc-lcK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="85j-4h-blz"/>
+                <constraint firstItem="74I-cc-lcK" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Mcq-7d-dFx"/>
             </constraints>
-            <point key="canvasLocation" x="-48" y="104"/>
+            <point key="canvasLocation" x="94" y="125"/>
         </view>
     </objects>
     <resources>
