@@ -1,5 +1,5 @@
 //
-//  MyPlanViewController.swift
+//  EvaluationViewController.swift
 //  MiniChallenge2
 //
 //  Created by Puras Handharmahua on 03/06/21.
@@ -7,13 +7,12 @@
 
 import UIKit
 
-class MyPlanViewController: UIViewController {
+class EvaluationViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "My Plan"
-        view.backgroundColor = .systemPink
+        view.backgroundColor = .systemGreen
+        title = "Evaluation"
     }
-
 }
