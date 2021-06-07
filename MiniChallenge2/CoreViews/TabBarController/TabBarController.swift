@@ -30,6 +30,11 @@ class TabBarController: UITabBarController {
         nav2.tabBarItem = UITabBarItem(title: "Evaluation", image: UIImage(systemName: "doc.text.fill"), tag: 2)
         nav3.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "person.crop.circle"), tag: 3)
         
+        nav1.tabBarItem.selectedImage = UIImage(systemName: "square.and.arrow.up.fill")
+        nav2.tabBarItem.selectedImage = UIImage(systemName: "square.and.arrow.down.fill")
+        nav3.tabBarItem.selectedImage = UIImage(systemName: "square.and.arrow.up.fill")
+        
+        
         nav1.navigationBar.prefersLargeTitles = true
         nav2.navigationBar.prefersLargeTitles = true
         nav3.navigationBar.prefersLargeTitles = true
@@ -38,6 +43,6 @@ class TabBarController: UITabBarController {
     }
     
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        <#code#>
+        
     }
 }
