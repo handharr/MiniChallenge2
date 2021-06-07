@@ -36,4 +36,8 @@ class TabBarController: UITabBarController {
         
         setViewControllers([nav1, nav2, nav3], animated: false)
     }
+    
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        <#code#>
+    }
 }
