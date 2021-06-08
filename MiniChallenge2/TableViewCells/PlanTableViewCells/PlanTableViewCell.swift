@@ -39,11 +39,15 @@ class PlanTableViewCell: UITableViewCell {
     func configureUI(model: Plan) {
         titleLabel.text = model.name
         titleLabel.textColor = .white
+        
         subtitleLabel.text = model.description
         subtitleLabel.textColor = .white
+        
         infoLabel.text = "\(model.workoutPerDay) workout/days"
         infoLabel.textColor = .white
+        
         countLabel.text = "\(model.daysPerWeek) days/week"
+        
         containerView.backgroundColor = UIColor(patternImage: model.planImage)
         containerView.layer.cornerRadius = 8
     }

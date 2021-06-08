@@ -27,7 +27,7 @@ class DummyData {
             workoutPerDay: 4,
             daysPerWeek: 2,
             onGoing: true,
-            planImage: UIImage(named: "plan-image-4")!
+            planImage: UIImage(named: "plan-image-1")!
         ),
         Plan(
             name: "Cardiovascular Plan",
@@ -43,7 +43,7 @@ class DummyData {
             workoutPerDay: 4,
             daysPerWeek: 2,
             onGoing: false,
-            planImage: UIImage(named: "plan-image-5")!
+            planImage: UIImage(named: "plan-image-2")!
         )
     ]
     

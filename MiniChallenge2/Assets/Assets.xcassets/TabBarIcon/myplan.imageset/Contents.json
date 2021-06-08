@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "plan-image-3@1x.png",
+      "filename" : "myplan@1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "plan-image-3@2x.png",
+      "filename" : "myplan@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "plan-image-3@3x.png",
+      "filename" : "myplan@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
