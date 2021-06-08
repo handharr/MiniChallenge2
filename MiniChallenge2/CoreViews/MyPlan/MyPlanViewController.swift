@@ -10,34 +10,16 @@ import UIKit
 class MyPlanViewController: UIViewController {
 
     @IBOutlet weak var planTableView: UITableView!
-    
-    let firstHeaderLabel: UILabel = {
-        let label = UILabel()
-        label.textAlignment = .left
-        label.font = .systemFont(ofSize: 22, weight: .bold)
-        label.textColor = .black
-        return label
-    }()
-    
-    let secondHeaderLabel: UILabel = {
-        let label = UILabel()
-        label.textAlignment = .left
-        label.font = .systemFont(ofSize: 22, weight: .bold)
-        label.textColor = .black
-        return label
-    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = "My Plan"
-        
-        planTableView.backgroundColor = .systemBackground
-
         setTableView()
     }
     
     private func setTableView() {
+        planTableView.backgroundColor = .systemBackground
         planTableView.delegate = self
         planTableView.dataSource = self
         planTableView.register(PlanTableViewCell.nib(), forCellReuseIdentifier: PlanTableViewCell.identifier)
@@ -77,17 +59,14 @@ extension MyPlanViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = UIView(frame: .init(x: 0, y: 0, width: view.frame.size.width, height: 30))
+        let header = MCTableViewSectionHeader(frame: .init(x: 0, y: 0, width: view.frame.size.width, height: 30))
 
         if section == 0 {
-            firstHeaderLabel.frame = header.bounds
-            firstHeaderLabel.text = "On Going"
-            header.addSubview(firstHeaderLabel)
+            header.textLabel.text = "On Going"
+            
             return header
         } else {
-            secondHeaderLabel.frame = header.bounds
-            secondHeaderLabel.text = "Other Plan"
-            header.addSubview(secondHeaderLabel)
+            header.textLabel.text = "Other Plan"
             return header
         }
     }

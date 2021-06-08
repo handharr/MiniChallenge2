@@ -34,8 +34,10 @@
 		866BCEFD26691B8100482207 /* CardioTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866BCEFB26691B8100482207 /* CardioTestViewController.swift */; };
 		866BCEFE26691B8100482207 /* CardioTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 866BCEFC26691B8100482207 /* CardioTestViewController.xib */; };
 		86771236266E4929000313B3 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86771235266E4929000313B3 /* Utility.swift */; };
+		8688D5EE266F787400081F8F /* MCTableViewSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8688D5ED266F787400081F8F /* MCTableViewSectionHeader.swift */; };
 		869EDCE22669C30000DA4770 /* PlanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869EDCE02669C30000DA4770 /* PlanTableViewCell.swift */; };
 		869EDCE32669C30000DA4770 /* PlanTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 869EDCE12669C30000DA4770 /* PlanTableViewCell.xib */; };
+		86A3D3D4266F2F4E001BE47B /* SectionHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A3D3D3266F2F4E001BE47B /* SectionHeaderCollectionReusableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,8 +70,10 @@
 		866BCEFB26691B8100482207 /* CardioTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardioTestViewController.swift; sourceTree = "<group>"; };
 		866BCEFC26691B8100482207 /* CardioTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardioTestViewController.xib; sourceTree = "<group>"; };
 		86771235266E4929000313B3 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		8688D5ED266F787400081F8F /* MCTableViewSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCTableViewSectionHeader.swift; sourceTree = "<group>"; };
 		869EDCE02669C30000DA4770 /* PlanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanTableViewCell.swift; sourceTree = "<group>"; };
 		869EDCE12669C30000DA4770 /* PlanTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlanTableViewCell.xib; sourceTree = "<group>"; };
+		86A3D3D3266F2F4E001BE47B /* SectionHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 				869EDCDD2669C2C800DA4770 /* TableViewCells */,
 				866BCEB82668FCF300482207 /* Assets */,
 				866BCEB42668FCB800482207 /* Models */,
+				86A3D3CE266F2A57001BE47B /* CustomViews */,
 				866BCEB72668FCE000482207 /* Views */,
 				866BCEB52668FCC000482207 /* CoreViews */,
 				86314D22266746C90055FC31 /* AppDelegate.swift */,
@@ -272,6 +277,14 @@
 			path = CardioTest;
 			sourceTree = "<group>";
 		};
+		8688D5EC266F784800081F8F /* TableViewSectionHeader */ = {
+			isa = PBXGroup;
+			children = (
+				8688D5ED266F787400081F8F /* MCTableViewSectionHeader.swift */,
+			);
+			path = TableViewSectionHeader;
+			sourceTree = "<group>";
+		};
 		869EDCDD2669C2C800DA4770 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,6 +307,23 @@
 				869EDCE12669C30000DA4770 /* PlanTableViewCell.xib */,
 			);
 			path = PlanTableViewCells;
+			sourceTree = "<group>";
+		};
+		86A3D3CE266F2A57001BE47B /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				8688D5EC266F784800081F8F /* TableViewSectionHeader */,
+				86A3D3D2266F2F02001BE47B /* CollectionViewSectionHeader */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		86A3D3D2266F2F02001BE47B /* CollectionViewSectionHeader */ = {
+			isa = PBXGroup;
+			children = (
+				86A3D3D3266F2F4E001BE47B /* SectionHeaderCollectionReusableView.swift */,
+			);
+			path = CollectionViewSectionHeader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -381,12 +411,14 @@
 				86314D23266746C90055FC31 /* AppDelegate.swift in Sources */,
 				861C35D9266DC5F3005ABB7E /* DummyData.swift in Sources */,
 				866BCEDD2669194300482207 /* WarmUpViewController.swift in Sources */,
+				8688D5EE266F787400081F8F /* MCTableViewSectionHeader.swift in Sources */,
 				866BCEF226691A1C00482207 /* TakeTestViewController.swift in Sources */,
 				866BCEBD2668FDF900482207 /* TabBarController.swift in Sources */,
 				866BCEC526690AF800482207 /* ProfileViewController.swift in Sources */,
 				866BCEF826691AE100482207 /* TestResultViewController.swift in Sources */,
 				866BCEE7266919B600482207 /* DetailPlanViewController.swift in Sources */,
 				866BCEC02668FEC200482207 /* MyPlanViewController.swift in Sources */,
+				86A3D3D4266F2F4E001BE47B /* SectionHeaderCollectionReusableView.swift in Sources */,
 				866BCEEC266919E700482207 /* ExcercisingViewController.swift in Sources */,
 				86771236266E4929000313B3 /* Utility.swift in Sources */,
 				869EDCE22669C30000DA4770 /* PlanTableViewCell.swift in Sources */,
