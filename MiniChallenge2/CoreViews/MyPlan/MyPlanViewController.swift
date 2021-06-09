@@ -59,7 +59,7 @@ extension MyPlanViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = MCTableViewSectionHeader(frame: .init(x: 0, y: 0, width: view.frame.size.width, height: 30))
+        let header = MCTableViewSectionHeader(frame: .init(x: 0, y: 0, width: view.frame.size.width, height: 50))
 
         if section == 0 {
             header.textLabel.text = "On Going"

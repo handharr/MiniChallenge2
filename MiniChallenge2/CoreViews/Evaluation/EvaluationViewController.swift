@@ -76,4 +76,9 @@ extension EvaluationViewController: UITableViewDelegate{
         return 92
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = TestResultViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
