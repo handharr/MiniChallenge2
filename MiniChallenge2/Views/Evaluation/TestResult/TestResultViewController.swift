@@ -27,6 +27,7 @@ class TestResultViewController: UIViewController {
         resultTable.register(GradingCriteriaTableViewCell.getNib(), forCellReuseIdentifier: GradingCriteriaTableViewCell.getIdentifier())
         resultTable.delegate = self
         resultTable.dataSource = self
+        resultTable.separatorStyle = .none
     }
 }
 

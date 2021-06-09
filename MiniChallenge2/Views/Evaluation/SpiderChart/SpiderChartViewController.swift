@@ -65,6 +65,7 @@ class SpiderChartViewController: UIViewController {
         setData1.fillAlpha = 0.8
         
         setData1.drawValuesEnabled = false
+        
         setData1.drawFilledEnabled = true
         
         let data = RadarChartData(dataSet: setData1)

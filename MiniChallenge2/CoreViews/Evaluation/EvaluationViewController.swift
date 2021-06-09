@@ -17,7 +17,9 @@ class EvaluationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Evaluation"
+        self.title = "Evaluation"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
         setUpTable()
     }
     

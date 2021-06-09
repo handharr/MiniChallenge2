@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -40,6 +39,9 @@
                                             <constraint firstItem="Fl8-2o-nuq" firstAttribute="centerX" secondItem="d91-Zh-nqG" secondAttribute="centerX" id="gl2-sp-7Pp"/>
                                             <constraint firstItem="Fl8-2o-nuq" firstAttribute="centerY" secondItem="d91-Zh-nqG" secondAttribute="centerY" id="uYQ-Sn-bgm"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aU1-4U-jvf">
                                         <rect key="frame" x="179" y="0.0" width="179" height="59.5"/>
@@ -58,9 +60,12 @@
                                             <constraint firstItem="UP9-5Z-4zq" firstAttribute="centerY" secondItem="aU1-4U-jvf" secondAttribute="centerY" id="jkN-Vp-w72"/>
                                             <constraint firstAttribute="trailing" secondItem="UP9-5Z-4zq" secondAttribute="trailing" constant="20" symbolic="YES" id="mjH-1R-Jpx"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="d91-Zh-nqG" firstAttribute="top" secondItem="KFM-s1-tv0" secondAttribute="top" id="4q2-JO-uvw"/>
                                     <constraint firstAttribute="bottom" secondItem="aU1-4U-jvf" secondAttribute="bottom" id="69I-pc-y6P"/>
@@ -71,6 +76,9 @@
                                     <constraint firstItem="d91-Zh-nqG" firstAttribute="width" secondItem="KFM-s1-tv0" secondAttribute="width" multiplier="0.5" id="rn2-Dj-KiR"/>
                                     <constraint firstItem="aU1-4U-jvf" firstAttribute="top" secondItem="KFM-s1-tv0" secondAttribute="top" id="waV-Lf-Vwt"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="The-LF-LQW" userLabel="Grading View">
                                 <rect key="frame" x="0.0" y="59.5" width="358" height="138.5"/>
@@ -282,6 +290,9 @@
                                                     <constraint firstItem="VkP-BO-aB9" firstAttribute="centerY" secondItem="zR9-ET-BxP" secondAttribute="centerY" id="R5f-yS-qia"/>
                                                     <constraint firstItem="VkP-BO-aB9" firstAttribute="centerX" secondItem="zR9-ET-BxP" secondAttribute="centerX" id="gTQ-Q1-cb1"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nfO-bX-KZ8">
                                                 <rect key="frame" x="179" y="0.0" width="179" height="34.5"/>
@@ -300,9 +311,12 @@
                                                     <constraint firstAttribute="trailing" secondItem="jo0-9Z-NI4" secondAttribute="trailing" constant="20" symbolic="YES" id="QwA-Ix-pwR"/>
                                                     <constraint firstItem="jo0-9Z-NI4" firstAttribute="centerX" secondItem="nfO-bX-KZ8" secondAttribute="centerX" id="vQe-s7-pTN"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.76862745099999996" green="0.76862745099999996" blue="0.76862745099999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="nfO-bX-KZ8" secondAttribute="trailing" id="0PG-7F-n6H"/>
                                             <constraint firstAttribute="bottom" secondItem="zR9-ET-BxP" secondAttribute="bottom" id="DeC-xP-7oO"/>
@@ -313,6 +327,9 @@
                                             <constraint firstItem="nfO-bX-KZ8" firstAttribute="leading" secondItem="zR9-ET-BxP" secondAttribute="trailing" id="t92-Ib-E31"/>
                                             <constraint firstItem="zR9-ET-BxP" firstAttribute="leading" secondItem="HQ9-yi-IYb" secondAttribute="leading" id="ydP-SY-GNH"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -359,6 +376,9 @@
                             <constraint firstItem="The-LF-LQW" firstAttribute="top" secondItem="KFM-s1-tv0" secondAttribute="bottom" id="xbE-HV-qvB"/>
                             <constraint firstItem="KFM-s1-tv0" firstAttribute="top" secondItem="Jg1-AR-Yqn" secondAttribute="top" id="yfM-4b-Eon"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -381,9 +401,4 @@
             <point key="canvasLocation" x="137.68115942028987" y="121.875"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-    </resources>
 </document>
