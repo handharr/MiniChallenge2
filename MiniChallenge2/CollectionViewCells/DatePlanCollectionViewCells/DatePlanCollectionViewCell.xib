@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DatePlanCollectionViewCell" id="gTV-IL-0wX" customClass="DatePlanCollectionViewCell" customModule="MiniChallenge2" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="122" height="165"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="122" height="165"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hLn-tw-OEz" userLabel="containerView">
+                        <rect key="frame" x="0.0" y="0.0" width="122" height="165"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awq-yT-lOZ">
+                                <rect key="frame" x="49" y="8" width="24" height="16"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="250" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6kT-tO-bGR">
+                                <rect key="frame" x="54" y="24.000000000000007" width="14" height="101.66666666666669"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thu" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EeH-Uk-4gK">
+                                <rect key="frame" x="49" y="125.66666666666667" width="24" height="15.666666666666671"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24 May" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wmf-Gy-T7N">
+                                <rect key="frame" x="38.333333333333343" y="141.33333333333334" width="45.666666666666657" height="15.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Wmf-Gy-T7N" secondAttribute="bottom" constant="8" id="0m9-CW-2PA"/>
+                            <constraint firstItem="EeH-Uk-4gK" firstAttribute="top" secondItem="6kT-tO-bGR" secondAttribute="bottom" id="4Sl-Mg-eAe"/>
+                            <constraint firstItem="Wmf-Gy-T7N" firstAttribute="centerX" secondItem="hLn-tw-OEz" secondAttribute="centerX" id="OXn-3o-l6y"/>
+                            <constraint firstItem="awq-yT-lOZ" firstAttribute="top" secondItem="hLn-tw-OEz" secondAttribute="top" constant="8" id="PWO-YK-24x"/>
+                            <constraint firstItem="EeH-Uk-4gK" firstAttribute="centerX" secondItem="hLn-tw-OEz" secondAttribute="centerX" id="VjP-DT-qCo"/>
+                            <constraint firstItem="awq-yT-lOZ" firstAttribute="centerX" secondItem="hLn-tw-OEz" secondAttribute="centerX" id="dro-fM-VSd"/>
+                            <constraint firstItem="6kT-tO-bGR" firstAttribute="top" secondItem="awq-yT-lOZ" secondAttribute="bottom" id="fMf-O8-Bpj"/>
+                            <constraint firstItem="6kT-tO-bGR" firstAttribute="centerX" secondItem="hLn-tw-OEz" secondAttribute="centerX" id="jT6-dY-6yJ"/>
+                            <constraint firstItem="Wmf-Gy-T7N" firstAttribute="top" secondItem="EeH-Uk-4gK" secondAttribute="bottom" id="pZe-5e-JoJ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="hLn-tw-OEz" secondAttribute="bottom" id="1gx-5W-b60"/>
+                <constraint firstItem="hLn-tw-OEz" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="7Pf-xx-3Ki"/>
+                <constraint firstItem="hLn-tw-OEz" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Vo7-Dd-o3t"/>
+                <constraint firstAttribute="trailing" secondItem="hLn-tw-OEz" secondAttribute="trailing" id="kDP-Oy-Njf"/>
+            </constraints>
+            <size key="customSize" width="122" height="165"/>
+            <connections>
+                <outlet property="containerView" destination="hLn-tw-OEz" id="64o-eJ-SrI"/>
+                <outlet property="dateMonthLabel" destination="Wmf-Gy-T7N" id="EGh-s2-17i"/>
+                <outlet property="dayLabel" destination="EeH-Uk-4gK" id="6uE-CY-vep"/>
+                <outlet property="numberLabel" destination="6kT-tO-bGR" id="j9p-zK-8FF"/>
+                <outlet property="topLabel" destination="awq-yT-lOZ" id="1d2-2k-4H9"/>
+            </connections>
+            <point key="canvasLocation" x="146.15384615384616" y="156.75355450236967"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

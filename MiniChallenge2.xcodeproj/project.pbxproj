@@ -50,9 +50,15 @@
 		866BCEFE26691B8100482207 /* CardioTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 866BCEFC26691B8100482207 /* CardioTestViewController.xib */; };
 		86771236266E4929000313B3 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86771235266E4929000313B3 /* Utility.swift */; };
 		8688D5EE266F787400081F8F /* MCTableViewSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8688D5ED266F787400081F8F /* MCTableViewSectionHeader.swift */; };
+		8688D5F2266FA23C00081F8F /* DatePlanCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8688D5F0266FA23C00081F8F /* DatePlanCollectionViewCell.swift */; };
+		8688D5F3266FA23C00081F8F /* DatePlanCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8688D5F1266FA23C00081F8F /* DatePlanCollectionViewCell.xib */; };
+		8688D5F7266FB55D00081F8F /* ExcerciseDetailPlanCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8688D5F5266FB55D00081F8F /* ExcerciseDetailPlanCollectionViewCell.swift */; };
+		8688D5F8266FB55D00081F8F /* ExcerciseDetailPlanCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8688D5F6266FB55D00081F8F /* ExcerciseDetailPlanCollectionViewCell.xib */; };
+		8688D5FC266FC1EA00081F8F /* SummaryDetailPlanCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8688D5FA266FC1EA00081F8F /* SummaryDetailPlanCollectionViewCell.swift */; };
+		8688D5FD266FC1EA00081F8F /* SummaryDetailPlanCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8688D5FB266FC1EA00081F8F /* SummaryDetailPlanCollectionViewCell.xib */; };
 		869EDCE22669C30000DA4770 /* PlanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869EDCE02669C30000DA4770 /* PlanTableViewCell.swift */; };
 		869EDCE32669C30000DA4770 /* PlanTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 869EDCE12669C30000DA4770 /* PlanTableViewCell.xib */; };
-		86A3D3D4266F2F4E001BE47B /* SectionHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A3D3D3266F2F4E001BE47B /* SectionHeaderCollectionReusableView.swift */; };
+		86A3D3D4266F2F4E001BE47B /* MCSectionHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A3D3D3266F2F4E001BE47B /* MCSectionHeaderCollectionReusableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,9 +106,15 @@
 		866BCEFC26691B8100482207 /* CardioTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardioTestViewController.xib; sourceTree = "<group>"; };
 		86771235266E4929000313B3 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		8688D5ED266F787400081F8F /* MCTableViewSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCTableViewSectionHeader.swift; sourceTree = "<group>"; };
+		8688D5F0266FA23C00081F8F /* DatePlanCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePlanCollectionViewCell.swift; sourceTree = "<group>"; };
+		8688D5F1266FA23C00081F8F /* DatePlanCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePlanCollectionViewCell.xib; sourceTree = "<group>"; };
+		8688D5F5266FB55D00081F8F /* ExcerciseDetailPlanCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcerciseDetailPlanCollectionViewCell.swift; sourceTree = "<group>"; };
+		8688D5F6266FB55D00081F8F /* ExcerciseDetailPlanCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExcerciseDetailPlanCollectionViewCell.xib; sourceTree = "<group>"; };
+		8688D5FA266FC1EA00081F8F /* SummaryDetailPlanCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryDetailPlanCollectionViewCell.swift; sourceTree = "<group>"; };
+		8688D5FB266FC1EA00081F8F /* SummaryDetailPlanCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SummaryDetailPlanCollectionViewCell.xib; sourceTree = "<group>"; };
 		869EDCE02669C30000DA4770 /* PlanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanTableViewCell.swift; sourceTree = "<group>"; };
 		869EDCE12669C30000DA4770 /* PlanTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlanTableViewCell.xib; sourceTree = "<group>"; };
-		86A3D3D3266F2F4E001BE47B /* SectionHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		86A3D3D3266F2F4E001BE47B /* MCSectionHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCSectionHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -375,6 +387,33 @@
 			path = TableViewSectionHeader;
 			sourceTree = "<group>";
 		};
+		8688D5EF266FA1E600081F8F /* DatePlanCollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				8688D5F0266FA23C00081F8F /* DatePlanCollectionViewCell.swift */,
+				8688D5F1266FA23C00081F8F /* DatePlanCollectionViewCell.xib */,
+			);
+			path = DatePlanCollectionViewCells;
+			sourceTree = "<group>";
+		};
+		8688D5F4266FB52A00081F8F /* ExcerciseDetailPlanCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				8688D5F5266FB55D00081F8F /* ExcerciseDetailPlanCollectionViewCell.swift */,
+				8688D5F6266FB55D00081F8F /* ExcerciseDetailPlanCollectionViewCell.xib */,
+			);
+			path = ExcerciseDetailPlanCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		8688D5F9266FC1A400081F8F /* SummaryDetailPlanCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				8688D5FA266FC1EA00081F8F /* SummaryDetailPlanCollectionViewCell.swift */,
+				8688D5FB266FC1EA00081F8F /* SummaryDetailPlanCollectionViewCell.xib */,
+			);
+			path = SummaryDetailPlanCollectionViewCell;
+			sourceTree = "<group>";
+		};
 		869EDCDD2669C2C800DA4770 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
@@ -388,6 +427,9 @@
 		869EDCDE2669C2D000DA4770 /* CollectionViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				8688D5F9266FC1A400081F8F /* SummaryDetailPlanCollectionViewCell */,
+				8688D5F4266FB52A00081F8F /* ExcerciseDetailPlanCollectionViewCell */,
+				8688D5EF266FA1E600081F8F /* DatePlanCollectionViewCells */,
 			);
 			path = CollectionViewCells;
 			sourceTree = "<group>";
@@ -413,7 +455,7 @@
 		86A3D3D2266F2F02001BE47B /* CollectionViewSectionHeader */ = {
 			isa = PBXGroup;
 			children = (
-				86A3D3D3266F2F4E001BE47B /* SectionHeaderCollectionReusableView.swift */,
+				86A3D3D3266F2F4E001BE47B /* MCSectionHeaderCollectionReusableView.swift */,
 			);
 			path = CollectionViewSectionHeader;
 			sourceTree = "<group>";
@@ -485,6 +527,8 @@
 				498085A02670C82800E10F40 /* TestResultViewController.xib in Resources */,
 				866BCEC12668FEC200482207 /* MyPlanViewController.xib in Resources */,
 				866BCEE8266919B600482207 /* DetailPlanViewController.xib in Resources */,
+				8688D5F3266FA23C00081F8F /* DatePlanCollectionViewCell.xib in Resources */,
+				8688D5F8266FB55D00081F8F /* ExcerciseDetailPlanCollectionViewCell.xib in Resources */,
 				866BCEF326691A1C00482207 /* TakeTestViewController.xib in Resources */,
 				866BCEC626690AF800482207 /* ProfileViewController.xib in Resources */,
 				498085A62670E8BE00E10F40 /* GradingCriteriaTableViewCell.xib in Resources */,
@@ -492,6 +536,7 @@
 				866BCEFE26691B8100482207 /* CardioTestViewController.xib in Resources */,
 				498085992670B91900E10F40 /* CardioTableViewCell.xib in Resources */,
 				866BCEE32669198B00482207 /* ExcerciseReportViewController.xib in Resources */,
+				8688D5FD266FC1EA00081F8F /* SummaryDetailPlanCollectionViewCell.xib in Resources */,
 				866BCEDE2669194300482207 /* WarmUpViewController.xib in Resources */,
 				86314D2C266746CA0055FC31 /* Assets.xcassets in Resources */,
 				866BCEED266919E700482207 /* ExcercisingViewController.xib in Resources */,
@@ -511,6 +556,7 @@
 				866BCEE22669198B00482207 /* ExcerciseReportViewController.swift in Sources */,
 				49875FD8266FAF170060BE6E /* History.swift in Sources */,
 				4980859F2670C82800E10F40 /* TestResultViewController.swift in Sources */,
+				8688D5FC266FC1EA00081F8F /* SummaryDetailPlanCollectionViewCell.swift in Sources */,
 				86314D23266746C90055FC31 /* AppDelegate.swift in Sources */,
 				861C35D9266DC5F3005ABB7E /* DummyData.swift in Sources */,
 				866BCEDD2669194300482207 /* WarmUpViewController.swift in Sources */,
@@ -525,11 +571,13 @@
 				49875FF5266FB16B0060BE6E /* SpiderChartViewController.swift in Sources */,
 				866BCEE7266919B600482207 /* DetailPlanViewController.swift in Sources */,
 				866BCEC02668FEC200482207 /* MyPlanViewController.swift in Sources */,
-				86A3D3D4266F2F4E001BE47B /* SectionHeaderCollectionReusableView.swift in Sources */,
 				49875FF4266FB16B0060BE6E /* SpiderChartChildViewController.swift in Sources */,
 				498085A52670E8BE00E10F40 /* GradingCriteriaTableViewCell.swift in Sources */,
 				49875FDE266FAF5D0060BE6E /* HistoryTableViewCell.swift in Sources */,
 				49875FF3266FB16B0060BE6E /* SpiderChartResultViewController.swift in Sources */,
+				86A3D3D4266F2F4E001BE47B /* MCSectionHeaderCollectionReusableView.swift in Sources */,
+				8688D5F2266FA23C00081F8F /* DatePlanCollectionViewCell.swift in Sources */,
+				8688D5F7266FB55D00081F8F /* ExcerciseDetailPlanCollectionViewCell.swift in Sources */,
 				866BCEEC266919E700482207 /* ExcercisingViewController.swift in Sources */,
 				86771236266E4929000313B3 /* Utility.swift in Sources */,
 				869EDCE22669C30000DA4770 /* PlanTableViewCell.swift in Sources */,

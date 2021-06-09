@@ -28,6 +28,9 @@ class DetailPlanViewController: UIViewController {
         
         detailPlanCollectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         detailPlanCollectionView.register(MCSectionHeaderCollectionReusableView.self, forSupplementaryViewOfKind: DetailPlanViewController.excercisesHeaderID, withReuseIdentifier: MCSectionHeaderCollectionReusableView.identifier)
+        detailPlanCollectionView.register(DatePlanCollectionViewCell.nib(), forCellWithReuseIdentifier: DatePlanCollectionViewCell.identifier)
+        detailPlanCollectionView.register(ExcerciseDetailPlanCollectionViewCell.nib(), forCellWithReuseIdentifier: ExcerciseDetailPlanCollectionViewCell.identifier)
+        detailPlanCollectionView.register(SummaryDetailPlanCollectionViewCell.nib(), forCellWithReuseIdentifier: SummaryDetailPlanCollectionViewCell.identifier)
     }
 }
 
@@ -56,9 +59,34 @@ extension DetailPlanViewController: UICollectionViewDelegate, UICollectionViewDa
     
     // Set item's cell
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        cell.backgroundColor = MCColor.MCColorPrimary
-        return cell
+        let defaultCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+        
+        if indexPath.section == 0 {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DatePlanCollectionViewCell.identifier, for: indexPath) as? DatePlanCollectionViewCell else {
+                return defaultCell
+            }
+            
+            if indexPath.row == 0 {
+                cell.containerView.backgroundColor = MCColor.MCColorPrimary
+            }
+            return cell
+        } else if indexPath.section == 2 {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ExcerciseDetailPlanCollectionViewCell.identifier, for: indexPath) as? ExcerciseDetailPlanCollectionViewCell else {
+                return defaultCell
+            }
+            
+            return cell
+        }
+        else if indexPath.section == 1 {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SummaryDetailPlanCollectionViewCell.identifier, for: indexPath) as? SummaryDetailPlanCollectionViewCell else {
+                return defaultCell
+            }
+
+            return cell
+        }
+        
+        defaultCell.backgroundColor = MCColor.MCColorPrimary
+        return defaultCell
     }
     
     // Set section's Header
@@ -87,7 +115,7 @@ extension DetailPlanViewController: UICollectionViewDelegate, UICollectionViewDa
                 let group = NSCollectionLayoutGroup.horizontal(
                     layoutSize: .init(
                         widthDimension: .fractionalWidth(1),
-                        heightDimension: .absolute(127)
+                        heightDimension: .absolute(140)
                     ),
                     subitem: item,
                     count: 5
@@ -114,7 +142,7 @@ extension DetailPlanViewController: UICollectionViewDelegate, UICollectionViewDa
                 let group = NSCollectionLayoutGroup.horizontal(
                     layoutSize: .init(
                         widthDimension: .fractionalWidth(1),
-                        heightDimension: .absolute(100)
+                        heightDimension: .absolute(85)
                     ),
                     subitem: item,
                     count: 1
@@ -126,6 +154,7 @@ extension DetailPlanViewController: UICollectionViewDelegate, UICollectionViewDa
                 
                 // return
                 return section
+                
             } else if section == 2 {
                 // item
                 let item = NSCollectionLayoutItem(
