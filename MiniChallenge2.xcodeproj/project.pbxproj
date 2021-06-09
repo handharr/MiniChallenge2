@@ -571,7 +571,6 @@
 				49875FF5266FB16B0060BE6E /* SpiderChartViewController.swift in Sources */,
 				866BCEE7266919B600482207 /* DetailPlanViewController.swift in Sources */,
 				866BCEC02668FEC200482207 /* MyPlanViewController.swift in Sources */,
-				86A3D3D4266F2F4E001BE47B /* SectionHeaderCollectionReusableView.swift in Sources */,
 				49875FF4266FB16B0060BE6E /* SpiderChartChildViewController.swift in Sources */,
 				498085A52670E8BE00E10F40 /* GradingCriteriaTableViewCell.swift in Sources */,
 				49875FDE266FAF5D0060BE6E /* HistoryTableViewCell.swift in Sources */,
