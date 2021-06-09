@@ -36,6 +36,7 @@ class TabBarController: UITabBarController {
         nav2.tabBarItem.selectedImage = UIImage(named: "evaluation-fill")
         nav3.tabBarItem.selectedImage = UIImage(named: "profile-fill")
         
+        
         nav1.navigationBar.prefersLargeTitles = true
         nav2.navigationBar.prefersLargeTitles = true
         nav3.navigationBar.prefersLargeTitles = true
