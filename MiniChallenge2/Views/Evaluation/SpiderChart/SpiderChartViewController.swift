@@ -15,33 +15,40 @@ class SpiderChartViewController: UIViewController {
         
         chartView.backgroundColor = .clear
         chartView.yAxis.labelFont = .boldSystemFont(ofSize: 0)
+        chartView.yAxis.labelCount = 10
+        chartView.xAxis.labelFont = .boldSystemFont(ofSize: 12)
         
-        let xaxis:XAxis = XAxis()
-        let formato:SpiderChartFormatter = SpiderChartFormatter()
-        
-        var dataSet : [String]! = ["CAR", "LOW", "COR", "UPP"]
-        
-        formato.setDataSet(data: dataSet)
-        for i in 0..<4{
-            formato.stringForValue(Double(i), axis: xaxis)
-        }
-        
-        xaxis.valueFormatter = formato
-        chartView.xAxis.valueFormatter = xaxis.valueFormatter
+            let xaxis:XAxis = XAxis()
+            let formato:SpiderChartFormatter = SpiderChartFormatter()
+
+            var dataSet : [String]! = ["CAR", "LOW", "COR", "UPP"]
+
+            formato.setDataSet(data: dataSet)
+            for i in 0..<4{
+                formato.stringForValue(Double(i), axis: xaxis)
+            }
+
+            xaxis.valueFormatter = formato
+            chartView.xAxis.valueFormatter = xaxis.valueFormatter
         
         chartView.rotationEnabled = false
         chartView.legend.enabled = false
-        
-        chartView.xAxis.labelFont = .boldSystemFont(ofSize: 12)
         
         return chartView
     }()
     
     let dataEntry : [RadarChartDataEntry] = [
         RadarChartDataEntry(value: 85.0),
-        RadarChartDataEntry(value: 95.0),
-        RadarChartDataEntry(value: 85.0),
+        RadarChartDataEntry(value: 55.0),
+        RadarChartDataEntry(value: 20.0),
         RadarChartDataEntry(value: 89.0)
+    ]
+    
+    let dataEntry2 : [RadarChartDataEntry] = [
+        RadarChartDataEntry(value: 80.0),
+        RadarChartDataEntry(value: 10.0),
+        RadarChartDataEntry(value: 70.0),
+        RadarChartDataEntry(value: 15.0)
     ]
     
     override func viewDidLoad() {
@@ -50,12 +57,13 @@ class SpiderChartViewController: UIViewController {
         view.backgroundColor = .clear
         spiderView.delegate = self
         setData()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         self.spiderView.animate(yAxisDuration: 2)
     }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        self.spiderView.animate(yAxisDuration: 2)
+//    }
 
     func setData(){
         let setData1 = RadarChartDataSet(entries: dataEntry)
@@ -68,8 +76,20 @@ class SpiderChartViewController: UIViewController {
         
         setData1.drawFilledEnabled = true
         
-        let data = RadarChartData(dataSet: setData1)
+        let setData2 = RadarChartDataSet(entries: dataEntry2)
+        setData2.lineWidth = 0
+        
+        setData2.fill = Fill(color: .cedarChest)
+        setData2.fillAlpha = 0
+        
+        setData2.drawValuesEnabled = false
+        
+        setData2.drawFilledEnabled = true
+        
+        let data = RadarChartData(dataSets: [setData1, setData2])
+        data.setDrawValues(false)
         spiderView.data = data
+        
     }
 }
 

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4942EDC72672474400444DC8 /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942EDC62672474400444DC8 /* UILabel+.swift */; };
+		4942EDCB2672491C00444DC8 /* UIScollView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942EDCA2672491C00444DC8 /* UIScollView+.swift */; };
+		4942EDD026724CD500444DC8 /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942EDCF26724CD500444DC8 /* UITableView+.swift */; };
+		4942EDD52672615300444DC8 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942EDD42672615300444DC8 /* UIView+.swift */; };
 		498085982670B91900E10F40 /* CardioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498085962670B91900E10F40 /* CardioTableViewCell.swift */; };
 		498085992670B91900E10F40 /* CardioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 498085972670B91900E10F40 /* CardioTableViewCell.xib */; };
 		4980859F2670C82800E10F40 /* TestResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4980859D2670C82800E10F40 /* TestResultViewController.swift */; };
@@ -62,6 +66,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4942EDC62672474400444DC8 /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
+		4942EDCA2672491C00444DC8 /* UIScollView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScollView+.swift"; sourceTree = "<group>"; };
+		4942EDCF26724CD500444DC8 /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
+		4942EDD42672615300444DC8 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		498085962670B91900E10F40 /* CardioTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardioTableViewCell.swift; sourceTree = "<group>"; };
 		498085972670B91900E10F40 /* CardioTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardioTableViewCell.xib; sourceTree = "<group>"; };
 		4980859D2670C82800E10F40 /* TestResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResultViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +137,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4942EDC92672490200444DC8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4942EDC62672474400444DC8 /* UILabel+.swift */,
+				4942EDCA2672491C00444DC8 /* UIScollView+.swift */,
+				4942EDCF26724CD500444DC8 /* UITableView+.swift */,
+				4942EDD42672615300444DC8 /* UIView+.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		4980858D2670B58C00E10F40 /* ResultTableViewCells */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +268,7 @@
 		866BCEB82668FCF300482207 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				4942EDC92672490200444DC8 /* Helpers */,
 				86314D2B266746CA0055FC31 /* Assets.xcassets */,
 				86771235266E4929000313B3 /* Utility.swift */,
 				49875FE8266FB0F70060BE6E /* ColorExtension.swift */,
@@ -555,6 +575,7 @@
 				866BCEFD26691B8100482207 /* CardioTestViewController.swift in Sources */,
 				866BCEE22669198B00482207 /* ExcerciseReportViewController.swift in Sources */,
 				49875FD8266FAF170060BE6E /* History.swift in Sources */,
+				4942EDD026724CD500444DC8 /* UITableView+.swift in Sources */,
 				4980859F2670C82800E10F40 /* TestResultViewController.swift in Sources */,
 				8688D5FC266FC1EA00081F8F /* SummaryDetailPlanCollectionViewCell.swift in Sources */,
 				86314D23266746C90055FC31 /* AppDelegate.swift in Sources */,
@@ -567,9 +588,11 @@
 				49875FED266FB0F70060BE6E /* SpiderChartFormatter.swift in Sources */,
 				866BCEC526690AF800482207 /* ProfileViewController.swift in Sources */,
 				498085982670B91900E10F40 /* CardioTableViewCell.swift in Sources */,
+				4942EDD52672615300444DC8 /* UIView+.swift in Sources */,
 				49875FE2266FAFAF0060BE6E /* HistoryTableViewController.swift in Sources */,
 				49875FF5266FB16B0060BE6E /* SpiderChartViewController.swift in Sources */,
 				866BCEE7266919B600482207 /* DetailPlanViewController.swift in Sources */,
+				4942EDCB2672491C00444DC8 /* UIScollView+.swift in Sources */,
 				866BCEC02668FEC200482207 /* MyPlanViewController.swift in Sources */,
 				49875FF4266FB16B0060BE6E /* SpiderChartChildViewController.swift in Sources */,
 				498085A52670E8BE00E10F40 /* GradingCriteriaTableViewCell.swift in Sources */,
@@ -582,6 +605,7 @@
 				86771236266E4929000313B3 /* Utility.swift in Sources */,
 				869EDCE22669C30000DA4770 /* PlanTableViewCell.swift in Sources */,
 				866BCECA26690B2100482207 /* EvaluationViewController.swift in Sources */,
+				4942EDC72672474400444DC8 /* UILabel+.swift in Sources */,
 				49875FEC266FB0F70060BE6E /* StringExtension.swift in Sources */,
 				86314D25266746C90055FC31 /* SceneDelegate.swift in Sources */,
 			);

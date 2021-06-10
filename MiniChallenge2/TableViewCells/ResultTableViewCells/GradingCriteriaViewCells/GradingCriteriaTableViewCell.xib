@@ -47,7 +47,7 @@
                                         <rect key="frame" x="179" y="0.0" width="179" height="59.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UP9-5Z-4zq">
-                                                <rect key="frame" x="20" y="19.5" width="139" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="19.5" width="179" height="20.5"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -56,9 +56,9 @@
                                         <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="UP9-5Z-4zq" firstAttribute="centerX" secondItem="aU1-4U-jvf" secondAttribute="centerX" id="8ZC-S3-vUw"/>
-                                            <constraint firstItem="UP9-5Z-4zq" firstAttribute="leading" secondItem="aU1-4U-jvf" secondAttribute="leading" constant="20" symbolic="YES" id="dg0-ey-Gy8"/>
+                                            <constraint firstItem="UP9-5Z-4zq" firstAttribute="leading" secondItem="aU1-4U-jvf" secondAttribute="leading" id="dg0-ey-Gy8"/>
                                             <constraint firstItem="UP9-5Z-4zq" firstAttribute="centerY" secondItem="aU1-4U-jvf" secondAttribute="centerY" id="jkN-Vp-w72"/>
-                                            <constraint firstAttribute="trailing" secondItem="UP9-5Z-4zq" secondAttribute="trailing" constant="20" symbolic="YES" id="mjH-1R-Jpx"/>
+                                            <constraint firstAttribute="trailing" secondItem="UP9-5Z-4zq" secondAttribute="trailing" id="mjH-1R-Jpx"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
