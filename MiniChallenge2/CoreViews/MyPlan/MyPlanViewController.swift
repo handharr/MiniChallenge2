@@ -99,11 +99,11 @@ extension MyPlanViewController: UICollectionViewDelegate, UICollectionViewDataSo
                     subitem: item,
                     count: 1
                 )
-                group.contentInsets = .init(top: 0, leading: 20, bottom: 0, trailing: 20)
+                group.contentInsets = .init(top: 0, leading: 0, bottom: 0, trailing: 0)
                 
                 // section
                 let section = NSCollectionLayoutSection(group: group)
-                section.contentInsets = .init(top: 5, leading: 0, bottom: 5, trailing: 0)
+                section.contentInsets = .init(top: 5, leading: 20, bottom: 5, trailing: 20)
                 section.boundarySupplementaryItems = [
                     .init(
                         layoutSize: .init(
@@ -125,22 +125,23 @@ extension MyPlanViewController: UICollectionViewDelegate, UICollectionViewDataSo
                         heightDimension: .fractionalHeight(1)
                     )
                 )
+                item.contentInsets = .init(top: 2, leading: 0, bottom: 2, trailing: 8 )
                 
                 // group
                 let group = NSCollectionLayoutGroup.horizontal(
                     layoutSize: .init(
-                        widthDimension: .fractionalWidth(1),
+                        widthDimension: .fractionalWidth(0.9),
                         heightDimension: .estimated(205)
                     ),
                     subitem: item,
                     count: 1
                 )
-                group.contentInsets = .init(top: 0, leading: 20, bottom: 0, trailing: 20)
+                group.contentInsets = .init(top: 0, leading: 0, bottom: 0, trailing: 0)
                 
                 // section
                 let section = NSCollectionLayoutSection(group: group)
-                section.orthogonalScrollingBehavior = .paging
-                section.contentInsets = .init(top: 5, leading: 0, bottom: 5, trailing: 0)
+                section.orthogonalScrollingBehavior = .groupPaging
+                section.contentInsets = .init(top: 5, leading: 20, bottom: 5, trailing: 20)
                 section.boundarySupplementaryItems = [
                     .init(
                         layoutSize: .init(

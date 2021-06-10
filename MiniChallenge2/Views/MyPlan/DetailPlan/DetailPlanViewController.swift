@@ -109,7 +109,7 @@ extension DetailPlanViewController: UICollectionViewDelegate, UICollectionViewDa
                         heightDimension: .fractionalHeight(1)
                     )
                 )
-                item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 5)
+                item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 8)
                 
                 // group
                 let group = NSCollectionLayoutGroup.horizontal(
@@ -120,11 +120,12 @@ extension DetailPlanViewController: UICollectionViewDelegate, UICollectionViewDa
                     subitem: item,
                     count: 5
                 )
-                group.contentInsets = NSDirectionalEdgeInsets(top: 16, leading: 20, bottom: 16, trailing: 0)
+                group.contentInsets = NSDirectionalEdgeInsets(top: 16, leading: 0, bottom: 16, trailing: 0)
                 
                 // section
                 let section = NSCollectionLayoutSection(group: group)
-                section.orthogonalScrollingBehavior = .paging
+                section.orthogonalScrollingBehavior = .continuous
+                section.contentInsets = .init(top: 0, leading: 16, bottom: 0, trailing: 20)
                 
                 // return
                 return section
@@ -147,7 +148,7 @@ extension DetailPlanViewController: UICollectionViewDelegate, UICollectionViewDa
                     subitem: item,
                     count: 1
                 )
-                group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20)
+                group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
                 
                 // section
                 let section = NSCollectionLayoutSection(group: group)
@@ -174,10 +175,11 @@ extension DetailPlanViewController: UICollectionViewDelegate, UICollectionViewDa
                     subitem: item,
                     count: 5
                 )
-                group.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 20, bottom: 0, trailing: 20)
+                group.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0)
                 
                 // section
                 let section = NSCollectionLayoutSection(group: group)
+                section.contentInsets = .init(top: 0, leading: 16, bottom: 0, trailing: 16)
                 section.boundarySupplementaryItems = [
                     .init(
                         layoutSize: .init(

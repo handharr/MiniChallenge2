@@ -27,7 +27,7 @@ class MCSectionHeaderCollectionReusableView: UICollectionReusableView {
     }
     
     override func layoutSubviews() {
-        textLabel.frame = .init(x: 20, y: 20, width: frame.size.width, height: frame.size.height-20)
+        textLabel.frame = .init(x: 0, y: 20, width: frame.size.width, height: frame.size.height-20)
     }
     
     required init?(coder: NSCoder) {
