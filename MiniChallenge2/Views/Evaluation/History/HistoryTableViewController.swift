@@ -17,16 +17,17 @@ class HistoryTableViewController: UITableViewController {
         
         self.title = "History"
         navigationController?.navigationBar.prefersLargeTitles = true
-        
-        tableView.register(historyCell.getNib(), forCellReuseIdentifier: "historyCell")
-        tableView.separatorStyle = .none
-        
+        setUpTable()
     }
 
     func registerXIBCell(cell : UITableViewCell){
         tableView.register(UINib(nibName: "\(cell.self)", bundle: nil), forCellReuseIdentifier: "historyCell")
     }
     
+    func setUpTable(){
+        tableView.register(historyCell.getNib(), forCellReuseIdentifier: "historyCell")
+        tableView.separatorStyle = .none
+    }
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -41,6 +42,11 @@ class HistoryTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 92
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = TestResultViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
     
 }
