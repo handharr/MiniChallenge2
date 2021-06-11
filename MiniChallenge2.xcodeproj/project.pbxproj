@@ -29,6 +29,8 @@
 		49875FF3266FB16B0060BE6E /* SpiderChartResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49875FF0266FB16B0060BE6E /* SpiderChartResultViewController.swift */; };
 		49875FF4266FB16B0060BE6E /* SpiderChartChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49875FF1266FB16B0060BE6E /* SpiderChartChildViewController.swift */; };
 		49875FF5266FB16B0060BE6E /* SpiderChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49875FF2266FB16B0060BE6E /* SpiderChartViewController.swift */; };
+		7DA5DC1E267323E100B6C7EB /* PlanCollectionViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA5DC1C267323E100B6C7EB /* PlanCollectionViewCells.swift */; };
+		7DA5DC1F267323E100B6C7EB /* PlanCollectionViewCells.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DA5DC1D267323E100B6C7EB /* PlanCollectionViewCells.xib */; };
 		861C35D9266DC5F3005ABB7E /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861C35D8266DC5F3005ABB7E /* DummyData.swift */; };
 		86314D23266746C90055FC31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86314D22266746C90055FC31 /* AppDelegate.swift */; };
 		86314D25266746C90055FC31 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86314D24266746C90055FC31 /* SceneDelegate.swift */; };
@@ -87,6 +89,8 @@
 		49875FF0266FB16B0060BE6E /* SpiderChartResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiderChartResultViewController.swift; sourceTree = "<group>"; };
 		49875FF1266FB16B0060BE6E /* SpiderChartChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiderChartChildViewController.swift; sourceTree = "<group>"; };
 		49875FF2266FB16B0060BE6E /* SpiderChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiderChartViewController.swift; sourceTree = "<group>"; };
+		7DA5DC1C267323E100B6C7EB /* PlanCollectionViewCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanCollectionViewCells.swift; sourceTree = "<group>"; };
+		7DA5DC1D267323E100B6C7EB /* PlanCollectionViewCells.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlanCollectionViewCells.xib; sourceTree = "<group>"; };
 		861C35D8266DC5F3005ABB7E /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
 		86314D1F266746C90055FC31 /* MiniChallenge2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniChallenge2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86314D22266746C90055FC31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -201,6 +205,16 @@
 			);
 			path = SpiderChart;
 			sourceTree = "<group>";
+		};
+		7DA5DC1B267323E100B6C7EB /* PlanCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				7DA5DC1C267323E100B6C7EB /* PlanCollectionViewCells.swift */,
+				7DA5DC1D267323E100B6C7EB /* PlanCollectionViewCells.xib */,
+			);
+			name = PlanCollectionViewCell;
+			path = MiniChallenge2/CollectionViewCells/PlanCollectionViewCell;
+			sourceTree = SOURCE_ROOT;
 		};
 		86314D16266746C90055FC31 = {
 			isa = PBXGroup;
@@ -447,7 +461,7 @@
 		869EDCDE2669C2D000DA4770 /* CollectionViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				86191DEA26710CCE0033CD40 /* PlanCollectionViewCell */,
+				7DA5DC1B267323E100B6C7EB /* PlanCollectionViewCell */,
 				8688D5F9266FC1A400081F8F /* SummaryDetailPlanCollectionViewCell */,
 				8688D5F4266FB52A00081F8F /* ExcerciseDetailPlanCollectionViewCell */,
 				8688D5EF266FA1E600081F8F /* DatePlanCollectionViewCells */,
@@ -557,6 +571,7 @@
 				866BCEFE26691B8100482207 /* CardioTestViewController.xib in Resources */,
 				498085992670B91900E10F40 /* CardioTableViewCell.xib in Resources */,
 				866BCEE32669198B00482207 /* ExcerciseReportViewController.xib in Resources */,
+				7DA5DC1F267323E100B6C7EB /* PlanCollectionViewCells.xib in Resources */,
 				8688D5FD266FC1EA00081F8F /* SummaryDetailPlanCollectionViewCell.xib in Resources */,
 				866BCEDE2669194300482207 /* WarmUpViewController.xib in Resources */,
 				86314D2C266746CA0055FC31 /* Assets.xcassets in Resources */,
@@ -574,7 +589,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				866BCEFD26691B8100482207 /* CardioTestViewController.swift in Sources */,
-				86191DED26710CF60033CD40 /* PlanCollectionViewCells.swift in Sources */,
 				866BCEE22669198B00482207 /* ExcerciseReportViewController.swift in Sources */,
 				49875FD8266FAF170060BE6E /* History.swift in Sources */,
 				4942EDD026724CD500444DC8 /* UITableView+.swift in Sources */,
@@ -597,6 +611,7 @@
 				4942EDCB2672491C00444DC8 /* UIScollView+.swift in Sources */,
 				866BCEC02668FEC200482207 /* MyPlanViewController.swift in Sources */,
 				49875FF4266FB16B0060BE6E /* SpiderChartChildViewController.swift in Sources */,
+				7DA5DC1E267323E100B6C7EB /* PlanCollectionViewCells.swift in Sources */,
 				498085A52670E8BE00E10F40 /* GradingCriteriaTableViewCell.swift in Sources */,
 				49875FDE266FAF5D0060BE6E /* HistoryTableViewCell.swift in Sources */,
 				49875FF3266FB16B0060BE6E /* SpiderChartResultViewController.swift in Sources */,

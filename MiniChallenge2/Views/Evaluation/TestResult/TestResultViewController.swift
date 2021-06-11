@@ -10,7 +10,7 @@ import UIKit
 class TestResultViewController: UIViewController {
     
     var tables : [UITableView] = []
-    var dataCount = 1
+    var dataCount = 4
     
     lazy var scrollView : UIScrollView = {
         self.setUpTable()
