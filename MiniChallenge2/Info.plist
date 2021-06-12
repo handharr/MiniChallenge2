@@ -4,6 +4,12 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>Your workout related data will be used to display your saved workouts in this App.</string>
+	<key>NSMotionUsageDescription</key>
+	<string>Your workout session tracking distance will be tracked using your phone Pedometer</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>Workouts tracked by this app on Apple Watch will be saved to HealthKit.</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
