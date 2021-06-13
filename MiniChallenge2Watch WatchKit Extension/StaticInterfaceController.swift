@@ -30,7 +30,7 @@ class StaticInterfaceController: WKInterfaceController {
 
 extension StaticInterfaceController: WCSessionDelegate{
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        print("Session Activation is Completed")
+        print("Watch Session Activation is Completed")
         let data : [String: Any] = ["BPM": "Message From Watch" as Any]
         watchSession!.sendMessage(data, replyHandler: nil, errorHandler: nil)
     }

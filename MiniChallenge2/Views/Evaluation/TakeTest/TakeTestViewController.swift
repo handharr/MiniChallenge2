@@ -11,18 +11,16 @@ import WatchConnectivity
 class TakeTestViewController: UIViewController {
     
     @IBOutlet weak var takeTestTableView: UITableView!
+    var session: WCSession?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        guard let supported = WCSession.isSupported() else { }
-        
-        let session = WCSession.default
-        session.delegate = self
-        session.activate() // activate the session
-
-        if session.isPaired {
+        if WCSession.isSupported(){
+            session = WCSession.default
             
+            session?.delegate = self
+            session?.activate() // activate the session
         }
         
         // Ini kerjaannya Celle
@@ -39,6 +37,12 @@ class TakeTestViewController: UIViewController {
         
         takeTestTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         takeTestTableView.register(TakeTestTableViewCell.nib(), forCellReuseIdentifier: TakeTestTableViewCell.identifier)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+       
+        
     }
     
 }
@@ -64,7 +68,9 @@ extension TakeTestViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+//        tableView.deselectRow(at: indexPath, animated: true)
+        let cardioTest = CardioTestViewController()
+        navigationController?.pushViewController(cardioTest, animated: true)
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -93,5 +99,11 @@ extension TakeTestViewController: WCSessionDelegate{
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         //yang pertama direach
+        print("iPhone Session Success")
+        if ((session.isPaired) != nil) {
+            UIAlertController.show(topTitle: "Apple Watch", sendMessage: "You phone is paired", buttonText: "Oke", from: self)
+        } else {
+            UIAlertController.show(topTitle: "Apple Watch", sendMessage: "You don't have any Apple Watch paired", buttonText: "Oke", from: self)
+        }
     }
 }

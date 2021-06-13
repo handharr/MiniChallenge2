@@ -24,7 +24,9 @@ class CardioTestViewController: UIViewController {
                                                             action: #selector(handleCancelButton))
         navigationItem.rightBarButtonItem?.tintColor = .white
         
-        point = CGPoint(x: view.center.x - 12, y: view.center.y - 50)
+        point = CGPoint(x: view.center.x, y: view.center.y)
+        
+        print(view.center.y)
         
         guard let point = point else {return}
         
@@ -44,16 +46,20 @@ class CardioTestViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = false
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
+        
+        tabBarController?.tabBar.isHidden = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.navigationBar.prefersLargeTitles = true
+        tabBarController?.tabBar.isHidden = false
     }
 }
 
 // MARK: - Layout View
 extension CardioTestViewController {
+    
     private func setupLabelView() {
         guard let point = point else {return}
         
