@@ -65,6 +65,9 @@
                                                 <state key="normal" title="Take Exam">
                                                     <color key="titleColor" red="0.77647058820000003" green="0.31764705879999999" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="takeExamTapped:" destination="e1Z-jb-QY4" eventType="touchUpInside" id="dNq-L4-X9p"/>
+                                                </connections>
                                             </button>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aRI-Tc-Oy0">
                                                 <rect key="frame" x="0.0" y="457" width="414" height="246"/>

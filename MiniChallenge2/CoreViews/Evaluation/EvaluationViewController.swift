@@ -58,6 +58,11 @@ class EvaluationViewController: UIViewController {
         navigationController?.pushViewController(historyTableVC, animated: true)
 
     }
+    
+    @IBAction func takeExamTapped(_ sender: Any) {
+        let examVC = TakeTestViewController()
+        navigationController?.pushViewController(examVC, animated: true)
+    }
 }
 
 extension EvaluationViewController: UITableViewDataSource{
