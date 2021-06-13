@@ -10,11 +10,20 @@ import Foundation
 import SpriteKit
 import WatchConnectivity
 
+protocol RunningSessionDelegate {
+    func stopDidTapped(isRunning : Bool)
+    func workoutDidCancel()
+}
+
+
 class InterfaceController: WKInterfaceController {
     
     
     
     @IBOutlet weak var interfaceScene: WKInterfaceSKScene!
+    
+    var delegate : RunningSessionDelegate?
+    var isRunning : Bool = false
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -58,12 +67,12 @@ class InterfaceController: WKInterfaceController {
         scene.addChild(backgroundNode)
         scene.addChild(shapeNode)
         print("firstScene")
-        
+
     }
     
-    @IBAction func stopTapped() {
-        self.popToRootController()
-        print("popped")
+    @IBAction func skippedTapped() {
+//        self.popToRootController()
+        delegate?.workoutDidCancel()
     }
     override func willActivate() {
         super.willActivate()
@@ -74,6 +83,7 @@ class InterfaceController: WKInterfaceController {
     }
 
     @IBAction func pauseTapped() {
-        self.popToRootController()
+//        self.popToRootController()
+        delegate?.stopDidTapped(isRunning: self.isRunning)
     }
 }

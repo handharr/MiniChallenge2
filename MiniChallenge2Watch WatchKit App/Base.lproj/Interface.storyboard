@@ -52,26 +52,10 @@
             </objects>
             <point key="canvasLocation" x="269" y="336"/>
         </scene>
-        <!--Interface Controller-->
-        <scene sceneID="5k9-tv-cdC">
-            <objects>
-                <controller id="9CZ-Qt-vbI">
-                    <items>
-                        <group width="1" height="1" alignment="left" layout="vertical" id="ZZX-nh-Bnx">
-                            <items>
-                                <button width="1" height="0.5" alignment="left" title="Button" id="4I4-sf-Ssq"/>
-                                <button width="1" height="0.5" alignment="left" title="Button" id="BXz-PJ-eIr"/>
-                            </items>
-                        </group>
-                    </items>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="822" y="364"/>
-        </scene>
         <!--Quit-->
         <scene sceneID="0Ll-3q-xEj">
             <objects>
-                <controller identifier="cardioExam" title="Quit" fullBounds="YES" id="QoU-MW-yoX" customClass="InterfaceController" customModule="MiniChallenge2Watch_WatchKit_Extension" customModuleProvider="target">
+                <controller identifier="cardioExam" title="Quit" fullBounds="YES" id="QoU-MW-yoX" customClass="InterfaceController" customModule="MiniChallenge2Watch_WatchKit_App" customModuleProvider="target">
                     <items>
                         <group width="1" height="1" alignment="left" layout="overlap" id="82R-jg-Hw3">
                             <items>
@@ -102,13 +86,17 @@
                                     <items>
                                         <button width="0.25" height="0.69999999999999996" alignment="left" verticalAlignment="bottom" backgroundImage="pausebutton" id="dQf-NF-iCD">
                                             <connections>
-                                                <action selector="stopTapped" destination="QoU-MW-yoX" id="iQf-hO-BHu"/>
+                                                <action selector="pauseTapped" destination="QoU-MW-yoX" id="aGJ-f7-KtJ"/>
                                             </connections>
                                         </button>
                                         <label alignment="center" verticalAlignment="bottom" text="Running 1,6km" textAlignment="center" id="kte-yB-xBN">
                                             <fontDescription key="font" type="system" pointSize="12"/>
                                         </label>
-                                        <button width="0.25" height="0.69999999999999996" alignment="right" verticalAlignment="bottom" backgroundImage="playbutton" id="xcI-ej-wbr"/>
+                                        <button width="0.25" height="0.69999999999999996" alignment="right" verticalAlignment="bottom" backgroundImage="playbutton" id="xcI-ej-wbr">
+                                            <connections>
+                                                <action selector="skippedTapped" destination="QoU-MW-yoX" id="efO-Ro-BBE"/>
+                                            </connections>
+                                        </button>
                                     </items>
                                 </group>
                             </items>
@@ -199,6 +187,13 @@
                             </items>
                         </group>
                     </items>
+                    <connections>
+                        <outlet property="averageSpeed" destination="xFx-6O-KTk" id="RCU-mn-sgH"/>
+                        <outlet property="calories" destination="lIJ-YY-ZJT" id="pK4-P9-PmK"/>
+                        <outlet property="distanceRunning" destination="Cu6-xk-x65" id="q29-nZ-Lsf"/>
+                        <outlet property="heartBeat" destination="5FY-Md-pN3" id="isN-u8-ky1"/>
+                        <outlet property="timer" destination="cER-X7-1tN" id="XbS-A6-Ls6"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="268" y="33"/>

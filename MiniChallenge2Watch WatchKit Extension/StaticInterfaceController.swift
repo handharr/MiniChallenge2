@@ -22,6 +22,10 @@ class StaticInterfaceController: WKInterfaceController {
     @IBAction func next() {
         presentController(withNames: ["cardioExam", "runningTest"], contexts: nil)
     }
+    
+    override func didDeactivate() {
+        print("geser")
+    }
 }
 
 extension StaticInterfaceController: WCSessionDelegate{
