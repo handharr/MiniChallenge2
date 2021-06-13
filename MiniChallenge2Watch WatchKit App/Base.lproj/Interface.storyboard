@@ -140,7 +140,7 @@
                                 </group>
                                 <group width="1" height="0.20000000000000001" alignment="left" verticalAlignment="bottom" spacing="0.0" id="ska-Sc-CcP">
                                     <items>
-                                        <group width="0.29999999999999999" height="0.5" alignment="left" verticalAlignment="center" id="qnx-eN-KDI">
+                                        <group width="0.40000000000000002" height="0.5" alignment="left" verticalAlignment="center" id="qnx-eN-KDI">
                                             <items>
                                                 <imageView alignment="left" verticalAlignment="center" image="heart.fill" catalog="system" id="GjL-Ck-OOT">
                                                     <color key="tintColor" red="0.77647058820000003" green="0.31764705879999999" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -150,7 +150,7 @@
                                                 </label>
                                             </items>
                                         </group>
-                                        <group width="0.69999999999999996" alignment="right" verticalAlignment="center" id="Lx9-cx-0Ll">
+                                        <group width="0.59999999999999998" alignment="right" verticalAlignment="center" id="Lx9-cx-0Ll">
                                             <items>
                                                 <imageView alignment="right" verticalAlignment="center" image="timer" catalog="system" id="YYJ-YV-E4A">
                                                     <color key="tintColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

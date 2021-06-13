@@ -17,6 +17,8 @@ class WorkoutInterfaceController: WKInterfaceController{
     @IBOutlet weak var calories: WKInterfaceLabel!
     @IBOutlet weak var averageSpeed: WKInterfaceLabel!
     
+    var watchInterface = InterfaceController()
+    
     let healthStore = HKHealthStore()
     var session: HKWorkoutSession!
     var builder: HKLiveWorkoutBuilder!
@@ -36,7 +38,10 @@ class WorkoutInterfaceController: WKInterfaceController{
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         self.becomeCurrentPage()
+        watchInterface.delegate = self
         setUpData()
+        requestAuthorization()
+        startWorkout()
     }
     
     override func willActivate() {
@@ -48,7 +53,11 @@ class WorkoutInterfaceController: WKInterfaceController{
     }
     
     func setUpData(){
-        
+        distanceRunning.setText(String(format: "%.1f", distance))
+        heartBeat.setText(String(format: "%.1f", heartrate))
+        timer.setText("\(elapsedTimeString(elapsed: secondsToHoursMinutesSeconds(seconds: elapsedSeconds)))")
+        calories.setText(String(format: "%.1f", activeCalories))
+        averageSpeed.setText(String(format: "%.1f", distance))
     }
     
     func requestAuthorization() {
@@ -74,12 +83,27 @@ class WorkoutInterfaceController: WKInterfaceController{
             .sink { [weak self] _ in
                 guard let self = self else { return }
                 self.elapsedSeconds = self.incrementElapsedTime()
+                DispatchQueue.main.async {
+                    self.timer.setText("\(self.elapsedTimeString(elapsed: self.secondsToHoursMinutesSeconds(seconds: self.elapsedSeconds)))")
+                }
+                
             }
+//        print("here")
     }
     
     func incrementElapsedTime() -> Int {
         let runningTime: Int = Int(-1 * (self.start.timeIntervalSinceNow))
         return self.accumulatedTime + runningTime
+    }
+    
+    func secondsToHoursMinutesSeconds (seconds: Int) -> (Int, Int, Int) {
+      return (seconds / 3600, (seconds % 3600) / 60, (seconds % 3600) % 60)
+    }
+    
+    // Convert the seconds, minutes, hours into a string.
+    func elapsedTimeString(elapsed: (h: Int, m: Int, s: Int)) -> String {
+//        print(elapsed)
+        return String(format: "%d:%02d:%02d", elapsed.h, elapsed.m, elapsed.s)
     }
     
     func workoutConfiguration() -> HKWorkoutConfiguration {
@@ -159,27 +183,36 @@ class WorkoutInterfaceController: WKInterfaceController{
             case HKQuantityType.quantityType(forIdentifier: .heartRate):
                 /// - Tag: SetLabel
                 let heartRateUnit = HKUnit.count().unitDivided(by: HKUnit.minute())
-                print("Heart Rate Unit: " + "\(heartRateUnit)")
+//                print("Heart Rate Unit: " + "\(heartRateUnit)")
                 let value = statistics.mostRecentQuantity()?.doubleValue(for: heartRateUnit)
-                print("Heart Rate Value: " + "\(value)")
+//                print("Heart Rate Value: " + "\(value)")
                 let roundedValue = Double( round( 1 * value! ) / 1 )
                 self.heartrate = roundedValue
+                
+                DispatchQueue.main.async {
+                    self.heartBeat.setText(String(format: "%.1f", self.heartrate))
+                }
             case HKQuantityType.quantityType(forIdentifier: .activeEnergyBurned):
                 let energyUnit = HKUnit.kilocalorie()
                 let value = statistics.sumQuantity()?.doubleValue(for: energyUnit)
                 self.activeCalories = Double( round( 1 * value! ) / 1 )
+                DispatchQueue.main.async {
+                    self.calories.setText(String(format: "%.1f", self.activeCalories))
+                }
 //                let voUnit = (HKUnit.liter().unitDivided(by: HKUnit.pound())).unitDivided(by: HKUnit.minute())
             case HKQuantityType.quantityType(forIdentifier: .distanceWalkingRunning):
                 let meterUnit = HKUnit.meter()
                 let value = statistics.sumQuantity()?.doubleValue(for: meterUnit)
                 let roundedValue = Double( round( 1 * value! ) / 1 )
-                self.distance = roundedValue
+                DispatchQueue.main.async {
+                    self.distanceRunning.setText(String(format: "%.1f", roundedValue))
+                }
                 return
             case HKQuantityType.quantityType(forIdentifier: .vo2Max):
                 let voUnit = HKUnit(from: "ml/kg*min")
-                print("VO2 Rate Unit: " + "\(voUnit)")
+//                print("VO2 Rate Unit: " + "\(voUnit)")
                 let values = statistics.mostRecentQuantity()?.doubleValue(for: voUnit)
-                print("VO2 Rate Unit: " + "\(values)")
+//                print("VO2 Rate Unit: " + "\(values)")
             default:
                 return
             }
@@ -194,10 +227,11 @@ extension WorkoutInterfaceController: RunningSessionDelegate {
         } else {
             resumeWorkout()
         }
+        print("Data> \(isRunning)")
         
     }
     func workoutDidCancel() {
-        
+        print("Workout out did cancel tapped")
     }
 }
 
@@ -207,11 +241,23 @@ extension WorkoutInterfaceController: HKWorkoutSessionDelegate {
                         from fromState: HKWorkoutSessionState, date: Date) {
         if toState == .ended {
             print("The workout has now ended.")
-            builder.endCollection(withEnd: Date()) { (success, error) in
-                self.builder.finishWorkout { (workout, error) in
-                    self.resetWorkout()
+            
+            if self.elapsedSeconds < 59 {
+                builder.endCollection(withEnd: Date()) { (success, error) in
+                    self.builder.finishWorkout { (workout, error) in
+                        self.resetWorkout()
+                    }
+                }
+                return
+            }
+            else {
+                builder.endCollection(withEnd: Date()) { (success, error) in
+                    self.builder.finishWorkout { (workout, error) in
+                        self.resetWorkout()
+                    }
                 }
             }
+            
         }
     }
     
@@ -227,11 +273,11 @@ extension WorkoutInterfaceController: HKLiveWorkoutBuilderDelegate {
     }
     
     func workoutBuilder(_ workoutBuilder: HKLiveWorkoutBuilder, didCollectDataOf collectedTypes: Set<HKSampleType>) {
-        print("collected type: \(collectedTypes)")
+//        print("collected type: \(collectedTypes)")
         //mengecek tipe koleksi apa aja yang sudah kita dapatkan dari reading dan updating dari healthStore
         for type in collectedTypes {
             //mengecek apakah collectedType yang kita dapatkan adalah quantity(diskrit dan bukan subjektif) atau bukan
-            print("type: \(type)")
+//            print("type: \(type)")
             
             guard let quantityType = type as? HKQuantityType else {
                 return // Nothing to do.

@@ -85,5 +85,6 @@ class InterfaceController: WKInterfaceController {
     @IBAction func pauseTapped() {
 //        self.popToRootController()
         delegate?.stopDidTapped(isRunning: self.isRunning)
+        isRunning = !isRunning
     }
 }
