@@ -1,9 +1,9 @@
 {
     "aps": {
         "alert": {
-            "body": "Test message",
+            "body": "This is ASD",
             "title": "Optional title",
-            "subtitle": "Optional subtitle"
+            "subtitle": "Hello There!"
         },
         "category": "myCategory",
         "thread-id": "5280"

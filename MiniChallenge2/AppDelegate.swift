@@ -16,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let window = UIWindow(frame: UIScreen.main.bounds)
         
+        let _ = WatchManager.shared
+        
         window.rootViewController = TabBarController()
         
         window.makeKeyAndVisible()

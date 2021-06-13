@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="17701" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KZO-Mk-QrE">
+    <device id="watch44"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="17500"/>
+    </dependencies>
+    <scenes>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="TK0-2Q-0sc">
+            <objects>
+                <notificationController id="PdX-qU-fSQ">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="VCu-Lv-PXD"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" id="CpH-cn-vjZ"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="VCu-Lv-PXD" id="mEC-Iu-iNW"/>
+                        <segue destination="1iN-CU-0EA" kind="relationship" relationship="dynamicNotificationInterface" id="exi-oS-9jr"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="703"/>
+        </scene>
+        <!--Exam-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller identifier="cardioExam" title="Exam" fullBounds="YES" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="MiniChallenge2Watch_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" height="1" alignment="left" layout="overlap" id="KqI-Za-3AP">
+                            <items>
+                                <group width="1" height="0.90000000000000002" alignment="left" layout="overlap" id="pwW-Nu-t7I">
+                                    <items>
+                                        <spriteKitScene alignment="center" verticalAlignment="center" id="ELz-85-qXZ"/>
+                                        <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="PJE-gH-7Sy">
+                                            <items>
+                                                <group width="1" alignment="center" layout="vertical" id="MvZ-tN-Vfi">
+                                                    <items>
+                                                        <label width="1" alignment="center" text="1,1" textAlignment="center" id="ug4-Un-F9x">
+                                                            <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
+                                                        </label>
+                                                    </items>
+                                                </group>
+                                                <group width="1" alignment="left" verticalAlignment="bottom" id="BHE-z1-H1n">
+                                                    <items>
+                                                        <label width="1" alignment="center" text="Kilometer" textAlignment="center" id="lQb-MM-OBI">
+                                                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                                        </label>
+                                                    </items>
+                                                </group>
+                                            </items>
+                                        </group>
+                                    </items>
+                                </group>
+                                <group width="1" height="0.29999999999999999" alignment="left" verticalAlignment="bottom" id="9mO-0D-qFK">
+                                    <items>
+                                        <button width="0.25" height="0.69999999999999996" alignment="left" verticalAlignment="bottom" backgroundImage="pausebutton" id="p7V-By-sCy">
+                                            <connections>
+                                                <action selector="pauseTapped" destination="AgC-eL-Hgc" id="lqh-id-7Gc"/>
+                                            </connections>
+                                        </button>
+                                        <label alignment="center" verticalAlignment="bottom" text="Running 1,6km" textAlignment="center" id="Xjo-X4-EDM">
+                                            <fontDescription key="font" type="system" pointSize="12"/>
+                                        </label>
+                                        <button width="0.25" height="0.69999999999999996" alignment="right" verticalAlignment="bottom" backgroundImage="playbutton" id="55o-0D-bzE"/>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <edgeInsets key="margins" left="1" right="1" top="0.0" bottom="20"/>
+                    <connections>
+                        <outlet property="interfaceScene" destination="ELz-85-qXZ" id="VoC-iW-NM4"/>
+                        <outlet property="playPauseButton" destination="p7V-By-sCy" id="3Aa-vd-g1d"/>
+                        <segue destination="fKy-AU-nT6" kind="relationship" relationship="nextPage" id="scN-fB-Ih6"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="219.52173913043478" y="344.55357142857144"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="uhK-DK-Jl5">
+            <objects>
+                <controller id="1iN-CU-0EA" customClass="NotificationController" customModule="MiniChallenge2Watch_WatchKit_Extension"/>
+            </objects>
+            <point key="canvasLocation" x="520" y="703"/>
+        </scene>
+        <!--Test-->
+        <scene sceneID="O5S-Q0-j6S">
+            <objects>
+                <controller identifier="Test" id="fKy-AU-nT6" customClass="WorkoutInterfaceController" customModule="MiniChallenge2Watch_WatchKit_Extension">
+                    <items>
+                        <group width="1" height="1" alignment="left" layout="vertical" id="wKD-eL-cFK">
+                            <items>
+                                <group width="1" height="0.59999999999999998" alignment="center" id="Grz-5G-dsW">
+                                    <items>
+                                        <group width="1" height="1" alignment="center" verticalAlignment="center" id="bj0-wK-vby">
+                                            <items>
+                                                <group width="1" alignment="left" id="PfV-HL-GMW">
+                                                    <items>
+                                                        <label height="1" alignment="center" verticalAlignment="center" text="0,78" id="REu-wz-kbc">
+                                                            <fontDescription key="font" type="system" pointSize="70"/>
+                                                        </label>
+                                                        <group alignment="center" id="L3G-pI-5ds">
+                                                            <items>
+                                                                <label height="1" alignment="center" verticalAlignment="bottom" text="Km" id="R5d-JF-AdS"/>
+                                                            </items>
+                                                        </group>
+                                                    </items>
+                                                </group>
+                                            </items>
+                                        </group>
+                                    </items>
+                                </group>
+                                <group width="1" height="0.20000000000000001" alignment="left" verticalAlignment="bottom" spacing="0.0" id="ffK-O3-zgm">
+                                    <items>
+                                        <group width="0.29999999999999999" height="0.5" alignment="left" verticalAlignment="center" id="oT8-WU-X8E">
+                                            <items>
+                                                <imageView alignment="left" verticalAlignment="center" image="heart.fill" catalog="system" id="wnh-UM-tZw">
+                                                    <color key="tintColor" red="0.77647058820000003" green="0.31764705879999999" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </imageView>
+                                                <label alignment="left" verticalAlignment="center" text="112" id="Afh-hL-8u9">
+                                                    <color key="textColor" red="0.77647058823529413" green="0.31764705882352939" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </label>
+                                            </items>
+                                        </group>
+                                        <group width="0.69999999999999996" alignment="right" verticalAlignment="center" id="bJS-Ud-IXd">
+                                            <items>
+                                                <imageView alignment="right" verticalAlignment="center" image="timer" catalog="system" id="5F2-Ex-o7I">
+                                                    <color key="tintColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </imageView>
+                                                <label alignment="right" verticalAlignment="center" text="28:09:00" id="naR-sf-mPm"/>
+                                            </items>
+                                        </group>
+                                    </items>
+                                </group>
+                                <group width="1" height="0.20000000000000001" alignment="left" verticalAlignment="bottom" id="Agt-8G-CJi">
+                                    <items>
+                                        <group width="0.5" height="0.5" alignment="left" verticalAlignment="center" id="3Dh-we-4Br">
+                                            <items>
+                                                <label alignment="left" verticalAlignment="center" text="Calories" id="Zyy-BW-D3r">
+                                                    <color key="textColor" red="0.33203311826235471" green="0.36134697385513231" blue="0.37640951137350065" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                                </label>
+                                                <label alignment="left" verticalAlignment="center" text="300" id="3fd-58-bqz">
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </label>
+                                            </items>
+                                        </group>
+                                        <group width="0.5" alignment="right" verticalAlignment="center" id="MUJ-eW-kzV">
+                                            <items>
+                                                <label alignment="right" verticalAlignment="center" text="Speed" id="C8G-17-laN">
+                                                    <color key="textColor" red="0.45490196078431372" green="0.45490196078431372" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                                </label>
+                                                <label alignment="right" verticalAlignment="center" text="8.40" id="BX2-TD-EYr"/>
+                                            </items>
+                                        </group>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="516" y="345"/>
+        </scene>
+        <!--Static Interface Controller-->
+        <scene sceneID="t56-BQ-fI5">
+            <objects>
+                <controller fullBounds="YES" id="KZO-Mk-QrE" customClass="StaticInterfaceController" customModule="MiniChallenge2Watch_WatchKit_Extension">
+                    <items>
+                        <group width="1" height="1" alignment="center" verticalAlignment="center" layout="vertical" id="AmE-cG-VLv">
+                            <items>
+                                <imageView width="0.29999999999999999" height="0.29999999999999999" alignment="center" verticalAlignment="center" image="playbutton" id="APs-29-kXh">
+                                    <color key="tintColor" red="0.77647058820000003" green="0.31764705879999999" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </imageView>
+                                <label width="1" alignment="center" verticalAlignment="center" text="Start a workout training session from your phone" textAlignment="center" numberOfLines="3" id="boW-IJ-GVm"/>
+                                <button width="1" alignment="center" verticalAlignment="bottom" title="Button" id="QT8-O7-yoE">
+                                    <connections>
+                                        <action selector="next" destination="KZO-Mk-QrE" id="eDP-9u-chs"/>
+                                    </connections>
+                                </button>
+                            </items>
+                            <color key="backgroundColor" red="0.77647058820000003" green="0.31764705879999999" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="904" y="279"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="5k9-tv-cdC">
+            <objects>
+                <controller id="9CZ-Qt-vbI"/>
+            </objects>
+            <point key="canvasLocation" x="1234" y="-98"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="heart.fill" catalog="system" width="128" height="105"/>
+        <image name="pausebutton" width="26" height="23"/>
+        <image name="playbutton" width="26" height="23"/>
+        <image name="timer" catalog="system" width="128" height="121"/>
+    </resources>
+</document>

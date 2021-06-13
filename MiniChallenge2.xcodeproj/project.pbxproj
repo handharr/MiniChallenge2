@@ -28,6 +28,12 @@
 		498571EC26746437000CB1B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 498571EB26746437000CB1B9 /* Assets.xcassets */; };
 		4985720126746527000CB1B9 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4985720026746527000CB1B9 /* HealthKit.framework */; };
 		4985720826746570000CB1B9 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4985720726746570000CB1B9 /* HealthKit.framework */; };
+		4985721F26747EF6000CB1B9 /* WatchScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4985721E26747EF6000CB1B9 /* WatchScene.sks */; };
+		4985722526748E57000CB1B9 /* WatchColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4985722426748E57000CB1B9 /* WatchColor.swift */; };
+		4985722B2674C2B2000CB1B9 /* WorkoutInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4985722A2674C2B2000CB1B9 /* WorkoutInterfaceController.swift */; };
+		498572422674F742000CB1B9 /* WatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498572412674F742000CB1B9 /* WatchManager.swift */; };
+		498572482674F848000CB1B9 /* WatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498572472674F848000CB1B9 /* WatchManager.swift */; };
+		4985724E2674FA72000CB1B9 /* StaticInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4985724D2674FA72000CB1B9 /* StaticInterfaceController.swift */; };
 		49875FD5266FAE960060BE6E /* EvaluationView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49875FD4266FAE960060BE6E /* EvaluationView.storyboard */; };
 		49875FD8266FAF170060BE6E /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49875FD7266FAF170060BE6E /* History.swift */; };
 		49875FDD266FAF5D0060BE6E /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49875FDB266FAF5D0060BE6E /* HistoryTableViewCell.xib */; };
@@ -148,6 +154,12 @@
 		4985720026746527000CB1B9 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		4985720626746570000CB1B9 /* MiniChallenge2Watch WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MiniChallenge2Watch WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		4985720726746570000CB1B9 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		4985721E26747EF6000CB1B9 /* WatchScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = WatchScene.sks; sourceTree = "<group>"; };
+		4985722426748E57000CB1B9 /* WatchColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchColor.swift; sourceTree = "<group>"; };
+		4985722A2674C2B2000CB1B9 /* WorkoutInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutInterfaceController.swift; sourceTree = "<group>"; };
+		498572412674F742000CB1B9 /* WatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchManager.swift; sourceTree = "<group>"; };
+		498572472674F848000CB1B9 /* WatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchManager.swift; sourceTree = "<group>"; };
+		4985724D2674FA72000CB1B9 /* StaticInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticInterfaceController.swift; sourceTree = "<group>"; };
 		49875FD4266FAE960060BE6E /* EvaluationView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EvaluationView.storyboard; sourceTree = "<group>"; };
 		49875FD7266FAF170060BE6E /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		49875FDB266FAF5D0060BE6E /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
@@ -261,6 +273,7 @@
 		498571D32674642B000CB1B9 /* MiniChallenge2Watch WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
+				4985721926747B8A000CB1B9 /* CustomRing */,
 				498571D42674642B000CB1B9 /* Interface.storyboard */,
 				498571D726746431000CB1B9 /* Assets.xcassets */,
 				498571D926746431000CB1B9 /* Info.plist */,
@@ -273,12 +286,17 @@
 			children = (
 				4985720626746570000CB1B9 /* MiniChallenge2Watch WatchKit Extension.entitlements */,
 				498571E326746431000CB1B9 /* InterfaceController.swift */,
+				4985721E26747EF6000CB1B9 /* WatchScene.sks */,
 				498571E526746431000CB1B9 /* ExtensionDelegate.swift */,
 				498571E726746431000CB1B9 /* NotificationController.swift */,
 				498571E926746431000CB1B9 /* ComplicationController.swift */,
 				498571EB26746437000CB1B9 /* Assets.xcassets */,
 				498571ED26746437000CB1B9 /* Info.plist */,
 				498571EE26746437000CB1B9 /* PushNotificationPayload.apns */,
+				4985722426748E57000CB1B9 /* WatchColor.swift */,
+				4985722A2674C2B2000CB1B9 /* WorkoutInterfaceController.swift */,
+				498572412674F742000CB1B9 /* WatchManager.swift */,
+				4985724D2674FA72000CB1B9 /* StaticInterfaceController.swift */,
 			);
 			path = "MiniChallenge2Watch WatchKit Extension";
 			sourceTree = "<group>";
@@ -290,6 +308,13 @@
 				4985720026746527000CB1B9 /* HealthKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4985721926747B8A000CB1B9 /* CustomRing */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomRing;
 			sourceTree = "<group>";
 		};
 		49875FDA266FAF4B0060BE6E /* HistoryTableViewCells */ = {
@@ -366,6 +391,7 @@
 				86314D24266746C90055FC31 /* SceneDelegate.swift */,
 				86314D2D266746CA0055FC31 /* LaunchScreen.storyboard */,
 				86314D30266746CA0055FC31 /* Info.plist */,
+				498572472674F848000CB1B9 /* WatchManager.swift */,
 			);
 			path = MiniChallenge2;
 			sourceTree = "<group>";
@@ -757,6 +783,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4985721F26747EF6000CB1B9 /* WatchScene.sks in Resources */,
 				498571EC26746437000CB1B9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -795,10 +822,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4985722B2674C2B2000CB1B9 /* WorkoutInterfaceController.swift in Sources */,
+				4985722526748E57000CB1B9 /* WatchColor.swift in Sources */,
 				498571E826746431000CB1B9 /* NotificationController.swift in Sources */,
 				498571EA26746431000CB1B9 /* ComplicationController.swift in Sources */,
+				498572422674F742000CB1B9 /* WatchManager.swift in Sources */,
 				498571E626746431000CB1B9 /* ExtensionDelegate.swift in Sources */,
 				498571E426746431000CB1B9 /* InterfaceController.swift in Sources */,
+				4985724E2674FA72000CB1B9 /* StaticInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -813,6 +844,7 @@
 				4980859F2670C82800E10F40 /* TestResultViewController.swift in Sources */,
 				8688D5FC266FC1EA00081F8F /* SummaryDetailPlanCollectionViewCell.swift in Sources */,
 				86314D23266746C90055FC31 /* AppDelegate.swift in Sources */,
+				498572482674F848000CB1B9 /* WatchManager.swift in Sources */,
 				861C35D9266DC5F3005ABB7E /* DummyData.swift in Sources */,
 				866BCEDD2669194300482207 /* WarmUpViewController.swift in Sources */,
 				8688D5EE266F787400081F8F /* MCTableViewSectionHeader.swift in Sources */,
@@ -887,6 +919,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TATAZHHLZ7;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jackieleonardy.MiniChallenge2Watch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -900,6 +933,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TATAZHHLZ7;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jackieleonardy.MiniChallenge2Watch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
