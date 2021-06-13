@@ -13,13 +13,13 @@ class TakeTestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let supported = WCSession.isSupported() else { }
+//        guard let supported = WCSession.isSupported() else { }
         
         let session = WCSession.default
         session.delegate = self
         session.activate() // activate the session
 
-        if session.paired {
+        if session.isPaired {
             
         }
     }

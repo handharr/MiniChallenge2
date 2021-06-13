@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4922C6992675B1910026CDD3 /* UIAlertController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4922C6982675B1910026CDD3 /* UIAlertController+.swift */; };
 		4942EDC72672474400444DC8 /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942EDC62672474400444DC8 /* UILabel+.swift */; };
 		4942EDCB2672491C00444DC8 /* UIScollView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942EDCA2672491C00444DC8 /* UIScollView+.swift */; };
 		4942EDD026724CD500444DC8 /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942EDCF26724CD500444DC8 /* UITableView+.swift */; };
@@ -127,6 +128,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4922C6982675B1910026CDD3 /* UIAlertController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+.swift"; sourceTree = "<group>"; };
 		4942EDC62672474400444DC8 /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
 		4942EDCA2672491C00444DC8 /* UIScollView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScollView+.swift"; sourceTree = "<group>"; };
 		4942EDCF26724CD500444DC8 /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 				4942EDCA2672491C00444DC8 /* UIScollView+.swift */,
 				4942EDCF26724CD500444DC8 /* UITableView+.swift */,
 				4942EDD42672615300444DC8 /* UIView+.swift */,
+				4922C6982675B1910026CDD3 /* UIAlertController+.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -839,6 +842,7 @@
 			files = (
 				866BCEFD26691B8100482207 /* CardioTestViewController.swift in Sources */,
 				866BCEE22669198B00482207 /* ExcerciseReportViewController.swift in Sources */,
+				4922C6992675B1910026CDD3 /* UIAlertController+.swift in Sources */,
 				49875FD8266FAF170060BE6E /* History.swift in Sources */,
 				4942EDD026724CD500444DC8 /* UITableView+.swift in Sources */,
 				4980859F2670C82800E10F40 /* TestResultViewController.swift in Sources */,
