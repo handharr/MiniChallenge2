@@ -83,6 +83,9 @@
 		869EDCE22669C30000DA4770 /* PlanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869EDCE02669C30000DA4770 /* PlanTableViewCell.swift */; };
 		869EDCE32669C30000DA4770 /* PlanTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 869EDCE12669C30000DA4770 /* PlanTableViewCell.xib */; };
 		86A3D3D4266F2F4E001BE47B /* MCSectionHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A3D3D3266F2F4E001BE47B /* MCSectionHeaderCollectionReusableView.swift */; };
+		86C5EF0026761D4E00A290EC /* CardioCircleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C5EEFF26761D4E00A290EC /* CardioCircleLabel.swift */; };
+		86C5EF082676289600A290EC /* SectionButtonCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C5EF062676289600A290EC /* SectionButtonCollectionView.swift */; };
+		86C5EF092676289600A290EC /* SectionButtonCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86C5EF072676289600A290EC /* SectionButtonCollectionView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -211,6 +214,9 @@
 		869EDCE02669C30000DA4770 /* PlanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanTableViewCell.swift; sourceTree = "<group>"; };
 		869EDCE12669C30000DA4770 /* PlanTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlanTableViewCell.xib; sourceTree = "<group>"; };
 		86A3D3D3266F2F4E001BE47B /* MCSectionHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCSectionHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		86C5EEFF26761D4E00A290EC /* CardioCircleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardioCircleLabel.swift; sourceTree = "<group>"; };
+		86C5EF062676289600A290EC /* SectionButtonCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionButtonCollectionView.swift; sourceTree = "<group>"; };
+		86C5EF072676289600A290EC /* SectionButtonCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionButtonCollectionView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -630,6 +636,8 @@
 		86A3D3CE266F2A57001BE47B /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				86C5EF01267627AB00A290EC /* SectionButtonCollectionView */,
+				86C5EEFE26761BE000A290EC /* CardioCircleLabel */,
 				8688D5EC266F784800081F8F /* TableViewSectionHeader */,
 				86A3D3D2266F2F02001BE47B /* CollectionViewSectionHeader */,
 			);
@@ -642,6 +650,23 @@
 				86A3D3D3266F2F4E001BE47B /* MCSectionHeaderCollectionReusableView.swift */,
 			);
 			path = CollectionViewSectionHeader;
+			sourceTree = "<group>";
+		};
+		86C5EEFE26761BE000A290EC /* CardioCircleLabel */ = {
+			isa = PBXGroup;
+			children = (
+				86C5EEFF26761D4E00A290EC /* CardioCircleLabel.swift */,
+			);
+			path = CardioCircleLabel;
+			sourceTree = "<group>";
+		};
+		86C5EF01267627AB00A290EC /* SectionButtonCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				86C5EF062676289600A290EC /* SectionButtonCollectionView.swift */,
+				86C5EF072676289600A290EC /* SectionButtonCollectionView.xib */,
+			);
+			path = SectionButtonCollectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -801,6 +826,7 @@
 				866BCEE8266919B600482207 /* DetailPlanViewController.xib in Resources */,
 				8688D5F3266FA23C00081F8F /* DatePlanCollectionViewCell.xib in Resources */,
 				8688D5F8266FB55D00081F8F /* ExcerciseDetailPlanCollectionViewCell.xib in Resources */,
+				86C5EF092676289600A290EC /* SectionButtonCollectionView.xib in Resources */,
 				866BCEF326691A1C00482207 /* TakeTestViewController.xib in Resources */,
 				866BCEC626690AF800482207 /* ProfileViewController.xib in Resources */,
 				498085A62670E8BE00E10F40 /* GradingCriteriaTableViewCell.xib in Resources */,
@@ -840,6 +866,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86C5EF0026761D4E00A290EC /* CardioCircleLabel.swift in Sources */,
 				866BCEFD26691B8100482207 /* CardioTestViewController.swift in Sources */,
 				866BCEE22669198B00482207 /* ExcerciseReportViewController.swift in Sources */,
 				4922C6992675B1910026CDD3 /* UIAlertController+.swift in Sources */,
@@ -858,6 +885,7 @@
 				49875FED266FB0F70060BE6E /* SpiderChartFormatter.swift in Sources */,
 				866BCEC526690AF800482207 /* ProfileViewController.swift in Sources */,
 				498085982670B91900E10F40 /* CardioTableViewCell.swift in Sources */,
+				86C5EF082676289600A290EC /* SectionButtonCollectionView.swift in Sources */,
 				4942EDD52672615300444DC8 /* UIView+.swift in Sources */,
 				49875FE2266FAFAF0060BE6E /* HistoryTableViewController.swift in Sources */,
 				49875FF5266FB16B0060BE6E /* SpiderChartViewController.swift in Sources */,
@@ -1154,6 +1182,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MiniChallenge2/MiniChallenge2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LR9373A784;
 				INFOPLIST_FILE = MiniChallenge2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1174,6 +1203,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MiniChallenge2/MiniChallenge2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LR9373A784;
 				INFOPLIST_FILE = MiniChallenge2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
