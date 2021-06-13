@@ -19,6 +19,7 @@ class EvaluationViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Evaluation"
         navigationController?.navigationBar.prefersLargeTitles = true
+        UIAlertController.show(topTitle: "Apple Watch", sendMessage: "You don't have any Apple Watch paired", buttonText: "Oke", from: self)
         
         setUpTable()
     }
