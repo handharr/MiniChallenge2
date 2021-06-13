@@ -14,7 +14,7 @@ class TabBarController: UITabBarController {
         
         // Define ViewController
         let vc1 = MyPlanViewController()
-        let vc3 = ProfileViewController()
+        let vc3 = TakeTestViewController()
         
         // Define NavigationController
         let nav1 = UINavigationController(rootViewController: vc1)
