@@ -86,6 +86,8 @@
 		86C5EF0026761D4E00A290EC /* CardioCircleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C5EEFF26761D4E00A290EC /* CardioCircleLabel.swift */; };
 		86C5EF082676289600A290EC /* SectionButtonCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C5EF062676289600A290EC /* SectionButtonCollectionView.swift */; };
 		86C5EF092676289600A290EC /* SectionButtonCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86C5EF072676289600A290EC /* SectionButtonCollectionView.xib */; };
+		86EFA78626766113007E7158 /* TakeTestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EFA78426766113007E7158 /* TakeTestTableViewCell.swift */; };
+		86EFA78726766113007E7158 /* TakeTestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86EFA78526766113007E7158 /* TakeTestTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -217,6 +219,8 @@
 		86C5EEFF26761D4E00A290EC /* CardioCircleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardioCircleLabel.swift; sourceTree = "<group>"; };
 		86C5EF062676289600A290EC /* SectionButtonCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionButtonCollectionView.swift; sourceTree = "<group>"; };
 		86C5EF072676289600A290EC /* SectionButtonCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionButtonCollectionView.xib; sourceTree = "<group>"; };
+		86EFA78426766113007E7158 /* TakeTestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeTestTableViewCell.swift; sourceTree = "<group>"; };
+		86EFA78526766113007E7158 /* TakeTestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TakeTestTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -606,6 +610,7 @@
 		869EDCDD2669C2C800DA4770 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				86EFA783267660E8007E7158 /* TakeTestTableViewCells */,
 				4980858D2670B58C00E10F40 /* ResultTableViewCells */,
 				49875FDA266FAF4B0060BE6E /* HistoryTableViewCells */,
 				869EDCDF2669C2E100DA4770 /* PlanTableViewCells */,
@@ -667,6 +672,15 @@
 				86C5EF072676289600A290EC /* SectionButtonCollectionView.xib */,
 			);
 			path = SectionButtonCollectionView;
+			sourceTree = "<group>";
+		};
+		86EFA783267660E8007E7158 /* TakeTestTableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				86EFA78426766113007E7158 /* TakeTestTableViewCell.swift */,
+				86EFA78526766113007E7158 /* TakeTestTableViewCell.xib */,
+			);
+			path = TakeTestTableViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -830,6 +844,7 @@
 				866BCEF326691A1C00482207 /* TakeTestViewController.xib in Resources */,
 				866BCEC626690AF800482207 /* ProfileViewController.xib in Resources */,
 				498085A62670E8BE00E10F40 /* GradingCriteriaTableViewCell.xib in Resources */,
+				86EFA78726766113007E7158 /* TakeTestTableViewCell.xib in Resources */,
 				869EDCE32669C30000DA4770 /* PlanTableViewCell.xib in Resources */,
 				866BCEFE26691B8100482207 /* CardioTestViewController.xib in Resources */,
 				498085992670B91900E10F40 /* CardioTableViewCell.xib in Resources */,
@@ -886,6 +901,7 @@
 				866BCEC526690AF800482207 /* ProfileViewController.swift in Sources */,
 				498085982670B91900E10F40 /* CardioTableViewCell.swift in Sources */,
 				86C5EF082676289600A290EC /* SectionButtonCollectionView.swift in Sources */,
+				86EFA78626766113007E7158 /* TakeTestTableViewCell.swift in Sources */,
 				4942EDD52672615300444DC8 /* UIView+.swift in Sources */,
 				49875FE2266FAFAF0060BE6E /* HistoryTableViewController.swift in Sources */,
 				49875FF5266FB16B0060BE6E /* SpiderChartViewController.swift in Sources */,
