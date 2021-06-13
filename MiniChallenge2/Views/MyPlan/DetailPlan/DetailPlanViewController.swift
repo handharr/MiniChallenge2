@@ -12,6 +12,7 @@ class DetailPlanViewController: UIViewController {
     @IBOutlet weak var detailPlanCollectionView: UICollectionView!
     
     static let excercisesHeaderID = "excercisesHeaderID"
+    static let startButtonID = "startButtonID"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,7 @@ class DetailPlanViewController: UIViewController {
         detailPlanCollectionView.register(DatePlanCollectionViewCell.nib(), forCellWithReuseIdentifier: DatePlanCollectionViewCell.identifier)
         detailPlanCollectionView.register(ExcerciseDetailPlanCollectionViewCell.nib(), forCellWithReuseIdentifier: ExcerciseDetailPlanCollectionViewCell.identifier)
         detailPlanCollectionView.register(SummaryDetailPlanCollectionViewCell.nib(), forCellWithReuseIdentifier: SummaryDetailPlanCollectionViewCell.identifier)
+        detailPlanCollectionView.register(SectionButtonCollectionView.nib(), forSupplementaryViewOfKind: DetailPlanViewController.startButtonID, withReuseIdentifier: SectionButtonCollectionView.identifier)
     }
 }
 
@@ -91,11 +93,17 @@ extension DetailPlanViewController: UICollectionViewDelegate, UICollectionViewDa
     
     // Set section's Header
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: MCSectionHeaderCollectionReusableView.identifier, for: indexPath) as! MCSectionHeaderCollectionReusableView
-        
-        header.textLabel.text = "Excercises"
-        
-        return header
+        if kind == DetailPlanViewController.excercisesHeaderID {
+            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: MCSectionHeaderCollectionReusableView.identifier, for: indexPath) as! MCSectionHeaderCollectionReusableView
+            
+            header.textLabel.text = "Excercises"
+            
+            return header
+        } else {
+            let startButton = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: SectionButtonCollectionView.identifier, for: indexPath) as! SectionButtonCollectionView
+            
+            return startButton
+        }
     }
     
     // Layouting
@@ -188,6 +196,14 @@ extension DetailPlanViewController: UICollectionViewDelegate, UICollectionViewDa
                         ),
                         elementKind: DetailPlanViewController.excercisesHeaderID,
                         alignment: .topLeading
+                    ),
+                    .init(
+                        layoutSize: .init(
+                            widthDimension: .fractionalWidth(1),
+                            heightDimension: .absolute(75)
+                        ),
+                        elementKind: DetailPlanViewController.startButtonID,
+                        alignment: .bottomLeading
                     )
                 ]
                 

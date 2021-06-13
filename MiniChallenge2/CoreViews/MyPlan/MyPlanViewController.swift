@@ -17,8 +17,14 @@ class MyPlanViewController: UIViewController {
         super.viewDidLoad()
 
         title = "My Plan"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .fastForward, target: self, action: #selector(goToCardioTest))
         
         setCollectionView()
+    }
+    
+    @objc private func goToCardioTest() {
+        let vc = CardioTestViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     private func setCollectionView() {
