@@ -47,6 +47,9 @@
 		49875FF3266FB16B0060BE6E /* SpiderChartResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49875FF0266FB16B0060BE6E /* SpiderChartResultViewController.swift */; };
 		49875FF4266FB16B0060BE6E /* SpiderChartChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49875FF1266FB16B0060BE6E /* SpiderChartChildViewController.swift */; };
 		49875FF5266FB16B0060BE6E /* SpiderChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49875FF2266FB16B0060BE6E /* SpiderChartViewController.swift */; };
+		4E459BD62676FAB0008DB2D8 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 4E459BD52676FAB0008DB2D8 /* FirebaseAnalytics */; };
+		4E459BD82676FAB0008DB2D8 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 4E459BD72676FAB0008DB2D8 /* FirebaseDatabase */; };
+		4E459BDA2676FAB0008DB2D8 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 4E459BD92676FAB0008DB2D8 /* FirebaseStorage */; };
 		7DA5DC1E267323E100B6C7EB /* PlanCollectionViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA5DC1C267323E100B6C7EB /* PlanCollectionViewCells.swift */; };
 		7DA5DC1F267323E100B6C7EB /* PlanCollectionViewCells.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DA5DC1D267323E100B6C7EB /* PlanCollectionViewCells.xib */; };
 		861C35D9266DC5F3005ABB7E /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861C35D8266DC5F3005ABB7E /* DummyData.swift */; };
@@ -238,6 +241,9 @@
 			files = (
 				49875FE6266FB05E0060BE6E /* Charts in Frameworks */,
 				4985720126746527000CB1B9 /* HealthKit.framework in Frameworks */,
+				4E459BD82676FAB0008DB2D8 /* FirebaseDatabase in Frameworks */,
+				4E459BDA2676FAB0008DB2D8 /* FirebaseStorage in Frameworks */,
+				4E459BD62676FAB0008DB2D8 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -752,6 +758,9 @@
 			name = MiniChallenge2;
 			packageProductDependencies = (
 				49875FE5266FB05E0060BE6E /* Charts */,
+				4E459BD52676FAB0008DB2D8 /* FirebaseAnalytics */,
+				4E459BD72676FAB0008DB2D8 /* FirebaseDatabase */,
+				4E459BD92676FAB0008DB2D8 /* FirebaseStorage */,
 			);
 			productName = MiniChallenge2;
 			productReference = 86314D1F266746C90055FC31 /* MiniChallenge2.app */;
@@ -791,6 +800,7 @@
 			mainGroup = 86314D16266746C90055FC31;
 			packageReferences = (
 				49875FE4266FB05E0060BE6E /* XCRemoteSwiftPackageReference "Charts" */,
+				4E459BD42676FAB0008DB2D8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 86314D20266746C90055FC31 /* Products */;
 			projectDirPath = "";
@@ -1292,6 +1302,14 @@
 				minimumVersion = 3.5.0;
 			};
 		};
+		4E459BD42676FAB0008DB2D8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.1.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1299,6 +1317,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 49875FE4266FB05E0060BE6E /* XCRemoteSwiftPackageReference "Charts" */;
 			productName = Charts;
+		};
+		4E459BD52676FAB0008DB2D8 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4E459BD42676FAB0008DB2D8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		4E459BD72676FAB0008DB2D8 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4E459BD42676FAB0008DB2D8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		4E459BD92676FAB0008DB2D8 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4E459BD42676FAB0008DB2D8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
