@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="17701" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NXq-Zg-2vp">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="17701" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vTX-Rr-Q3Z">
     <device id="watch44"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -29,10 +29,10 @@
             </objects>
             <point key="canvasLocation" x="520" y="703"/>
         </scene>
-        <!--interface-->
+        <!--Home Interface Controller-->
         <scene sceneID="Vkz-kv-KI5">
             <objects>
-                <controller identifier="interface" id="vTX-Rr-Q3Z" customClass="StaticInterfaceController" customModule="MiniChallenge2_WatchApp_Extension">
+                <controller id="vTX-Rr-Q3Z" customClass="HomeInterfaceController" customModule="MiniChallenge2_WatchApp" customModuleProvider="target">
                     <items>
                         <group width="1" height="1" alignment="left" layout="vertical" id="KKl-cR-BBQ">
                             <items>
@@ -47,10 +47,10 @@
             </objects>
             <point key="canvasLocation" x="743" y="445"/>
         </scene>
-        <!--quit-->
+        <!--Quit-->
         <scene sceneID="KqR-aV-kv1">
             <objects>
-                <controller identifier="runningTest" title="quit" id="CWh-Br-Gfh" customClass="WorkoutInterfaceController" customModule="MiniChallenge2_WatchApp_Extension">
+                <controller identifier="runningTest" title="Quit" id="CWh-Br-Gfh" customClass="WorkoutInterfaceController" customModule="MiniChallenge2_WatchApp_Extension">
                     <items>
                         <group width="1" height="1" alignment="left" layout="vertical" id="sum-SN-DAh">
                             <items>

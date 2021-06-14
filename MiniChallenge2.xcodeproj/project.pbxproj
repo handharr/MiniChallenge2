@@ -17,8 +17,6 @@
 		4929018C2677C656007F00D0 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4929018A2677C656007F00D0 /* Interface.storyboard */; };
 		4929018D2677C656007F00D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4929018B2677C656007F00D0 /* Assets.xcassets */; };
 		4929019F2677C690007F00D0 /* WatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4929019A2677C690007F00D0 /* WatchManager.swift */; };
-		492901A02677C690007F00D0 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4929019B2677C690007F00D0 /* InterfaceController.swift */; };
-		492901A12677C690007F00D0 /* StaticInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4929019C2677C690007F00D0 /* StaticInterfaceController.swift */; };
 		492901A22677C690007F00D0 /* WatchColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4929019D2677C690007F00D0 /* WatchColor.swift */; };
 		492901A32677C691007F00D0 /* WorkoutInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4929019E2677C690007F00D0 /* WorkoutInterfaceController.swift */; };
 		492901AE2677C6AA007F00D0 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4985720726746570000CB1B9 /* HealthKit.framework */; };
@@ -47,6 +45,8 @@
 		49875FF3266FB16B0060BE6E /* SpiderChartResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49875FF0266FB16B0060BE6E /* SpiderChartResultViewController.swift */; };
 		49875FF4266FB16B0060BE6E /* SpiderChartChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49875FF1266FB16B0060BE6E /* SpiderChartChildViewController.swift */; };
 		49875FF5266FB16B0060BE6E /* SpiderChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49875FF2266FB16B0060BE6E /* SpiderChartViewController.swift */; };
+		4990F8F72677D7CE007030F0 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4990F8F62677D7CE007030F0 /* InterfaceController.swift */; };
+		4990F8FF2677D879007030F0 /* HomeInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4990F8FE2677D879007030F0 /* HomeInterfaceController.swift */; };
 		4994ACA826772C3600127044 /* ProfileHealthToggleTableViewCells.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4994ACA626772C3600127044 /* ProfileHealthToggleTableViewCells.xib */; };
 		4994ACA926772C3600127044 /* ProfileHealthToggleTableViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4994ACA726772C3600127044 /* ProfileHealthToggleTableViewCells.swift */; };
 		4994ACAF26772C5900127044 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4994ACAE26772C5900127044 /* Profile.swift */; };
@@ -161,8 +161,6 @@
 		4929018A2677C656007F00D0 /* Interface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Interface.storyboard; sourceTree = "<group>"; };
 		4929018B2677C656007F00D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4929019A2677C690007F00D0 /* WatchManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchManager.swift; sourceTree = "<group>"; };
-		4929019B2677C690007F00D0 /* InterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
-		4929019C2677C690007F00D0 /* StaticInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticInterfaceController.swift; sourceTree = "<group>"; };
 		4929019D2677C690007F00D0 /* WatchColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchColor.swift; sourceTree = "<group>"; };
 		4929019E2677C690007F00D0 /* WorkoutInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutInterfaceController.swift; sourceTree = "<group>"; };
 		492901AD2677C6AA007F00D0 /* MiniChallenge2 WatchApp Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MiniChallenge2 WatchApp Extension.entitlements"; sourceTree = "<group>"; };
@@ -192,6 +190,8 @@
 		49875FF0266FB16B0060BE6E /* SpiderChartResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiderChartResultViewController.swift; sourceTree = "<group>"; };
 		49875FF1266FB16B0060BE6E /* SpiderChartChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiderChartChildViewController.swift; sourceTree = "<group>"; };
 		49875FF2266FB16B0060BE6E /* SpiderChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiderChartViewController.swift; sourceTree = "<group>"; };
+		4990F8F62677D7CE007030F0 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		4990F8FE2677D879007030F0 /* HomeInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInterfaceController.swift; sourceTree = "<group>"; };
 		4994ACA626772C3600127044 /* ProfileHealthToggleTableViewCells.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileHealthToggleTableViewCells.xib; sourceTree = "<group>"; };
 		4994ACA726772C3600127044 /* ProfileHealthToggleTableViewCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHealthToggleTableViewCells.swift; sourceTree = "<group>"; };
 		4994ACAE26772C5900127044 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
@@ -293,12 +293,12 @@
 				492901692677C62C007F00D0 /* Assets.xcassets */,
 				4929016B2677C62C007F00D0 /* Info.plist */,
 				4929016C2677C62C007F00D0 /* PushNotificationPayload.apns */,
-				4929019B2677C690007F00D0 /* InterfaceController.swift */,
-				4929019C2677C690007F00D0 /* StaticInterfaceController.swift */,
 				4929019D2677C690007F00D0 /* WatchColor.swift */,
 				4929019A2677C690007F00D0 /* WatchManager.swift */,
 				4929019E2677C690007F00D0 /* WorkoutInterfaceController.swift */,
 				492901C02677CF53007F00D0 /* MyScene.sks */,
+				4990F8F62677D7CE007030F0 /* InterfaceController.swift */,
+				4990F8FE2677D879007030F0 /* HomeInterfaceController.swift */,
 			);
 			path = "MiniChallenge2 WatchApp Extension";
 			sourceTree = "<group>";
@@ -904,14 +904,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				492901A02677C690007F00D0 /* InterfaceController.swift in Sources */,
 				492901662677C626007F00D0 /* NotificationController.swift in Sources */,
 				492901682677C626007F00D0 /* ComplicationController.swift in Sources */,
 				492901642677C626007F00D0 /* ExtensionDelegate.swift in Sources */,
 				4929019F2677C690007F00D0 /* WatchManager.swift in Sources */,
+				4990F8FF2677D879007030F0 /* HomeInterfaceController.swift in Sources */,
 				492901A22677C690007F00D0 /* WatchColor.swift in Sources */,
+				4990F8F72677D7CE007030F0 /* InterfaceController.swift in Sources */,
 				492901A32677C691007F00D0 /* WorkoutInterfaceController.swift in Sources */,
-				492901A12677C690007F00D0 /* StaticInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
