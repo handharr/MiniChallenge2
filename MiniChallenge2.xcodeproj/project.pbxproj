@@ -94,6 +94,9 @@
 		86C5EF092676289600A290EC /* SectionButtonCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86C5EF072676289600A290EC /* SectionButtonCollectionView.xib */; };
 		86D6DA0B267717F900488252 /* InputCountExamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D6DA09267717F900488252 /* InputCountExamViewController.swift */; };
 		86D6DA0C267717F900488252 /* InputCountExamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86D6DA0A267717F900488252 /* InputCountExamViewController.xib */; };
+		86D6DA1026771E2100488252 /* ExamCameraViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D6DA0E26771E2100488252 /* ExamCameraViewViewController.swift */; };
+		86D6DA1126771E2100488252 /* ExamCameraViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86D6DA0F26771E2100488252 /* ExamCameraViewViewController.xib */; };
+		86D6DA13267721FA00488252 /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D6DA12267721FA00488252 /* VideoCapture.swift */; };
 		86EFA78626766113007E7158 /* TakeTestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EFA78426766113007E7158 /* TakeTestTableViewCell.swift */; };
 		86EFA78726766113007E7158 /* TakeTestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86EFA78526766113007E7158 /* TakeTestTableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -232,6 +235,9 @@
 		86C5EF072676289600A290EC /* SectionButtonCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionButtonCollectionView.xib; sourceTree = "<group>"; };
 		86D6DA09267717F900488252 /* InputCountExamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputCountExamViewController.swift; sourceTree = "<group>"; };
 		86D6DA0A267717F900488252 /* InputCountExamViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputCountExamViewController.xib; sourceTree = "<group>"; };
+		86D6DA0E26771E2100488252 /* ExamCameraViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamCameraViewViewController.swift; sourceTree = "<group>"; };
+		86D6DA0F26771E2100488252 /* ExamCameraViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExamCameraViewViewController.xib; sourceTree = "<group>"; };
+		86D6DA12267721FA00488252 /* VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
 		86EFA78426766113007E7158 /* TakeTestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeTestTableViewCell.swift; sourceTree = "<group>"; };
 		86EFA78526766113007E7158 /* TakeTestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TakeTestTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -562,6 +568,7 @@
 		866BCEEE26691A0700482207 /* Evaluation */ = {
 			isa = PBXGroup;
 			children = (
+				86D6DA0D26771E0B00488252 /* ExamCameraView */,
 				86D6DA08267717C900488252 /* InputCountExam */,
 				49875FEF266FB1580060BE6E /* SpiderChart */,
 				49875FE0266FAFA30060BE6E /* History */,
@@ -709,6 +716,16 @@
 				86D6DA0A267717F900488252 /* InputCountExamViewController.xib */,
 			);
 			path = InputCountExam;
+			sourceTree = "<group>";
+		};
+		86D6DA0D26771E0B00488252 /* ExamCameraView */ = {
+			isa = PBXGroup;
+			children = (
+				86D6DA0E26771E2100488252 /* ExamCameraViewViewController.swift */,
+				86D6DA0F26771E2100488252 /* ExamCameraViewViewController.xib */,
+				86D6DA12267721FA00488252 /* VideoCapture.swift */,
+			);
+			path = ExamCameraView;
 			sourceTree = "<group>";
 		};
 		86EFA783267660E8007E7158 /* TakeTestTableViewCells */ = {
@@ -881,6 +898,7 @@
 				866BCEE8266919B600482207 /* DetailPlanViewController.xib in Resources */,
 				8688D5F3266FA23C00081F8F /* DatePlanCollectionViewCell.xib in Resources */,
 				8688D5F8266FB55D00081F8F /* ExcerciseDetailPlanCollectionViewCell.xib in Resources */,
+				86D6DA1126771E2100488252 /* ExamCameraViewViewController.xib in Resources */,
 				86D6DA0C267717F900488252 /* InputCountExamViewController.xib in Resources */,
 				86C5EF092676289600A290EC /* SectionButtonCollectionView.xib in Resources */,
 				866BCEF326691A1C00482207 /* TakeTestViewController.xib in Resources */,
@@ -928,6 +946,7 @@
 				4994ACA926772C3600127044 /* ProfileHealthToggleTableViewCells.swift in Sources */,
 				866BCEFD26691B8100482207 /* CardioTestViewController.swift in Sources */,
 				866BCEE22669198B00482207 /* ExcerciseReportViewController.swift in Sources */,
+				86D6DA1026771E2100488252 /* ExamCameraViewViewController.swift in Sources */,
 				4922C6992675B1910026CDD3 /* UIAlertController+.swift in Sources */,
 				49875FD8266FAF170060BE6E /* History.swift in Sources */,
 				4942EDD026724CD500444DC8 /* UITableView+.swift in Sources */,
@@ -955,6 +974,7 @@
 				866BCEC02668FEC200482207 /* MyPlanViewController.swift in Sources */,
 				49875FF4266FB16B0060BE6E /* SpiderChartChildViewController.swift in Sources */,
 				7DA5DC1E267323E100B6C7EB /* PlanCollectionViewCells.swift in Sources */,
+				86D6DA13267721FA00488252 /* VideoCapture.swift in Sources */,
 				498085A52670E8BE00E10F40 /* GradingCriteriaTableViewCell.swift in Sources */,
 				49875FDE266FAF5D0060BE6E /* HistoryTableViewCell.swift in Sources */,
 				49875FF3266FB16B0060BE6E /* SpiderChartResultViewController.swift in Sources */,

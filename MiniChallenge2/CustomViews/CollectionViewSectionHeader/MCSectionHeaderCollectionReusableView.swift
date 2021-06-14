@@ -15,7 +15,7 @@ class MCSectionHeaderCollectionReusableView: UICollectionReusableView {
         let label = UILabel()
         label.textAlignment = .left
         label.font = .systemFont(ofSize: 22, weight: .bold)
-        label.textColor = .black
+        label.textColor = .label
         
         return label
     }()
