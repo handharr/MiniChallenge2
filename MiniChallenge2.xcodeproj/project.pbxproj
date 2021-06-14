@@ -22,6 +22,7 @@
 		492901A22677C690007F00D0 /* WatchColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4929019D2677C690007F00D0 /* WatchColor.swift */; };
 		492901A32677C691007F00D0 /* WorkoutInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4929019E2677C690007F00D0 /* WorkoutInterfaceController.swift */; };
 		492901AE2677C6AA007F00D0 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4985720726746570000CB1B9 /* HealthKit.framework */; };
+		492901C12677CF53007F00D0 /* MyScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 492901C02677CF53007F00D0 /* MyScene.sks */; };
 		4942EDC72672474400444DC8 /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942EDC62672474400444DC8 /* UILabel+.swift */; };
 		4942EDCB2672491C00444DC8 /* UIScollView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942EDCA2672491C00444DC8 /* UIScollView+.swift */; };
 		4942EDD026724CD500444DC8 /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942EDCF26724CD500444DC8 /* UITableView+.swift */; };
@@ -165,6 +166,7 @@
 		4929019D2677C690007F00D0 /* WatchColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchColor.swift; sourceTree = "<group>"; };
 		4929019E2677C690007F00D0 /* WorkoutInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutInterfaceController.swift; sourceTree = "<group>"; };
 		492901AD2677C6AA007F00D0 /* MiniChallenge2 WatchApp Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MiniChallenge2 WatchApp Extension.entitlements"; sourceTree = "<group>"; };
+		492901C02677CF53007F00D0 /* MyScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyScene.sks; sourceTree = "<group>"; };
 		4942EDC62672474400444DC8 /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
 		4942EDCA2672491C00444DC8 /* UIScollView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScollView+.swift"; sourceTree = "<group>"; };
 		4942EDCF26724CD500444DC8 /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
@@ -296,6 +298,7 @@
 				4929019D2677C690007F00D0 /* WatchColor.swift */,
 				4929019A2677C690007F00D0 /* WatchManager.swift */,
 				4929019E2677C690007F00D0 /* WorkoutInterfaceController.swift */,
+				492901C02677CF53007F00D0 /* MyScene.sks */,
 			);
 			path = "MiniChallenge2 WatchApp Extension";
 			sourceTree = "<group>";
@@ -856,6 +859,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				492901C12677CF53007F00D0 /* MyScene.sks in Resources */,
 				4929016A2677C62C007F00D0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

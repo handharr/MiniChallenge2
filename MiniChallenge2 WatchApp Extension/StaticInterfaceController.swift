@@ -18,6 +18,7 @@ class StaticInterfaceController: WKInterfaceController {
         watchSession = WCSession.default
         watchSession?.delegate = self
         watchSession?.activate()
+        presentController(withNames: ["cardioExam", "runningTest"], contexts: nil)
     }
     
     override func didDeactivate() {
@@ -33,7 +34,10 @@ extension StaticInterfaceController: WCSessionDelegate{
     }
     
     func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
-        presentController(withNames: ["cardioExam", "runningTest"], contexts: nil)
+        if let data = applicationContext["data"] as? Bool {
+            print(data)
+            presentController(withNames: ["cardioExam", "runningTest"], contexts: nil)
+        }
     }
     
 //    override func contextForSegue(withIdentifier segueIdentifier: String) -> Any? {
@@ -42,7 +46,7 @@ extension StaticInterfaceController: WCSessionDelegate{
 //    }
     
     func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
-        presentController(withNames: ["cardioExam", "runningTest"], contexts: nil)
+//        presentController(withNames: ["cardioExam", "runningTest"], contexts: nil)
     }
     
     

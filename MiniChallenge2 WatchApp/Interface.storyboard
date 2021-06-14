@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="17701" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vTX-Rr-Q3Z">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="17701" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NXq-Zg-2vp">
     <device id="watch44"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -29,10 +29,10 @@
             </objects>
             <point key="canvasLocation" x="520" y="703"/>
         </scene>
-        <!--Static Interface Controller-->
+        <!--interface-->
         <scene sceneID="Vkz-kv-KI5">
             <objects>
-                <controller id="vTX-Rr-Q3Z" customClass="StaticInterfaceController" customModule="MiniChallenge2_WatchApp_Extension">
+                <controller identifier="interface" id="vTX-Rr-Q3Z" customClass="StaticInterfaceController" customModule="MiniChallenge2_WatchApp_Extension">
                     <items>
                         <group width="1" height="1" alignment="left" layout="vertical" id="KKl-cR-BBQ">
                             <items>
@@ -45,85 +45,27 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="529" y="326"/>
+            <point key="canvasLocation" x="743" y="445"/>
         </scene>
-        <!--Quit-->
-        <scene sceneID="bLZ-tS-lnS">
+        <!--quit-->
+        <scene sceneID="KqR-aV-kv1">
             <objects>
-                <controller identifier="cardioExam" title="Quit" fullBounds="YES" id="ZPI-iy-out" customClass="InterfaceController" customModule="MiniChallenge2_WatchApp" customModuleProvider="target">
+                <controller identifier="runningTest" title="quit" id="CWh-Br-Gfh" customClass="WorkoutInterfaceController" customModule="MiniChallenge2_WatchApp_Extension">
                     <items>
-                        <group width="1" height="1" alignment="left" layout="overlap" id="Pip-Wq-yM0">
+                        <group width="1" height="1" alignment="left" layout="vertical" id="sum-SN-DAh">
                             <items>
-                                <group width="1" height="0.90000000000000002" alignment="left" layout="overlap" id="9d0-kN-WXO">
+                                <group width="1" height="0.59999999999999998" alignment="center" id="jVz-Kr-9jS">
                                     <items>
-                                        <spriteKitScene alignment="center" verticalAlignment="center" id="UQg-FQ-2fY"/>
-                                        <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="sRL-D8-JKo">
+                                        <group width="1" height="1" alignment="center" verticalAlignment="center" id="oky-Ot-Jvz">
                                             <items>
-                                                <group width="1" alignment="center" layout="vertical" id="h8H-j3-oSg">
+                                                <group width="1" alignment="left" id="EWh-KG-9LB">
                                                     <items>
-                                                        <label width="1" alignment="center" text="1,3" textAlignment="center" id="Pf3-xQ-h0I">
-                                                            <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
-                                                        </label>
-                                                    </items>
-                                                </group>
-                                                <group width="1" alignment="left" verticalAlignment="bottom" id="wSd-Jj-Jg9">
-                                                    <items>
-                                                        <label width="1" alignment="center" text="Kilometer" textAlignment="center" id="UY0-gU-CS1">
-                                                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
-                                                        </label>
-                                                    </items>
-                                                </group>
-                                            </items>
-                                        </group>
-                                    </items>
-                                </group>
-                                <group width="1" height="0.29999999999999999" alignment="left" verticalAlignment="bottom" id="C70-Cm-jvh">
-                                    <items>
-                                        <button width="0.25" height="0.69999999999999996" alignment="left" verticalAlignment="bottom" backgroundImage="pausebutton" id="7bh-ZU-wNb">
-                                            <connections>
-                                                <action selector="pauseTapped" destination="ZPI-iy-out" id="bKz-Qb-ctm"/>
-                                            </connections>
-                                        </button>
-                                        <label alignment="center" verticalAlignment="bottom" text="Running 1,6km" textAlignment="center" id="ST1-ts-B1V">
-                                            <fontDescription key="font" type="system" pointSize="12"/>
-                                        </label>
-                                        <button width="0.25" height="0.69999999999999996" alignment="right" verticalAlignment="bottom" backgroundImage="playbutton" id="ApA-TK-2PC">
-                                            <connections>
-                                                <action selector="skippedTapped" destination="ZPI-iy-out" id="Whf-fv-EV5"/>
-                                            </connections>
-                                        </button>
-                                    </items>
-                                </group>
-                            </items>
-                        </group>
-                    </items>
-                    <edgeInsets key="margins" left="1" right="1" top="0.0" bottom="20"/>
-                    <connections>
-                        <outlet property="interfaceScene" destination="UQg-FQ-2fY" id="yeS-yy-6ue"/>
-                    </connections>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="14" y="40"/>
-        </scene>
-        <!--Quit-->
-        <scene sceneID="xP8-2R-yTb">
-            <objects>
-                <controller identifier="runningTest" title="Quit" animationDuration="3" id="x2J-cQ-TPD" customClass="WorkoutInterfaceController" customModule="MiniChallenge2Watch_WatchKit_Extension">
-                    <items>
-                        <group width="1" height="1" alignment="left" layout="vertical" id="qLa-W0-Hbh">
-                            <items>
-                                <group width="1" height="0.59999999999999998" alignment="center" id="6Xk-8Z-i6W">
-                                    <items>
-                                        <group width="1" height="1" alignment="center" verticalAlignment="center" id="CYE-AW-0BP">
-                                            <items>
-                                                <group width="1" alignment="left" id="VPV-OG-ELt">
-                                                    <items>
-                                                        <label height="1" alignment="center" verticalAlignment="center" text="0,78" id="YoE-Ah-EiW">
+                                                        <label height="1" alignment="center" verticalAlignment="center" text="0,78" id="snD-Sg-uHi">
                                                             <fontDescription key="font" type="system" pointSize="70"/>
                                                         </label>
-                                                        <group alignment="center" id="z7i-bD-vwn">
+                                                        <group alignment="center" id="58N-oY-J0a">
                                                             <items>
-                                                                <label height="1" alignment="center" verticalAlignment="bottom" text="Km" id="Q35-na-VjG"/>
+                                                                <label height="1" alignment="center" verticalAlignment="bottom" text="Km" id="rFz-ey-vA2"/>
                                                             </items>
                                                         </group>
                                                     </items>
@@ -132,48 +74,48 @@
                                         </group>
                                     </items>
                                 </group>
-                                <group width="1" height="0.20000000000000001" alignment="left" verticalAlignment="bottom" spacing="0.0" id="aTm-Zj-onH">
+                                <group width="1" height="0.20000000000000001" alignment="left" verticalAlignment="bottom" spacing="0.0" id="ou4-OM-qTM">
                                     <items>
-                                        <group width="0.40000000000000002" height="0.5" alignment="left" verticalAlignment="center" id="AOm-Px-xVo">
+                                        <group width="0.40000000000000002" height="0.5" alignment="left" verticalAlignment="center" id="E21-uT-GEV">
                                             <items>
-                                                <imageView alignment="left" verticalAlignment="center" image="heart.fill" catalog="system" id="gsw-c7-j0t">
+                                                <imageView alignment="left" verticalAlignment="center" image="heart.fill" catalog="system" id="Eeb-WW-oVH">
                                                     <color key="tintColor" red="0.77647058820000003" green="0.31764705879999999" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </imageView>
-                                                <label alignment="left" verticalAlignment="center" text="112" id="hEC-P3-4af">
+                                                <label alignment="left" verticalAlignment="center" text="112" id="nlc-EU-r1l">
                                                     <color key="textColor" red="0.77647058820000003" green="0.31764705879999999" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </label>
                                             </items>
                                         </group>
-                                        <group width="0.59999999999999998" alignment="right" verticalAlignment="center" id="8fH-Dn-Rpx">
+                                        <group width="0.59999999999999998" alignment="right" verticalAlignment="center" id="gPN-Sf-U8i">
                                             <items>
-                                                <imageView alignment="right" verticalAlignment="center" image="timer" catalog="system" id="1zT-Jr-rEH">
+                                                <imageView alignment="right" verticalAlignment="center" image="timer" catalog="system" id="7zk-nw-O4L">
                                                     <color key="tintColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </imageView>
-                                                <label alignment="right" verticalAlignment="center" text="28:09:00" id="94q-Bg-zha"/>
+                                                <label alignment="right" verticalAlignment="center" text="28:09:00" id="Ecz-De-MoT"/>
                                             </items>
                                         </group>
                                     </items>
                                 </group>
-                                <group width="1" height="0.20000000000000001" alignment="left" verticalAlignment="bottom" id="xri-AP-7JA">
+                                <group width="1" height="0.20000000000000001" alignment="left" verticalAlignment="bottom" id="A75-fs-Zmu">
                                     <items>
-                                        <group width="0.5" height="0.5" alignment="left" verticalAlignment="center" id="VYu-tO-IHa">
+                                        <group width="0.5" height="0.5" alignment="left" verticalAlignment="center" id="Tnx-Mh-42w">
                                             <items>
-                                                <label alignment="left" verticalAlignment="center" text="Calories" id="o4V-OP-vOL">
+                                                <label alignment="left" verticalAlignment="center" text="Calories" id="X0K-Na-mga">
                                                     <color key="textColor" red="0.33203311829999999" green="0.36134697389999998" blue="0.37640951140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                                                 </label>
-                                                <label alignment="left" verticalAlignment="center" text="300" id="xBD-Xl-EAK">
+                                                <label alignment="left" verticalAlignment="center" text="300" id="nLP-KO-1LW">
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </label>
                                             </items>
                                         </group>
-                                        <group width="0.5" alignment="right" verticalAlignment="center" id="IQu-HW-6kQ">
+                                        <group width="0.5" alignment="right" verticalAlignment="center" id="gdU-QL-l4T">
                                             <items>
-                                                <label alignment="right" verticalAlignment="center" text="Speed" id="eSu-I6-fJo">
+                                                <label alignment="right" verticalAlignment="center" text="Speed" id="gRp-rm-P44">
                                                     <color key="textColor" red="0.4549019608" green="0.4549019608" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                                                 </label>
-                                                <label alignment="right" verticalAlignment="center" text="8.40" id="gwe-ke-Tnz"/>
+                                                <label alignment="right" verticalAlignment="center" text="8.40" id="2If-fA-v7y"/>
                                             </items>
                                         </group>
                                     </items>
@@ -182,15 +124,64 @@
                         </group>
                     </items>
                     <connections>
-                        <outlet property="averageSpeed" destination="gwe-ke-Tnz" id="pGu-2v-lPb"/>
-                        <outlet property="calories" destination="xBD-Xl-EAK" id="Hoa-tb-7ah"/>
-                        <outlet property="distanceRunning" destination="YoE-Ah-EiW" id="wmR-d9-j9T"/>
-                        <outlet property="heartBeat" destination="hEC-P3-4af" id="EZd-ee-FMt"/>
-                        <outlet property="timer" destination="94q-Bg-zha" id="shA-wz-ZeY"/>
+                        <outlet property="averageSpeed" destination="2If-fA-v7y" id="msQ-Un-ez6"/>
+                        <outlet property="calories" destination="nLP-KO-1LW" id="rrG-sq-ErH"/>
+                        <outlet property="distanceRunning" destination="snD-Sg-uHi" id="lQX-A5-uU5"/>
+                        <outlet property="heartBeat" destination="nlc-EU-r1l" id="x1m-GO-uMf"/>
+                        <outlet property="timer" destination="Ecz-De-MoT" id="nw7-rl-saG"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="268" y="33"/>
+            <point key="canvasLocation" x="220" y="326"/>
+        </scene>
+        <!--Quit-->
+        <scene sceneID="uAW-uM-dcZ">
+            <objects>
+                <controller identifier="cardioExam" title="Quit" id="NXq-Zg-2vp" customClass="InterfaceController">
+                    <items>
+                        <group width="1" height="1" alignment="left" layout="overlap" id="YYb-JF-tMh">
+                            <items>
+                                <group width="1" height="0.90000000000000002" alignment="left" layout="overlap" id="9Su-9Z-ZVk">
+                                    <items>
+                                        <group width="1" height="0.29999999999999999" alignment="left" verticalAlignment="bottom" id="4nC-jc-VEq">
+                                            <items>
+                                                <button width="0.25" height="0.69999999999999996" alignment="left" verticalAlignment="bottom" backgroundImage="pausebutton" id="LWi-rb-ccm"/>
+                                                <label alignment="center" verticalAlignment="bottom" text="Running 1,6km" textAlignment="center" id="FaR-x5-p4j">
+                                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                                </label>
+                                                <button width="0.25" height="0.69999999999999996" alignment="right" verticalAlignment="bottom" backgroundImage="playbutton" id="T8p-En-l2O"/>
+                                            </items>
+                                        </group>
+                                        <spriteKitScene alignment="center" verticalAlignment="center" scene="MyScene.sks" id="WLs-dD-jm8"/>
+                                        <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="trf-MH-XNb">
+                                            <items>
+                                                <group width="1" alignment="center" layout="vertical" id="7hx-5T-ue2">
+                                                    <items>
+                                                        <label width="1" alignment="center" text="1,3" textAlignment="center" id="V9Y-S7-v4B">
+                                                            <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
+                                                        </label>
+                                                    </items>
+                                                </group>
+                                                <group width="1" alignment="left" verticalAlignment="bottom" id="DpT-zu-Ava">
+                                                    <items>
+                                                        <label width="1" alignment="center" text="Kilometer" textAlignment="center" id="Fas-n3-PDd">
+                                                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                                        </label>
+                                                    </items>
+                                                </group>
+                                            </items>
+                                        </group>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="interfaceScene" destination="WLs-dD-jm8" id="lKR-m9-Y1p"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-103" y="326"/>
         </scene>
     </scenes>
     <resources>
