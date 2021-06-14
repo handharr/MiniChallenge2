@@ -62,7 +62,18 @@ class TakeTestViewController: UIViewController {
 
                 alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.destructive, handler: { _ in }))
             
+            if ((self.session?.isReachable) != nil){
+                
+            }
+            
                 alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: {_ in
+                    do{
+                        let data = ["Data" : true]
+                        try WCSession.default.updateApplicationContext(data)
+                    }catch{
+                        print("Error")
+                    }
+                    
                     self.navigateToCardioTest(isUsingPhone: false)
                 }))
             self.present(alert, animated: true, completion: nil)

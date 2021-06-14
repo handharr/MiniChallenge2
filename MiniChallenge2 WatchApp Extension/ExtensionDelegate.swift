@@ -1,8 +1,8 @@
 //
 //  ExtensionDelegate.swift
-//  MiniChallenge2Watch WatchKit Extension
+//  MiniChallenge2 WatchApp Extension
 //
-//  Created by Jackie Leonardy on 12/06/21.
+//  Created by Jackie Leonardy on 14/06/21.
 //
 
 import WatchKit
