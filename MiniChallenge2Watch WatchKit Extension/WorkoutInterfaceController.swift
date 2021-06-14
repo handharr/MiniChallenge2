@@ -42,6 +42,14 @@ class WorkoutInterfaceController: WKInterfaceController{
         setUpData()
         requestAuthorization()
         startWorkout()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(notificationTriggered), name: NSNotification.Name("Pause Triggered"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(notificationTriggered), name: NSNotification.Name("Skip Triggered"), object: nil)
+    }
+    
+    @objc
+    func notificationTriggered(){
+        print("triggered")
     }
     
     override func willActivate() {

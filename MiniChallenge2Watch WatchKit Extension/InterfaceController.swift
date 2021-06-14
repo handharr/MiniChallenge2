@@ -84,7 +84,8 @@ class InterfaceController: WKInterfaceController {
 
     @IBAction func pauseTapped() {
 //        self.popToRootController()
-        delegate?.stopDidTapped(isRunning: self.isRunning)
-        isRunning = !isRunning
+//        delegate?.stopDidTapped(isRunning: self.isRunning)
+//        isRunning = !isRunning
+        NotificationCenter.default.post(name: NSNotification.Name("Pause Triggered"), object: nil)
     }
 }

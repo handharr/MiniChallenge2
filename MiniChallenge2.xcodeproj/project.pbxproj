@@ -47,6 +47,11 @@
 		49875FF3266FB16B0060BE6E /* SpiderChartResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49875FF0266FB16B0060BE6E /* SpiderChartResultViewController.swift */; };
 		49875FF4266FB16B0060BE6E /* SpiderChartChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49875FF1266FB16B0060BE6E /* SpiderChartChildViewController.swift */; };
 		49875FF5266FB16B0060BE6E /* SpiderChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49875FF2266FB16B0060BE6E /* SpiderChartViewController.swift */; };
+		4994ACA826772C3600127044 /* ProfileHealthToggleTableViewCells.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4994ACA626772C3600127044 /* ProfileHealthToggleTableViewCells.xib */; };
+		4994ACA926772C3600127044 /* ProfileHealthToggleTableViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4994ACA726772C3600127044 /* ProfileHealthToggleTableViewCells.swift */; };
+		4994ACAF26772C5900127044 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4994ACAE26772C5900127044 /* Profile.swift */; };
+		4994ACBA26772F9E00127044 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4994ACB826772F9E00127044 /* ProfileViewController.swift */; };
+		4994ACBB26772F9E00127044 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4994ACB926772F9E00127044 /* ProfileViewController.xib */; };
 		4E459BD62676FAB0008DB2D8 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 4E459BD52676FAB0008DB2D8 /* FirebaseAnalytics */; };
 		4E459BD82676FAB0008DB2D8 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 4E459BD72676FAB0008DB2D8 /* FirebaseDatabase */; };
 		4E459BDA2676FAB0008DB2D8 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 4E459BD92676FAB0008DB2D8 /* FirebaseStorage */; };
@@ -60,8 +65,6 @@
 		866BCEBD2668FDF900482207 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866BCEBC2668FDF900482207 /* TabBarController.swift */; };
 		866BCEC02668FEC200482207 /* MyPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866BCEBE2668FEC200482207 /* MyPlanViewController.swift */; };
 		866BCEC12668FEC200482207 /* MyPlanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 866BCEBF2668FEC200482207 /* MyPlanViewController.xib */; };
-		866BCEC526690AF800482207 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866BCEC326690AF800482207 /* ProfileViewController.swift */; };
-		866BCEC626690AF800482207 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 866BCEC426690AF800482207 /* ProfileViewController.xib */; };
 		866BCECA26690B2100482207 /* EvaluationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866BCEC826690B2100482207 /* EvaluationViewController.swift */; };
 		866BCEDD2669194300482207 /* WarmUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866BCEDB2669194300482207 /* WarmUpViewController.swift */; };
 		866BCEDE2669194300482207 /* WarmUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 866BCEDC2669194300482207 /* WarmUpViewController.xib */; };
@@ -183,6 +186,11 @@
 		49875FF0266FB16B0060BE6E /* SpiderChartResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiderChartResultViewController.swift; sourceTree = "<group>"; };
 		49875FF1266FB16B0060BE6E /* SpiderChartChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiderChartChildViewController.swift; sourceTree = "<group>"; };
 		49875FF2266FB16B0060BE6E /* SpiderChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiderChartViewController.swift; sourceTree = "<group>"; };
+		4994ACA626772C3600127044 /* ProfileHealthToggleTableViewCells.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileHealthToggleTableViewCells.xib; sourceTree = "<group>"; };
+		4994ACA726772C3600127044 /* ProfileHealthToggleTableViewCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHealthToggleTableViewCells.swift; sourceTree = "<group>"; };
+		4994ACAE26772C5900127044 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		4994ACB826772F9E00127044 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		4994ACB926772F9E00127044 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		7DA5DC1C267323E100B6C7EB /* PlanCollectionViewCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanCollectionViewCells.swift; sourceTree = "<group>"; };
 		7DA5DC1D267323E100B6C7EB /* PlanCollectionViewCells.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlanCollectionViewCells.xib; sourceTree = "<group>"; };
 		861C35D8266DC5F3005ABB7E /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
@@ -195,8 +203,6 @@
 		866BCEBC2668FDF900482207 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		866BCEBE2668FEC200482207 /* MyPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlanViewController.swift; sourceTree = "<group>"; };
 		866BCEBF2668FEC200482207 /* MyPlanViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPlanViewController.xib; sourceTree = "<group>"; };
-		866BCEC326690AF800482207 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		866BCEC426690AF800482207 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		866BCEC826690B2100482207 /* EvaluationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationViewController.swift; sourceTree = "<group>"; };
 		866BCEDB2669194300482207 /* WarmUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarmUpViewController.swift; sourceTree = "<group>"; };
 		866BCEDC2669194300482207 /* WarmUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WarmUpViewController.xib; sourceTree = "<group>"; };
@@ -367,6 +373,15 @@
 			path = SpiderChart;
 			sourceTree = "<group>";
 		};
+		4994ACA526772C3600127044 /* ProfileHealthToggleViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				4994ACA626772C3600127044 /* ProfileHealthToggleTableViewCells.xib */,
+				4994ACA726772C3600127044 /* ProfileHealthToggleTableViewCells.swift */,
+			);
+			path = ProfileHealthToggleViewCells;
+			sourceTree = "<group>";
+		};
 		7DA5DC1B267323E100B6C7EB /* PlanCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -424,6 +439,7 @@
 			children = (
 				861C35D8266DC5F3005ABB7E /* DummyData.swift */,
 				49875FD7266FAF170060BE6E /* History.swift */,
+				4994ACAE26772C5900127044 /* Profile.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -481,8 +497,8 @@
 		866BCEC226690A6900482207 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				866BCEC326690AF800482207 /* ProfileViewController.swift */,
-				866BCEC426690AF800482207 /* ProfileViewController.xib */,
+				4994ACB826772F9E00127044 /* ProfileViewController.swift */,
+				4994ACB926772F9E00127044 /* ProfileViewController.xib */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -621,6 +637,7 @@
 		869EDCDD2669C2C800DA4770 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				4994ACA526772C3600127044 /* ProfileHealthToggleViewCells */,
 				86EFA783267660E8007E7158 /* TakeTestTableViewCells */,
 				4980858D2670B58C00E10F40 /* ResultTableViewCells */,
 				49875FDA266FAF4B0060BE6E /* HistoryTableViewCells */,
@@ -867,15 +884,16 @@
 				86D6DA0C267717F900488252 /* InputCountExamViewController.xib in Resources */,
 				86C5EF092676289600A290EC /* SectionButtonCollectionView.xib in Resources */,
 				866BCEF326691A1C00482207 /* TakeTestViewController.xib in Resources */,
-				866BCEC626690AF800482207 /* ProfileViewController.xib in Resources */,
 				498085A62670E8BE00E10F40 /* GradingCriteriaTableViewCell.xib in Resources */,
 				86EFA78726766113007E7158 /* TakeTestTableViewCell.xib in Resources */,
 				869EDCE32669C30000DA4770 /* PlanTableViewCell.xib in Resources */,
+				4994ACA826772C3600127044 /* ProfileHealthToggleTableViewCells.xib in Resources */,
 				866BCEFE26691B8100482207 /* CardioTestViewController.xib in Resources */,
 				498085992670B91900E10F40 /* CardioTableViewCell.xib in Resources */,
 				866BCEE32669198B00482207 /* ExcerciseReportViewController.xib in Resources */,
 				7DA5DC1F267323E100B6C7EB /* PlanCollectionViewCells.xib in Resources */,
 				8688D5FD266FC1EA00081F8F /* SummaryDetailPlanCollectionViewCell.xib in Resources */,
+				4994ACBB26772F9E00127044 /* ProfileViewController.xib in Resources */,
 				866BCEDE2669194300482207 /* WarmUpViewController.xib in Resources */,
 				86314D2C266746CA0055FC31 /* Assets.xcassets in Resources */,
 				866BCEED266919E700482207 /* ExcercisingViewController.xib in Resources */,
@@ -907,6 +925,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				86C5EF0026761D4E00A290EC /* CardioCircleLabel.swift in Sources */,
+				4994ACA926772C3600127044 /* ProfileHealthToggleTableViewCells.swift in Sources */,
 				866BCEFD26691B8100482207 /* CardioTestViewController.swift in Sources */,
 				866BCEE22669198B00482207 /* ExcerciseReportViewController.swift in Sources */,
 				4922C6992675B1910026CDD3 /* UIAlertController+.swift in Sources */,
@@ -921,9 +940,9 @@
 				8688D5EE266F787400081F8F /* MCTableViewSectionHeader.swift in Sources */,
 				866BCEF226691A1C00482207 /* TakeTestViewController.swift in Sources */,
 				866BCEBD2668FDF900482207 /* TabBarController.swift in Sources */,
+				4994ACAF26772C5900127044 /* Profile.swift in Sources */,
 				49875FEB266FB0F70060BE6E /* ColorExtension.swift in Sources */,
 				49875FED266FB0F70060BE6E /* SpiderChartFormatter.swift in Sources */,
-				866BCEC526690AF800482207 /* ProfileViewController.swift in Sources */,
 				498085982670B91900E10F40 /* CardioTableViewCell.swift in Sources */,
 				86D6DA0B267717F900488252 /* InputCountExamViewController.swift in Sources */,
 				86C5EF082676289600A290EC /* SectionButtonCollectionView.swift in Sources */,
@@ -947,6 +966,7 @@
 				869EDCE22669C30000DA4770 /* PlanTableViewCell.swift in Sources */,
 				866BCECA26690B2100482207 /* EvaluationViewController.swift in Sources */,
 				4942EDC72672474400444DC8 /* UILabel+.swift in Sources */,
+				4994ACBA26772F9E00127044 /* ProfileViewController.swift in Sources */,
 				49875FEC266FB0F70060BE6E /* StringExtension.swift in Sources */,
 				86314D25266746C90055FC31 /* SceneDelegate.swift in Sources */,
 			);
