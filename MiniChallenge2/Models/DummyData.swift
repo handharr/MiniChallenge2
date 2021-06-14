@@ -7,6 +7,9 @@
 
 import Foundation
 import UIKit
+import FirebaseDatabase
+import FirebaseStorage
+import Firebase
 
 struct Plan {
     let name: String
@@ -84,4 +87,5 @@ class DummyData {
         
         return filtered
     }
+    
 }

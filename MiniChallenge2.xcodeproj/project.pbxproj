@@ -55,6 +55,10 @@
 		4E459BD62676FAB0008DB2D8 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 4E459BD52676FAB0008DB2D8 /* FirebaseAnalytics */; };
 		4E459BD82676FAB0008DB2D8 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 4E459BD72676FAB0008DB2D8 /* FirebaseDatabase */; };
 		4E459BDA2676FAB0008DB2D8 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 4E459BD92676FAB0008DB2D8 /* FirebaseStorage */; };
+		4E459BDE2677196F008DB2D8 /* PlanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E459BDD2677196F008DB2D8 /* PlanModel.swift */; };
+		4E459BE0267721F6008DB2D8 /* Databases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E459BDF267721F6008DB2D8 /* Databases.swift */; };
+		4E459BE42677497C008DB2D8 /* HistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E459BE32677497C008DB2D8 /* HistoryModel.swift */; };
+		4E459BEE26775F8E008DB2D8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E459BED26775F8E008DB2D8 /* GoogleService-Info.plist */; };
 		7DA5DC1E267323E100B6C7EB /* PlanCollectionViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA5DC1C267323E100B6C7EB /* PlanCollectionViewCells.swift */; };
 		7DA5DC1F267323E100B6C7EB /* PlanCollectionViewCells.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DA5DC1D267323E100B6C7EB /* PlanCollectionViewCells.xib */; };
 		861C35D9266DC5F3005ABB7E /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861C35D8266DC5F3005ABB7E /* DummyData.swift */; };
@@ -189,6 +193,10 @@
 		49875FF0266FB16B0060BE6E /* SpiderChartResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiderChartResultViewController.swift; sourceTree = "<group>"; };
 		49875FF1266FB16B0060BE6E /* SpiderChartChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiderChartChildViewController.swift; sourceTree = "<group>"; };
 		49875FF2266FB16B0060BE6E /* SpiderChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiderChartViewController.swift; sourceTree = "<group>"; };
+		4E459BDD2677196F008DB2D8 /* PlanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanModel.swift; sourceTree = "<group>"; };
+		4E459BDF267721F6008DB2D8 /* Databases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Databases.swift; sourceTree = "<group>"; };
+		4E459BE32677497C008DB2D8 /* HistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryModel.swift; sourceTree = "<group>"; };
+		4E459BED26775F8E008DB2D8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4994ACA626772C3600127044 /* ProfileHealthToggleTableViewCells.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileHealthToggleTableViewCells.xib; sourceTree = "<group>"; };
 		4994ACA726772C3600127044 /* ProfileHealthToggleTableViewCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHealthToggleTableViewCells.swift; sourceTree = "<group>"; };
 		4994ACAE26772C5900127044 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
@@ -423,6 +431,7 @@
 		86314D21266746C90055FC31 /* MiniChallenge2 */ = {
 			isa = PBXGroup;
 			children = (
+				4E459BED26775F8E008DB2D8 /* GoogleService-Info.plist */,
 				498571FE26746527000CB1B9 /* MiniChallenge2.entitlements */,
 				869EDCDE2669C2D000DA4770 /* CollectionViewCells */,
 				869EDCDD2669C2C800DA4770 /* TableViewCells */,
@@ -445,6 +454,9 @@
 			children = (
 				861C35D8266DC5F3005ABB7E /* DummyData.swift */,
 				49875FD7266FAF170060BE6E /* History.swift */,
+				4E459BDD2677196F008DB2D8 /* PlanModel.swift */,
+				4E459BDF267721F6008DB2D8 /* Databases.swift */,
+				4E459BE32677497C008DB2D8 /* HistoryModel.swift */,
 				4994ACAE26772C5900127044 /* Profile.swift */,
 			);
 			path = Models;
@@ -914,6 +926,7 @@
 				4994ACBB26772F9E00127044 /* ProfileViewController.xib in Resources */,
 				866BCEDE2669194300482207 /* WarmUpViewController.xib in Resources */,
 				86314D2C266746CA0055FC31 /* Assets.xcassets in Resources */,
+				4E459BEE26775F8E008DB2D8 /* GoogleService-Info.plist in Resources */,
 				866BCEED266919E700482207 /* ExcercisingViewController.xib in Resources */,
 				49875FD5266FAE960060BE6E /* EvaluationView.storyboard in Resources */,
 				49875FDD266FAF5D0060BE6E /* HistoryTableViewCell.xib in Resources */,
@@ -950,15 +963,18 @@
 				4922C6992675B1910026CDD3 /* UIAlertController+.swift in Sources */,
 				49875FD8266FAF170060BE6E /* History.swift in Sources */,
 				4942EDD026724CD500444DC8 /* UITableView+.swift in Sources */,
+				4E459BE0267721F6008DB2D8 /* Databases.swift in Sources */,
 				4980859F2670C82800E10F40 /* TestResultViewController.swift in Sources */,
 				8688D5FC266FC1EA00081F8F /* SummaryDetailPlanCollectionViewCell.swift in Sources */,
 				86314D23266746C90055FC31 /* AppDelegate.swift in Sources */,
 				498572482674F848000CB1B9 /* WatchManager.swift in Sources */,
+				4E459BE42677497C008DB2D8 /* HistoryModel.swift in Sources */,
 				861C35D9266DC5F3005ABB7E /* DummyData.swift in Sources */,
 				866BCEDD2669194300482207 /* WarmUpViewController.swift in Sources */,
 				8688D5EE266F787400081F8F /* MCTableViewSectionHeader.swift in Sources */,
 				866BCEF226691A1C00482207 /* TakeTestViewController.swift in Sources */,
 				866BCEBD2668FDF900482207 /* TabBarController.swift in Sources */,
+				4E459BDE2677196F008DB2D8 /* PlanModel.swift in Sources */,
 				4994ACAF26772C5900127044 /* Profile.swift in Sources */,
 				49875FEB266FB0F70060BE6E /* ColorExtension.swift in Sources */,
 				49875FED266FB0F70060BE6E /* SpiderChartFormatter.swift in Sources */,

@@ -19,7 +19,7 @@ class EvaluationViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Evaluation"
         navigationController?.navigationBar.prefersLargeTitles = true
-        
+        Databases.shared.addHistory()
         setUpTable()
     }
     
