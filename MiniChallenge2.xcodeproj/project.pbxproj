@@ -47,6 +47,11 @@
 		49875FF3266FB16B0060BE6E /* SpiderChartResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49875FF0266FB16B0060BE6E /* SpiderChartResultViewController.swift */; };
 		49875FF4266FB16B0060BE6E /* SpiderChartChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49875FF1266FB16B0060BE6E /* SpiderChartChildViewController.swift */; };
 		49875FF5266FB16B0060BE6E /* SpiderChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49875FF2266FB16B0060BE6E /* SpiderChartViewController.swift */; };
+		4994ACA826772C3600127044 /* ProfileHealthToggleTableViewCells.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4994ACA626772C3600127044 /* ProfileHealthToggleTableViewCells.xib */; };
+		4994ACA926772C3600127044 /* ProfileHealthToggleTableViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4994ACA726772C3600127044 /* ProfileHealthToggleTableViewCells.swift */; };
+		4994ACAF26772C5900127044 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4994ACAE26772C5900127044 /* Profile.swift */; };
+		4994ACBA26772F9E00127044 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4994ACB826772F9E00127044 /* ProfileViewController.swift */; };
+		4994ACBB26772F9E00127044 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4994ACB926772F9E00127044 /* ProfileViewController.xib */; };
 		4E459BD62676FAB0008DB2D8 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 4E459BD52676FAB0008DB2D8 /* FirebaseAnalytics */; };
 		4E459BD82676FAB0008DB2D8 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 4E459BD72676FAB0008DB2D8 /* FirebaseDatabase */; };
 		4E459BDA2676FAB0008DB2D8 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 4E459BD92676FAB0008DB2D8 /* FirebaseStorage */; };
@@ -64,8 +69,6 @@
 		866BCEBD2668FDF900482207 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866BCEBC2668FDF900482207 /* TabBarController.swift */; };
 		866BCEC02668FEC200482207 /* MyPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866BCEBE2668FEC200482207 /* MyPlanViewController.swift */; };
 		866BCEC12668FEC200482207 /* MyPlanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 866BCEBF2668FEC200482207 /* MyPlanViewController.xib */; };
-		866BCEC526690AF800482207 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866BCEC326690AF800482207 /* ProfileViewController.swift */; };
-		866BCEC626690AF800482207 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 866BCEC426690AF800482207 /* ProfileViewController.xib */; };
 		866BCECA26690B2100482207 /* EvaluationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866BCEC826690B2100482207 /* EvaluationViewController.swift */; };
 		866BCEDD2669194300482207 /* WarmUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866BCEDB2669194300482207 /* WarmUpViewController.swift */; };
 		866BCEDE2669194300482207 /* WarmUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 866BCEDC2669194300482207 /* WarmUpViewController.xib */; };
@@ -93,6 +96,11 @@
 		86C5EF0026761D4E00A290EC /* CardioCircleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C5EEFF26761D4E00A290EC /* CardioCircleLabel.swift */; };
 		86C5EF082676289600A290EC /* SectionButtonCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C5EF062676289600A290EC /* SectionButtonCollectionView.swift */; };
 		86C5EF092676289600A290EC /* SectionButtonCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86C5EF072676289600A290EC /* SectionButtonCollectionView.xib */; };
+		86D6DA0B267717F900488252 /* InputCountExamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D6DA09267717F900488252 /* InputCountExamViewController.swift */; };
+		86D6DA0C267717F900488252 /* InputCountExamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86D6DA0A267717F900488252 /* InputCountExamViewController.xib */; };
+		86D6DA1026771E2100488252 /* ExamCameraViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D6DA0E26771E2100488252 /* ExamCameraViewViewController.swift */; };
+		86D6DA1126771E2100488252 /* ExamCameraViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86D6DA0F26771E2100488252 /* ExamCameraViewViewController.xib */; };
+		86D6DA13267721FA00488252 /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D6DA12267721FA00488252 /* VideoCapture.swift */; };
 		86EFA78626766113007E7158 /* TakeTestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EFA78426766113007E7158 /* TakeTestTableViewCell.swift */; };
 		86EFA78726766113007E7158 /* TakeTestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86EFA78526766113007E7158 /* TakeTestTableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -189,6 +197,11 @@
 		4E459BDF267721F6008DB2D8 /* Databases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Databases.swift; sourceTree = "<group>"; };
 		4E459BE32677497C008DB2D8 /* HistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryModel.swift; sourceTree = "<group>"; };
 		4E459BED26775F8E008DB2D8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4994ACA626772C3600127044 /* ProfileHealthToggleTableViewCells.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileHealthToggleTableViewCells.xib; sourceTree = "<group>"; };
+		4994ACA726772C3600127044 /* ProfileHealthToggleTableViewCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHealthToggleTableViewCells.swift; sourceTree = "<group>"; };
+		4994ACAE26772C5900127044 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		4994ACB826772F9E00127044 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		4994ACB926772F9E00127044 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		7DA5DC1C267323E100B6C7EB /* PlanCollectionViewCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanCollectionViewCells.swift; sourceTree = "<group>"; };
 		7DA5DC1D267323E100B6C7EB /* PlanCollectionViewCells.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlanCollectionViewCells.xib; sourceTree = "<group>"; };
 		861C35D8266DC5F3005ABB7E /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
@@ -201,8 +214,6 @@
 		866BCEBC2668FDF900482207 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		866BCEBE2668FEC200482207 /* MyPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlanViewController.swift; sourceTree = "<group>"; };
 		866BCEBF2668FEC200482207 /* MyPlanViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPlanViewController.xib; sourceTree = "<group>"; };
-		866BCEC326690AF800482207 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		866BCEC426690AF800482207 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		866BCEC826690B2100482207 /* EvaluationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationViewController.swift; sourceTree = "<group>"; };
 		866BCEDB2669194300482207 /* WarmUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarmUpViewController.swift; sourceTree = "<group>"; };
 		866BCEDC2669194300482207 /* WarmUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WarmUpViewController.xib; sourceTree = "<group>"; };
@@ -230,6 +241,11 @@
 		86C5EEFF26761D4E00A290EC /* CardioCircleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardioCircleLabel.swift; sourceTree = "<group>"; };
 		86C5EF062676289600A290EC /* SectionButtonCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionButtonCollectionView.swift; sourceTree = "<group>"; };
 		86C5EF072676289600A290EC /* SectionButtonCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionButtonCollectionView.xib; sourceTree = "<group>"; };
+		86D6DA09267717F900488252 /* InputCountExamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputCountExamViewController.swift; sourceTree = "<group>"; };
+		86D6DA0A267717F900488252 /* InputCountExamViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputCountExamViewController.xib; sourceTree = "<group>"; };
+		86D6DA0E26771E2100488252 /* ExamCameraViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamCameraViewViewController.swift; sourceTree = "<group>"; };
+		86D6DA0F26771E2100488252 /* ExamCameraViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExamCameraViewViewController.xib; sourceTree = "<group>"; };
+		86D6DA12267721FA00488252 /* VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
 		86EFA78426766113007E7158 /* TakeTestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeTestTableViewCell.swift; sourceTree = "<group>"; };
 		86EFA78526766113007E7158 /* TakeTestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TakeTestTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -371,6 +387,15 @@
 			path = SpiderChart;
 			sourceTree = "<group>";
 		};
+		4994ACA526772C3600127044 /* ProfileHealthToggleViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				4994ACA626772C3600127044 /* ProfileHealthToggleTableViewCells.xib */,
+				4994ACA726772C3600127044 /* ProfileHealthToggleTableViewCells.swift */,
+			);
+			path = ProfileHealthToggleViewCells;
+			sourceTree = "<group>";
+		};
 		7DA5DC1B267323E100B6C7EB /* PlanCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -432,6 +457,7 @@
 				4E459BDD2677196F008DB2D8 /* PlanModel.swift */,
 				4E459BDF267721F6008DB2D8 /* Databases.swift */,
 				4E459BE32677497C008DB2D8 /* HistoryModel.swift */,
+				4994ACAE26772C5900127044 /* Profile.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -489,8 +515,8 @@
 		866BCEC226690A6900482207 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				866BCEC326690AF800482207 /* ProfileViewController.swift */,
-				866BCEC426690AF800482207 /* ProfileViewController.xib */,
+				4994ACB826772F9E00127044 /* ProfileViewController.swift */,
+				4994ACB926772F9E00127044 /* ProfileViewController.xib */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -554,6 +580,8 @@
 		866BCEEE26691A0700482207 /* Evaluation */ = {
 			isa = PBXGroup;
 			children = (
+				86D6DA0D26771E0B00488252 /* ExamCameraView */,
+				86D6DA08267717C900488252 /* InputCountExam */,
 				49875FEF266FB1580060BE6E /* SpiderChart */,
 				49875FE0266FAFA30060BE6E /* History */,
 				866BCEFA26691B6C00482207 /* CardioTest */,
@@ -628,6 +656,7 @@
 		869EDCDD2669C2C800DA4770 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				4994ACA526772C3600127044 /* ProfileHealthToggleViewCells */,
 				86EFA783267660E8007E7158 /* TakeTestTableViewCells */,
 				4980858D2670B58C00E10F40 /* ResultTableViewCells */,
 				49875FDA266FAF4B0060BE6E /* HistoryTableViewCells */,
@@ -690,6 +719,25 @@
 				86C5EF072676289600A290EC /* SectionButtonCollectionView.xib */,
 			);
 			path = SectionButtonCollectionView;
+			sourceTree = "<group>";
+		};
+		86D6DA08267717C900488252 /* InputCountExam */ = {
+			isa = PBXGroup;
+			children = (
+				86D6DA09267717F900488252 /* InputCountExamViewController.swift */,
+				86D6DA0A267717F900488252 /* InputCountExamViewController.xib */,
+			);
+			path = InputCountExam;
+			sourceTree = "<group>";
+		};
+		86D6DA0D26771E0B00488252 /* ExamCameraView */ = {
+			isa = PBXGroup;
+			children = (
+				86D6DA0E26771E2100488252 /* ExamCameraViewViewController.swift */,
+				86D6DA0F26771E2100488252 /* ExamCameraViewViewController.xib */,
+				86D6DA12267721FA00488252 /* VideoCapture.swift */,
+			);
+			path = ExamCameraView;
 			sourceTree = "<group>";
 		};
 		86EFA783267660E8007E7158 /* TakeTestTableViewCells */ = {
@@ -862,17 +910,20 @@
 				866BCEE8266919B600482207 /* DetailPlanViewController.xib in Resources */,
 				8688D5F3266FA23C00081F8F /* DatePlanCollectionViewCell.xib in Resources */,
 				8688D5F8266FB55D00081F8F /* ExcerciseDetailPlanCollectionViewCell.xib in Resources */,
+				86D6DA1126771E2100488252 /* ExamCameraViewViewController.xib in Resources */,
+				86D6DA0C267717F900488252 /* InputCountExamViewController.xib in Resources */,
 				86C5EF092676289600A290EC /* SectionButtonCollectionView.xib in Resources */,
 				866BCEF326691A1C00482207 /* TakeTestViewController.xib in Resources */,
-				866BCEC626690AF800482207 /* ProfileViewController.xib in Resources */,
 				498085A62670E8BE00E10F40 /* GradingCriteriaTableViewCell.xib in Resources */,
 				86EFA78726766113007E7158 /* TakeTestTableViewCell.xib in Resources */,
 				869EDCE32669C30000DA4770 /* PlanTableViewCell.xib in Resources */,
+				4994ACA826772C3600127044 /* ProfileHealthToggleTableViewCells.xib in Resources */,
 				866BCEFE26691B8100482207 /* CardioTestViewController.xib in Resources */,
 				498085992670B91900E10F40 /* CardioTableViewCell.xib in Resources */,
 				866BCEE32669198B00482207 /* ExcerciseReportViewController.xib in Resources */,
 				7DA5DC1F267323E100B6C7EB /* PlanCollectionViewCells.xib in Resources */,
 				8688D5FD266FC1EA00081F8F /* SummaryDetailPlanCollectionViewCell.xib in Resources */,
+				4994ACBB26772F9E00127044 /* ProfileViewController.xib in Resources */,
 				866BCEDE2669194300482207 /* WarmUpViewController.xib in Resources */,
 				86314D2C266746CA0055FC31 /* Assets.xcassets in Resources */,
 				4E459BEE26775F8E008DB2D8 /* GoogleService-Info.plist in Resources */,
@@ -905,8 +956,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				86C5EF0026761D4E00A290EC /* CardioCircleLabel.swift in Sources */,
+				4994ACA926772C3600127044 /* ProfileHealthToggleTableViewCells.swift in Sources */,
 				866BCEFD26691B8100482207 /* CardioTestViewController.swift in Sources */,
 				866BCEE22669198B00482207 /* ExcerciseReportViewController.swift in Sources */,
+				86D6DA1026771E2100488252 /* ExamCameraViewViewController.swift in Sources */,
 				4922C6992675B1910026CDD3 /* UIAlertController+.swift in Sources */,
 				49875FD8266FAF170060BE6E /* History.swift in Sources */,
 				4942EDD026724CD500444DC8 /* UITableView+.swift in Sources */,
@@ -922,10 +975,11 @@
 				866BCEF226691A1C00482207 /* TakeTestViewController.swift in Sources */,
 				866BCEBD2668FDF900482207 /* TabBarController.swift in Sources */,
 				4E459BDE2677196F008DB2D8 /* PlanModel.swift in Sources */,
+				4994ACAF26772C5900127044 /* Profile.swift in Sources */,
 				49875FEB266FB0F70060BE6E /* ColorExtension.swift in Sources */,
 				49875FED266FB0F70060BE6E /* SpiderChartFormatter.swift in Sources */,
-				866BCEC526690AF800482207 /* ProfileViewController.swift in Sources */,
 				498085982670B91900E10F40 /* CardioTableViewCell.swift in Sources */,
+				86D6DA0B267717F900488252 /* InputCountExamViewController.swift in Sources */,
 				86C5EF082676289600A290EC /* SectionButtonCollectionView.swift in Sources */,
 				86EFA78626766113007E7158 /* TakeTestTableViewCell.swift in Sources */,
 				4942EDD52672615300444DC8 /* UIView+.swift in Sources */,
@@ -936,6 +990,7 @@
 				866BCEC02668FEC200482207 /* MyPlanViewController.swift in Sources */,
 				49875FF4266FB16B0060BE6E /* SpiderChartChildViewController.swift in Sources */,
 				7DA5DC1E267323E100B6C7EB /* PlanCollectionViewCells.swift in Sources */,
+				86D6DA13267721FA00488252 /* VideoCapture.swift in Sources */,
 				498085A52670E8BE00E10F40 /* GradingCriteriaTableViewCell.swift in Sources */,
 				49875FDE266FAF5D0060BE6E /* HistoryTableViewCell.swift in Sources */,
 				49875FF3266FB16B0060BE6E /* SpiderChartResultViewController.swift in Sources */,
@@ -947,6 +1002,7 @@
 				869EDCE22669C30000DA4770 /* PlanTableViewCell.swift in Sources */,
 				866BCECA26690B2100482207 /* EvaluationViewController.swift in Sources */,
 				4942EDC72672474400444DC8 /* UILabel+.swift in Sources */,
+				4994ACBA26772F9E00127044 /* ProfileViewController.swift in Sources */,
 				49875FEC266FB0F70060BE6E /* StringExtension.swift in Sources */,
 				86314D25266746C90055FC31 /* SceneDelegate.swift in Sources */,
 			);
@@ -1223,16 +1279,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MiniChallenge2/MiniChallenge2.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LR9373A784;
+				DEVELOPMENT_TEAM = TATAZHHLZ7;
 				INFOPLIST_FILE = MiniChallenge2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Example.MiniChallenge2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jackieleonardy.MiniChallenge2App;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1244,16 +1302,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MiniChallenge2/MiniChallenge2.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LR9373A784;
+				DEVELOPMENT_TEAM = TATAZHHLZ7;
 				INFOPLIST_FILE = MiniChallenge2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Example.MiniChallenge2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jackieleonardy.MiniChallenge2App;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
