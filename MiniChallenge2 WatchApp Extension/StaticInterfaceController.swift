@@ -33,7 +33,7 @@ extension StaticInterfaceController: WCSessionDelegate{
     }
     
     func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
-        
+        presentController(withNames: ["cardioExam", "runningTest"], contexts: nil)
     }
     
 //    override func contextForSegue(withIdentifier segueIdentifier: String) -> Any? {
@@ -44,6 +44,8 @@ extension StaticInterfaceController: WCSessionDelegate{
     func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
         presentController(withNames: ["cardioExam", "runningTest"], contexts: nil)
     }
+    
+    
     
     
     

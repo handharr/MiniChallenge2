@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="17701" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="XFs-uS-4Lb">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="17701" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vTX-Rr-Q3Z">
     <device id="watch44"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -30,22 +30,22 @@
             <point key="canvasLocation" x="520" y="703"/>
         </scene>
         <!--Static Interface Controller-->
-        <scene sceneID="hVI-C5-kVi">
+        <scene sceneID="Vkz-kv-KI5">
             <objects>
-                <controller fullBounds="YES" id="XFs-uS-4Lb" customClass="StaticInterfaceController" customModule="MiniChallenge2Watch_WatchKit_Extension">
+                <controller id="vTX-Rr-Q3Z" customClass="StaticInterfaceController" customModule="MiniChallenge2_WatchApp_Extension">
                     <items>
-                        <group width="1" height="1" alignment="center" verticalAlignment="center" layout="vertical" id="IF4-t5-dbG">
+                        <group width="1" height="1" alignment="left" layout="vertical" id="KKl-cR-BBQ">
                             <items>
-                                <imageView width="0.29999999999999999" height="0.29999999999999999" alignment="center" verticalAlignment="center" image="playbutton" id="pRE-Lh-wQN">
+                                <imageView width="0.29999999999999999" height="0.29999999999999999" alignment="center" verticalAlignment="center" image="playbutton" id="5Pw-Tq-apa">
                                     <color key="tintColor" red="0.77647058820000003" green="0.31764705879999999" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </imageView>
-                                <label width="1" alignment="center" verticalAlignment="center" text="Start a training session from your phone" textAlignment="center" numberOfLines="3" id="jRs-Hf-TjP"/>
+                                <label width="1" alignment="center" verticalAlignment="center" text="Start a training session from your phone" textAlignment="center" numberOfLines="3" id="VEp-TU-nl8"/>
                             </items>
                         </group>
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="269" y="336"/>
+            <point key="canvasLocation" x="529" y="326"/>
         </scene>
         <!--Quit-->
         <scene sceneID="bLZ-tS-lnS">
