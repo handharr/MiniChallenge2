@@ -101,9 +101,9 @@ extension TakeTestViewController: WCSessionDelegate{
         //yang pertama direach
         print("iPhone Session Success")
         if session.isPaired {
-            UIAlertController.show(topTitle: "Apple Watch", sendMessage: "You phone is paired", textButton: "Oke", from: self)
+            UIAlertController.show("Apple Watch", "Your Apple Watch is Paired", "Oke", self)
         } else {
-            UIAlertController.show(topTitle: "Apple Watch", sendMessage: "You don't have any Apple Watch paired", textButton: "Oke", from: self)
+            UIAlertController.show("Apple Watch", "You don't have any Apple Watch paired", "Oke", self)
         }
     }
 }
