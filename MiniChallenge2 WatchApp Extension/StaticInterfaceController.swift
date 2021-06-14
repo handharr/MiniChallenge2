@@ -19,9 +19,6 @@ class StaticInterfaceController: WKInterfaceController {
         watchSession?.delegate = self
         watchSession?.activate()
     }
-    @IBAction func next() {
-        presentController(withNames: ["cardioExam", "runningTest"], contexts: nil)
-    }
     
     override func didDeactivate() {
         print("geser")
@@ -43,6 +40,10 @@ extension StaticInterfaceController: WCSessionDelegate{
 //
 //        return any
 //    }
+    
+    func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
+        presentController(withNames: ["cardioExam", "runningTest"], contexts: nil)
+    }
     
     
     
