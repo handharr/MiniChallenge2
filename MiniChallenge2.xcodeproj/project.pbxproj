@@ -89,6 +89,8 @@
 		86C5EF0026761D4E00A290EC /* CardioCircleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C5EEFF26761D4E00A290EC /* CardioCircleLabel.swift */; };
 		86C5EF082676289600A290EC /* SectionButtonCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C5EF062676289600A290EC /* SectionButtonCollectionView.swift */; };
 		86C5EF092676289600A290EC /* SectionButtonCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86C5EF072676289600A290EC /* SectionButtonCollectionView.xib */; };
+		86D6DA0B267717F900488252 /* InputCountExamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D6DA09267717F900488252 /* InputCountExamViewController.swift */; };
+		86D6DA0C267717F900488252 /* InputCountExamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86D6DA0A267717F900488252 /* InputCountExamViewController.xib */; };
 		86EFA78626766113007E7158 /* TakeTestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EFA78426766113007E7158 /* TakeTestTableViewCell.swift */; };
 		86EFA78726766113007E7158 /* TakeTestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86EFA78526766113007E7158 /* TakeTestTableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -222,6 +224,8 @@
 		86C5EEFF26761D4E00A290EC /* CardioCircleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardioCircleLabel.swift; sourceTree = "<group>"; };
 		86C5EF062676289600A290EC /* SectionButtonCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionButtonCollectionView.swift; sourceTree = "<group>"; };
 		86C5EF072676289600A290EC /* SectionButtonCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionButtonCollectionView.xib; sourceTree = "<group>"; };
+		86D6DA09267717F900488252 /* InputCountExamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputCountExamViewController.swift; sourceTree = "<group>"; };
+		86D6DA0A267717F900488252 /* InputCountExamViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputCountExamViewController.xib; sourceTree = "<group>"; };
 		86EFA78426766113007E7158 /* TakeTestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeTestTableViewCell.swift; sourceTree = "<group>"; };
 		86EFA78526766113007E7158 /* TakeTestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TakeTestTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -542,6 +546,7 @@
 		866BCEEE26691A0700482207 /* Evaluation */ = {
 			isa = PBXGroup;
 			children = (
+				86D6DA08267717C900488252 /* InputCountExam */,
 				49875FEF266FB1580060BE6E /* SpiderChart */,
 				49875FE0266FAFA30060BE6E /* History */,
 				866BCEFA26691B6C00482207 /* CardioTest */,
@@ -678,6 +683,15 @@
 				86C5EF072676289600A290EC /* SectionButtonCollectionView.xib */,
 			);
 			path = SectionButtonCollectionView;
+			sourceTree = "<group>";
+		};
+		86D6DA08267717C900488252 /* InputCountExam */ = {
+			isa = PBXGroup;
+			children = (
+				86D6DA09267717F900488252 /* InputCountExamViewController.swift */,
+				86D6DA0A267717F900488252 /* InputCountExamViewController.xib */,
+			);
+			path = InputCountExam;
 			sourceTree = "<group>";
 		};
 		86EFA783267660E8007E7158 /* TakeTestTableViewCells */ = {
@@ -850,6 +864,7 @@
 				866BCEE8266919B600482207 /* DetailPlanViewController.xib in Resources */,
 				8688D5F3266FA23C00081F8F /* DatePlanCollectionViewCell.xib in Resources */,
 				8688D5F8266FB55D00081F8F /* ExcerciseDetailPlanCollectionViewCell.xib in Resources */,
+				86D6DA0C267717F900488252 /* InputCountExamViewController.xib in Resources */,
 				86C5EF092676289600A290EC /* SectionButtonCollectionView.xib in Resources */,
 				866BCEF326691A1C00482207 /* TakeTestViewController.xib in Resources */,
 				866BCEC626690AF800482207 /* ProfileViewController.xib in Resources */,
@@ -910,6 +925,7 @@
 				49875FED266FB0F70060BE6E /* SpiderChartFormatter.swift in Sources */,
 				866BCEC526690AF800482207 /* ProfileViewController.swift in Sources */,
 				498085982670B91900E10F40 /* CardioTableViewCell.swift in Sources */,
+				86D6DA0B267717F900488252 /* InputCountExamViewController.swift in Sources */,
 				86C5EF082676289600A290EC /* SectionButtonCollectionView.swift in Sources */,
 				86EFA78626766113007E7158 /* TakeTestTableViewCell.swift in Sources */,
 				4942EDD52672615300444DC8 /* UIView+.swift in Sources */,
