@@ -23,7 +23,7 @@ class MyPlanViewController: UIViewController {
     }
     
     @objc private func goToCardioTest() {
-        let vc = InputCountExamViewController()
+        let vc = ExamCameraViewViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
     
