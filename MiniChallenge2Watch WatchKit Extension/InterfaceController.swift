@@ -72,7 +72,8 @@ class InterfaceController: WKInterfaceController {
     
     @IBAction func skippedTapped() {
 //        self.popToRootController()
-        delegate?.workoutDidCancel()
+//        delegate?.workoutDidCancel()
+        NotificationCenter.default.post(name: NSNotification.Name("Skip Triggered"), object: nil)
     }
     override func willActivate() {
         super.willActivate()

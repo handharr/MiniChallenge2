@@ -17,6 +17,7 @@ class HistoryTableViewController: UITableViewController {
         
         self.title = "History"
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.backgroundColor = . systemBackground
         setUpTable()
     }
 

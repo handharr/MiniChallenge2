@@ -43,13 +43,22 @@ class WorkoutInterfaceController: WKInterfaceController{
         requestAuthorization()
         startWorkout()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(notificationTriggered), name: NSNotification.Name("Pause Triggered"), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(notificationTriggered), name: NSNotification.Name("Skip Triggered"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(pauseTriggered), name: NSNotification.Name("Pause Triggered"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(skipTriggered), name: NSNotification.Name("Skip Triggered"), object: nil)
     }
     
     @objc
-    func notificationTriggered(){
-        print("triggered")
+    func pauseTriggered(){
+        if running {
+            self.pauseWorkout()
+        } else {
+            resumeWorkout()
+        }
+    }
+    
+    @objc
+    func skipTriggered(){
+        self.endWorkout()
     }
     
     override func willActivate() {
@@ -96,7 +105,6 @@ class WorkoutInterfaceController: WKInterfaceController{
                 }
                 
             }
-//        print("here")
     }
     
     func incrementElapsedTime() -> Int {
@@ -110,7 +118,6 @@ class WorkoutInterfaceController: WKInterfaceController{
     
     // Convert the seconds, minutes, hours into a string.
     func elapsedTimeString(elapsed: (h: Int, m: Int, s: Int)) -> String {
-//        print(elapsed)
         return String(format: "%d:%02d:%02d", elapsed.h, elapsed.m, elapsed.s)
     }
     
@@ -285,7 +292,7 @@ extension WorkoutInterfaceController: HKLiveWorkoutBuilderDelegate {
         //mengecek tipe koleksi apa aja yang sudah kita dapatkan dari reading dan updating dari healthStore
         for type in collectedTypes {
             //mengecek apakah collectedType yang kita dapatkan adalah quantity(diskrit dan bukan subjektif) atau bukan
-//            print("type: \(type)")
+            print("type: \(type)")
             
             guard let quantityType = type as? HKQuantityType else {
                 return // Nothing to do.
