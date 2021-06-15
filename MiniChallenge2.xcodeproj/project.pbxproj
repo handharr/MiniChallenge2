@@ -25,6 +25,19 @@
 		49875FF3266FB16B0060BE6E /* SpiderChartResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49875FF0266FB16B0060BE6E /* SpiderChartResultViewController.swift */; };
 		49875FF4266FB16B0060BE6E /* SpiderChartChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49875FF1266FB16B0060BE6E /* SpiderChartChildViewController.swift */; };
 		49875FF5266FB16B0060BE6E /* SpiderChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49875FF2266FB16B0060BE6E /* SpiderChartViewController.swift */; };
+		7548A45E26743FF700D30654 /* VideoSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7548A45C26743FF700D30654 /* VideoSectionView.xib */; };
+		7548A45F26743FF700D30654 /* VideoSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7548A45D26743FF700D30654 /* VideoSectionView.swift */; };
+		7548A46D26746E9D00D30654 /* ActionSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7548A46B26746E9D00D30654 /* ActionSectionView.swift */; };
+		7548A4742674712700D30654 /* crunches.mov in Resources */ = {isa = PBXBuildFile; fileRef = 7548A4732674712700D30654 /* crunches.mov */; };
+		7548A47B2674A4CD00D30654 /* CongratulationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7548A4792674A4CD00D30654 /* CongratulationViewController.xib */; };
+		7548A47C2674A4CD00D30654 /* CongratulationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7548A47A2674A4CD00D30654 /* CongratulationViewController.swift */; };
+		7548A47F2674A4F100D30654 /* CongratulationMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7548A47D2674A4F100D30654 /* CongratulationMessageView.xib */; };
+		7548A4802674A4F100D30654 /* CongratulationMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7548A47E2674A4F100D30654 /* CongratulationMessageView.swift */; };
+		7548A4822674A8F200D30654 /* ActionSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7548A4812674A8F200D30654 /* ActionSectionView.xib */; };
+		7553C4F02678390D009A9131 /* ExcercisingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7553C4EF2678390D009A9131 /* ExcercisingViewController.swift */; };
+		755E0D752675D7FB001505CC /* Push up.mov in Resources */ = {isa = PBXBuildFile; fileRef = 755E0D732675D7FB001505CC /* Push up.mov */; };
+		755E0D762675D7FB001505CC /* sit up.mov in Resources */ = {isa = PBXBuildFile; fileRef = 755E0D742675D7FB001505CC /* sit up.mov */; };
+		755E0D7F2675E48E001505CC /* ExcercisingViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 755E0D7D2675E48E001505CC /* ExcercisingViewController.xib */; };
 		861C35D9266DC5F3005ABB7E /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861C35D8266DC5F3005ABB7E /* DummyData.swift */; };
 		86314D23266746C90055FC31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86314D22266746C90055FC31 /* AppDelegate.swift */; };
 		86314D25266746C90055FC31 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86314D24266746C90055FC31 /* SceneDelegate.swift */; };
@@ -42,8 +55,6 @@
 		866BCEE32669198B00482207 /* ExcerciseReportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 866BCEE12669198B00482207 /* ExcerciseReportViewController.xib */; };
 		866BCEE7266919B600482207 /* DetailPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866BCEE5266919B600482207 /* DetailPlanViewController.swift */; };
 		866BCEE8266919B600482207 /* DetailPlanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 866BCEE6266919B600482207 /* DetailPlanViewController.xib */; };
-		866BCEEC266919E700482207 /* ExcercisingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866BCEEA266919E700482207 /* ExcercisingViewController.swift */; };
-		866BCEED266919E700482207 /* ExcercisingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 866BCEEB266919E700482207 /* ExcercisingViewController.xib */; };
 		866BCEF226691A1C00482207 /* TakeTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866BCEF026691A1C00482207 /* TakeTestViewController.swift */; };
 		866BCEF326691A1C00482207 /* TakeTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 866BCEF126691A1C00482207 /* TakeTestViewController.xib */; };
 		866BCEFD26691B8100482207 /* CardioTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866BCEFB26691B8100482207 /* CardioTestViewController.swift */; };
@@ -79,6 +90,19 @@
 		49875FF0266FB16B0060BE6E /* SpiderChartResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiderChartResultViewController.swift; sourceTree = "<group>"; };
 		49875FF1266FB16B0060BE6E /* SpiderChartChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiderChartChildViewController.swift; sourceTree = "<group>"; };
 		49875FF2266FB16B0060BE6E /* SpiderChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiderChartViewController.swift; sourceTree = "<group>"; };
+		7548A45C26743FF700D30654 /* VideoSectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VideoSectionView.xib; path = ../../../../../code/swifttutorial/XibTutorial/XibTutorial/InExercise/component/VideoSectionView.xib; sourceTree = "<group>"; };
+		7548A45D26743FF700D30654 /* VideoSectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoSectionView.swift; path = ../../../../../code/swifttutorial/XibTutorial/XibTutorial/InExercise/component/VideoSectionView.swift; sourceTree = "<group>"; };
+		7548A46B26746E9D00D30654 /* ActionSectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActionSectionView.swift; path = ../../../../../code/swifttutorial/XibTutorial/XibTutorial/InExercise/component/ActionSectionView.swift; sourceTree = "<group>"; };
+		7548A4732674712700D30654 /* crunches.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = crunches.mov; path = ../../../../../../Downloads/crunches.mov; sourceTree = "<group>"; };
+		7548A4792674A4CD00D30654 /* CongratulationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CongratulationViewController.xib; path = "../../../../../../code/swifttutorial/XibTutorial/XibTutorial/InExercise/view controller/CongratulationViewController.xib"; sourceTree = "<group>"; };
+		7548A47A2674A4CD00D30654 /* CongratulationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CongratulationViewController.swift; path = "../../../../../../code/swifttutorial/XibTutorial/XibTutorial/InExercise/view controller/CongratulationViewController.swift"; sourceTree = "<group>"; };
+		7548A47D2674A4F100D30654 /* CongratulationMessageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CongratulationMessageView.xib; path = ../../../../../code/swifttutorial/XibTutorial/XibTutorial/InExercise/component/CongratulationMessageView.xib; sourceTree = "<group>"; };
+		7548A47E2674A4F100D30654 /* CongratulationMessageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CongratulationMessageView.swift; path = ../../../../../code/swifttutorial/XibTutorial/XibTutorial/InExercise/component/CongratulationMessageView.swift; sourceTree = "<group>"; };
+		7548A4812674A8F200D30654 /* ActionSectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ActionSectionView.xib; path = ../../../../../code/swifttutorial/XibTutorial/XibTutorial/InExercise/component/ActionSectionView.xib; sourceTree = "<group>"; };
+		7553C4EF2678390D009A9131 /* ExcercisingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExcercisingViewController.swift; sourceTree = "<group>"; };
+		755E0D732675D7FB001505CC /* Push up.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = "Push up.mov"; path = "../../../../../../Downloads/Push up.mov"; sourceTree = "<group>"; };
+		755E0D742675D7FB001505CC /* sit up.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = "sit up.mov"; path = "../../../../../../Downloads/sit up.mov"; sourceTree = "<group>"; };
+		755E0D7D2675E48E001505CC /* ExcercisingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExcercisingViewController.xib; sourceTree = "<group>"; };
 		861C35D8266DC5F3005ABB7E /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
 		86314D1F266746C90055FC31 /* MiniChallenge2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniChallenge2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86314D22266746C90055FC31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -98,8 +122,6 @@
 		866BCEE12669198B00482207 /* ExcerciseReportViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExcerciseReportViewController.xib; sourceTree = "<group>"; };
 		866BCEE5266919B600482207 /* DetailPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPlanViewController.swift; sourceTree = "<group>"; };
 		866BCEE6266919B600482207 /* DetailPlanViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailPlanViewController.xib; sourceTree = "<group>"; };
-		866BCEEA266919E700482207 /* ExcercisingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcercisingViewController.swift; sourceTree = "<group>"; };
-		866BCEEB266919E700482207 /* ExcercisingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExcercisingViewController.xib; sourceTree = "<group>"; };
 		866BCEF026691A1C00482207 /* TakeTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeTestViewController.swift; sourceTree = "<group>"; };
 		866BCEF126691A1C00482207 /* TakeTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TakeTestViewController.xib; sourceTree = "<group>"; };
 		866BCEFB26691B8100482207 /* CardioTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardioTestViewController.swift; sourceTree = "<group>"; };
@@ -183,6 +205,29 @@
 			path = SpiderChart;
 			sourceTree = "<group>";
 		};
+		7548A45B26743FB600D30654 /* ExercisingCustomView */ = {
+			isa = PBXGroup;
+			children = (
+				7548A47E2674A4F100D30654 /* CongratulationMessageView.swift */,
+				7548A47D2674A4F100D30654 /* CongratulationMessageView.xib */,
+				7548A45D26743FF700D30654 /* VideoSectionView.swift */,
+				7548A45C26743FF700D30654 /* VideoSectionView.xib */,
+				7548A46B26746E9D00D30654 /* ActionSectionView.swift */,
+				7548A4812674A8F200D30654 /* ActionSectionView.xib */,
+			);
+			path = ExercisingCustomView;
+			sourceTree = "<group>";
+		};
+		7548A4722674710D00D30654 /* sampleVideo */ = {
+			isa = PBXGroup;
+			children = (
+				7548A4732674712700D30654 /* crunches.mov */,
+				755E0D732675D7FB001505CC /* Push up.mov */,
+				755E0D742675D7FB001505CC /* sit up.mov */,
+			);
+			path = sampleVideo;
+			sourceTree = "<group>";
+		};
 		86314D16266746C90055FC31 = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +294,7 @@
 		866BCEB82668FCF300482207 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				7548A4722674710D00D30654 /* sampleVideo */,
 				86314D2B266746CA0055FC31 /* Assets.xcassets */,
 				86771235266E4929000313B3 /* Utility.swift */,
 				49875FE8266FB0F70060BE6E /* ColorExtension.swift */,
@@ -334,8 +380,10 @@
 		866BCEE9266919D500482207 /* Excercising */ = {
 			isa = PBXGroup;
 			children = (
-				866BCEEA266919E700482207 /* ExcercisingViewController.swift */,
-				866BCEEB266919E700482207 /* ExcercisingViewController.xib */,
+				7553C4EF2678390D009A9131 /* ExcercisingViewController.swift */,
+				755E0D7D2675E48E001505CC /* ExcercisingViewController.xib */,
+				7548A47A2674A4CD00D30654 /* CongratulationViewController.swift */,
+				7548A4792674A4CD00D30654 /* CongratulationViewController.xib */,
 			);
 			path = Excercising;
 			sourceTree = "<group>";
@@ -446,6 +494,7 @@
 		86A3D3CE266F2A57001BE47B /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				7548A45B26743FB600D30654 /* ExercisingCustomView */,
 				8688D5EC266F784800081F8F /* TableViewSectionHeader */,
 				86A3D3D2266F2F02001BE47B /* CollectionViewSectionHeader */,
 			);
@@ -532,14 +581,20 @@
 				866BCEF326691A1C00482207 /* TakeTestViewController.xib in Resources */,
 				866BCEC626690AF800482207 /* ProfileViewController.xib in Resources */,
 				498085A62670E8BE00E10F40 /* GradingCriteriaTableViewCell.xib in Resources */,
+				755E0D752675D7FB001505CC /* Push up.mov in Resources */,
 				869EDCE32669C30000DA4770 /* PlanTableViewCell.xib in Resources */,
+				7548A47B2674A4CD00D30654 /* CongratulationViewController.xib in Resources */,
+				7548A47F2674A4F100D30654 /* CongratulationMessageView.xib in Resources */,
+				755E0D762675D7FB001505CC /* sit up.mov in Resources */,
 				866BCEFE26691B8100482207 /* CardioTestViewController.xib in Resources */,
 				498085992670B91900E10F40 /* CardioTableViewCell.xib in Resources */,
 				866BCEE32669198B00482207 /* ExcerciseReportViewController.xib in Resources */,
 				8688D5FD266FC1EA00081F8F /* SummaryDetailPlanCollectionViewCell.xib in Resources */,
 				866BCEDE2669194300482207 /* WarmUpViewController.xib in Resources */,
+				7548A4742674712700D30654 /* crunches.mov in Resources */,
 				86314D2C266746CA0055FC31 /* Assets.xcassets in Resources */,
-				866BCEED266919E700482207 /* ExcercisingViewController.xib in Resources */,
+				7548A45E26743FF700D30654 /* VideoSectionView.xib in Resources */,
+				7548A4822674A8F200D30654 /* ActionSectionView.xib in Resources */,
 				49875FD5266FAE960060BE6E /* EvaluationView.storyboard in Resources */,
 				49875FDD266FAF5D0060BE6E /* HistoryTableViewCell.xib in Resources */,
 			);
@@ -560,10 +615,13 @@
 				86314D23266746C90055FC31 /* AppDelegate.swift in Sources */,
 				861C35D9266DC5F3005ABB7E /* DummyData.swift in Sources */,
 				866BCEDD2669194300482207 /* WarmUpViewController.swift in Sources */,
+				7548A4802674A4F100D30654 /* CongratulationMessageView.swift in Sources */,
 				8688D5EE266F787400081F8F /* MCTableViewSectionHeader.swift in Sources */,
 				866BCEF226691A1C00482207 /* TakeTestViewController.swift in Sources */,
 				866BCEBD2668FDF900482207 /* TabBarController.swift in Sources */,
 				49875FEB266FB0F70060BE6E /* ColorExtension.swift in Sources */,
+				7553C4F02678390D009A9131 /* ExcercisingViewController.swift in Sources */,
+				755E0D7F2675E48E001505CC /* ExcercisingViewController.xib in Sources */,
 				49875FED266FB0F70060BE6E /* SpiderChartFormatter.swift in Sources */,
 				866BCEC526690AF800482207 /* ProfileViewController.swift in Sources */,
 				498085982670B91900E10F40 /* CardioTableViewCell.swift in Sources */,
@@ -573,13 +631,15 @@
 				866BCEC02668FEC200482207 /* MyPlanViewController.swift in Sources */,
 				49875FF4266FB16B0060BE6E /* SpiderChartChildViewController.swift in Sources */,
 				498085A52670E8BE00E10F40 /* GradingCriteriaTableViewCell.swift in Sources */,
+				7548A47C2674A4CD00D30654 /* CongratulationViewController.swift in Sources */,
 				49875FDE266FAF5D0060BE6E /* HistoryTableViewCell.swift in Sources */,
 				49875FF3266FB16B0060BE6E /* SpiderChartResultViewController.swift in Sources */,
 				86A3D3D4266F2F4E001BE47B /* MCSectionHeaderCollectionReusableView.swift in Sources */,
+				7548A46D26746E9D00D30654 /* ActionSectionView.swift in Sources */,
 				8688D5F2266FA23C00081F8F /* DatePlanCollectionViewCell.swift in Sources */,
 				8688D5F7266FB55D00081F8F /* ExcerciseDetailPlanCollectionViewCell.swift in Sources */,
-				866BCEEC266919E700482207 /* ExcercisingViewController.swift in Sources */,
 				86771236266E4929000313B3 /* Utility.swift in Sources */,
+				7548A45F26743FF700D30654 /* VideoSectionView.swift in Sources */,
 				869EDCE22669C30000DA4770 /* PlanTableViewCell.swift in Sources */,
 				866BCECA26690B2100482207 /* EvaluationViewController.swift in Sources */,
 				49875FEC266FB0F70060BE6E /* StringExtension.swift in Sources */,
