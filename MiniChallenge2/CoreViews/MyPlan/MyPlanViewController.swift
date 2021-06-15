@@ -17,7 +17,6 @@ class MyPlanViewController: UIViewController {
         title = "My Plan"
         setTableView()
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(goToExercise))
     }
     
     private func setTableView() {
@@ -25,11 +24,6 @@ class MyPlanViewController: UIViewController {
         planTableView.delegate = self
         planTableView.dataSource = self
         planTableView.register(PlanTableViewCell.nib(), forCellReuseIdentifier: PlanTableViewCell.identifier)
-    }
-    
-    @objc private func goToExercise(){
-        let vc = ExcercisingViewController()
-        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
