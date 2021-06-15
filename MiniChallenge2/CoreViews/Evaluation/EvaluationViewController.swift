@@ -19,7 +19,7 @@ class EvaluationViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Evaluation"
         navigationController?.navigationBar.prefersLargeTitles = true
-        Databases.shared.addHistory()
+        
         setUpTable()
     }
     
@@ -61,6 +61,7 @@ class EvaluationViewController: UIViewController {
     @IBAction func takeExamTapped(_ sender: Any) {
         let examVC = TakeTestViewController()
         navigationController?.pushViewController(examVC, animated: true)
+        Databases.shared.addHistory()
     }
 }
 
