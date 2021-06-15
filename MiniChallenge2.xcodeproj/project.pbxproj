@@ -7,12 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4922C6992675B1910026CDD3 /* UIAlertController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4922C6982675B1910026CDD3 /* UIAlertController+.swift */; };
+		4929015D2677C626007F00D0 /* MiniChallenge2 WatchApp Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4929015C2677C626007F00D0 /* MiniChallenge2 WatchApp Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		492901642677C626007F00D0 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492901632677C626007F00D0 /* ExtensionDelegate.swift */; };
+		492901662677C626007F00D0 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492901652677C626007F00D0 /* NotificationController.swift */; };
+		492901682677C626007F00D0 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492901672677C626007F00D0 /* ComplicationController.swift */; };
+		4929016A2677C62C007F00D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 492901692677C62C007F00D0 /* Assets.xcassets */; };
+		4929016F2677C62C007F00D0 /* MiniChallenge2 WatchApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 492901502677C620007F00D0 /* MiniChallenge2 WatchApp.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4929018C2677C656007F00D0 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4929018A2677C656007F00D0 /* Interface.storyboard */; };
+		4929018D2677C656007F00D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4929018B2677C656007F00D0 /* Assets.xcassets */; };
+		4929019F2677C690007F00D0 /* WatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4929019A2677C690007F00D0 /* WatchManager.swift */; };
+		492901A22677C690007F00D0 /* WatchColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4929019D2677C690007F00D0 /* WatchColor.swift */; };
+		492901A32677C691007F00D0 /* WorkoutInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4929019E2677C690007F00D0 /* WorkoutInterfaceController.swift */; };
+		492901AE2677C6AA007F00D0 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4985720726746570000CB1B9 /* HealthKit.framework */; };
+		492901C12677CF53007F00D0 /* MyScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 492901C02677CF53007F00D0 /* MyScene.sks */; };
+		4942EDC72672474400444DC8 /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942EDC62672474400444DC8 /* UILabel+.swift */; };
+		4942EDCB2672491C00444DC8 /* UIScollView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942EDCA2672491C00444DC8 /* UIScollView+.swift */; };
+		4942EDD026724CD500444DC8 /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942EDCF26724CD500444DC8 /* UITableView+.swift */; };
+		4942EDD52672615300444DC8 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942EDD42672615300444DC8 /* UIView+.swift */; };
+		496C2B69267846DF00333F56 /* HealthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496C2B68267846DF00333F56 /* HealthModel.swift */; };
+		496C2B80267873A700333F56 /* InterfaceCardioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496C2B7F267873A700333F56 /* InterfaceCardioController.swift */; };
+		496C2B85267875B300333F56 /* WorkoutSessionInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496C2B84267875B300333F56 /* WorkoutSessionInterfaceController.swift */; };
 		498085982670B91900E10F40 /* CardioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498085962670B91900E10F40 /* CardioTableViewCell.swift */; };
 		498085992670B91900E10F40 /* CardioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 498085972670B91900E10F40 /* CardioTableViewCell.xib */; };
 		4980859F2670C82800E10F40 /* TestResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4980859D2670C82800E10F40 /* TestResultViewController.swift */; };
 		498085A02670C82800E10F40 /* TestResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4980859E2670C82800E10F40 /* TestResultViewController.xib */; };
 		498085A52670E8BE00E10F40 /* GradingCriteriaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498085A32670E8BE00E10F40 /* GradingCriteriaTableViewCell.swift */; };
 		498085A62670E8BE00E10F40 /* GradingCriteriaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 498085A42670E8BE00E10F40 /* GradingCriteriaTableViewCell.xib */; };
+		4985720126746527000CB1B9 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4985720026746527000CB1B9 /* HealthKit.framework */; };
+		498572482674F848000CB1B9 /* WatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498572472674F848000CB1B9 /* WatchManager.swift */; };
 		49875FD5266FAE960060BE6E /* EvaluationView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49875FD4266FAE960060BE6E /* EvaluationView.storyboard */; };
 		49875FD8266FAF170060BE6E /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49875FD7266FAF170060BE6E /* History.swift */; };
 		49875FDD266FAF5D0060BE6E /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49875FDB266FAF5D0060BE6E /* HistoryTableViewCell.xib */; };
@@ -25,6 +48,24 @@
 		49875FF3266FB16B0060BE6E /* SpiderChartResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49875FF0266FB16B0060BE6E /* SpiderChartResultViewController.swift */; };
 		49875FF4266FB16B0060BE6E /* SpiderChartChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49875FF1266FB16B0060BE6E /* SpiderChartChildViewController.swift */; };
 		49875FF5266FB16B0060BE6E /* SpiderChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49875FF2266FB16B0060BE6E /* SpiderChartViewController.swift */; };
+		4990F8F72677D7CE007030F0 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4990F8F62677D7CE007030F0 /* InterfaceController.swift */; };
+		4990F8FF2677D879007030F0 /* HomeInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4990F8FE2677D879007030F0 /* HomeInterfaceController.swift */; };
+		4994ACA826772C3600127044 /* ProfileHealthToggleTableViewCells.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4994ACA626772C3600127044 /* ProfileHealthToggleTableViewCells.xib */; };
+		4994ACA926772C3600127044 /* ProfileHealthToggleTableViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4994ACA726772C3600127044 /* ProfileHealthToggleTableViewCells.swift */; };
+		4994ACAF26772C5900127044 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4994ACAE26772C5900127044 /* Profile.swift */; };
+		4994ACBA26772F9E00127044 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4994ACB826772F9E00127044 /* ProfileViewController.swift */; };
+		4994ACBB26772F9E00127044 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4994ACB926772F9E00127044 /* ProfileViewController.xib */; };
+		4E459BD62676FAB0008DB2D8 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 4E459BD52676FAB0008DB2D8 /* FirebaseAnalytics */; };
+		4E459BD82676FAB0008DB2D8 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 4E459BD72676FAB0008DB2D8 /* FirebaseDatabase */; };
+		4E459BDA2676FAB0008DB2D8 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 4E459BD92676FAB0008DB2D8 /* FirebaseStorage */; };
+		4E459BDE2677196F008DB2D8 /* PlanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E459BDD2677196F008DB2D8 /* PlanModel.swift */; };
+		4E459BE0267721F6008DB2D8 /* Databases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E459BDF267721F6008DB2D8 /* Databases.swift */; };
+		4E459BE42677497C008DB2D8 /* HistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E459BE32677497C008DB2D8 /* HistoryModel.swift */; };
+		4E459BEE26775F8E008DB2D8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E459BED26775F8E008DB2D8 /* GoogleService-Info.plist */; };
+		4E459BF026784662008DB2D8 /* ExerciseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E459BEF26784662008DB2D8 /* ExerciseModel.swift */; };
+		4E459BF22678477F008DB2D8 /* PaketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E459BF12678477F008DB2D8 /* PaketModel.swift */; };
+		7DA5DC1E267323E100B6C7EB /* PlanCollectionViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA5DC1C267323E100B6C7EB /* PlanCollectionViewCells.swift */; };
+		7DA5DC1F267323E100B6C7EB /* PlanCollectionViewCells.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DA5DC1D267323E100B6C7EB /* PlanCollectionViewCells.xib */; };
 		7548A45E26743FF700D30654 /* VideoSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7548A45C26743FF700D30654 /* VideoSectionView.xib */; };
 		7548A45F26743FF700D30654 /* VideoSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7548A45D26743FF700D30654 /* VideoSectionView.swift */; };
 		7548A46D26746E9D00D30654 /* ActionSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7548A46B26746E9D00D30654 /* ActionSectionView.swift */; };
@@ -46,8 +87,6 @@
 		866BCEBD2668FDF900482207 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866BCEBC2668FDF900482207 /* TabBarController.swift */; };
 		866BCEC02668FEC200482207 /* MyPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866BCEBE2668FEC200482207 /* MyPlanViewController.swift */; };
 		866BCEC12668FEC200482207 /* MyPlanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 866BCEBF2668FEC200482207 /* MyPlanViewController.xib */; };
-		866BCEC526690AF800482207 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866BCEC326690AF800482207 /* ProfileViewController.swift */; };
-		866BCEC626690AF800482207 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 866BCEC426690AF800482207 /* ProfileViewController.xib */; };
 		866BCECA26690B2100482207 /* EvaluationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866BCEC826690B2100482207 /* EvaluationViewController.swift */; };
 		866BCEDD2669194300482207 /* WarmUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866BCEDB2669194300482207 /* WarmUpViewController.swift */; };
 		866BCEDE2669194300482207 /* WarmUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 866BCEDC2669194300482207 /* WarmUpViewController.xib */; };
@@ -70,15 +109,95 @@
 		869EDCE22669C30000DA4770 /* PlanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869EDCE02669C30000DA4770 /* PlanTableViewCell.swift */; };
 		869EDCE32669C30000DA4770 /* PlanTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 869EDCE12669C30000DA4770 /* PlanTableViewCell.xib */; };
 		86A3D3D4266F2F4E001BE47B /* MCSectionHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A3D3D3266F2F4E001BE47B /* MCSectionHeaderCollectionReusableView.swift */; };
+		86C5EF0026761D4E00A290EC /* CardioCircleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C5EEFF26761D4E00A290EC /* CardioCircleLabel.swift */; };
+		86C5EF082676289600A290EC /* SectionButtonCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C5EF062676289600A290EC /* SectionButtonCollectionView.swift */; };
+		86C5EF092676289600A290EC /* SectionButtonCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86C5EF072676289600A290EC /* SectionButtonCollectionView.xib */; };
+		86D6DA0B267717F900488252 /* InputCountExamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D6DA09267717F900488252 /* InputCountExamViewController.swift */; };
+		86D6DA0C267717F900488252 /* InputCountExamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86D6DA0A267717F900488252 /* InputCountExamViewController.xib */; };
+		86D6DA1026771E2100488252 /* ExamCameraViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D6DA0E26771E2100488252 /* ExamCameraViewViewController.swift */; };
+		86D6DA1126771E2100488252 /* ExamCameraViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86D6DA0F26771E2100488252 /* ExamCameraViewViewController.xib */; };
+		86D6DA13267721FA00488252 /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D6DA12267721FA00488252 /* VideoCapture.swift */; };
+		86EFA78626766113007E7158 /* TakeTestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EFA78426766113007E7158 /* TakeTestTableViewCell.swift */; };
+		86EFA78726766113007E7158 /* TakeTestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86EFA78526766113007E7158 /* TakeTestTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		4929015E2677C626007F00D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 86314D17266746C90055FC31 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4929015B2677C626007F00D0;
+			remoteInfo = "MiniChallenge2 WatchApp Extension";
+		};
+		4929016D2677C62C007F00D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 86314D17266746C90055FC31 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4929014F2677C620007F00D0;
+			remoteInfo = "MiniChallenge2 WatchApp";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		492901702677C62C007F00D0 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				4929016F2677C62C007F00D0 /* MiniChallenge2 WatchApp.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		492901732677C62C007F00D0 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4929015D2677C626007F00D0 /* MiniChallenge2 WatchApp Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		4922C6982675B1910026CDD3 /* UIAlertController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+.swift"; sourceTree = "<group>"; };
+		492901502677C620007F00D0 /* MiniChallenge2 WatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MiniChallenge2 WatchApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		492901572677C626007F00D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4929015C2677C626007F00D0 /* MiniChallenge2 WatchApp Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "MiniChallenge2 WatchApp Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		492901632677C626007F00D0 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		492901652677C626007F00D0 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		492901672677C626007F00D0 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		492901692677C62C007F00D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4929016B2677C62C007F00D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4929016C2677C62C007F00D0 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		4929018A2677C656007F00D0 /* Interface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Interface.storyboard; sourceTree = "<group>"; };
+		4929018B2677C656007F00D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4929019A2677C690007F00D0 /* WatchManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchManager.swift; sourceTree = "<group>"; };
+		4929019D2677C690007F00D0 /* WatchColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchColor.swift; sourceTree = "<group>"; };
+		4929019E2677C690007F00D0 /* WorkoutInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutInterfaceController.swift; sourceTree = "<group>"; };
+		492901AD2677C6AA007F00D0 /* MiniChallenge2 WatchApp Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MiniChallenge2 WatchApp Extension.entitlements"; sourceTree = "<group>"; };
+		492901C02677CF53007F00D0 /* MyScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyScene.sks; sourceTree = "<group>"; };
+		4942EDC62672474400444DC8 /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
+		4942EDCA2672491C00444DC8 /* UIScollView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScollView+.swift"; sourceTree = "<group>"; };
+		4942EDCF26724CD500444DC8 /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
+		4942EDD42672615300444DC8 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		496C2B68267846DF00333F56 /* HealthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthModel.swift; sourceTree = "<group>"; };
+		496C2B7F267873A700333F56 /* InterfaceCardioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceCardioController.swift; sourceTree = "<group>"; };
+		496C2B84267875B300333F56 /* WorkoutSessionInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutSessionInterfaceController.swift; sourceTree = "<group>"; };
 		498085962670B91900E10F40 /* CardioTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardioTableViewCell.swift; sourceTree = "<group>"; };
 		498085972670B91900E10F40 /* CardioTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardioTableViewCell.xib; sourceTree = "<group>"; };
 		4980859D2670C82800E10F40 /* TestResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResultViewController.swift; sourceTree = "<group>"; };
 		4980859E2670C82800E10F40 /* TestResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestResultViewController.xib; sourceTree = "<group>"; };
 		498085A32670E8BE00E10F40 /* GradingCriteriaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradingCriteriaTableViewCell.swift; sourceTree = "<group>"; };
 		498085A42670E8BE00E10F40 /* GradingCriteriaTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GradingCriteriaTableViewCell.xib; sourceTree = "<group>"; };
+		498571FE26746527000CB1B9 /* MiniChallenge2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MiniChallenge2.entitlements; sourceTree = "<group>"; };
+		4985720026746527000CB1B9 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		4985720726746570000CB1B9 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		498572472674F848000CB1B9 /* WatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchManager.swift; sourceTree = "<group>"; };
 		49875FD4266FAE960060BE6E /* EvaluationView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EvaluationView.storyboard; sourceTree = "<group>"; };
 		49875FD7266FAF170060BE6E /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		49875FDB266FAF5D0060BE6E /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
@@ -90,6 +209,25 @@
 		49875FF0266FB16B0060BE6E /* SpiderChartResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiderChartResultViewController.swift; sourceTree = "<group>"; };
 		49875FF1266FB16B0060BE6E /* SpiderChartChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiderChartChildViewController.swift; sourceTree = "<group>"; };
 		49875FF2266FB16B0060BE6E /* SpiderChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiderChartViewController.swift; sourceTree = "<group>"; };
+		4E459BDD2677196F008DB2D8 /* PlanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanModel.swift; sourceTree = "<group>"; };
+		4E459BDF267721F6008DB2D8 /* Databases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Databases.swift; sourceTree = "<group>"; };
+		4E459BE32677497C008DB2D8 /* HistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryModel.swift; sourceTree = "<group>"; };
+		4E459BED26775F8E008DB2D8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4E459BEF26784662008DB2D8 /* ExerciseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseModel.swift; sourceTree = "<group>"; };
+		4E459BF12678477F008DB2D8 /* PaketModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaketModel.swift; sourceTree = "<group>"; };
+		4990F8F62677D7CE007030F0 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		4990F8FE2677D879007030F0 /* HomeInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInterfaceController.swift; sourceTree = "<group>"; };
+		4994ACA626772C3600127044 /* ProfileHealthToggleTableViewCells.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileHealthToggleTableViewCells.xib; sourceTree = "<group>"; };
+		4994ACA726772C3600127044 /* ProfileHealthToggleTableViewCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHealthToggleTableViewCells.swift; sourceTree = "<group>"; };
+		4994ACAE26772C5900127044 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		4994ACB826772F9E00127044 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		4994ACB926772F9E00127044 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		4E459BDD2677196F008DB2D8 /* PlanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanModel.swift; sourceTree = "<group>"; };
+		4E459BDF267721F6008DB2D8 /* Databases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Databases.swift; sourceTree = "<group>"; };
+		4E459BE32677497C008DB2D8 /* HistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryModel.swift; sourceTree = "<group>"; };
+		4E459BED26775F8E008DB2D8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7DA5DC1C267323E100B6C7EB /* PlanCollectionViewCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanCollectionViewCells.swift; sourceTree = "<group>"; };
+		7DA5DC1D267323E100B6C7EB /* PlanCollectionViewCells.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlanCollectionViewCells.xib; sourceTree = "<group>"; };
 		7548A45C26743FF700D30654 /* VideoSectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VideoSectionView.xib; path = ../../../../../code/swifttutorial/XibTutorial/XibTutorial/InExercise/component/VideoSectionView.xib; sourceTree = "<group>"; };
 		7548A45D26743FF700D30654 /* VideoSectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoSectionView.swift; path = ../../../../../code/swifttutorial/XibTutorial/XibTutorial/InExercise/component/VideoSectionView.swift; sourceTree = "<group>"; };
 		7548A46B26746E9D00D30654 /* ActionSectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActionSectionView.swift; path = ../../../../../code/swifttutorial/XibTutorial/XibTutorial/InExercise/component/ActionSectionView.swift; sourceTree = "<group>"; };
@@ -113,8 +251,6 @@
 		866BCEBC2668FDF900482207 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		866BCEBE2668FEC200482207 /* MyPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlanViewController.swift; sourceTree = "<group>"; };
 		866BCEBF2668FEC200482207 /* MyPlanViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPlanViewController.xib; sourceTree = "<group>"; };
-		866BCEC326690AF800482207 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		866BCEC426690AF800482207 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		866BCEC826690B2100482207 /* EvaluationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationViewController.swift; sourceTree = "<group>"; };
 		866BCEDB2669194300482207 /* WarmUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarmUpViewController.swift; sourceTree = "<group>"; };
 		866BCEDC2669194300482207 /* WarmUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WarmUpViewController.xib; sourceTree = "<group>"; };
@@ -137,20 +273,86 @@
 		869EDCE02669C30000DA4770 /* PlanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanTableViewCell.swift; sourceTree = "<group>"; };
 		869EDCE12669C30000DA4770 /* PlanTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlanTableViewCell.xib; sourceTree = "<group>"; };
 		86A3D3D3266F2F4E001BE47B /* MCSectionHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCSectionHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		86C5EEFF26761D4E00A290EC /* CardioCircleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardioCircleLabel.swift; sourceTree = "<group>"; };
+		86C5EF062676289600A290EC /* SectionButtonCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionButtonCollectionView.swift; sourceTree = "<group>"; };
+		86C5EF072676289600A290EC /* SectionButtonCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionButtonCollectionView.xib; sourceTree = "<group>"; };
+		86D6DA09267717F900488252 /* InputCountExamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputCountExamViewController.swift; sourceTree = "<group>"; };
+		86D6DA0A267717F900488252 /* InputCountExamViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputCountExamViewController.xib; sourceTree = "<group>"; };
+		86D6DA0E26771E2100488252 /* ExamCameraViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamCameraViewViewController.swift; sourceTree = "<group>"; };
+		86D6DA0F26771E2100488252 /* ExamCameraViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExamCameraViewViewController.xib; sourceTree = "<group>"; };
+		86D6DA12267721FA00488252 /* VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
+		86EFA78426766113007E7158 /* TakeTestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeTestTableViewCell.swift; sourceTree = "<group>"; };
+		86EFA78526766113007E7158 /* TakeTestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TakeTestTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		492901592677C626007F00D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				492901AE2677C6AA007F00D0 /* HealthKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		86314D1C266746C90055FC31 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				49875FE6266FB05E0060BE6E /* Charts in Frameworks */,
+				4985720126746527000CB1B9 /* HealthKit.framework in Frameworks */,
+				4E459BD82676FAB0008DB2D8 /* FirebaseDatabase in Frameworks */,
+				4E459BDA2676FAB0008DB2D8 /* FirebaseStorage in Frameworks */,
+				4E459BD62676FAB0008DB2D8 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		492901512677C620007F00D0 /* MiniChallenge2 WatchApp */ = {
+			isa = PBXGroup;
+			children = (
+				4929018B2677C656007F00D0 /* Assets.xcassets */,
+				4929018A2677C656007F00D0 /* Interface.storyboard */,
+				492901572677C626007F00D0 /* Info.plist */,
+			);
+			path = "MiniChallenge2 WatchApp";
+			sourceTree = "<group>";
+		};
+		492901602677C626007F00D0 /* MiniChallenge2 WatchApp Extension */ = {
+			isa = PBXGroup;
+			children = (
+				492901AD2677C6AA007F00D0 /* MiniChallenge2 WatchApp Extension.entitlements */,
+				492901632677C626007F00D0 /* ExtensionDelegate.swift */,
+				492901652677C626007F00D0 /* NotificationController.swift */,
+				492901672677C626007F00D0 /* ComplicationController.swift */,
+				492901692677C62C007F00D0 /* Assets.xcassets */,
+				4929016B2677C62C007F00D0 /* Info.plist */,
+				4929016C2677C62C007F00D0 /* PushNotificationPayload.apns */,
+				4929019D2677C690007F00D0 /* WatchColor.swift */,
+				4929019A2677C690007F00D0 /* WatchManager.swift */,
+				4929019E2677C690007F00D0 /* WorkoutInterfaceController.swift */,
+				492901C02677CF53007F00D0 /* MyScene.sks */,
+				4990F8F62677D7CE007030F0 /* InterfaceController.swift */,
+				4990F8FE2677D879007030F0 /* HomeInterfaceController.swift */,
+				496C2B7F267873A700333F56 /* InterfaceCardioController.swift */,
+				496C2B84267875B300333F56 /* WorkoutSessionInterfaceController.swift */,
+			);
+			path = "MiniChallenge2 WatchApp Extension";
+			sourceTree = "<group>";
+		};
+		4942EDC92672490200444DC8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4942EDC62672474400444DC8 /* UILabel+.swift */,
+				4942EDCA2672491C00444DC8 /* UIScollView+.swift */,
+				4942EDCF26724CD500444DC8 /* UITableView+.swift */,
+				4942EDD42672615300444DC8 /* UIView+.swift */,
+				4922C6982675B1910026CDD3 /* UIAlertController+.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		4980858D2670B58C00E10F40 /* ResultTableViewCells */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +378,15 @@
 				498085A42670E8BE00E10F40 /* GradingCriteriaTableViewCell.xib */,
 			);
 			path = GradingCriteriaViewCells;
+			sourceTree = "<group>";
+		};
+		498571FF26746527000CB1B9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4985720726746570000CB1B9 /* HealthKit.framework */,
+				4985720026746527000CB1B9 /* HealthKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		49875FDA266FAF4B0060BE6E /* HistoryTableViewCells */ = {
@@ -205,6 +416,24 @@
 			path = SpiderChart;
 			sourceTree = "<group>";
 		};
+		4994ACA526772C3600127044 /* ProfileHealthToggleViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				4994ACA626772C3600127044 /* ProfileHealthToggleTableViewCells.xib */,
+				4994ACA726772C3600127044 /* ProfileHealthToggleTableViewCells.swift */,
+			);
+			path = ProfileHealthToggleViewCells;
+			sourceTree = "<group>";
+		};
+		7DA5DC1B267323E100B6C7EB /* PlanCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				7DA5DC1C267323E100B6C7EB /* PlanCollectionViewCells.swift */,
+				7DA5DC1D267323E100B6C7EB /* PlanCollectionViewCells.xib */,
+			);
+			name = PlanCollectionViewCell;
+			path = MiniChallenge2/CollectionViewCells/PlanCollectionViewCell;
+			sourceTree = SOURCE_ROOT;
 		7548A45B26743FB600D30654 /* ExercisingCustomView */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,7 +461,10 @@
 			isa = PBXGroup;
 			children = (
 				86314D21266746C90055FC31 /* MiniChallenge2 */,
+				492901512677C620007F00D0 /* MiniChallenge2 WatchApp */,
+				492901602677C626007F00D0 /* MiniChallenge2 WatchApp Extension */,
 				86314D20266746C90055FC31 /* Products */,
+				498571FF26746527000CB1B9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -240,6 +472,8 @@
 			isa = PBXGroup;
 			children = (
 				86314D1F266746C90055FC31 /* MiniChallenge2.app */,
+				492901502677C620007F00D0 /* MiniChallenge2 WatchApp.app */,
+				4929015C2677C626007F00D0 /* MiniChallenge2 WatchApp Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -247,6 +481,8 @@
 		86314D21266746C90055FC31 /* MiniChallenge2 */ = {
 			isa = PBXGroup;
 			children = (
+				4E459BED26775F8E008DB2D8 /* GoogleService-Info.plist */,
+				498571FE26746527000CB1B9 /* MiniChallenge2.entitlements */,
 				869EDCDE2669C2D000DA4770 /* CollectionViewCells */,
 				869EDCDD2669C2C800DA4770 /* TableViewCells */,
 				866BCEB82668FCF300482207 /* Assets */,
@@ -258,6 +494,7 @@
 				86314D24266746C90055FC31 /* SceneDelegate.swift */,
 				86314D2D266746CA0055FC31 /* LaunchScreen.storyboard */,
 				86314D30266746CA0055FC31 /* Info.plist */,
+				498572472674F848000CB1B9 /* WatchManager.swift */,
 			);
 			path = MiniChallenge2;
 			sourceTree = "<group>";
@@ -267,6 +504,13 @@
 			children = (
 				861C35D8266DC5F3005ABB7E /* DummyData.swift */,
 				49875FD7266FAF170060BE6E /* History.swift */,
+				4E459BDD2677196F008DB2D8 /* PlanModel.swift */,
+				4E459BDF267721F6008DB2D8 /* Databases.swift */,
+				4E459BE32677497C008DB2D8 /* HistoryModel.swift */,
+				4E459BEF26784662008DB2D8 /* ExerciseModel.swift */,
+				4E459BF12678477F008DB2D8 /* PaketModel.swift */,
+				4994ACAE26772C5900127044 /* Profile.swift */,
+				496C2B68267846DF00333F56 /* HealthModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -294,6 +538,7 @@
 		866BCEB82668FCF300482207 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				4942EDC92672490200444DC8 /* Helpers */,
 				7548A4722674710D00D30654 /* sampleVideo */,
 				86314D2B266746CA0055FC31 /* Assets.xcassets */,
 				86771235266E4929000313B3 /* Utility.swift */,
@@ -324,8 +569,8 @@
 		866BCEC226690A6900482207 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				866BCEC326690AF800482207 /* ProfileViewController.swift */,
-				866BCEC426690AF800482207 /* ProfileViewController.xib */,
+				4994ACB826772F9E00127044 /* ProfileViewController.swift */,
+				4994ACB926772F9E00127044 /* ProfileViewController.xib */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -391,6 +636,8 @@
 		866BCEEE26691A0700482207 /* Evaluation */ = {
 			isa = PBXGroup;
 			children = (
+				86D6DA0D26771E0B00488252 /* ExamCameraView */,
+				86D6DA08267717C900488252 /* InputCountExam */,
 				49875FEF266FB1580060BE6E /* SpiderChart */,
 				49875FE0266FAFA30060BE6E /* History */,
 				866BCEFA26691B6C00482207 /* CardioTest */,
@@ -465,6 +712,8 @@
 		869EDCDD2669C2C800DA4770 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				4994ACA526772C3600127044 /* ProfileHealthToggleViewCells */,
+				86EFA783267660E8007E7158 /* TakeTestTableViewCells */,
 				4980858D2670B58C00E10F40 /* ResultTableViewCells */,
 				49875FDA266FAF4B0060BE6E /* HistoryTableViewCells */,
 				869EDCDF2669C2E100DA4770 /* PlanTableViewCells */,
@@ -475,6 +724,7 @@
 		869EDCDE2669C2D000DA4770 /* CollectionViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				7DA5DC1B267323E100B6C7EB /* PlanCollectionViewCell */,
 				8688D5F9266FC1A400081F8F /* SummaryDetailPlanCollectionViewCell */,
 				8688D5F4266FB52A00081F8F /* ExcerciseDetailPlanCollectionViewCell */,
 				8688D5EF266FA1E600081F8F /* DatePlanCollectionViewCells */,
@@ -494,6 +744,8 @@
 		86A3D3CE266F2A57001BE47B /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				86C5EF01267627AB00A290EC /* SectionButtonCollectionView */,
+				86C5EEFE26761BE000A290EC /* CardioCircleLabel */,
 				7548A45B26743FB600D30654 /* ExercisingCustomView */,
 				8688D5EC266F784800081F8F /* TableViewSectionHeader */,
 				86A3D3D2266F2F02001BE47B /* CollectionViewSectionHeader */,
@@ -509,9 +761,88 @@
 			path = CollectionViewSectionHeader;
 			sourceTree = "<group>";
 		};
+		86C5EEFE26761BE000A290EC /* CardioCircleLabel */ = {
+			isa = PBXGroup;
+			children = (
+				86C5EEFF26761D4E00A290EC /* CardioCircleLabel.swift */,
+			);
+			path = CardioCircleLabel;
+			sourceTree = "<group>";
+		};
+		86C5EF01267627AB00A290EC /* SectionButtonCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				86C5EF062676289600A290EC /* SectionButtonCollectionView.swift */,
+				86C5EF072676289600A290EC /* SectionButtonCollectionView.xib */,
+			);
+			path = SectionButtonCollectionView;
+			sourceTree = "<group>";
+		};
+		86D6DA08267717C900488252 /* InputCountExam */ = {
+			isa = PBXGroup;
+			children = (
+				86D6DA09267717F900488252 /* InputCountExamViewController.swift */,
+				86D6DA0A267717F900488252 /* InputCountExamViewController.xib */,
+			);
+			path = InputCountExam;
+			sourceTree = "<group>";
+		};
+		86D6DA0D26771E0B00488252 /* ExamCameraView */ = {
+			isa = PBXGroup;
+			children = (
+				86D6DA0E26771E2100488252 /* ExamCameraViewViewController.swift */,
+				86D6DA0F26771E2100488252 /* ExamCameraViewViewController.xib */,
+				86D6DA12267721FA00488252 /* VideoCapture.swift */,
+			);
+			path = ExamCameraView;
+			sourceTree = "<group>";
+		};
+		86EFA783267660E8007E7158 /* TakeTestTableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				86EFA78426766113007E7158 /* TakeTestTableViewCell.swift */,
+				86EFA78526766113007E7158 /* TakeTestTableViewCell.xib */,
+			);
+			path = TakeTestTableViewCells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4929014F2677C620007F00D0 /* MiniChallenge2 WatchApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 492901772677C62C007F00D0 /* Build configuration list for PBXNativeTarget "MiniChallenge2 WatchApp" */;
+			buildPhases = (
+				4929014E2677C620007F00D0 /* Resources */,
+				492901732677C62C007F00D0 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4929015F2677C626007F00D0 /* PBXTargetDependency */,
+			);
+			name = "MiniChallenge2 WatchApp";
+			productName = "MiniChallenge2 WatchApp";
+			productReference = 492901502677C620007F00D0 /* MiniChallenge2 WatchApp.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		4929015B2677C626007F00D0 /* MiniChallenge2 WatchApp Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 492901762677C62C007F00D0 /* Build configuration list for PBXNativeTarget "MiniChallenge2 WatchApp Extension" */;
+			buildPhases = (
+				492901582677C626007F00D0 /* Sources */,
+				492901592677C626007F00D0 /* Frameworks */,
+				4929015A2677C626007F00D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MiniChallenge2 WatchApp Extension";
+			productName = "MiniChallenge2 WatchApp Extension";
+			productReference = 4929015C2677C626007F00D0 /* MiniChallenge2 WatchApp Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		86314D1E266746C90055FC31 /* MiniChallenge2 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 86314D33266746CA0055FC31 /* Build configuration list for PBXNativeTarget "MiniChallenge2" */;
@@ -519,14 +850,19 @@
 				86314D1B266746C90055FC31 /* Sources */,
 				86314D1C266746C90055FC31 /* Frameworks */,
 				86314D1D266746C90055FC31 /* Resources */,
+				492901702677C62C007F00D0 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4929016E2677C62C007F00D0 /* PBXTargetDependency */,
 			);
 			name = MiniChallenge2;
 			packageProductDependencies = (
 				49875FE5266FB05E0060BE6E /* Charts */,
+				4E459BD52676FAB0008DB2D8 /* FirebaseAnalytics */,
+				4E459BD72676FAB0008DB2D8 /* FirebaseDatabase */,
+				4E459BD92676FAB0008DB2D8 /* FirebaseStorage */,
 			);
 			productName = MiniChallenge2;
 			productReference = 86314D1F266746C90055FC31 /* MiniChallenge2.app */;
@@ -538,9 +874,15 @@
 		86314D17266746C90055FC31 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1250;
+				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					4929014F2677C620007F00D0 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					4929015B2677C626007F00D0 = {
+						CreatedOnToolsVersion = 12.4;
+					};
 					86314D1E266746C90055FC31 = {
 						CreatedOnToolsVersion = 12.5;
 					};
@@ -557,17 +899,38 @@
 			mainGroup = 86314D16266746C90055FC31;
 			packageReferences = (
 				49875FE4266FB05E0060BE6E /* XCRemoteSwiftPackageReference "Charts" */,
+				4E459BD42676FAB0008DB2D8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 86314D20266746C90055FC31 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				86314D1E266746C90055FC31 /* MiniChallenge2 */,
+				4929014F2677C620007F00D0 /* MiniChallenge2 WatchApp */,
+				4929015B2677C626007F00D0 /* MiniChallenge2 WatchApp Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4929014E2677C620007F00D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4929018D2677C656007F00D0 /* Assets.xcassets in Resources */,
+				4929018C2677C656007F00D0 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4929015A2677C626007F00D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				492901C12677CF53007F00D0 /* MyScene.sks in Resources */,
+				4929016A2677C62C007F00D0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		86314D1D266746C90055FC31 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -578,9 +941,14 @@
 				866BCEE8266919B600482207 /* DetailPlanViewController.xib in Resources */,
 				8688D5F3266FA23C00081F8F /* DatePlanCollectionViewCell.xib in Resources */,
 				8688D5F8266FB55D00081F8F /* ExcerciseDetailPlanCollectionViewCell.xib in Resources */,
+				86D6DA1126771E2100488252 /* ExamCameraViewViewController.xib in Resources */,
+				86D6DA0C267717F900488252 /* InputCountExamViewController.xib in Resources */,
+				86C5EF092676289600A290EC /* SectionButtonCollectionView.xib in Resources */,
 				866BCEF326691A1C00482207 /* TakeTestViewController.xib in Resources */,
-				866BCEC626690AF800482207 /* ProfileViewController.xib in Resources */,
 				498085A62670E8BE00E10F40 /* GradingCriteriaTableViewCell.xib in Resources */,
+				86EFA78726766113007E7158 /* TakeTestTableViewCell.xib in Resources */,
+				869EDCE32669C30000DA4770 /* PlanTableViewCell.xib in Resources */,
+				4994ACA826772C3600127044 /* ProfileHealthToggleTableViewCells.xib in Resources */,
 				755E0D752675D7FB001505CC /* Push up.mov in Resources */,
 				869EDCE32669C30000DA4770 /* PlanTableViewCell.xib in Resources */,
 				7548A47B2674A4CD00D30654 /* CongratulationViewController.xib in Resources */,
@@ -589,10 +957,14 @@
 				866BCEFE26691B8100482207 /* CardioTestViewController.xib in Resources */,
 				498085992670B91900E10F40 /* CardioTableViewCell.xib in Resources */,
 				866BCEE32669198B00482207 /* ExcerciseReportViewController.xib in Resources */,
+				7DA5DC1F267323E100B6C7EB /* PlanCollectionViewCells.xib in Resources */,
 				8688D5FD266FC1EA00081F8F /* SummaryDetailPlanCollectionViewCell.xib in Resources */,
+				4994ACBB26772F9E00127044 /* ProfileViewController.xib in Resources */,
 				866BCEDE2669194300482207 /* WarmUpViewController.xib in Resources */,
 				7548A4742674712700D30654 /* crunches.mov in Resources */,
 				86314D2C266746CA0055FC31 /* Assets.xcassets in Resources */,
+				4E459BEE26775F8E008DB2D8 /* GoogleService-Info.plist in Resources */,
+				866BCEED266919E700482207 /* ExcercisingViewController.xib in Resources */,
 				7548A45E26743FF700D30654 /* VideoSectionView.xib in Resources */,
 				7548A4822674A8F200D30654 /* ActionSectionView.xib in Resources */,
 				49875FD5266FAE960060BE6E /* EvaluationView.storyboard in Resources */,
@@ -603,33 +975,69 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		492901582677C626007F00D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				496C2B80267873A700333F56 /* InterfaceCardioController.swift in Sources */,
+				492901662677C626007F00D0 /* NotificationController.swift in Sources */,
+				492901682677C626007F00D0 /* ComplicationController.swift in Sources */,
+				492901642677C626007F00D0 /* ExtensionDelegate.swift in Sources */,
+				4929019F2677C690007F00D0 /* WatchManager.swift in Sources */,
+				4990F8FF2677D879007030F0 /* HomeInterfaceController.swift in Sources */,
+				496C2B85267875B300333F56 /* WorkoutSessionInterfaceController.swift in Sources */,
+				492901A22677C690007F00D0 /* WatchColor.swift in Sources */,
+				4990F8F72677D7CE007030F0 /* InterfaceController.swift in Sources */,
+				492901A32677C691007F00D0 /* WorkoutInterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		86314D1B266746C90055FC31 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86C5EF0026761D4E00A290EC /* CardioCircleLabel.swift in Sources */,
+				4994ACA926772C3600127044 /* ProfileHealthToggleTableViewCells.swift in Sources */,
 				866BCEFD26691B8100482207 /* CardioTestViewController.swift in Sources */,
 				866BCEE22669198B00482207 /* ExcerciseReportViewController.swift in Sources */,
+				86D6DA1026771E2100488252 /* ExamCameraViewViewController.swift in Sources */,
+				4922C6992675B1910026CDD3 /* UIAlertController+.swift in Sources */,
 				49875FD8266FAF170060BE6E /* History.swift in Sources */,
+				4942EDD026724CD500444DC8 /* UITableView+.swift in Sources */,
+				4E459BE0267721F6008DB2D8 /* Databases.swift in Sources */,
 				4980859F2670C82800E10F40 /* TestResultViewController.swift in Sources */,
 				8688D5FC266FC1EA00081F8F /* SummaryDetailPlanCollectionViewCell.swift in Sources */,
 				86314D23266746C90055FC31 /* AppDelegate.swift in Sources */,
+				498572482674F848000CB1B9 /* WatchManager.swift in Sources */,
+				4E459BF026784662008DB2D8 /* ExerciseModel.swift in Sources */,
+				4E459BE42677497C008DB2D8 /* HistoryModel.swift in Sources */,
 				861C35D9266DC5F3005ABB7E /* DummyData.swift in Sources */,
 				866BCEDD2669194300482207 /* WarmUpViewController.swift in Sources */,
+				4E459BF22678477F008DB2D8 /* PaketModel.swift in Sources */,
 				7548A4802674A4F100D30654 /* CongratulationMessageView.swift in Sources */,
 				8688D5EE266F787400081F8F /* MCTableViewSectionHeader.swift in Sources */,
 				866BCEF226691A1C00482207 /* TakeTestViewController.swift in Sources */,
 				866BCEBD2668FDF900482207 /* TabBarController.swift in Sources */,
+				4E459BDE2677196F008DB2D8 /* PlanModel.swift in Sources */,
+				4994ACAF26772C5900127044 /* Profile.swift in Sources */,
 				49875FEB266FB0F70060BE6E /* ColorExtension.swift in Sources */,
 				7553C4F02678390D009A9131 /* ExcercisingViewController.swift in Sources */,
 				755E0D7F2675E48E001505CC /* ExcercisingViewController.xib in Sources */,
 				49875FED266FB0F70060BE6E /* SpiderChartFormatter.swift in Sources */,
-				866BCEC526690AF800482207 /* ProfileViewController.swift in Sources */,
 				498085982670B91900E10F40 /* CardioTableViewCell.swift in Sources */,
+				86D6DA0B267717F900488252 /* InputCountExamViewController.swift in Sources */,
+				86C5EF082676289600A290EC /* SectionButtonCollectionView.swift in Sources */,
+				86EFA78626766113007E7158 /* TakeTestTableViewCell.swift in Sources */,
+				4942EDD52672615300444DC8 /* UIView+.swift in Sources */,
 				49875FE2266FAFAF0060BE6E /* HistoryTableViewController.swift in Sources */,
 				49875FF5266FB16B0060BE6E /* SpiderChartViewController.swift in Sources */,
 				866BCEE7266919B600482207 /* DetailPlanViewController.swift in Sources */,
+				4942EDCB2672491C00444DC8 /* UIScollView+.swift in Sources */,
 				866BCEC02668FEC200482207 /* MyPlanViewController.swift in Sources */,
 				49875FF4266FB16B0060BE6E /* SpiderChartChildViewController.swift in Sources */,
+				496C2B69267846DF00333F56 /* HealthModel.swift in Sources */,
+				7DA5DC1E267323E100B6C7EB /* PlanCollectionViewCells.swift in Sources */,
+				86D6DA13267721FA00488252 /* VideoCapture.swift in Sources */,
 				498085A52670E8BE00E10F40 /* GradingCriteriaTableViewCell.swift in Sources */,
 				7548A47C2674A4CD00D30654 /* CongratulationViewController.swift in Sources */,
 				49875FDE266FAF5D0060BE6E /* HistoryTableViewCell.swift in Sources */,
@@ -642,12 +1050,27 @@
 				7548A45F26743FF700D30654 /* VideoSectionView.swift in Sources */,
 				869EDCE22669C30000DA4770 /* PlanTableViewCell.swift in Sources */,
 				866BCECA26690B2100482207 /* EvaluationViewController.swift in Sources */,
+				4942EDC72672474400444DC8 /* UILabel+.swift in Sources */,
+				4994ACBA26772F9E00127044 /* ProfileViewController.swift in Sources */,
 				49875FEC266FB0F70060BE6E /* StringExtension.swift in Sources */,
 				86314D25266746C90055FC31 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4929015F2677C626007F00D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4929015B2677C626007F00D0 /* MiniChallenge2 WatchApp Extension */;
+			targetProxy = 4929015E2677C626007F00D0 /* PBXContainerItemProxy */;
+		};
+		4929016E2677C62C007F00D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4929014F2677C620007F00D0 /* MiniChallenge2 WatchApp */;
+			targetProxy = 4929016D2677C62C007F00D0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		86314D2D266746CA0055FC31 /* LaunchScreen.storyboard */ = {
@@ -661,6 +1084,94 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		492901712677C62C007F00D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TATAZHHLZ7;
+				IBSC_MODULE = MiniChallenge2_WatchApp_Extension;
+				INFOPLIST_FILE = "MiniChallenge2 WatchApp/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jackieleonardy.MiniChallenge2App.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Debug;
+		};
+		492901722677C62C007F00D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TATAZHHLZ7;
+				IBSC_MODULE = MiniChallenge2_WatchApp_Extension;
+				INFOPLIST_FILE = "MiniChallenge2 WatchApp/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jackieleonardy.MiniChallenge2App.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Release;
+		};
+		492901742677C62C007F00D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "MiniChallenge2 WatchApp Extension/MiniChallenge2 WatchApp Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TATAZHHLZ7;
+				INFOPLIST_FILE = "MiniChallenge2 WatchApp Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jackieleonardy.MiniChallenge2App.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Debug;
+		};
+		492901752677C62C007F00D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "MiniChallenge2 WatchApp Extension/MiniChallenge2 WatchApp Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TATAZHHLZ7;
+				INFOPLIST_FILE = "MiniChallenge2 WatchApp Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jackieleonardy.MiniChallenge2App.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Release;
+		};
 		86314D31266746CA0055FC31 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -782,15 +1293,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MiniChallenge2/MiniChallenge2.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TATAZHHLZ7;
 				INFOPLIST_FILE = MiniChallenge2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Example.MiniChallenge2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jackieleonardy.MiniChallenge2App;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -801,15 +1316,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MiniChallenge2/MiniChallenge2.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TATAZHHLZ7;
 				INFOPLIST_FILE = MiniChallenge2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Example.MiniChallenge2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jackieleonardy.MiniChallenge2App;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -818,6 +1337,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		492901762677C62C007F00D0 /* Build configuration list for PBXNativeTarget "MiniChallenge2 WatchApp Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				492901742677C62C007F00D0 /* Debug */,
+				492901752677C62C007F00D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		492901772677C62C007F00D0 /* Build configuration list for PBXNativeTarget "MiniChallenge2 WatchApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				492901712677C62C007F00D0 /* Debug */,
+				492901722677C62C007F00D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		86314D1A266746C90055FC31 /* Build configuration list for PBXProject "MiniChallenge2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -847,6 +1384,14 @@
 				minimumVersion = 3.5.0;
 			};
 		};
+		4E459BD42676FAB0008DB2D8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.1.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -854,6 +1399,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 49875FE4266FB05E0060BE6E /* XCRemoteSwiftPackageReference "Charts" */;
 			productName = Charts;
+		};
+		4E459BD52676FAB0008DB2D8 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4E459BD42676FAB0008DB2D8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		4E459BD72676FAB0008DB2D8 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4E459BD42676FAB0008DB2D8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		4E459BD92676FAB0008DB2D8 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4E459BD42676FAB0008DB2D8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

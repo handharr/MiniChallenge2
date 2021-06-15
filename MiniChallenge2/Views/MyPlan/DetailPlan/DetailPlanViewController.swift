@@ -12,6 +12,7 @@ class DetailPlanViewController: UIViewController {
     @IBOutlet weak var detailPlanCollectionView: UICollectionView!
     
     static let excercisesHeaderID = "excercisesHeaderID"
+    static let startButtonID = "startButtonID"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,7 @@ class DetailPlanViewController: UIViewController {
         detailPlanCollectionView.register(DatePlanCollectionViewCell.nib(), forCellWithReuseIdentifier: DatePlanCollectionViewCell.identifier)
         detailPlanCollectionView.register(ExcerciseDetailPlanCollectionViewCell.nib(), forCellWithReuseIdentifier: ExcerciseDetailPlanCollectionViewCell.identifier)
         detailPlanCollectionView.register(SummaryDetailPlanCollectionViewCell.nib(), forCellWithReuseIdentifier: SummaryDetailPlanCollectionViewCell.identifier)
+        detailPlanCollectionView.register(SectionButtonCollectionView.nib(), forSupplementaryViewOfKind: DetailPlanViewController.startButtonID, withReuseIdentifier: SectionButtonCollectionView.identifier)
     }
 }
 
@@ -91,11 +93,17 @@ extension DetailPlanViewController: UICollectionViewDelegate, UICollectionViewDa
     
     // Set section's Header
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: MCSectionHeaderCollectionReusableView.identifier, for: indexPath) as! MCSectionHeaderCollectionReusableView
-        
-        header.textLabel.text = "Excercises"
-        
-        return header
+        if kind == DetailPlanViewController.excercisesHeaderID {
+            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: MCSectionHeaderCollectionReusableView.identifier, for: indexPath) as! MCSectionHeaderCollectionReusableView
+            
+            header.textLabel.text = "Excercises"
+            
+            return header
+        } else {
+            let startButton = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: SectionButtonCollectionView.identifier, for: indexPath) as! SectionButtonCollectionView
+            
+            return startButton
+        }
     }
     
     // Layouting
@@ -109,7 +117,7 @@ extension DetailPlanViewController: UICollectionViewDelegate, UICollectionViewDa
                         heightDimension: .fractionalHeight(1)
                     )
                 )
-                item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 5)
+                item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 8)
                 
                 // group
                 let group = NSCollectionLayoutGroup.horizontal(
@@ -120,11 +128,12 @@ extension DetailPlanViewController: UICollectionViewDelegate, UICollectionViewDa
                     subitem: item,
                     count: 5
                 )
-                group.contentInsets = NSDirectionalEdgeInsets(top: 16, leading: 20, bottom: 16, trailing: 0)
+                group.contentInsets = NSDirectionalEdgeInsets(top: 16, leading: 0, bottom: 16, trailing: 0)
                 
                 // section
                 let section = NSCollectionLayoutSection(group: group)
-                section.orthogonalScrollingBehavior = .paging
+                section.orthogonalScrollingBehavior = .continuous
+                section.contentInsets = .init(top: 0, leading: 16, bottom: 0, trailing: 20)
                 
                 // return
                 return section
@@ -147,7 +156,7 @@ extension DetailPlanViewController: UICollectionViewDelegate, UICollectionViewDa
                     subitem: item,
                     count: 1
                 )
-                group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20)
+                group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
                 
                 // section
                 let section = NSCollectionLayoutSection(group: group)
@@ -174,10 +183,11 @@ extension DetailPlanViewController: UICollectionViewDelegate, UICollectionViewDa
                     subitem: item,
                     count: 5
                 )
-                group.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 20, bottom: 0, trailing: 20)
+                group.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0)
                 
                 // section
                 let section = NSCollectionLayoutSection(group: group)
+                section.contentInsets = .init(top: 0, leading: 16, bottom: 0, trailing: 16)
                 section.boundarySupplementaryItems = [
                     .init(
                         layoutSize: .init(
@@ -186,6 +196,14 @@ extension DetailPlanViewController: UICollectionViewDelegate, UICollectionViewDa
                         ),
                         elementKind: DetailPlanViewController.excercisesHeaderID,
                         alignment: .topLeading
+                    ),
+                    .init(
+                        layoutSize: .init(
+                            widthDimension: .fractionalWidth(1),
+                            heightDimension: .absolute(75)
+                        ),
+                        elementKind: DetailPlanViewController.startButtonID,
+                        alignment: .bottomLeading
                     )
                 ]
                 

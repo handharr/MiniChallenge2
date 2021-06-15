@@ -17,7 +17,9 @@ class EvaluationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Evaluation"
+        self.title = "Evaluation"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
         setUpTable()
     }
     
@@ -54,6 +56,12 @@ class EvaluationViewController: UIViewController {
         let historyTableVC = HistoryTableViewController()
         navigationController?.pushViewController(historyTableVC, animated: true)
 
+    }
+    
+    @IBAction func takeExamTapped(_ sender: Any) {
+        let examVC = TakeTestViewController()
+        navigationController?.pushViewController(examVC, animated: true)
+        Databases.shared.addHistory()
     }
 }
 

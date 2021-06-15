@@ -6,8 +6,8 @@
 //
 
 import UIKit
-
-@main
+import Firebase
+@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
@@ -16,8 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let window = UIWindow(frame: UIScreen.main.bounds)
         
-        window.rootViewController = TabBarController()
+//        let _ = WatchManager.shared
         
+        window.rootViewController = TabBarController()
+        FirebaseApp.configure()
         window.makeKeyAndVisible()
         self.window = window
         

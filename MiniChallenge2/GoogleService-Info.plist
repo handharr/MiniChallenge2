@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>61472164562-nj80g1t6clpk0sotj6bdg6g57c2oamkc.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.61472164562-nj80g1t6clpk0sotj6bdg6g57c2oamkc</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBGRTR6s4Hwpz7RH-aNgddeC_2pDrHOTq8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>61472164562</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.tian</string>
+	<key>PROJECT_ID</key>
+	<string>cheerdemo-ea42f</string>
+	<key>STORAGE_BUCKET</key>
+	<string>cheerdemo-ea42f.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:61472164562:ios:1db2c1f17080a28521bb0b</string>
+	<key>DATABASE_URL</key>
+	<string>https://cheerdemo-ea42f-default-rtdb.asia-southeast1.firebasedatabase.app</string>
+</dict>
+</plist>
