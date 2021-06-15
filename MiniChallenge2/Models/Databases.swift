@@ -21,7 +21,9 @@ class Databases {
     var histories = [HistoryModel]()
     
     
-    
+    init() {
+        retrivePlan()
+    }
     
 }
 
@@ -41,13 +43,14 @@ extension Databases{
                     let planWPD = planObject?["workoutPerDay"]
                     let planDPW = planObject?["dpw"]
                     let planOG = planObject?["onGoing"]
+                    let planCategory = planObject?["category"]
                     
-                    let plan = PlanModel(desc: planDesc as! String, name: planName as! String, thumbnailImage: planThumbnail as! String, workoutPerDay: planWPD as! Int, daysPerWeek: planDPW as! Int, onGoing: planOG as! String)
+                    let plan = PlanModel(desc: planDesc as! String, name: planName as! String, thumbnailImage: planThumbnail as! String, workoutPerDay: planWPD as! Int, daysPerWeek: planDPW as! Int, onGoing: planOG as! Bool, category: planCategory as! String)
                     self.plans.append(plan)
                     print()
                 }
                 //self.exerciseTV.reloadData()
-                print("total \(self.plans.count)")
+                //print("total \(self.plans.count)")
             }
         })
     }
@@ -97,6 +100,26 @@ extension Databases{
 //            }
 //        }
 //    }
+    
+//        func getImage(path: String) -> UIImage?{
+//            var image: UIImage?
+//            DispatchQueue.global(qos: .background).async {
+//                DispatchQueue.main.async {
+//                    let storageRef = Storage.storage().reference(withPath: path)
+//
+//                    storageRef.getData(maxSize: 4 * 1024 * 1024){ (data, error) in
+//                        if let error = error {
+//                            print("Got an error: \(error.localizedDescription)")
+//                            return
+//                        }
+//                        guard let data = data else {return}
+//                        image = UIImage(data: data)
+//                    }
+//                }
+//            }
+//            guard let image = image else {return nil}
+//            return image
+//        }
 
     
     //MARK: - add History Data
@@ -138,5 +161,27 @@ extension Databases{
         ref?.setValue(plan)
         //ref?.child()
         
+    }
+}
+//MARK: - Get Data
+ extension Databases {
+    
+    func getBeginnerPlan() -> [PlanModel] {
+        return plans.filter {$0.category == "beginner"}
+    }
+    func getIntermediatePlan() -> [PlanModel] {
+        return plans.filter {$0.category == "intermediate"}
+    }
+    func getAdvancePlan() -> [PlanModel] {
+        return plans.filter {$0.category == "advance"}
+    }
+    
+    public func getOnGoing() -> PlanModel? {
+        
+        if let index = plans.firstIndex(where: { $0.onGoing == true }) {
+            return plans[index]
+        }
+        
+        return nil
     }
 }
