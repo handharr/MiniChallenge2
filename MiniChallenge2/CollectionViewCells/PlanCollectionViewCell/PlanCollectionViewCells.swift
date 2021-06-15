@@ -39,6 +39,21 @@ class PlanCollectionViewCells: UICollectionViewCell {
         containerView.backgroundColor = UIColor(patternImage: model.planImage)
     }
     
+    public func configureUI(model: PlanModel){
+        titleLabel.text = model.name
+        descriptionLabel.text = model.desc
+        subtitleLabel.text = "\(model.workoutPerDay) workout/days"
+        
+        switch model.name {
+        case "All in One":
+            containerView.backgroundColor = UIColor(patternImage: UIImage(named: "plan-image-1")!)
+        case "Strength Plan":
+            containerView.backgroundColor = UIColor(patternImage: UIImage(named: "plan-image-2")!)
+        default:
+            containerView.backgroundColor = UIColor(patternImage: UIImage(named: "plan-image-3")!)
+        }
+    }
+    
     override func prepareForReuse() {
         setupUI()
     }

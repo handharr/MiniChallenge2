@@ -12,14 +12,45 @@ class MyPlanViewController: UIViewController {
     @IBOutlet weak var myPlanCollectionView: UICollectionView!
     
     static let topHeaderId = "topHeaderID"
-    
+    var datas = [[PlanModel]]()
+        
     override func viewDidLoad() {
+        
         super.viewDidLoad()
 
         title = "My Plan"
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .fastForward, target: self, action: #selector(goToCardioTest))
         
+        fetchData()
+        print(datas)
         setCollectionView()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        fetchData()
+    }
+    
+    private func fetchData(){
+        var onGoing = [PlanModel]()
+        if let ogData = Databases.shared.getOnGoing(){
+            onGoing.append(ogData)
+        }
+
+        let beginner = Databases.shared.getBeginnerPlan()
+        
+        let intermediate = Databases.shared.getIntermediatePlan()
+
+        let advance = Databases.shared.getAdvancePlan()
+
+       
+        datas.append(onGoing)
+        datas.append(beginner)
+        datas.append(intermediate)
+        datas.append(advance)
+
+
     }
     
     @objc private func goToCardioTest() {
@@ -40,26 +71,44 @@ class MyPlanViewController: UIViewController {
 }
 
 extension MyPlanViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return datas[section].count
+//    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return section == 0 ? 1 : 3
-    }
+           return section == 0 ? 1 : 3
+       }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 4
     }
     
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        let defaultCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+//        defaultCell.backgroundColor = MCColor.MCColorPrimary
+//
+//        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PlanCollectionViewCells.identifier, for: indexPath) as? PlanCollectionViewCells else {
+//            return defaultCell
+//        }
+//
+//        let model = datas[indexPath.section][indexPath.row]
+//        cell.configureUI(model: model)
+//
+//        return cell
+//    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let defaultCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        defaultCell.backgroundColor = MCColor.MCColorPrimary
-        
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PlanCollectionViewCells.identifier, for: indexPath) as? PlanCollectionViewCells else {
-            return defaultCell
+            let defaultCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+            defaultCell.backgroundColor = MCColor.MCColorPrimary
+            
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PlanCollectionViewCells.identifier, for: indexPath) as? PlanCollectionViewCells else {
+                return defaultCell
+            }
+            
+            cell.configureUI(model: DummyData.shared.dummyPlan[indexPath.row])
+            
+            return cell
         }
-        
-        cell.configureUI(model: DummyData.shared.dummyPlan[indexPath.row])
-        
-        return cell
-    }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)

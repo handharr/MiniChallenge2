@@ -23,6 +23,7 @@ class Databases {
     
     init() {
         retrivePlan()
+        print("ini plan ya \(plans)")
     }
     
 }
@@ -39,15 +40,16 @@ extension Databases{
                     let planObject =  plans.value as? [String: Any]
                     let planName =  planObject?["name"]
                     let planDesc = planObject?["desc"]
-                    let planThumbnail = planObject?["thumbnailImage"]
-                    let planWPD = planObject?["workoutPerDay"]
+                    let planThumbnail = planObject?["thumbnail"]
+                    let planWPD = planObject?["wpd"]
                     let planDPW = planObject?["dpw"]
-                    let planOG = planObject?["onGoing"]
+                    let planOG = planObject?["ongoing"]
                     let planCategory = planObject?["category"]
                     
                     let plan = PlanModel(desc: planDesc as! String, name: planName as! String, thumbnailImage: planThumbnail as! String, workoutPerDay: planWPD as! Int, daysPerWeek: planDPW as! Int, onGoing: planOG as! Bool, category: planCategory as! String)
                     self.plans.append(plan)
-                    print()
+                    print("ini ya plan \(plan.name)")
+                    print(self.plans.count)
                 }
                 //self.exerciseTV.reloadData()
                 //print("total \(self.plans.count)")
