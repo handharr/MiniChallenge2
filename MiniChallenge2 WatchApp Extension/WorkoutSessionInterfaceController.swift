@@ -1,21 +1,22 @@
 //
-//  WorkoutViewController.swift
-//  MiniChallenge2Watch WatchKit Extension
+//  WorkoutSessionInterfaceController.swift
+//  MiniChallenge2 WatchApp Extension
 //
-//  Created by Jackie Leonardy on 12/06/21.
+//  Created by Jackie Leonardy on 15/06/21.
 //
 
 import WatchKit
 import HealthKit
 import Combine
 
-class WorkoutInterfaceController: WKInterfaceController{
+class WorkoutSessionInterfaceController: WKInterfaceController{
     
     @IBOutlet weak var distanceRunning: WKInterfaceLabel!
     @IBOutlet weak var heartBeat: WKInterfaceLabel!
     @IBOutlet weak var timer: WKInterfaceLabel!
     @IBOutlet weak var calories: WKInterfaceLabel!
     @IBOutlet weak var averageSpeed: WKInterfaceLabel!
+    
     
     var watchInterface = InterfaceController()
     
@@ -235,7 +236,7 @@ class WorkoutInterfaceController: WKInterfaceController{
     }
 }
 
-extension WorkoutInterfaceController: RunningSessionDelegate {
+extension WorkoutSessionInterfaceController: RunningSessionDelegate {
     func stopDidTapped(isRunning: Bool) {
         if isRunning {
             self.pauseWorkout()
@@ -251,7 +252,7 @@ extension WorkoutInterfaceController: RunningSessionDelegate {
 }
 
 // MARK: - HKWorkoutSessionDelegate
-extension WorkoutInterfaceController: HKWorkoutSessionDelegate {
+extension WorkoutSessionInterfaceController: HKWorkoutSessionDelegate {
     func workoutSession(_ workoutSession: HKWorkoutSession, didChangeTo toState: HKWorkoutSessionState,
                         from fromState: HKWorkoutSessionState, date: Date) {
         if toState == .ended {
@@ -282,7 +283,7 @@ extension WorkoutInterfaceController: HKWorkoutSessionDelegate {
 }
 
 // MARK: - HKLiveWorkoutBuilderDelegate
-extension WorkoutInterfaceController: HKLiveWorkoutBuilderDelegate {
+extension WorkoutSessionInterfaceController: HKLiveWorkoutBuilderDelegate {
     func workoutBuilderDidCollectEvent(_ workoutBuilder: HKLiveWorkoutBuilder) {
         
     }

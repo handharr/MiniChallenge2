@@ -8,7 +8,6 @@
 import UIKit
 import CoreMotion
 
-
 class CardioTestViewController: UIViewController, CardioTestDelegate {
     
     let ringShape = CAShapeLayer()
@@ -49,8 +48,6 @@ class CardioTestViewController: UIViewController, CardioTestDelegate {
         setupLabelView()
         if self.isUsingPhone!{
             setUpPedoMeter()
-        } else{
-            
         }
     }
     

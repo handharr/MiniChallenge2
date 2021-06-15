@@ -18,7 +18,7 @@ class HomeInterfaceController: WKInterfaceController {
         watchSession = WCSession.default
         watchSession?.delegate = self
         watchSession?.activate()
-//        presentController(withNames: ["cardioExam", "runningTest"], contexts: nil)
+//        presentController(withName: "cardioExam", context: nil)
     }
     
     override func didDeactivate() {
@@ -33,24 +33,21 @@ extension HomeInterfaceController: WCSessionDelegate{
         watchSession!.sendMessage(data, replyHandler: nil, errorHandler: nil)
     }
     
-    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
-        if let data = applicationContext["data"] as? Bool {
-            print(data)
-            presentController(withNames: ["cardioExam", "runningTest"], contexts: nil)
+    func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
+        if let receivedData = userInfo["data"] as? String{
+            presentController(withName: "lala", context: nil)
         }
     }
     
-//    override func contextForSegue(withIdentifier segueIdentifier: String) -> Any? {
-//
-//        return any
-//    }
-    
-    func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
-//        presentController(withNames: ["cardioExam", "runningTest"], contexts: nil)
+    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
+        if let receivedData = applicationContext["data"] as? String{
+//            presentController(withName: "lala", context: nil)
+            presentController(withNames: ["runningTest", "examCardio"], contexts: nil)
+        }
     }
     
-    
-    
-    
-    
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+        
+    }
+
 }

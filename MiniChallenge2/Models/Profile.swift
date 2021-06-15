@@ -35,4 +35,9 @@ class Profile {
         let data = [self.dateOfBirth, self.sex, self.weight, self.height]
         return data
     }
+    
+    func returnProfileEmpty() -> [String]{
+        let data = ["Not Retrived", "Not Retrived", "Not Retrived", "Not Retrived"]
+        return data
+    }
 }

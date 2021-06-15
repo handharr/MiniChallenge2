@@ -63,13 +63,32 @@ class TakeTestViewController: UIViewController {
                 alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.destructive, handler: { _ in }))
             
                 alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: {_ in
-                    let data = ["data" : true]
-                    do{
-                        try WCSession.default.updateApplicationContext(data)
-                    }catch{
-                        print("error")
+                    let data = ["data" : "\(UUID())"]
+                    if HealthModel.hasRequestedHealthData{
+                        do{
+                            try self.session?.updateApplicationContext(data)
+                        }catch{
+                            
+                        }
+                        self.navigateToCardioTest(isUsingPhone: false)
+                    } else {
+                        HealthModel.setUpHealthRequest(){
+                            do{
+                                try self.session?.updateApplicationContext(data)
+                            }catch{
+                                
+                            }
+                            DispatchQueue.main.async {
+                                self.navigateToCardioTest(isUsingPhone: false)
+                            }
+                        }
                     }
-                    self.navigateToCardioTest(isUsingPhone: false)
+//                    self.session?.transferUserInfo(data)
+//                    if ((self.session?.isReachable) != nil){
+//                        self.session?.sendMessage(data, replyHandler: nil, errorHandler: { (error) in
+//                            print(error)
+//                        })
+//                    }
                 }))
             self.present(alert, animated: true, completion: nil)
 
@@ -114,7 +133,6 @@ extension TakeTestViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        tableView.deselectRow(at: indexPath, animated: true)
         if indexPath.row == 0{
             if WCSession.isSupported(){
                 session = WCSession.default

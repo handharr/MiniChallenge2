@@ -25,6 +25,9 @@
 		4942EDCB2672491C00444DC8 /* UIScollView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942EDCA2672491C00444DC8 /* UIScollView+.swift */; };
 		4942EDD026724CD500444DC8 /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942EDCF26724CD500444DC8 /* UITableView+.swift */; };
 		4942EDD52672615300444DC8 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942EDD42672615300444DC8 /* UIView+.swift */; };
+		496C2B69267846DF00333F56 /* HealthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496C2B68267846DF00333F56 /* HealthModel.swift */; };
+		496C2B80267873A700333F56 /* InterfaceCardioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496C2B7F267873A700333F56 /* InterfaceCardioController.swift */; };
+		496C2B85267875B300333F56 /* WorkoutSessionInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496C2B84267875B300333F56 /* WorkoutSessionInterfaceController.swift */; };
 		498085982670B91900E10F40 /* CardioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498085962670B91900E10F40 /* CardioTableViewCell.swift */; };
 		498085992670B91900E10F40 /* CardioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 498085972670B91900E10F40 /* CardioTableViewCell.xib */; };
 		4980859F2670C82800E10F40 /* TestResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4980859D2670C82800E10F40 /* TestResultViewController.swift */; };
@@ -169,6 +172,9 @@
 		4942EDCA2672491C00444DC8 /* UIScollView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScollView+.swift"; sourceTree = "<group>"; };
 		4942EDCF26724CD500444DC8 /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
 		4942EDD42672615300444DC8 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		496C2B68267846DF00333F56 /* HealthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthModel.swift; sourceTree = "<group>"; };
+		496C2B7F267873A700333F56 /* InterfaceCardioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceCardioController.swift; sourceTree = "<group>"; };
+		496C2B84267875B300333F56 /* WorkoutSessionInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutSessionInterfaceController.swift; sourceTree = "<group>"; };
 		498085962670B91900E10F40 /* CardioTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardioTableViewCell.swift; sourceTree = "<group>"; };
 		498085972670B91900E10F40 /* CardioTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardioTableViewCell.xib; sourceTree = "<group>"; };
 		4980859D2670C82800E10F40 /* TestResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResultViewController.swift; sourceTree = "<group>"; };
@@ -299,6 +305,8 @@
 				492901C02677CF53007F00D0 /* MyScene.sks */,
 				4990F8F62677D7CE007030F0 /* InterfaceController.swift */,
 				4990F8FE2677D879007030F0 /* HomeInterfaceController.swift */,
+				496C2B7F267873A700333F56 /* InterfaceCardioController.swift */,
+				496C2B84267875B300333F56 /* WorkoutSessionInterfaceController.swift */,
 			);
 			path = "MiniChallenge2 WatchApp Extension";
 			sourceTree = "<group>";
@@ -448,6 +456,7 @@
 				4E459BDF267721F6008DB2D8 /* Databases.swift */,
 				4E459BE32677497C008DB2D8 /* HistoryModel.swift */,
 				4994ACAE26772C5900127044 /* Profile.swift */,
+				496C2B68267846DF00333F56 /* HealthModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -904,11 +913,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				496C2B80267873A700333F56 /* InterfaceCardioController.swift in Sources */,
 				492901662677C626007F00D0 /* NotificationController.swift in Sources */,
 				492901682677C626007F00D0 /* ComplicationController.swift in Sources */,
 				492901642677C626007F00D0 /* ExtensionDelegate.swift in Sources */,
 				4929019F2677C690007F00D0 /* WatchManager.swift in Sources */,
 				4990F8FF2677D879007030F0 /* HomeInterfaceController.swift in Sources */,
+				496C2B85267875B300333F56 /* WorkoutSessionInterfaceController.swift in Sources */,
 				492901A22677C690007F00D0 /* WatchColor.swift in Sources */,
 				4990F8F72677D7CE007030F0 /* InterfaceController.swift in Sources */,
 				492901A32677C691007F00D0 /* WorkoutInterfaceController.swift in Sources */,
@@ -953,6 +964,7 @@
 				4942EDCB2672491C00444DC8 /* UIScollView+.swift in Sources */,
 				866BCEC02668FEC200482207 /* MyPlanViewController.swift in Sources */,
 				49875FF4266FB16B0060BE6E /* SpiderChartChildViewController.swift in Sources */,
+				496C2B69267846DF00333F56 /* HealthModel.swift in Sources */,
 				7DA5DC1E267323E100B6C7EB /* PlanCollectionViewCells.swift in Sources */,
 				86D6DA13267721FA00488252 /* VideoCapture.swift in Sources */,
 				498085A52670E8BE00E10F40 /* GradingCriteriaTableViewCell.swift in Sources */,

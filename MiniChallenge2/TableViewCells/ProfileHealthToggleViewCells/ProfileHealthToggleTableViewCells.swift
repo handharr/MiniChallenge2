@@ -8,7 +8,7 @@
 import UIKit
 
 protocol profileSyncDelegate{
-    func syncDidTapped(isTapped: Bool)
+    func syncDidTapped(isSwitched: Bool)
 }
 
 class ProfileHealthToggleTableViewCells: UITableViewCell {
@@ -35,6 +35,7 @@ class ProfileHealthToggleTableViewCells: UITableViewCell {
     }
     
     @IBAction func healthSyncTapped(_ sender: Any) {
-        delegate?.syncDidTapped(isTapped: isSwitched)
+        delegate?.syncDidTapped(isSwitched: isSwitched)
+        isSwitched = !isSwitched
     }
 }

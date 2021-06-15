@@ -10,9 +10,10 @@ import HealthKit
 
 class ProfileViewController: UIViewController {
 
+    var delegate: ProfileHealthToggleTableViewCells!
     
-    let profileSection : [String] = Profile.returnProfileSection()
-    let profileData : [String] = Profile.returnProfileData(Profile.profile)()
+    var profileSection : [String] = Profile.returnProfileSection()
+    var profileData : [String] = Profile.returnProfileData(Profile.profile)()
     let table = UITableView(frame: CGRect(x: 0, y: 0, width: 0, height: 0), style: .insetGrouped)
     
     override func viewDidLoad() {
@@ -21,6 +22,12 @@ class ProfileViewController: UIViewController {
         title = "Profile"
         view.backgroundColor = .systemTeal
         setUpTable()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        profileSection = Profile.returnProfileSection()
+        profileData = Profile.returnProfileData(Profile.profile)()
+        table.reloadData()
     }
     
     func setUpTable(){
@@ -103,8 +110,9 @@ extension ProfileViewController: UITableViewDataSource{
             cell.backgroundColor = .cultured
             return cell
         }
-        let cell = tableView.dequeueReusableCell(withIdentifier: ProfileHealthToggleTableViewCells.getIdentifier(), for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: ProfileHealthToggleTableViewCells.getIdentifier(), for: indexPath) as! ProfileHealthToggleTableViewCells
         cell.backgroundColor = .cultured
+        cell.delegate = self
         return cell
     }
     
@@ -112,4 +120,20 @@ extension ProfileViewController: UITableViewDataSource{
             return 50
     }
     
+}
+
+extension ProfileViewController: profileSyncDelegate{
+    func syncDidTapped(isSwitched: Bool) {
+        if !isSwitched{
+            profileSection = Profile.returnProfileSection()
+            profileData = Profile.returnProfileData(Profile.profile)()
+        }
+        else {
+            profileData = Profile.returnProfileEmpty(Profile.profile)()
+        }
+        let sectionToReload = 0
+        let indexSet: IndexSet = [sectionToReload]
+
+        self.table.reloadSections(indexSet, with: .none)
+    }
 }
