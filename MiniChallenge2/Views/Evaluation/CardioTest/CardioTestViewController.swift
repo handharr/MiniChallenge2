@@ -6,16 +6,25 @@
 //
 
 import UIKit
+import CoreMotion
 
-class CardioTestViewController: UIViewController {
+
+class CardioTestViewController: UIViewController, CardioTestDelegate {
     
     let ringShape = CAShapeLayer()
     var circlePath: UIBezierPath?
     var labelView: CardioCircleLabel?
     var point: CGPoint?
-
+    
+    var isUsingPhone: Bool?
+    var takeTest = TakeTestViewController()
+    
+    let activityManager = CMMotionActivityManager()
+    let pedometer = CMPedometer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        takeTest.delegate = self
         
         let closeIcon = UIImage(systemName: "xmark")!
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: closeIcon,
@@ -38,7 +47,72 @@ class CardioTestViewController: UIViewController {
         
         setupRingShape()
         setupLabelView()
+        if self.isUsingPhone!{
+            setUpPedoMeter()
+        } else{
+            
+        }
     }
+    
+    func setUpPedoMeter(){
+        self.labelView?.topLabel.text = "0,0"
+        if CMMotionActivityManager.isActivityAvailable(){
+            self.activityManager.startActivityUpdates(to: OperationQueue.main) { (data) in
+                DispatchQueue.main.async {
+                    if let activity = data {
+                        if activity.running == true{
+                            
+                        }
+                        else if activity.walking == true{
+                        }
+                        else if activity.automotive == true{
+                        }
+                    }
+                }
+            }
+        }
+        
+        if CMPedometer.isStepCountingAvailable(){
+            self.pedometer.startUpdates(from: Date()) { (data, error) in
+                if error == nil{
+                    if let response = data{
+                        guard let pedometerDistance = response.distance else {return}
+                        
+                        let distanceInKilo = Measurement(value: pedometerDistance.doubleValue, unit: UnitLength.meters)
+
+                        let distance = distanceInKilo.converted(to: UnitLength.kilometers)
+                        
+                        DispatchQueue.main.async {
+                            self.labelView?.topLabel.text = "\(distance)"
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    func setObserver(){
+        NotificationCenter.default.addObserver(self, selector: #selector(isPhoneChosen(_:)), name: NSNotification.Name("Chosing Phone Notification"), object: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        NotificationCenter.default.addObserver(self, selector: #selector(isPhoneChosen(_:)), name: NSNotification.Name("Chosing Phone Notification"), object: nil)
+    }
+    
+    func phoneDidChosen(didPhoneChosen: Bool) {
+        self.isUsingPhone = didPhoneChosen
+    }
+    
+    @objc
+    func isPhoneChosen(_ notification: NSNotification){
+        if let dict = notification.userInfo as NSDictionary? {
+            if let usingPhone = dict["isUsingPhone"] as? Bool{
+                self.isUsingPhone = usingPhone
+            }
+        }
+    }
+    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
