@@ -14,44 +14,58 @@ import Firebase
 
 
 class Databases {
+    
     static let shared = Databases()
     
     var ref:DatabaseReference?
     var plans = [PlanModel]()
     var histories = [HistoryModel]()
     
-    
-    init() {
-        retrivePlan()
-    }
-    
 }
 
 extension Databases{
     
     //MARK: - Retrive Data Plan
-    func retrivePlan(){
+    static public func retriveAllPlan( completion: @escaping (Result<[[PlanModel]], Error>) -> Void ) {
+        
+        var datas: [[PlanModel]]?
+        var allPlans: [PlanModel] = []
+        var ref:DatabaseReference?
+        
         ref = Database.database().reference().child("plan")
         ref?.observe(.value, with: { (snapshot) in
             if snapshot.childrenCount>0{
-                self.plans.removeAll()
                 for plans in snapshot.children.allObjects as![DataSnapshot]{
                     let planObject =  plans.value as? [String: Any]
                     let planName =  planObject?["name"]
                     let planDesc = planObject?["desc"]
-                    let planThumbnail = planObject?["thumbnailImage"]
-                    let planWPD = planObject?["workoutPerDay"]
+                    let planThumbnail = planObject?["thumbnail"]
+                    let planWPD = planObject?["wpd"]
                     let planDPW = planObject?["dpw"]
-                    let planOG = planObject?["onGoing"]
+                    let planOG = planObject?["ongoing"]
                     let planCategory = planObject?["category"]
                     
                     let plan = PlanModel(desc: planDesc as! String, name: planName as! String, thumbnailImage: planThumbnail as! String, workoutPerDay: planWPD as! Int, daysPerWeek: planDPW as! Int, onGoing: planOG as! Bool, category: planCategory as! String)
-                    self.plans.append(plan)
-                    print()
+                    
+                    allPlans.append(plan)
                 }
-                //self.exerciseTV.reloadData()
-                //print("total \(self.plans.count)")
             }
+            
+            var ogArray = [PlanModel]()
+            if let onGoing = self.getOnGoing(plansData: allPlans) {
+                ogArray.append(onGoing)
+            }
+            
+            
+            let beginner = Databases.getBeginnerPlan(plansData: allPlans)
+            let intermediate = Databases.getIntermediatePlan(plansData: allPlans)
+            let advance = Databases.getAdvancePlan(plansData: allPlans)
+            
+            datas = [ogArray, beginner, intermediate, advance]
+            
+            guard let datas = datas else {return}
+            
+            completion(.success(datas))
         })
     }
     
@@ -166,20 +180,20 @@ extension Databases{
 //MARK: - Get Data
  extension Databases {
     
-    func getBeginnerPlan() -> [PlanModel] {
-        return plans.filter {$0.category == "beginner"}
+    static func getBeginnerPlan(plansData: [PlanModel]) -> [PlanModel] {
+        return plansData.filter {$0.category == "beginner"}
     }
-    func getIntermediatePlan() -> [PlanModel] {
-        return plans.filter {$0.category == "intermediate"}
+    static func getIntermediatePlan(plansData: [PlanModel]) -> [PlanModel] {
+        return plansData.filter {$0.category == "intermediate"}
     }
-    func getAdvancePlan() -> [PlanModel] {
-        return plans.filter {$0.category == "advance"}
+    static func getAdvancePlan(plansData: [PlanModel]) -> [PlanModel] {
+        return plansData.filter {$0.category == "advance"}
     }
     
-    public func getOnGoing() -> PlanModel? {
+    static public func getOnGoing(plansData: [PlanModel]) -> PlanModel? {
         
-        if let index = plans.firstIndex(where: { $0.onGoing == true }) {
-            return plans[index]
+        if let index = plansData.firstIndex(where: { $0.onGoing == true }) {
+            return plansData[index]
         }
         
         return nil

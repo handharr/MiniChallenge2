@@ -19,6 +19,7 @@ class PlanCollectionViewCells: UICollectionViewCell {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var labelContainer: UIView!
     @IBOutlet weak var subtitleLabel: UILabel!
+    @IBOutlet weak var backgroundImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,6 +31,7 @@ class PlanCollectionViewCells: UICollectionViewCell {
         descriptionLabel.textColor = .white
         labelContainer.layer.cornerRadius = 8
         containerView.layer.cornerRadius = 8
+        containerView.clipsToBounds = true
     }
 
     public func configureUI(model: Plan) {
@@ -37,6 +39,21 @@ class PlanCollectionViewCells: UICollectionViewCell {
         descriptionLabel.text = model.description
         subtitleLabel.text = "\(model.workoutPerDay) workout/days"
         containerView.backgroundColor = UIColor(patternImage: model.planImage)
+    }
+    
+    public func configureUI(model: PlanModel) {
+        titleLabel.text = model.name
+        descriptionLabel.text = model.desc
+        subtitleLabel.text = "\(model.workoutPerDay) workout/days"
+        
+        switch model.name {
+        case "All in One Plan":
+            backgroundImageView.image = UIImage(named: "plan-image-1")
+        case "Strength Plan":
+            backgroundImageView.image = UIImage(named: "plan-image-2")
+        default:
+            backgroundImageView.image = UIImage(named: "plan-image-3")
+        }
     }
     
     override func prepareForReuse() {

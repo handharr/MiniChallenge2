@@ -12,6 +12,7 @@ class MyPlanViewController: UIViewController {
     @IBOutlet weak var myPlanCollectionView: UICollectionView!
     
     static let topHeaderId = "topHeaderID"
+    var plansData: [[PlanModel]]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,24 @@ class MyPlanViewController: UIViewController {
     @objc private func goToCardioTest() {
         let vc = ExamCameraViewViewController()
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        Databases.retriveAllPlan { [weak self] res in
+            switch res {
+            case .success(let datas):
+                self?.plansData = datas
+                
+                DispatchQueue.main.async {
+                    self?.myPlanCollectionView.reloadData()
+                }
+                
+            case .failure(let err):
+                print(err)
+            }
+        }
     }
     
     private func setCollectionView() {
@@ -41,22 +60,35 @@ class MyPlanViewController: UIViewController {
 
 extension MyPlanViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return section == 0 ? 1 : 3
+        
+        guard let datas = plansData else {
+            return section == 0 ? 1 : 3
+        }
+        
+        return datas[section].count
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 4
+        
+        guard let datas = plansData else {
+            return 4
+        }
+        
+        return datas.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let defaultCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
         defaultCell.backgroundColor = MCColor.MCColorPrimary
         
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PlanCollectionViewCells.identifier, for: indexPath) as? PlanCollectionViewCells else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PlanCollectionViewCells.identifier, for: indexPath) as? PlanCollectionViewCells,
+              let datas = plansData else {
+            defaultCell.contentView.backgroundColor = .systemGray3
             return defaultCell
         }
         
-        cell.configureUI(model: DummyData.shared.dummyPlan[indexPath.row])
+        let model = datas[indexPath.section][indexPath.row]
+        cell.configureUI(model: model)
         
         return cell
     }
