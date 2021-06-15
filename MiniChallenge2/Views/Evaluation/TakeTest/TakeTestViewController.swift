@@ -77,7 +77,7 @@ class TakeTestViewController: UIViewController {
                                 try self.session?.updateApplicationContext(data)
                             }catch{
                                 
-                            }
+                            }    
                             DispatchQueue.main.async {
                                 self.navigateToCardioTest(isUsingPhone: false)
                             }

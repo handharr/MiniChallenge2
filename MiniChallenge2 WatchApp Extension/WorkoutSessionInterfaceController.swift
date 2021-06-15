@@ -8,6 +8,7 @@
 import WatchKit
 import HealthKit
 import Combine
+import WatchConnectivity
 
 class WorkoutSessionInterfaceController: WKInterfaceController{
     
@@ -19,6 +20,7 @@ class WorkoutSessionInterfaceController: WKInterfaceController{
     
     
     var watchInterface = InterfaceController()
+    var watchSession: WCSession!
     
     let healthStore = HKHealthStore()
     var session: HKWorkoutSession!
@@ -46,6 +48,10 @@ class WorkoutSessionInterfaceController: WKInterfaceController{
         
         NotificationCenter.default.addObserver(self, selector: #selector(pauseTriggered), name: NSNotification.Name("Pause Triggered"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(skipTriggered), name: NSNotification.Name("Skip Triggered"), object: nil)
+        
+        watchSession = WCSession.default
+        watchSession?.delegate = self
+        watchSession?.activate()
     }
     
     @objc
@@ -220,6 +226,7 @@ class WorkoutSessionInterfaceController: WKInterfaceController{
                 let meterUnit = HKUnit.meter()
                 let value = statistics.sumQuantity()?.doubleValue(for: meterUnit)
                 let roundedValue = Double( round( 1 * value! ) / 1 )
+                self.distance = roundedValue
                 DispatchQueue.main.async {
                     self.distanceRunning.setText(String(format: "%.1f", roundedValue))
                 }
@@ -233,6 +240,17 @@ class WorkoutSessionInterfaceController: WKInterfaceController{
                 return
             }
         }
+        
+        do{
+            try watchSession?.updateApplicationContext([
+                "heartRate": self.heartrate,
+                "activeEnergy": self.activeCalories,
+                "workoutTimer": "\(self.elapsedTimeString(elapsed: self.secondsToHoursMinutesSeconds(seconds: self.elapsedSeconds)))",
+                "runningSpeed": self.speed,
+                "runningDistance": self.distance
+            ])
+            print("distance=> \(self.distance)")
+        }catch{}
     }
 }
 
@@ -307,4 +325,11 @@ extension WorkoutSessionInterfaceController: HKLiveWorkoutBuilderDelegate {
             updateForStatistics(statistics)
         }
     }
+}
+
+extension WorkoutSessionInterfaceController: WCSessionDelegate{
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+    }
+    
+    
 }

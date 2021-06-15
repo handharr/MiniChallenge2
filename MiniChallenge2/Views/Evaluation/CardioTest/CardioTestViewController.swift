@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreMotion
+import WatchConnectivity
 
 class CardioTestViewController: UIViewController, CardioTestDelegate {
     
@@ -20,6 +21,8 @@ class CardioTestViewController: UIViewController, CardioTestDelegate {
     
     let activityManager = CMMotionActivityManager()
     let pedometer = CMPedometer()
+    
+    var watchSession: WCSession!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +52,10 @@ class CardioTestViewController: UIViewController, CardioTestDelegate {
         if self.isUsingPhone!{
             setUpPedoMeter()
         }
+        
+        watchSession = WCSession.default
+        watchSession?.delegate = self
+        watchSession?.activate()
     }
     
     func setUpPedoMeter(){
@@ -180,5 +187,27 @@ extension CardioTestViewController {
         }))
         ac.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
         self.present(ac, animated: true, completion: nil)
+    }
+}
+
+extension CardioTestViewController: WCSessionDelegate{
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        
+    }
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+        
+    }
+    
+    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
+        DispatchQueue.main.async {
+            self.labelView?.topLabel.text = String(format: "%.1f", applicationContext["runningDistance"] as! Double)
+//            self.timerLabel.text = "\(applicationContext["workoutTimer"] as! String)"
+//            self.heartRate.text = String(format: "%.1f", applicationContext["heartRate"] as! Double)
+        }
     }
 }

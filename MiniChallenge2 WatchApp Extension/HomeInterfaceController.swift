@@ -18,7 +18,6 @@ class HomeInterfaceController: WKInterfaceController {
         watchSession = WCSession.default
         watchSession?.delegate = self
         watchSession?.activate()
-//        presentController(withName: "cardioExam", context: nil)
     }
     
     override func didDeactivate() {
@@ -33,21 +32,10 @@ extension HomeInterfaceController: WCSessionDelegate{
         watchSession!.sendMessage(data, replyHandler: nil, errorHandler: nil)
     }
     
-    func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
-        if let receivedData = userInfo["data"] as? String{
-            presentController(withName: "lala", context: nil)
-        }
-    }
-    
     func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
         if let receivedData = applicationContext["data"] as? String{
-//            presentController(withName: "lala", context: nil)
             presentController(withNames: ["runningTest", "examCardio"], contexts: nil)
+            print(receivedData)
         }
     }
-    
-    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-        
-    }
-
 }

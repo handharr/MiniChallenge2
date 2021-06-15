@@ -9,7 +9,7 @@ import UIKit
 
 class CardioCircleLabel: UIView {
     
-    let topLabel: UILabel = {
+    var topLabel: UILabel = {
         let label = UILabel()
         
         label.font = .systemFont(ofSize: 100, weight: .bold)

@@ -38,7 +38,7 @@
                             <items>
                                 <group width="1" height="0.90000000000000002" alignment="left" layout="overlap" id="eag-Pz-rt3">
                                     <items>
-                                        <spriteKitScene alignment="center" verticalAlignment="center" id="2J4-Cl-Whu"/>
+                                        <spriteKitScene height="0.90000000000000002" alignment="center" verticalAlignment="center" id="2J4-Cl-Whu"/>
                                         <group width="1" height="0.29999999999999999" alignment="left" verticalAlignment="bottom" id="cTi-UV-VnS">
                                             <items>
                                                 <button width="0.25" height="0.69999999999999996" alignment="left" verticalAlignment="bottom" backgroundImage="pausebutton" id="yHR-Ef-MkG">
@@ -102,7 +102,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="815" y="326"/>
+            <point key="canvasLocation" x="815" y="363"/>
         </scene>
         <!--Quit-->
         <scene sceneID="KqR-aV-kv1">
