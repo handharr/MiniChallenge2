@@ -20,10 +20,71 @@ class Databases {
     var ref:DatabaseReference?
     var plans = [PlanModel]()
     var histories = [HistoryModel]()
+    var pakets = [PaketModel]()
+    var exercise = [ExerciseModel]()
     
 }
 
 extension Databases{
+    
+    //MARK: - Retive exercise
+    static public func retriveAllExercises( completion: @escaping (Result<[ExerciseModel], Error>) -> Void ) {
+        
+        var allExercises: [ExerciseModel] = []
+        var ref:DatabaseReference?
+        
+        ref = Database.database().reference().child("exercise")
+        ref?.observe(.value, with: { (snapshot) in
+            if snapshot.childrenCount>0{
+                for exercises in snapshot.children.allObjects as![DataSnapshot]{
+                    let exerciseObject = exercises.value as? [String:Any]
+                    let name = exerciseObject?["name"]
+                    let paketid = exerciseObject?["paketid"]
+                    let category = exerciseObject?["category"]
+                    let thumbnail = exerciseObject?["thumbnail"]
+                    let time = exerciseObject?["time"]
+                    let video = exerciseObject?["video"]
+                  
+                    
+            
+                    let exercise = ExerciseModel(name: name as! String, thumbnail: thumbnail as! String, video: video as! String, time: time as! Int, category: category as! String, paketid: paketid as! String)
+                    print("ini keynya \(exercises.key)")
+                    allExercises.append(exercise)
+                }
+            }
+    
+            
+            completion(.success(allExercises))
+        })
+    }
+    //MARK: - Retrive detail plan
+    static public func retriveAllPaket( completion: @escaping (Result<[PaketModel], Error>) -> Void ) {
+        
+        var allPakets: [PaketModel] = []
+        var ref:DatabaseReference?
+        
+        ref = Database.database().reference().child("p1")
+        ref?.observe(.value, with: { (snapshot) in
+            if snapshot.childrenCount>0{
+                for pakets in snapshot.children.allObjects as![DataSnapshot]{
+                    let paketObject = pakets.value as? [String:Any]
+                    let total = paketObject?["total"]
+                    let status = paketObject?["status"]
+                    let level = paketObject?["level"]
+                    let minutes = paketObject?["minutes"]
+                    
+            
+                    let paket = PaketModel(status: status as! Bool, total: total as! Int, level: level as! Int, minutes: minutes as! Int)
+                    print("ini keynya \(pakets.key)")
+                    allPakets.append(paket)
+                }
+            }
+    
+            
+            completion(.success(allPakets))
+        })
+    }
+    
     
     //MARK: - Retrive Data Plan
     static public func retriveAllPlan( completion: @escaping (Result<[[PlanModel]], Error>) -> Void ) {
@@ -45,8 +106,10 @@ extension Databases{
                     let planOG = planObject?["ongoing"]
                     let planCategory = planObject?["category"]
                     
-                    let plan = PlanModel(desc: planDesc as! String, name: planName as! String, thumbnailImage: planThumbnail as! String, workoutPerDay: planWPD as! Int, daysPerWeek: planDPW as! Int, onGoing: planOG as! Bool, category: planCategory as! String)
                     
+                    
+                    let plan = PlanModel(desc: planDesc as! String, name: planName as! String, thumbnailImage: planThumbnail as! String, workoutPerDay: planWPD as! Int, daysPerWeek: planDPW as! Int, onGoing: planOG as! Bool, category: planCategory as! String)
+                    print("ini keynya \(plans.key)")
                     allPlans.append(plan)
                 }
             }
@@ -158,6 +221,25 @@ extension Databases{
         newHis.child("history").childByAutoId().setValue(object)
     }
     
+    //MARK: - add Data Profile
+    func addProfile(){
+        
+        let currentDateTime = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yy"
+        let dateTimeString = formatter.string(from: currentDateTime)
+        
+        let object: [String:Any] = [
+            "dob": dateTimeString as NSObject,
+            "Sex" : "Female",
+            "weight" : 64,
+            "height" : 160
+        ]
+        
+        let profile = Database.database().reference()
+        profile.child("profile").setValue(object)
+        
+    }
     //MARK: - updatePlan Status
     
     func updatePlanStatus(planid: String,planName: String, planDesc: String, imgThumbnail: String, onGoing: String, workoutperday: Int, dayperweek: Int, category: String) {

@@ -9,26 +9,27 @@ import Foundation
 
 class PaketModel {
     
-    var exercises: [ExerciseModel]
-    var status: String
+//  var exercises: [ExerciseModel]
+    var status: Bool
     var total: Int
     var level: Int
-
+    var minutes: Int
     
-    init(exercises: [ExerciseModel], status: String, total: Int, level: Int) {
-        self.exercises = exercises;
+    init(status: Bool, total: Int, level: Int, minutes: Int) {
         self.status = status;
         self.total = total;
-        self.level = level
+        self.level = level;
+        self.minutes = minutes
     }
     
-    func getMinute() -> Int {
-        var temp = 0
-        
-        for item in exercises {
-            temp += item.time
-        }
-        return temp
-    }
+    //get total minutes
+//    func getMinute() -> Int {
+//        var temp = 0
+//
+//        for item in exercises {
+//            temp += item.time
+//        }
+//        return temp
+//    }
     
 }
