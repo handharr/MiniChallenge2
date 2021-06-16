@@ -21,6 +21,14 @@ class ExamCameraViewViewController: UIViewController {
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var countLabel: UILabel!
     
+    private var counter = 0 {
+        didSet {
+            DispatchQueue.main.async { [weak self] in
+                self?.countLabel.text = "\(self?.counter ?? 0)"
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -55,6 +63,7 @@ extension ExamCameraViewViewController {
             }
         }
         
+        countLabel.text = "\(counter)"
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -116,6 +125,10 @@ extension ExamCameraViewViewController {
 
 // MARK: - Video Capture Delegate
 extension ExamCameraViewViewController: VideoCaptureDelegate {
+    
+    func processPrediction() {
+        counter += 1
+    }
     
     func processPoints(_ points: [CGPoint]) {
         
