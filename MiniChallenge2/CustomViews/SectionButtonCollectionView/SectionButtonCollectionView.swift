@@ -16,6 +16,8 @@ class SectionButtonCollectionView: UICollectionReusableView {
 
     @IBOutlet weak var startButton: UIButton!
     
+    var navigate: (() -> Void)?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -23,6 +25,7 @@ class SectionButtonCollectionView: UICollectionReusableView {
     }
     
     @IBAction func handleStartButton(_ sender: Any) {
-        
+        navigate?()
+    
     }
 }

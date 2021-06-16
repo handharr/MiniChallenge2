@@ -64,6 +64,19 @@
 		4E459BEE26775F8E008DB2D8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E459BED26775F8E008DB2D8 /* GoogleService-Info.plist */; };
 		4E459BF026784662008DB2D8 /* ExerciseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E459BEF26784662008DB2D8 /* ExerciseModel.swift */; };
 		4E459BF22678477F008DB2D8 /* PaketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E459BF12678477F008DB2D8 /* PaketModel.swift */; };
+		7519895B2679D47D00B6230C /* VideoSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751989552679D47D00B6230C /* VideoSectionView.swift */; };
+		7519895C2679D47D00B6230C /* CongratulationMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 751989562679D47D00B6230C /* CongratulationMessageView.xib */; };
+		7519895D2679D47D00B6230C /* ActionSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751989572679D47D00B6230C /* ActionSectionView.swift */; };
+		7519895E2679D47D00B6230C /* CongratulationMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751989582679D47D00B6230C /* CongratulationMessageView.swift */; };
+		7519895F2679D47D00B6230C /* VideoSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 751989592679D47D00B6230C /* VideoSectionView.xib */; };
+		751989602679D47D00B6230C /* ActionSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7519895A2679D47D00B6230C /* ActionSectionView.xib */; };
+		751989642679D6BB00B6230C /* CongratulationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 751989622679D6BB00B6230C /* CongratulationViewController.xib */; };
+		751989652679D6BB00B6230C /* CongratulationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751989632679D6BB00B6230C /* CongratulationViewController.swift */; };
+		751989692679D7C400B6230C /* ExcercisingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751989672679D7C400B6230C /* ExcercisingViewController.swift */; };
+		7519896A2679D7C400B6230C /* ExcercisingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 751989682679D7C400B6230C /* ExcercisingViewController.xib */; };
+		7519896E2679DE5800B6230C /* Push up.mov in Resources */ = {isa = PBXBuildFile; fileRef = 7519896B2679DE5700B6230C /* Push up.mov */; };
+		7519896F2679DE5800B6230C /* sit up.mov in Resources */ = {isa = PBXBuildFile; fileRef = 7519896C2679DE5700B6230C /* sit up.mov */; };
+		751989702679DE5800B6230C /* crunches.mov in Resources */ = {isa = PBXBuildFile; fileRef = 7519896D2679DE5800B6230C /* crunches.mov */; };
 		7DA5DC1E267323E100B6C7EB /* PlanCollectionViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA5DC1C267323E100B6C7EB /* PlanCollectionViewCells.swift */; };
 		7DA5DC1F267323E100B6C7EB /* PlanCollectionViewCells.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DA5DC1D267323E100B6C7EB /* PlanCollectionViewCells.xib */; };
 		861C35D9266DC5F3005ABB7E /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861C35D8266DC5F3005ABB7E /* DummyData.swift */; };
@@ -81,8 +94,6 @@
 		866BCEE32669198B00482207 /* ExcerciseReportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 866BCEE12669198B00482207 /* ExcerciseReportViewController.xib */; };
 		866BCEE7266919B600482207 /* DetailPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866BCEE5266919B600482207 /* DetailPlanViewController.swift */; };
 		866BCEE8266919B600482207 /* DetailPlanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 866BCEE6266919B600482207 /* DetailPlanViewController.xib */; };
-		866BCEEC266919E700482207 /* ExcercisingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866BCEEA266919E700482207 /* ExcercisingViewController.swift */; };
-		866BCEED266919E700482207 /* ExcercisingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 866BCEEB266919E700482207 /* ExcercisingViewController.xib */; };
 		866BCEF226691A1C00482207 /* TakeTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866BCEF026691A1C00482207 /* TakeTestViewController.swift */; };
 		866BCEF326691A1C00482207 /* TakeTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 866BCEF126691A1C00482207 /* TakeTestViewController.xib */; };
 		866BCEFD26691B8100482207 /* CardioTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866BCEFB26691B8100482207 /* CardioTestViewController.swift */; };
@@ -212,6 +223,19 @@
 		4E459BED26775F8E008DB2D8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4E459BEF26784662008DB2D8 /* ExerciseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseModel.swift; sourceTree = "<group>"; };
 		4E459BF12678477F008DB2D8 /* PaketModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaketModel.swift; sourceTree = "<group>"; };
+		751989552679D47D00B6230C /* VideoSectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoSectionView.swift; sourceTree = "<group>"; };
+		751989562679D47D00B6230C /* CongratulationMessageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CongratulationMessageView.xib; sourceTree = "<group>"; };
+		751989572679D47D00B6230C /* ActionSectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionSectionView.swift; sourceTree = "<group>"; };
+		751989582679D47D00B6230C /* CongratulationMessageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongratulationMessageView.swift; sourceTree = "<group>"; };
+		751989592679D47D00B6230C /* VideoSectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoSectionView.xib; sourceTree = "<group>"; };
+		7519895A2679D47D00B6230C /* ActionSectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActionSectionView.xib; sourceTree = "<group>"; };
+		751989622679D6BB00B6230C /* CongratulationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CongratulationViewController.xib; sourceTree = "<group>"; };
+		751989632679D6BB00B6230C /* CongratulationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongratulationViewController.swift; sourceTree = "<group>"; };
+		751989672679D7C400B6230C /* ExcercisingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExcercisingViewController.swift; sourceTree = "<group>"; };
+		751989682679D7C400B6230C /* ExcercisingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExcercisingViewController.xib; sourceTree = "<group>"; };
+		7519896B2679DE5700B6230C /* Push up.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "Push up.mov"; sourceTree = "<group>"; };
+		7519896C2679DE5700B6230C /* sit up.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "sit up.mov"; sourceTree = "<group>"; };
+		7519896D2679DE5800B6230C /* crunches.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = crunches.mov; sourceTree = "<group>"; };
 		7DA5DC1C267323E100B6C7EB /* PlanCollectionViewCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanCollectionViewCells.swift; sourceTree = "<group>"; };
 		7DA5DC1D267323E100B6C7EB /* PlanCollectionViewCells.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlanCollectionViewCells.xib; sourceTree = "<group>"; };
 		861C35D8266DC5F3005ABB7E /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
@@ -231,8 +255,6 @@
 		866BCEE12669198B00482207 /* ExcerciseReportViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExcerciseReportViewController.xib; sourceTree = "<group>"; };
 		866BCEE5266919B600482207 /* DetailPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPlanViewController.swift; sourceTree = "<group>"; };
 		866BCEE6266919B600482207 /* DetailPlanViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailPlanViewController.xib; sourceTree = "<group>"; };
-		866BCEEA266919E700482207 /* ExcercisingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcercisingViewController.swift; sourceTree = "<group>"; };
-		866BCEEB266919E700482207 /* ExcercisingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExcercisingViewController.xib; sourceTree = "<group>"; };
 		866BCEF026691A1C00482207 /* TakeTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeTestViewController.swift; sourceTree = "<group>"; };
 		866BCEF126691A1C00482207 /* TakeTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TakeTestViewController.xib; sourceTree = "<group>"; };
 		866BCEFB26691B8100482207 /* CardioTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardioTestViewController.swift; sourceTree = "<group>"; };
@@ -401,6 +423,38 @@
 			path = ProfileHealthToggleViewCells;
 			sourceTree = "<group>";
 		};
+		751989542679D47D00B6230C /* ExercisingCustomView */ = {
+			isa = PBXGroup;
+			children = (
+				751989552679D47D00B6230C /* VideoSectionView.swift */,
+				751989562679D47D00B6230C /* CongratulationMessageView.xib */,
+				751989572679D47D00B6230C /* ActionSectionView.swift */,
+				751989582679D47D00B6230C /* CongratulationMessageView.swift */,
+				751989592679D47D00B6230C /* VideoSectionView.xib */,
+				7519895A2679D47D00B6230C /* ActionSectionView.xib */,
+			);
+			path = ExercisingCustomView;
+			sourceTree = "<group>";
+		};
+		751989612679D6A400B6230C /* Congratulation */ = {
+			isa = PBXGroup;
+			children = (
+				751989632679D6BB00B6230C /* CongratulationViewController.swift */,
+				751989622679D6BB00B6230C /* CongratulationViewController.xib */,
+			);
+			path = Congratulation;
+			sourceTree = "<group>";
+		};
+		751989662679D70C00B6230C /* video */ = {
+			isa = PBXGroup;
+			children = (
+				7519896D2679DE5800B6230C /* crunches.mov */,
+				7519896B2679DE5700B6230C /* Push up.mov */,
+				7519896C2679DE5700B6230C /* sit up.mov */,
+			);
+			path = video;
+			sourceTree = "<group>";
+		};
 		7DA5DC1B267323E100B6C7EB /* PlanCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -493,6 +547,7 @@
 		866BCEB82668FCF300482207 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				751989662679D70C00B6230C /* video */,
 				4942EDC92672490200444DC8 /* Helpers */,
 				86314D2B266746CA0055FC31 /* Assets.xcassets */,
 				86771235266E4929000313B3 /* Utility.swift */,
@@ -579,8 +634,9 @@
 		866BCEE9266919D500482207 /* Excercising */ = {
 			isa = PBXGroup;
 			children = (
-				866BCEEA266919E700482207 /* ExcercisingViewController.swift */,
-				866BCEEB266919E700482207 /* ExcercisingViewController.xib */,
+				751989672679D7C400B6230C /* ExcercisingViewController.swift */,
+				751989682679D7C400B6230C /* ExcercisingViewController.xib */,
+				751989612679D6A400B6230C /* Congratulation */,
 			);
 			path = Excercising;
 			sourceTree = "<group>";
@@ -696,6 +752,7 @@
 		86A3D3CE266F2A57001BE47B /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				751989542679D47D00B6230C /* ExercisingCustomView */,
 				86C5EF01267627AB00A290EC /* SectionButtonCollectionView */,
 				86C5EEFE26761BE000A290EC /* CardioCircleLabel */,
 				8688D5EC266F784800081F8F /* TableViewSectionHeader */,
@@ -892,6 +949,8 @@
 				866BCEE8266919B600482207 /* DetailPlanViewController.xib in Resources */,
 				8688D5F3266FA23C00081F8F /* DatePlanCollectionViewCell.xib in Resources */,
 				8688D5F8266FB55D00081F8F /* ExcerciseDetailPlanCollectionViewCell.xib in Resources */,
+				751989702679DE5800B6230C /* crunches.mov in Resources */,
+				7519895C2679D47D00B6230C /* CongratulationMessageView.xib in Resources */,
 				86D6DA1126771E2100488252 /* ExamCameraViewViewController.xib in Resources */,
 				86D6DA0C267717F900488252 /* InputCountExamViewController.xib in Resources */,
 				86C5EF092676289600A290EC /* SectionButtonCollectionView.xib in Resources */,
@@ -905,13 +964,18 @@
 				866BCEE32669198B00482207 /* ExcerciseReportViewController.xib in Resources */,
 				7DA5DC1F267323E100B6C7EB /* PlanCollectionViewCells.xib in Resources */,
 				8688D5FD266FC1EA00081F8F /* SummaryDetailPlanCollectionViewCell.xib in Resources */,
+				751989642679D6BB00B6230C /* CongratulationViewController.xib in Resources */,
+				7519895F2679D47D00B6230C /* VideoSectionView.xib in Resources */,
 				4994ACBB26772F9E00127044 /* ProfileViewController.xib in Resources */,
 				866BCEDE2669194300482207 /* WarmUpViewController.xib in Resources */,
+				751989602679D47D00B6230C /* ActionSectionView.xib in Resources */,
 				86314D2C266746CA0055FC31 /* Assets.xcassets in Resources */,
+				7519896E2679DE5800B6230C /* Push up.mov in Resources */,
 				4E459BEE26775F8E008DB2D8 /* GoogleService-Info.plist in Resources */,
-				866BCEED266919E700482207 /* ExcercisingViewController.xib in Resources */,
 				49875FD5266FAE960060BE6E /* EvaluationView.storyboard in Resources */,
 				49875FDD266FAF5D0060BE6E /* HistoryTableViewCell.xib in Resources */,
+				7519896A2679D7C400B6230C /* ExcercisingViewController.xib in Resources */,
+				7519896F2679DE5800B6230C /* sit up.mov in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -939,6 +1003,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7519895D2679D47D00B6230C /* ActionSectionView.swift in Sources */,
 				86C5EF0026761D4E00A290EC /* CardioCircleLabel.swift in Sources */,
 				4994ACA926772C3600127044 /* ProfileHealthToggleTableViewCells.swift in Sources */,
 				866BCEFD26691B8100482207 /* CardioTestViewController.swift in Sources */,
@@ -946,6 +1011,7 @@
 				86D6DA1026771E2100488252 /* ExamCameraViewViewController.swift in Sources */,
 				4922C6992675B1910026CDD3 /* UIAlertController+.swift in Sources */,
 				49875FD8266FAF170060BE6E /* History.swift in Sources */,
+				7519895E2679D47D00B6230C /* CongratulationMessageView.swift in Sources */,
 				4942EDD026724CD500444DC8 /* UITableView+.swift in Sources */,
 				4E459BE0267721F6008DB2D8 /* Databases.swift in Sources */,
 				4980859F2670C82800E10F40 /* TestResultViewController.swift in Sources */,
@@ -967,10 +1033,12 @@
 				498085982670B91900E10F40 /* CardioTableViewCell.swift in Sources */,
 				86D6DA0B267717F900488252 /* InputCountExamViewController.swift in Sources */,
 				86C5EF082676289600A290EC /* SectionButtonCollectionView.swift in Sources */,
+				7519895B2679D47D00B6230C /* VideoSectionView.swift in Sources */,
 				86EFA78626766113007E7158 /* TakeTestTableViewCell.swift in Sources */,
 				4942EDD52672615300444DC8 /* UIView+.swift in Sources */,
 				49875FE2266FAFAF0060BE6E /* HistoryTableViewController.swift in Sources */,
 				49875FF5266FB16B0060BE6E /* SpiderChartViewController.swift in Sources */,
+				751989692679D7C400B6230C /* ExcercisingViewController.swift in Sources */,
 				866BCEE7266919B600482207 /* DetailPlanViewController.swift in Sources */,
 				4942EDCB2672491C00444DC8 /* UIScollView+.swift in Sources */,
 				866BCEC02668FEC200482207 /* MyPlanViewController.swift in Sources */,
@@ -984,8 +1052,8 @@
 				86A3D3D4266F2F4E001BE47B /* MCSectionHeaderCollectionReusableView.swift in Sources */,
 				8688D5F2266FA23C00081F8F /* DatePlanCollectionViewCell.swift in Sources */,
 				8688D5F7266FB55D00081F8F /* ExcerciseDetailPlanCollectionViewCell.swift in Sources */,
-				866BCEEC266919E700482207 /* ExcercisingViewController.swift in Sources */,
 				86771236266E4929000313B3 /* Utility.swift in Sources */,
+				751989652679D6BB00B6230C /* CongratulationViewController.swift in Sources */,
 				869EDCE22669C30000DA4770 /* PlanTableViewCell.swift in Sources */,
 				866BCECA26690B2100482207 /* EvaluationViewController.swift in Sources */,
 				86F8E5FD267996B1003E694D /* Pushup.mlmodel in Sources */,
