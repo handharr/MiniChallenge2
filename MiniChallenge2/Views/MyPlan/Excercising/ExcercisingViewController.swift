@@ -17,28 +17,28 @@ class ExcercisingViewController: UIViewController, ActionSectionDelegate {
         nextExer()
     }
     
-    var exerciseList = [Exercise]()
-    var position = 0
     @IBOutlet weak var videoContainer: UIView!
     @IBOutlet weak var blurView: UIView!
     @IBOutlet weak var actionContainer: ActionSectionView!
     
-    //    var exerciseList = [Exercise]()
-    //    var position = 0
+        var exerciseList = [Exercise]()
+        var position = 0
     var timer = Timer()
     var exerciseTimer = Timer()
     var count = 0
     var isActive = false
     var totalSet = 3
     var currentSet = 1
+    var timeString = ""
     
     let subView:VideoSectionView = {
         let subView = VideoSectionView(frame: CGRect(x: 0, y: 0, width: 414, height: 545))
         return subView
     }()
     lazy var subView2:ActionSectionView = {
-        let subView = ActionSectionView(frame: CGRect(x: -17, y: 420, width: 420, height: 300))
+        let subView = ActionSectionView(frame: CGRect(x: -17, y: 420, width: 420, height: 350))
         subView.delegate = self
+        subView.totalExercise = exerciseList.count
         return subView
     }()
     
@@ -102,6 +102,7 @@ class ExcercisingViewController: UIViewController, ActionSectionDelegate {
     
     @objc private func closeButton(){
         let vc = CongratulationViewController()
+        vc.timeString = timeString
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -131,7 +132,7 @@ class ExcercisingViewController: UIViewController, ActionSectionDelegate {
     @objc func timerCounter(){
         count += 1
         let time = secondsToHoursMinutes(seconds: count)
-        let timeString = makeTimeString(minutes: time.0, seconds: time.1)
+        timeString = makeTimeString(minutes: time.0, seconds: time.1)
         navigationItem.title = timeString
     }
     

@@ -14,13 +14,21 @@ class CongratulationViewController: UIViewController {
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var congratulationMessageView: CongratulationMessageView!
     
+    var timeString = ""
+    lazy var messageView:CongratulationMessageView = {
+        let subView = CongratulationMessageView(frame: CGRect(x: 40, y: 430, width: 310, height: 240))        
+        subView.timeString = timeString
+        return subView
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
-        let subView:CongratulationMessageView = CongratulationMessageView(frame: CGRect(x: 52, y: 450, width: 310, height: 240))
-        self.view.addSubview(subView)
-        
+//        subView.timeString = timeString
+        self.view.addSubview(messageView)
         doneButton.layer.cornerRadius = 8
+        messageView.setUpView()
 
     }
+    
+    
 
 }
