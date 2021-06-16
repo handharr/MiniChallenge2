@@ -101,9 +101,9 @@ extension DetailPlanViewController: UICollectionViewDelegate, UICollectionViewDa
             return header
         } else {
             let startButton = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: SectionButtonCollectionView.identifier, for: indexPath) as! SectionButtonCollectionView
-            startButton.navigate = {
+            startButton.navigate = { [weak self] in
                 let vc = ExcercisingViewController()
-                self.navigationController?.pushViewController(vc, animated: true)
+                self?.navigationController?.pushViewController(vc, animated: true)
             }
             return startButton
         }

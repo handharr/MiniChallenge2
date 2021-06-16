@@ -10,7 +10,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExcercisingViewController" customModule="MiniChallenge2" customModuleProvider="target">
             <connections>
-                <outlet property="actionContainer" destination="Rhh-m2-UW7" id="jG2-6z-D7x"/>
                 <outlet property="blurView" destination="qBK-Tj-Ai1" id="EpX-ob-pRq"/>
                 <outlet property="videoContainer" destination="4OT-8q-Cti" id="YHV-HX-SYY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -22,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4OT-8q-Cti">
-                    <rect key="frame" x="0.0" y="-103" width="390" height="545"/>
+                    <rect key="frame" x="0.0" y="-103" width="390" height="577"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qBK-Tj-Ai1">
@@ -32,25 +31,17 @@
                         <constraint firstAttribute="height" constant="88" id="UOJ-f9-YDI"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rhh-m2-UW7" customClass="ActionSectionView" customModule="MiniChallenge2" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="442" width="390" height="368"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="4OT-8q-Cti" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="5cg-bg-u6q"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Rhh-m2-UW7" secondAttribute="trailing" id="6bW-Dk-feX"/>
                 <constraint firstItem="qBK-Tj-Ai1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Afd-1F-Rqu"/>
                 <constraint firstItem="4OT-8q-Cti" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="EBz-Se-4N0"/>
-                <constraint firstItem="Rhh-m2-UW7" firstAttribute="top" secondItem="4OT-8q-Cti" secondAttribute="bottom" id="FUv-H4-IAM"/>
                 <constraint firstItem="qBK-Tj-Ai1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="K8i-K0-iDn"/>
                 <constraint firstItem="4OT-8q-Cti" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="-103" id="KUR-tm-0wW"/>
-                <constraint firstItem="Rhh-m2-UW7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Ol8-ec-ViE"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qBK-Tj-Ai1" secondAttribute="trailing" id="ZYb-hJ-mQd"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Rhh-m2-UW7" secondAttribute="bottom" id="g5U-iI-vKG"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="4OT-8q-Cti" secondAttribute="bottom" constant="368" id="gqv-RX-4vh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="4OT-8q-Cti" secondAttribute="bottom" constant="336" id="gqv-RX-4vh"/>
             </constraints>
             <point key="canvasLocation" x="121.53846153846153" y="145.73459715639811"/>
         </view>

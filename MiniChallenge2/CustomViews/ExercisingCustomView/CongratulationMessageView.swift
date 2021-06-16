@@ -17,9 +17,12 @@ class CongratulationMessageView: UIView {
     @IBOutlet weak var minuteLabel: UILabel!
     
     var view:UIView!
+    var timeString = ""
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
+        timeLabel?.text = timeString
     }
     required init?(coder: NSCoder) {
         super.init(coder:coder)
@@ -28,7 +31,11 @@ class CongratulationMessageView: UIView {
         let viewXib = Bundle.main.loadNibNamed("CongratulationMessageView", owner: self, options: nil)! [0] as! UIView
         viewXib.frame = self.bounds
         addSubview(viewXib)
+//        timeLabel.text = timeString
     }
     
-    
+    func setUpView(){
+        planTitleLabel?.text = ""
+        timeLabel?.text = timeString
+    }
 }

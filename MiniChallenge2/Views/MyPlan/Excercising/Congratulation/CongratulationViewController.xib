@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CongratulationViewController" customModule="XibTutorial" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CongratulationViewController" customModule="MiniChallenge2" customModuleProvider="target">
             <connections>
                 <outlet property="congratLabel" destination="s7y-ax-PSe" id="d4o-hp-I9N"/>
                 <outlet property="congrateImage" destination="rwl-bS-n0D" id="TaE-cg-gdu"/>
@@ -19,17 +19,17 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulation!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7y-ax-PSe">
-                    <rect key="frame" x="0.0" y="64" width="414" height="41"/>
+                    <rect key="frame" x="0.0" y="64" width="390" height="41"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Lk-Yr-xyg">
-                    <rect key="frame" x="16" y="777" width="382" height="50"/>
+                    <rect key="frame" x="16" y="725" width="358" height="50"/>
                     <color key="backgroundColor" red="0.77647058823529413" green="0.31764705882352939" blue="0.28235294117647058" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="pLf-fb-Y31"/>
@@ -38,12 +38,12 @@
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                 </button>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qam-wI-r2I" customClass="CongratulationMessageView" customModule="XibTutorial" customModuleProvider="target">
-                    <rect key="frame" x="40" y="399" width="334" height="285"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qam-wI-r2I" customClass="CongratulationMessageView" customModule="MiniChallenge2" customModuleProvider="target">
+                    <rect key="frame" x="40" y="399" width="310" height="233"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="conratulation" translatesAutoresizingMaskIntoConstraints="NO" id="rwl-bS-n0D">
-                    <rect key="frame" x="95" y="151" width="224" height="200"/>
+                    <rect key="frame" x="95" y="151" width="200" height="200"/>
                 </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

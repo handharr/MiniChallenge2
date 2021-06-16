@@ -25,7 +25,7 @@ class ActionSectionView: UIView {
     @IBOutlet weak var setCounterLabel: UILabel!
     @IBOutlet weak var exerciseCounterLabel: UILabel!
     
-    var timer = Timer()
+    var timer : Timer?
     var second = 0
     var isActive = false
     var exerciseData:Exercise?
@@ -52,19 +52,19 @@ class ActionSectionView: UIView {
     func setUpView(data: Exercise, exerciseNumber:Int){
         exerciseData = data
         self.exerciseNum = exerciseNumber
-        
         exerciseCounterLabel.text = "\(exerciseNumber+1)" + "/" + "\(totalExercise)"
+//        setCounterLabel.text = "\(currentSet)/\(totalSet)"
         if data.exerciseType == "timeBase"{
-            timer.fire()
+//            timer.fire()
             exerciseType?.text = data.exerciseTitle
             timeLabel?.text = String(data.repetition)
             second = data.repetition
-//            timerForEachExerCise()
-            
+            timerForEachExerCise()
         }
         else if data.exerciseType == "countBase"{
             exerciseType?.text = "\(data.repetition) \(data.exerciseTitle)"
-            stopTimerforCountBase()
+//            second =
+            timer?.invalidate()
             timeLabel?.text = "-"
             
         }
@@ -73,9 +73,7 @@ class ActionSectionView: UIView {
     func timerForEachExerCise(){
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector:#selector(ActionSectionView.timerClass) , userInfo: nil, repeats: true)
     }
-    func stopTimerforCountBase(){
-        timer.invalidate()
-    }
+
     @IBAction func startBtn(_ sender: Any) {
         guard let exercise = exerciseData else {
             return
@@ -87,29 +85,27 @@ class ActionSectionView: UIView {
             if isActive{
                 isActive = false
                 startBtn.setImage(#imageLiteral(resourceName: "pauseBtn"), for: .normal)
-                timer.invalidate()
-                timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector:#selector(ActionSectionView.timerClass) , userInfo: nil, repeats: true)
+                timer?.invalidate()
             }
             else{
                 isActive = true
                 startBtn.setImage(#imageLiteral(resourceName: "playBtn"), for: .normal)
-                timer.invalidate()
+                timer?.invalidate()
             }
         }
     }
 
     @IBAction func nextBtn(_ sender: Any) {
+        timer?.invalidate()
         delegate?.nextExercise()
-        timer.invalidate()
     }
     
     @objc func timerClass(){
         second -= 1
         timeLabel?.text = "\(second)"
         if second == 0{
+            timer?.invalidate()
             delegate?.nextExercise()
-            timer.invalidate()
-            
         }
     }
 }

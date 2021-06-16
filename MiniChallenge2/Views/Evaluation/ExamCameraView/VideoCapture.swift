@@ -12,6 +12,7 @@ import CoreML
 
 protocol VideoCaptureDelegate: NSObject {
     func processPoints(_ points: [CGPoint])
+    func processPrediction()
 }
 
 class VideoCapture: NSObject {
@@ -35,6 +36,12 @@ class VideoCapture: NSObject {
         .leftKnee,
         .rightKnee
     ]
+    
+    var poseMultiArray: [MLMultiArray] = [] {
+        didSet {
+            handlePoseAdded()
+        }
+    }
     
     var points: [CGPoint] = []
     
@@ -61,7 +68,11 @@ class VideoCapture: NSObject {
     }
 }
 
+
+// MARK: - AV Video Output Delegate
+
 extension VideoCapture: AVCaptureVideoDataOutputSampleBufferDelegate {
+    
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         
         defer {
@@ -93,10 +104,42 @@ extension VideoCapture: AVCaptureVideoDataOutputSampleBufferDelegate {
               let allPoints = try? firstResult.recognizedPoints(.all)
               else { return }
         
+        guard let multiArr = try? firstResult.keypointsMultiArray() else { return }
+        
+        poseMultiArray.append(multiArr)
+        
         points = jointNames.compactMap {
             guard let point = allPoints[$0], point.confidence > 0.3 else { return nil }
             
             return CGPoint(x: point.location.x, y: 1 - point.location.y)
+        }
+    }
+    
+    private func handlePoseAdded() {
+        if poseMultiArray.count == 15 {
+            let concatinateArr = MLMultiArray(concatenating: poseMultiArray, axis: 0, dataType: .float32)
+            
+            // CoreML
+            do {
+                let config = MLModelConfiguration()
+                let model = try Pushup(configuration: config)
+
+                let input = PushupInput(poses: concatinateArr)
+
+                let outputPU = try model.prediction(input: input)
+
+                let predLabel = outputPU.label
+
+                if predLabel == "up" {
+                    delegate?.processPrediction()
+                }
+
+                print("Hasil prediksi : \(outputPU.label)")
+            } catch {
+                print("error \(error)")
+            }
+            
+            poseMultiArray.removeAll()
         }
     }
 }
