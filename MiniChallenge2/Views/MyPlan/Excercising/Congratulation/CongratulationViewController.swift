@@ -16,7 +16,7 @@ class CongratulationViewController: UIViewController {
     
     var timeString = ""
     lazy var messageView:CongratulationMessageView = {
-        let subView = CongratulationMessageView(frame: CGRect(x: 52, y: 450, width: 310, height: 240))        
+        let subView = CongratulationMessageView(frame: CGRect(x: 40, y: 430, width: 310, height: 240))        
         subView.timeString = timeString
         return subView
     }()
