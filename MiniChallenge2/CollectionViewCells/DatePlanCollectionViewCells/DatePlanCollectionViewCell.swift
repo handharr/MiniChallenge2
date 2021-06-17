@@ -36,6 +36,31 @@ class DatePlanCollectionViewCell: UICollectionViewCell {
         dateMonthLabel.textColor = .white
     }
     
+    public func configureUI(idx: Int) {
+        
+        let date = Date()
+        let formatter = DateFormatter()
+        
+        if idx == 0 {
+            containerView.backgroundColor = MCColor.MCColorPrimary
+        }
+        
+        numberLabel.text = "\(idx + 1)"
+        
+        if idx == 0 {
+            formatter.dateFormat = "E"
+            dayLabel.text = formatter.string(from: date)
+            formatter.dateFormat = "d MMM"
+            dateMonthLabel.text = formatter.string(from: date)
+        } else {
+            formatter.dateFormat = "E"
+            let dateNow = Calendar.current.date(byAdding: .day, value: idx*3, to: date)!
+            dayLabel.text = "\(formatter.string(from: dateNow))"
+            formatter.dateFormat = "d MMM"
+            dateMonthLabel.text = formatter.string(from: dateNow)
+        }
+    }
+    
     override func prepareForReuse() {
         containerView.backgroundColor = .systemGray4
     }

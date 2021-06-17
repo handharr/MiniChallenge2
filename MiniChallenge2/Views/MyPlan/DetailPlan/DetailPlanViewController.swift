@@ -14,12 +14,47 @@ class DetailPlanViewController: UIViewController {
     static let excercisesHeaderID = "excercisesHeaderID"
     static let startButtonID = "startButtonID"
     
+    // Data's
+    private var pakets: [PaketModel] = []
+    private var excercises: [ExerciseModel] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "Plan Name"
     
         setCollectionView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        Databases.retriveAllPaket { [weak self] res in
+            
+            switch res {
+            case .success(let data):
+                self?.pakets = data
+            case .failure(let err):
+                print("data paket error: \(err)")
+            }
+            
+            self?.detailPlanCollectionView.reloadData()
+        }
+        
+        Databases.retriveAllExercises { [weak self] res in
+            
+            switch res {
+            case .success(let data):
+                let usedData = data.filter {
+                    return $0.paketid == "paket1"
+                }
+                self?.excercises = usedData
+            case .failure(let err):
+                print("data paket error: \(err)")
+            }
+            
+            self?.detailPlanCollectionView.reloadData()
+        }
     }
     
     private func setCollectionView() {
@@ -44,11 +79,11 @@ extension DetailPlanViewController: UICollectionViewDelegate, UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch section {
         case 0:
-            return 20
+            return pakets.count
         case 1:
             return 1
         case 2:
-            return 5
+            return excercises.count
         default:
             return 0
         }
@@ -68,14 +103,15 @@ extension DetailPlanViewController: UICollectionViewDelegate, UICollectionViewDa
                 return defaultCell
             }
             
-            if indexPath.row == 0 {
-                cell.containerView.backgroundColor = MCColor.MCColorPrimary
-            }
+            cell.configureUI(idx: indexPath.row)
+            
             return cell
         } else if indexPath.section == 2 {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ExcerciseDetailPlanCollectionViewCell.identifier, for: indexPath) as? ExcerciseDetailPlanCollectionViewCell else {
                 return defaultCell
             }
+            
+            cell.configureUI(model: excercises[indexPath.row], idx: indexPath.row)
             
             return cell
         }
@@ -115,7 +151,7 @@ extension DetailPlanViewController: UICollectionViewDelegate, UICollectionViewDa
             if section == 0 {
                 // item
                 let item = NSCollectionLayoutItem(
-                    layoutSize: .init(
+                    layoutSize: NSCollectionLayoutSize(
                         widthDimension: .fractionalWidth(1/5),
                         heightDimension: .fractionalHeight(1)
                     )
@@ -124,7 +160,7 @@ extension DetailPlanViewController: UICollectionViewDelegate, UICollectionViewDa
                 
                 // group
                 let group = NSCollectionLayoutGroup.horizontal(
-                    layoutSize: .init(
+                    layoutSize: NSCollectionLayoutSize(
                         widthDimension: .fractionalWidth(1),
                         heightDimension: .absolute(140)
                     ),
@@ -136,7 +172,7 @@ extension DetailPlanViewController: UICollectionViewDelegate, UICollectionViewDa
                 // section
                 let section = NSCollectionLayoutSection(group: group)
                 section.orthogonalScrollingBehavior = .continuous
-                section.contentInsets = .init(top: 0, leading: 16, bottom: 0, trailing: 20)
+                section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 20)
                 
                 // return
                 return section
@@ -144,7 +180,7 @@ extension DetailPlanViewController: UICollectionViewDelegate, UICollectionViewDa
             } else if section == 1 {
                 // item
                 let item = NSCollectionLayoutItem(
-                    layoutSize: .init(
+                    layoutSize: NSCollectionLayoutSize(
                         widthDimension: .fractionalWidth(1),
                         heightDimension: .fractionalHeight(1)
                     )
@@ -152,7 +188,7 @@ extension DetailPlanViewController: UICollectionViewDelegate, UICollectionViewDa
                 
                 // group
                 let group = NSCollectionLayoutGroup.horizontal(
-                    layoutSize: .init(
+                    layoutSize: NSCollectionLayoutSize(
                         widthDimension: .fractionalWidth(1),
                         heightDimension: .absolute(85)
                     ),
@@ -170,38 +206,38 @@ extension DetailPlanViewController: UICollectionViewDelegate, UICollectionViewDa
             } else if section == 2 {
                 // item
                 let item = NSCollectionLayoutItem(
-                    layoutSize: .init(
+                    layoutSize: NSCollectionLayoutSize(
                         widthDimension: .fractionalWidth(1),
-                        heightDimension: .fractionalHeight(1)
+                        heightDimension: .absolute(92)
                     )
                 )
-                item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0)
+                item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0)
                 
                 // group
                 let group = NSCollectionLayoutGroup.vertical(
-                    layoutSize: .init(
+                    layoutSize: NSCollectionLayoutSize(
                         widthDimension: .fractionalWidth(1),
-                        heightDimension: .fractionalHeight(1)
+                        heightDimension: .absolute(92)
                     ),
                     subitem: item,
-                    count: 5
+                    count: 1
                 )
-                group.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0)
+                group.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 0, bottom: 0, trailing: 0)
                 
                 // section
                 let section = NSCollectionLayoutSection(group: group)
-                section.contentInsets = .init(top: 0, leading: 16, bottom: 0, trailing: 16)
+                section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16)
                 section.boundarySupplementaryItems = [
-                    .init(
-                        layoutSize: .init(
+                    NSCollectionLayoutBoundarySupplementaryItem(
+                        layoutSize: NSCollectionLayoutSize(
                             widthDimension: .fractionalWidth(1),
                             heightDimension: .absolute(50)
                         ),
                         elementKind: DetailPlanViewController.excercisesHeaderID,
                         alignment: .topLeading
                     ),
-                    .init(
-                        layoutSize: .init(
+                    NSCollectionLayoutBoundarySupplementaryItem(
+                        layoutSize: NSCollectionLayoutSize(
                             widthDimension: .fractionalWidth(1),
                             heightDimension: .absolute(75)
                         ),

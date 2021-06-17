@@ -27,7 +27,7 @@ class Databases {
 
 extension Databases{
     
-    //MARK: - Retive exercise
+    //MARK: - Retrieve exercise
     static public func retriveAllExercises( completion: @escaping (Result<[ExerciseModel], Error>) -> Void ) {
         
         var allExercises: [ExerciseModel] = []
@@ -38,6 +38,7 @@ extension Databases{
             if snapshot.childrenCount>0{
                 for exercises in snapshot.children.allObjects as![DataSnapshot]{
                     let exerciseObject = exercises.value as? [String:Any]
+                    
                     let name = exerciseObject?["name"]
                     let paketid = exerciseObject?["paketid"]
                     let category = exerciseObject?["category"]
@@ -68,19 +69,20 @@ extension Databases{
             if snapshot.childrenCount>0{
                 for pakets in snapshot.children.allObjects as![DataSnapshot]{
                     let paketObject = pakets.value as? [String:Any]
+                    
                     let total = paketObject?["total"]
                     let status = paketObject?["status"]
                     let level = paketObject?["level"]
                     let minutes = paketObject?["minutes"]
+                    let set = paketObject?["set"]
                     
             
-                    let paket = PaketModel(status: status as! Bool, total: total as! Int, level: level as! Int, minutes: minutes as! Int)
-                    print("ini keynya \(pakets.key)")
+                    let paket = PaketModel(status: status as! Bool, total: total as! Int, level: level as! Int, minutes: minutes as! Int, set: set as! Int)
+//                    print("ini keynya \(pakets.key)")
                     allPakets.append(paket)
                 }
             }
     
-            
             completion(.success(allPakets))
         })
     }
@@ -98,6 +100,7 @@ extension Databases{
             if snapshot.childrenCount>0{
                 for plans in snapshot.children.allObjects as![DataSnapshot]{
                     let planObject =  plans.value as? [String: Any]
+                    
                     let planName =  planObject?["name"]
                     let planDesc = planObject?["desc"]
                     let planThumbnail = planObject?["thumbnail"]

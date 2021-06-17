@@ -14,12 +14,14 @@ class PaketModel {
     var total: Int
     var level: Int
     var minutes: Int
+    var set: Int
     
-    init(status: Bool, total: Int, level: Int, minutes: Int) {
+    init(status: Bool, total: Int, level: Int, minutes: Int, set: Int) {
         self.status = status;
         self.total = total;
         self.level = level;
         self.minutes = minutes
+        self.set = set
     }
     
     //get total minutes

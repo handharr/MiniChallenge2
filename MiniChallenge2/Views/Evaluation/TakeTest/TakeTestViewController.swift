@@ -141,6 +141,9 @@ extension TakeTestViewController: UITableViewDelegate, UITableViewDataSource {
                 session?.activate()
                 choosingAlert()
             }
+        } else if indexPath.row == 1 {
+            let vc = ExamCameraViewViewController()
+            navigationController?.pushViewController(vc, animated: true)
         }
     }
     

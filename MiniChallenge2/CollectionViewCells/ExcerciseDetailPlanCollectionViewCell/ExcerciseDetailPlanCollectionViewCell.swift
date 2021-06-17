@@ -31,4 +31,13 @@ class ExcerciseDetailPlanCollectionViewCell: UICollectionViewCell {
         subtitleLabel.textColor = MCColor.MCColorPrimary
         containerView.layer.cornerRadius = 8
     }
+    
+    public func configureUI(model: ExerciseModel, idx: Int) {
+        titleLabel.text = model.name
+        imageView.image = UIImage(named: "exc-\(idx % 8)")
+        
+        subtitleLabel.text = model.time == 0 ? "8 reps" : "\(model.time) sec"
+        
+        imageView.backgroundColor = .clear
+    }
 }
