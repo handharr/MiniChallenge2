@@ -14,8 +14,6 @@ class TestResultViewController: UIViewController {
     
     lazy var scrollView : UIScrollView = {
         self.setUpTable()
-        print("Masuk")
-        print(tables.count)
         let scrollView = UIScrollView()
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.isPagingEnabled = true

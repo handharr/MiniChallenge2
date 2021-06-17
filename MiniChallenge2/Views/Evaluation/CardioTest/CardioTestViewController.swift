@@ -11,6 +11,10 @@ import WatchConnectivity
 
 class CardioTestViewController: UIViewController, CardioTestDelegate {
     
+    @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var heartRate: UILabel!
+    
+    
     let ringShape = CAShapeLayer()
     var circlePath: UIBezierPath?
     var labelView: CardioCircleLabel?
@@ -209,10 +213,17 @@ extension CardioTestViewController: WCSessionDelegate{
     }
     
     func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
-        DispatchQueue.main.async {
-            self.labelView?.topLabel.text = String(format: "%.1f", applicationContext["runningDistance"] as! Double)
-//            self.timerLabel.text = "\(applicationContext["workoutTimer"] as! String)"
-//            self.heartRate.text = String(format: "%.1f", applicationContext["heartRate"] as! Double)
+        if let distance = applicationContext["runningDistance"] as? Double, let timer = applicationContext["workoutTimer"] as? String, let heartRate = applicationContext["heartRate"]! as? Double{
+            DispatchQueue.main.async {
+                self.labelView?.topLabel.text = String(format: "%.2f", distance)
+                self.timerLabel.text = "\(timer)"
+                self.heartRate.text = String(format: "%.1f", heartRate)
+            }
+        } else if let data = applicationContext["skipped"] as? String{
+            DispatchQueue.main.async {
+                self.navigationController?.popToRootViewController(animated: true)
+                print(data)
+            }
         }
     }
 }

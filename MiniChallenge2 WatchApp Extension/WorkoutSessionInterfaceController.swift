@@ -44,7 +44,6 @@ class WorkoutSessionInterfaceController: WKInterfaceController{
 //        watchInterface.delegate = self
         setUpData()
         requestAuthorization()
-        startWorkout()
         
         NotificationCenter.default.addObserver(self, selector: #selector(pauseTriggered), name: NSNotification.Name("Pause Triggered"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(skipTriggered), name: NSNotification.Name("Skip Triggered"), object: nil)
@@ -96,6 +95,7 @@ class WorkoutSessionInterfaceController: WKInterfaceController{
         ]
         
         healthStore.requestAuthorization(toShare: typesToShare, read: typesToRead) { (success, error) in
+            self.startWorkout()
         }
     }
     
@@ -124,7 +124,7 @@ class WorkoutSessionInterfaceController: WKInterfaceController{
     
     // Convert the seconds, minutes, hours into a string.
     func elapsedTimeString(elapsed: (h: Int, m: Int, s: Int)) -> String {
-        return String(format: "%d:%02d:%02d", elapsed.h, elapsed.m, elapsed.s)
+        return String(format: "%02d:%02d", elapsed.m, elapsed.s)
     }
     
     func workoutConfiguration() -> HKWorkoutConfiguration {
@@ -224,17 +224,12 @@ class WorkoutSessionInterfaceController: WKInterfaceController{
             case HKQuantityType.quantityType(forIdentifier: .distanceWalkingRunning):
                 let meterUnit = HKUnit.meter()
                 let value = statistics.sumQuantity()?.doubleValue(for: meterUnit)
-                let roundedValue = Double( round( 1 * value! ) / 1 )
+                let roundedValue = Double( round( 1 * value! ) / 1 )/1000
                 self.distance = roundedValue
                 DispatchQueue.main.async {
-                    self.distanceRunning.setText(String(format: "%.1f", roundedValue))
+                    self.distanceRunning.setText(String(format: "%.2f", roundedValue))
                 }
                 return
-            case HKQuantityType.quantityType(forIdentifier: .vo2Max):
-                let voUnit = HKUnit(from: "ml/kg*min")
-//                print("VO2 Rate Unit: " + "\(voUnit)")
-                let values = statistics.mostRecentQuantity()?.doubleValue(for: voUnit)
-//                print("VO2 Rate Unit: " + "\(values)")
             default:
                 return
             }
@@ -260,11 +255,8 @@ extension WorkoutSessionInterfaceController: RunningSessionDelegate {
         } else {
             resumeWorkout()
         }
-        print("Data> \(isRunning)")
-        
     }
     func workoutDidCancel() {
-        print("Workout out did cancel tapped")
     }
 }
 
@@ -273,7 +265,6 @@ extension WorkoutSessionInterfaceController: HKWorkoutSessionDelegate {
     func workoutSession(_ workoutSession: HKWorkoutSession, didChangeTo toState: HKWorkoutSessionState,
                         from fromState: HKWorkoutSessionState, date: Date) {
         if toState == .ended {
-            print("The workout has now ended.")
             
             if self.elapsedSeconds < 59 {
                 builder.endCollection(withEnd: Date()) { (success, error) in
@@ -333,6 +324,7 @@ extension WorkoutSessionInterfaceController: WCSessionDelegate{
     func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
         if let receivedData = applicationContext["quit"] as? String{
             self.dismiss()
+            print(receivedData)
         }
     }
 }
