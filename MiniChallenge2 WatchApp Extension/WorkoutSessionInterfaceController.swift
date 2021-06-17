@@ -20,7 +20,7 @@ class WorkoutSessionInterfaceController: WKInterfaceController{
     
     
     var watchInterface = InterfaceController()
-    var watchSession: WCSession!
+    var watchSession: WCSession = WCSession.default
     
     let healthStore = HKHealthStore()
     var session: HKWorkoutSession!
@@ -48,11 +48,8 @@ class WorkoutSessionInterfaceController: WKInterfaceController{
         
         NotificationCenter.default.addObserver(self, selector: #selector(pauseTriggered), name: NSNotification.Name("Pause Triggered"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(skipTriggered), name: NSNotification.Name("Skip Triggered"), object: nil)
-        
-        watchSession = WCSession.default
-        watchSession?.delegate = self
-        watchSession?.activate()
     }
+    
     
     @objc
     func pauseTriggered(){
@@ -70,6 +67,8 @@ class WorkoutSessionInterfaceController: WKInterfaceController{
     
     override func willActivate() {
         super.willActivate()
+        watchSession.delegate = self
+        watchSession.activate()
     }
     
     override func didDeactivate() {
@@ -242,7 +241,7 @@ class WorkoutSessionInterfaceController: WKInterfaceController{
         }
         
         do{
-            try watchSession?.updateApplicationContext([
+            try watchSession.updateApplicationContext([
                 "heartRate": self.heartrate,
                 "activeEnergy": self.activeCalories,
                 "workoutTimer": "\(self.elapsedTimeString(elapsed: self.secondsToHoursMinutesSeconds(seconds: self.elapsedSeconds)))",
@@ -331,5 +330,9 @@ extension WorkoutSessionInterfaceController: WCSessionDelegate{
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
     }
     
-    
+    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
+        if let receivedData = applicationContext["quit"] as? String{
+            self.dismiss()
+        }
+    }
 }

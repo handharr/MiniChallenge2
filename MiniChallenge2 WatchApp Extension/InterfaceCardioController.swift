@@ -7,12 +7,14 @@
 
 import WatchKit
 import SpriteKit
+import WatchConnectivity
 
 class InterfaceCardioController: WKInterfaceController{
     @IBOutlet weak var interfaceScene: WKInterfaceSKScene!
     
     var delegate : RunningSessionDelegate?
     var isRunning : Bool = false
+    var session : WCSession = WCSession.default
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -66,6 +68,8 @@ class InterfaceCardioController: WKInterfaceController{
     }
     override func willActivate() {
         super.willActivate()
+        session.delegate = self
+        session.activate()
     }
     
     override func didDeactivate() {
@@ -73,9 +77,19 @@ class InterfaceCardioController: WKInterfaceController{
     }
 
     @IBAction func pauseTapped() {
-//        self.popToRootController()
-//        delegate?.stopDidTapped(isRunning: self.isRunning)
-//        isRunning = !isRunning
         NotificationCenter.default.post(name: NSNotification.Name("Pause Triggered"), object: nil)
     }
+}
+
+extension InterfaceCardioController: WCSessionDelegate{
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        
+    }
+    
+    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
+        if let receivedData = applicationContext["quit"] as? String{
+            self.dismiss()
+        }
+    }
+    
 }

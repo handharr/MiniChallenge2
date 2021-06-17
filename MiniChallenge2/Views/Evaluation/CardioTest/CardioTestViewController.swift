@@ -182,7 +182,12 @@ extension CardioTestViewController {
         
         ac.addAction(UIAlertAction(title: "Quit", style: .destructive, handler: { [weak self] ac in
             guard self != nil else {return}
-            
+            let data = ["quit" : "\(UUID())"]
+            do{
+                try self?.watchSession?.updateApplicationContext(data)
+            }catch{
+                
+            }
             self?.navigationController?.popToRootViewController(animated: true)
         }))
         ac.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
