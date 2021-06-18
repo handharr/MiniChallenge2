@@ -11,28 +11,40 @@ import WatchConnectivity
 
 class HomeInterfaceController: WKInterfaceController {
         
-    var watchSession : WCSession!
+//    var watchSession : WCSession = WCSession.default
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        watchSession = WCSession.default
-        watchSession?.delegate = self
-        watchSession?.activate()
+        
     }
     
     override func didDeactivate() {
         print("geser")
+    }
+    
+    override func willActivate() {
+        if WCSession.isSupported() {
+            let session = WCSession.default
+            session.delegate = self
+            session.activate()
+            if session.isReachable {
+              print("your iphone is Reachable")
+            } else {
+              print("your iphone is not Reachable...")
+            }
+          } else {
+            print("This device is not supported.")
+          }
     }
 }
 
 extension HomeInterfaceController: WCSessionDelegate{
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         print("Watch Session Activation is Completed")
-        let data : [String: Any] = ["BPM": "Message From Watch" as Any]
-        watchSession!.sendMessage(data, replyHandler: nil, errorHandler: nil)
     }
     
     func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
+        
         if let receivedData = applicationContext["data"] as? String{
             presentController(withNames: ["runningTest", "examCardio"], contexts: nil)
             print(receivedData)

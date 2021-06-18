@@ -15,7 +15,7 @@ class CardioCircleLabel: UIView {
         label.font = .systemFont(ofSize: 100, weight: .bold)
         label.textColor = .white
         label.textAlignment = .center
-        label.text = "0,78"
+        label.text = "0.0"
         
         return label
     }()

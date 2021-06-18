@@ -7,12 +7,15 @@
 
 import WatchKit
 import SpriteKit
+import WatchConnectivity
 
 class InterfaceCardioController: WKInterfaceController{
     @IBOutlet weak var interfaceScene: WKInterfaceSKScene!
+    @IBOutlet weak var pausePlayButton: WKInterfaceButton!
     
     var delegate : RunningSessionDelegate?
-    var isRunning : Bool = false
+    var isRunning : Bool = true
+    var session : WCSession = WCSession.default
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -55,27 +58,53 @@ class InterfaceCardioController: WKInterfaceController{
 
         scene.addChild(backgroundNode)
         scene.addChild(shapeNode)
-        print("firstScene")
-
     }
     
     @IBAction func skippedTapped() {
-//        self.popToRootController()
-//        delegate?.workoutDidCancel()
+        let data = ["skipped" : "\(UUID())"]
+        do{
+            try self.session.updateApplicationContext(data)
+        }catch{ }
         NotificationCenter.default.post(name: NSNotification.Name("Skip Triggered"), object: nil)
+        self.dismiss()
     }
+    
     override func willActivate() {
         super.willActivate()
+        session.delegate = self
+        session.activate()
     }
     
     override func didDeactivate() {
         super.didDeactivate()
     }
 
-    @IBAction func pauseTapped() {
-//        self.popToRootController()
-//        delegate?.stopDidTapped(isRunning: self.isRunning)
-//        isRunning = !isRunning
+    @IBAction func pauseTapped() { 
+        if isRunning {
+            DispatchQueue.main.async {
+                self.pausePlayButton.setBackgroundImageNamed("playbutto3")
+            }
+        } else {
+            DispatchQueue.main.async {
+//                self.pausePlayButton.setBackgroundImage(#imageLiteral(resourceName: "playbutto3"))
+                self.pausePlayButton.setBackgroundImageNamed("pausebutton3")
+            }
+        }
+        isRunning = !isRunning
+
         NotificationCenter.default.post(name: NSNotification.Name("Pause Triggered"), object: nil)
     }
+}
+
+extension InterfaceCardioController: WCSessionDelegate{
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+    }
+    
+    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
+        if let receivedData = applicationContext["quit"] as? String{
+            self.dismiss()
+            print(receivedData)
+        }
+    }
+    
 }

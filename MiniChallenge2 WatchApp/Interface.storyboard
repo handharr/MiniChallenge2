@@ -41,7 +41,7 @@
                                         <spriteKitScene height="0.90000000000000002" alignment="center" verticalAlignment="center" id="2J4-Cl-Whu"/>
                                         <group width="1" height="0.29999999999999999" alignment="left" verticalAlignment="bottom" id="cTi-UV-VnS">
                                             <items>
-                                                <button width="0.25" height="0.69999999999999996" alignment="left" verticalAlignment="bottom" backgroundImage="pausebutton" id="yHR-Ef-MkG">
+                                                <button width="0.20000000000000001" height="0.69999999999999996" alignment="left" verticalAlignment="bottom" backgroundImage="pausebutton3" id="yHR-Ef-MkG">
                                                     <connections>
                                                         <action selector="pauseTapped" destination="eFL-2c-ssi" id="pzY-F4-YU7"/>
                                                     </connections>
@@ -49,7 +49,7 @@
                                                 <label alignment="center" verticalAlignment="bottom" text="Running 1,6km" textAlignment="center" id="8bj-75-7gJ">
                                                     <fontDescription key="font" type="system" pointSize="12"/>
                                                 </label>
-                                                <button width="0.25" height="0.69999999999999996" alignment="right" verticalAlignment="bottom" backgroundImage="playbutton" id="cQz-DU-NWF">
+                                                <button width="0.20000000000000001" height="0.69999999999999996" alignment="right" verticalAlignment="bottom" backgroundImage="Nextbutton3" id="cQz-DU-NWF">
                                                     <connections>
                                                         <action selector="skippedTapped" destination="eFL-2c-ssi" id="AQN-Cb-BNO"/>
                                                     </connections>
@@ -81,6 +81,7 @@
                     </items>
                     <connections>
                         <outlet property="interfaceScene" destination="2J4-Cl-Whu" id="0vo-xY-qfN"/>
+                        <outlet property="pausePlayButton" destination="yHR-Ef-MkG" id="edb-Xi-pWI"/>
                     </connections>
                 </controller>
             </objects>
@@ -89,11 +90,11 @@
         <!--Home Interface Controller-->
         <scene sceneID="Vkz-kv-KI5">
             <objects>
-                <controller id="vTX-Rr-Q3Z" customClass="HomeInterfaceController" customModule="MiniChallenge2_WatchApp" customModuleProvider="target">
+                <controller fullBounds="YES" id="vTX-Rr-Q3Z" customClass="HomeInterfaceController" customModule="MiniChallenge2_WatchApp" customModuleProvider="target">
                     <items>
                         <group width="1" height="1" alignment="left" layout="vertical" id="KKl-cR-BBQ">
                             <items>
-                                <imageView width="0.29999999999999999" height="0.29999999999999999" alignment="center" verticalAlignment="center" image="playbutton" id="5Pw-Tq-apa">
+                                <imageView width="0.31" height="0.29999999999999999" alignment="center" verticalAlignment="center" image="circle-cropped" id="5Pw-Tq-apa">
                                     <color key="tintColor" red="0.77647058820000003" green="0.31764705879999999" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </imageView>
                                 <label width="1" alignment="center" verticalAlignment="center" text="Start a training session from your phone" textAlignment="center" numberOfLines="3" id="VEp-TU-nl8"/>
@@ -193,9 +194,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Nextbutton3" width="21" height="21"/>
+        <image name="circle-cropped" width="179" height="179"/>
         <image name="heart.fill" catalog="system" width="128" height="105"/>
-        <image name="pausebutton" width="26" height="23"/>
-        <image name="playbutton" width="26" height="23"/>
+        <image name="pausebutton3" width="21" height="21"/>
         <image name="timer" catalog="system" width="128" height="121"/>
     </resources>
 </document>

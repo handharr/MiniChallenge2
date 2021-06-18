@@ -25,6 +25,11 @@ class TakeTestViewController: UIViewController {
         //
         // --------
         title = "Take Test"
+        if WCSession.isSupported(){
+            session = WCSession.default
+            session?.delegate = self
+            session?.activate()
+        }
         setTableView()
     }
     
@@ -83,12 +88,6 @@ class TakeTestViewController: UIViewController {
                             }
                         }
                     }
-//                    self.session?.transferUserInfo(data)
-//                    if ((self.session?.isReachable) != nil){
-//                        self.session?.sendMessage(data, replyHandler: nil, errorHandler: { (error) in
-//                            print(error)
-//                        })
-//                    }
                 }))
             self.present(alert, animated: true, completion: nil)
 
@@ -144,6 +143,7 @@ extension TakeTestViewController: UITableViewDelegate, UITableViewDataSource {
         } else if indexPath.row == 1 {
             let vc = ExamCameraViewViewController()
             navigationController?.pushViewController(vc, animated: true)
+            choosingAlert()
         }
     }
     

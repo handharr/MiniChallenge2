@@ -20,9 +20,13 @@
             <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4OT-8q-Cti">
-                    <rect key="frame" x="0.0" y="-103" width="390" height="577"/>
+                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4OT-8q-Cti" userLabel="videoContainer">
+                    <rect key="frame" x="0.0" y="0.0" width="390" height="487.66666666666669"/>
+                    <viewLayoutGuide key="safeArea" id="uEy-9R-Vbv"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="4OT-8q-Cti" secondAttribute="height" multiplier="8:10" id="k2b-r0-6Ak"/>
+                    </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qBK-Tj-Ai1">
                     <rect key="frame" x="0.0" y="0.0" width="390" height="88"/>
@@ -35,13 +39,12 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="4OT-8q-Cti" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="5cg-bg-u6q"/>
                 <constraint firstItem="qBK-Tj-Ai1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Afd-1F-Rqu"/>
-                <constraint firstItem="4OT-8q-Cti" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="EBz-Se-4N0"/>
+                <constraint firstItem="4OT-8q-Cti" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="J7f-Ar-I7J"/>
                 <constraint firstItem="qBK-Tj-Ai1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="K8i-K0-iDn"/>
-                <constraint firstItem="4OT-8q-Cti" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="-103" id="KUR-tm-0wW"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qBK-Tj-Ai1" secondAttribute="trailing" id="ZYb-hJ-mQd"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="4OT-8q-Cti" secondAttribute="bottom" constant="336" id="gqv-RX-4vh"/>
+                <constraint firstItem="4OT-8q-Cti" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="b9m-Bw-czz"/>
+                <constraint firstItem="4OT-8q-Cti" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="nmU-gb-HZZ"/>
             </constraints>
             <point key="canvasLocation" x="121.53846153846153" y="145.73459715639811"/>
         </view>
