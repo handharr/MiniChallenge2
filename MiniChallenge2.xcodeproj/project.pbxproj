@@ -82,6 +82,12 @@
 		7DA5DC1E267323E100B6C7EB /* PlanCollectionViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA5DC1C267323E100B6C7EB /* PlanCollectionViewCells.swift */; };
 		7DA5DC1F267323E100B6C7EB /* PlanCollectionViewCells.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DA5DC1D267323E100B6C7EB /* PlanCollectionViewCells.xib */; };
 		861C35D9266DC5F3005ABB7E /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861C35D8266DC5F3005ABB7E /* DummyData.swift */; };
+		861E0702267B64E70064FC49 /* StrengthTestLayerStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861E0701267B64E70064FC49 /* StrengthTestLayerStart.swift */; };
+		861E0705267B67B40064FC49 /* StrengthTestLayerResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861E0704267B67B40064FC49 /* StrengthTestLayerResult.swift */; };
+		861E0709267BBA030064FC49 /* StrengthTestResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861E0707267BBA030064FC49 /* StrengthTestResultViewController.swift */; };
+		861E070A267BBA030064FC49 /* StrengthTestResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 861E0708267BBA030064FC49 /* StrengthTestResultViewController.xib */; };
+		861E070E267BBB460064FC49 /* StrengthResultTableViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861E070C267BBB460064FC49 /* StrengthResultTableViewCells.swift */; };
+		861E070F267BBB460064FC49 /* StrengthResultTableViewCells.xib in Resources */ = {isa = PBXBuildFile; fileRef = 861E070D267BBB460064FC49 /* StrengthResultTableViewCells.xib */; };
 		86314D23266746C90055FC31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86314D22266746C90055FC31 /* AppDelegate.swift */; };
 		86314D25266746C90055FC31 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86314D24266746C90055FC31 /* SceneDelegate.swift */; };
 		86314D2C266746CA0055FC31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86314D2B266746CA0055FC31 /* Assets.xcassets */; };
@@ -244,6 +250,12 @@
 		7DA5DC1C267323E100B6C7EB /* PlanCollectionViewCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanCollectionViewCells.swift; sourceTree = "<group>"; };
 		7DA5DC1D267323E100B6C7EB /* PlanCollectionViewCells.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlanCollectionViewCells.xib; sourceTree = "<group>"; };
 		861C35D8266DC5F3005ABB7E /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
+		861E0701267B64E70064FC49 /* StrengthTestLayerStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrengthTestLayerStart.swift; sourceTree = "<group>"; };
+		861E0704267B67B40064FC49 /* StrengthTestLayerResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrengthTestLayerResult.swift; sourceTree = "<group>"; };
+		861E0707267BBA030064FC49 /* StrengthTestResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrengthTestResultViewController.swift; sourceTree = "<group>"; };
+		861E0708267BBA030064FC49 /* StrengthTestResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StrengthTestResultViewController.xib; sourceTree = "<group>"; };
+		861E070C267BBB460064FC49 /* StrengthResultTableViewCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrengthResultTableViewCells.swift; sourceTree = "<group>"; };
+		861E070D267BBB460064FC49 /* StrengthResultTableViewCells.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StrengthResultTableViewCells.xib; sourceTree = "<group>"; };
 		86314D1F266746C90055FC31 /* MiniChallenge2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniChallenge2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86314D22266746C90055FC31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86314D24266746C90055FC31 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -359,6 +371,7 @@
 		4980858D2670B58C00E10F40 /* ResultTableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				861E070B267BBB240064FC49 /* StrengthResultTableViewCells */,
 				498085A22670E88300E10F40 /* GradingCriteriaViewCells */,
 				498085952670B90900E10F40 /* CardioTableViewCells */,
 			);
@@ -478,6 +491,40 @@
 			name = PlanCollectionViewCell;
 			path = MiniChallenge2/CollectionViewCells/PlanCollectionViewCell;
 			sourceTree = SOURCE_ROOT;
+		};
+		861E0700267B64BB0064FC49 /* StrengthTestLayerStart */ = {
+			isa = PBXGroup;
+			children = (
+				861E0701267B64E70064FC49 /* StrengthTestLayerStart.swift */,
+			);
+			path = StrengthTestLayerStart;
+			sourceTree = "<group>";
+		};
+		861E0703267B679D0064FC49 /* StrengthTestLayerResult */ = {
+			isa = PBXGroup;
+			children = (
+				861E0704267B67B40064FC49 /* StrengthTestLayerResult.swift */,
+			);
+			path = StrengthTestLayerResult;
+			sourceTree = "<group>";
+		};
+		861E0706267BB9DB0064FC49 /* StrengthTestResultViewController */ = {
+			isa = PBXGroup;
+			children = (
+				861E0707267BBA030064FC49 /* StrengthTestResultViewController.swift */,
+				861E0708267BBA030064FC49 /* StrengthTestResultViewController.xib */,
+			);
+			path = StrengthTestResultViewController;
+			sourceTree = "<group>";
+		};
+		861E070B267BBB240064FC49 /* StrengthResultTableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				861E070C267BBB460064FC49 /* StrengthResultTableViewCells.swift */,
+				861E070D267BBB460064FC49 /* StrengthResultTableViewCells.xib */,
+			);
+			path = StrengthResultTableViewCells;
+			sourceTree = "<group>";
 		};
 		86314D16266746C90055FC31 = {
 			isa = PBXGroup;
@@ -659,6 +706,7 @@
 		866BCEEE26691A0700482207 /* Evaluation */ = {
 			isa = PBXGroup;
 			children = (
+				861E0706267BB9DB0064FC49 /* StrengthTestResultViewController */,
 				86D6DA0D26771E0B00488252 /* ExamCameraView */,
 				86D6DA08267717C900488252 /* InputCountExam */,
 				49875FEF266FB1580060BE6E /* SpiderChart */,
@@ -767,6 +815,8 @@
 		86A3D3CE266F2A57001BE47B /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				861E0703267B679D0064FC49 /* StrengthTestLayerResult */,
+				861E0700267B64BB0064FC49 /* StrengthTestLayerStart */,
 				751989542679D47D00B6230C /* ExercisingCustomView */,
 				86C5EF01267627AB00A290EC /* SectionButtonCollectionView */,
 				86C5EEFE26761BE000A290EC /* CardioCircleLabel */,
@@ -972,6 +1022,7 @@
 				86C5EF092676289600A290EC /* SectionButtonCollectionView.xib in Resources */,
 				7567D411267CCC5300C96067 /* timerCountdown.wav in Resources */,
 				866BCEF326691A1C00482207 /* TakeTestViewController.xib in Resources */,
+				861E070F267BBB460064FC49 /* StrengthResultTableViewCells.xib in Resources */,
 				498085A62670E8BE00E10F40 /* GradingCriteriaTableViewCell.xib in Resources */,
 				86EFA78726766113007E7158 /* TakeTestTableViewCell.xib in Resources */,
 				869EDCE32669C30000DA4770 /* PlanTableViewCell.xib in Resources */,
@@ -986,6 +1037,7 @@
 				4994ACBB26772F9E00127044 /* ProfileViewController.xib in Resources */,
 				866BCEDE2669194300482207 /* WarmUpViewController.xib in Resources */,
 				751989602679D47D00B6230C /* ActionSectionView.xib in Resources */,
+				861E070A267BBA030064FC49 /* StrengthTestResultViewController.xib in Resources */,
 				86314D2C266746CA0055FC31 /* Assets.xcassets in Resources */,
 				7519896E2679DE5800B6230C /* Push up.mov in Resources */,
 				4E459BEE26775F8E008DB2D8 /* GoogleService-Info.plist in Resources */,
@@ -1024,6 +1076,8 @@
 				7519895D2679D47D00B6230C /* ActionSectionView.swift in Sources */,
 				86C5EF0026761D4E00A290EC /* CardioCircleLabel.swift in Sources */,
 				4994ACA926772C3600127044 /* ProfileHealthToggleTableViewCells.swift in Sources */,
+				861E0705267B67B40064FC49 /* StrengthTestLayerResult.swift in Sources */,
+				861E0709267BBA030064FC49 /* StrengthTestResultViewController.swift in Sources */,
 				866BCEFD26691B8100482207 /* CardioTestViewController.swift in Sources */,
 				866BCEE22669198B00482207 /* ExcerciseReportViewController.swift in Sources */,
 				86D6DA1026771E2100488252 /* ExamCameraViewViewController.swift in Sources */,
@@ -1037,6 +1091,7 @@
 				86314D23266746C90055FC31 /* AppDelegate.swift in Sources */,
 				498572482674F848000CB1B9 /* WatchManager.swift in Sources */,
 				4E459BF026784662008DB2D8 /* ExerciseModel.swift in Sources */,
+				861E0702267B64E70064FC49 /* StrengthTestLayerStart.swift in Sources */,
 				4E459BE42677497C008DB2D8 /* HistoryModel.swift in Sources */,
 				861C35D9266DC5F3005ABB7E /* DummyData.swift in Sources */,
 				866BCEDD2669194300482207 /* WarmUpViewController.swift in Sources */,
@@ -1045,6 +1100,7 @@
 				866BCEF226691A1C00482207 /* TakeTestViewController.swift in Sources */,
 				866BCEBD2668FDF900482207 /* TabBarController.swift in Sources */,
 				4E459BDE2677196F008DB2D8 /* PlanModel.swift in Sources */,
+				861E070E267BBB460064FC49 /* StrengthResultTableViewCells.swift in Sources */,
 				4994ACAF26772C5900127044 /* Profile.swift in Sources */,
 				49875FEB266FB0F70060BE6E /* ColorExtension.swift in Sources */,
 				49875FED266FB0F70060BE6E /* SpiderChartFormatter.swift in Sources */,

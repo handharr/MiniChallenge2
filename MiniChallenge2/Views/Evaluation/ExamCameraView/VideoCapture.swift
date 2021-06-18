@@ -66,6 +66,10 @@ class VideoCapture: NSObject {
         captureSession.startRunning()
         videoOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "videoDispatchQueue"))
     }
+    
+    public func endCapture() {
+        captureSession.stopRunning()
+    }
 }
 
 

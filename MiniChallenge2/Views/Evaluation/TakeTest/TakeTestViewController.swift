@@ -133,6 +133,16 @@ extension TakeTestViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0{
+            if WCSession.isSupported(){
+                session = WCSession.default
+                
+                session?.delegate = self
+                session?.activate()
+                choosingAlert()
+            }
+        } else if indexPath.row == 1 {
+            let vc = ExamCameraViewViewController()
+            navigationController?.pushViewController(vc, animated: true)
             choosingAlert()
         }
     }

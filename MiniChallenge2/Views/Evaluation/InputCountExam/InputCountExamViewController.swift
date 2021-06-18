@@ -15,6 +15,8 @@ class InputCountExamViewController: UIViewController {
         super.viewDidLoad()
 
         inputTextField.keyboardType = .asciiCapableNumberPad
+        navigationItem.backBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(handleBackToRoot))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .done, target: self, action: #selector(handleBackToRoot))
         
         setNavbarButtonItem()
         setBorder()
@@ -27,8 +29,13 @@ class InputCountExamViewController: UIViewController {
         navigationItem.rightBarButtonItem?.tintColor = MCColor.MCColorPrimary
     }
     
-    @objc private func handleDoneTapped() {
+    @objc private func handleBackToRoot() {
         navigationController?.popToRootViewController(animated: true)
+    }
+    
+    @objc private func handleDoneTapped() {
+        let vc = StrengthTestResultViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     private func setBorder() {
