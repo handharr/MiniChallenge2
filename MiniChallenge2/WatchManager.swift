@@ -17,8 +17,7 @@ class WatchManager: NSObject{
     override init() {
         super.init()
         if(!WCSession.isSupported()){
-//            WCSession = nil
-            
+            watchSession = nil
             return
         }
         watchSession = WCSession.default

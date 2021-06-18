@@ -118,7 +118,7 @@ class WorkoutInterfaceController: WKInterfaceController{
     
     // Convert the seconds, minutes, hours into a string.
     func elapsedTimeString(elapsed: (h: Int, m: Int, s: Int)) -> String {
-        return String(format: "%d:%02d:%02d", elapsed.h, elapsed.m, elapsed.s)
+        return String(format: "%02d:%02d", elapsed.m, elapsed.s)
     }
     
     func workoutConfiguration() -> HKWorkoutConfiguration {
@@ -216,18 +216,13 @@ class WorkoutInterfaceController: WKInterfaceController{
                 }
 //                let voUnit = (HKUnit.liter().unitDivided(by: HKUnit.pound())).unitDivided(by: HKUnit.minute())
             case HKQuantityType.quantityType(forIdentifier: .distanceWalkingRunning):
-                let meterUnit = HKUnit.meter()
+                let meterUnit = HKUnit.meterUnit(with: .kilo)
                 let value = statistics.sumQuantity()?.doubleValue(for: meterUnit)
                 let roundedValue = Double( round( 1 * value! ) / 1 )
                 DispatchQueue.main.async {
-                    self.distanceRunning.setText(String(format: "%.1f", roundedValue))
+                    self.distanceRunning.setText(String(format: "%.2f", roundedValue))
                 }
                 return
-            case HKQuantityType.quantityType(forIdentifier: .vo2Max):
-                let voUnit = HKUnit(from: "ml/kg*min")
-//                print("VO2 Rate Unit: " + "\(voUnit)")
-                let values = statistics.mostRecentQuantity()?.doubleValue(for: voUnit)
-//                print("VO2 Rate Unit: " + "\(values)")
             default:
                 return
             }

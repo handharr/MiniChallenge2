@@ -11,7 +11,8 @@ import HealthKit
 class HealthModel{
     
     public static var healthStore = HKHealthStore()
-    static var hasRequestedHealthData: Bool = false
+    static var hasRequestedHealthData: Bool = defaults.bool(forKey: "RequestedHealthData")
+    private static var defaults = UserDefaults.standard
     
     static func setUpHealthRequest( navigating: @escaping () -> Void){
         if HKHealthStore.isHealthDataAvailable(){
@@ -38,9 +39,11 @@ class HealthModel{
                         } else {
 //                           labelText = "HealthKit authorization request was successful! "
                         }
-                        self.hasRequestedHealthData = true
+                        defaults.set(true, forKey: "RequestedHealthData")
+                        self.hasRequestedHealthData = defaults.bool(forKey: "RequestedHealthData")
                     } else {
-                        self.hasRequestedHealthData = false
+                        defaults.set(false, forKey: "RequestedHealthData")
+                        self.hasRequestedHealthData = defaults.bool(forKey: "RequestedHealthData")
                     }
                 }
                 navigating()
