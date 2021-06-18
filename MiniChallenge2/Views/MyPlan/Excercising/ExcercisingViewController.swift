@@ -19,10 +19,11 @@ class ExcercisingViewController: UIViewController, ActionSectionDelegate {
     
     @IBOutlet weak var videoContainer: UIView!
     @IBOutlet weak var blurView: UIView!
-    @IBOutlet weak var actionContainer: ActionSectionView!
+    @IBOutlet weak var actionContainerView: ActionSectionView!
     
-        var exerciseList = [Exercise]()
-        var position = 0
+    
+    var exerciseList = [Exercise]()
+    var position = 0
     var timer = Timer()
     var exerciseTimer = Timer()
     var count = 0
@@ -31,39 +32,51 @@ class ExcercisingViewController: UIViewController, ActionSectionDelegate {
     var currentSet = 1
     var timeString = ""
     
-    let subView:VideoSectionView = {
-        let subView = VideoSectionView(frame: CGRect(x: 0, y: 0, width: 414, height: 545))
-        return subView
-    }()
+//    let subView:VideoSectionView = {
+//        let subView = VideoSectionView(frame: CGRect(x: 0, y: 0, width: 414, height: 545))
+//        return subView
+//    }()
     lazy var subView2:ActionSectionView = {
-        let subView = ActionSectionView(frame: CGRect(x: -17, y: 420, width: 420, height: 350))
+        let subView = ActionSectionView(frame: CGRect(x: 0, y: 0, width: 414, height: 320))
+        subView.translatesAutoresizingMaskIntoConstraints = false
         subView.delegate = self
-        subView.totalExercise = exerciseList.count
         return subView
     }()
+    
+    var layers = AVPlayerLayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureExercise()
-        self.videoContainer.addSubview(subView)
         self.view.addSubview(subView2)
+        subView2.translatesAutoresizingMaskIntoConstraints = false
         self.navigationController?.navigationBar.prefersLargeTitles = false
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.backgroundColor = .clear
         self.navigationController?.navigationBar.isTranslucent
+        self.navigationItem.hidesBackButton = true
         blurView.applyBlurEffect(blurView)
-//        actionContainer.setUpNewView()
-        nextExer()
+        constrainSubView2()
+        subView2.totalExercise = exerciseList.count
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(quitAlertVC))
         timeSpend()
-        playVideo()
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        nextExer()
+        
     }
     
     func configureExercise(){
-        exerciseList.append(Exercise(exerciseTitle: "Crunches", repetition: 5, videoName: "crunches", exerciseType:"timeBase"))
+        exerciseList.append(Exercise(exerciseTitle: "Crunches", repetition: 15, videoName: "crunches", exerciseType:"timeBase"))
+        exerciseList.append(Exercise(exerciseTitle: "break", repetition: 15, videoName: "break_1", exerciseType:"timeBase"))
         exerciseList.append(Exercise(exerciseTitle: "PushUp", repetition: 8, videoName: "Push up", exerciseType:"countBase"))
-        exerciseList.append(Exercise(exerciseTitle: "SitUp", repetition: 5, videoName: "sit up", exerciseType:"timeBase"))
+        exerciseList.append(Exercise(exerciseTitle: "break", repetition: 10, videoName: "break_1", exerciseType:"timeBase"))
+        exerciseList.append(Exercise(exerciseTitle: "SitUp", repetition: 8, videoName: "sit up", exerciseType:"countBase"))
+        exerciseList.append(Exercise(exerciseTitle: "break", repetition: 10, videoName: "break_1", exerciseType:"timeBase"))
     }
     func nextExer(){
         if position < exerciseList.count{
@@ -73,8 +86,10 @@ class ExcercisingViewController: UIViewController, ActionSectionDelegate {
         else if position == exerciseList.count && currentSet < totalSet{
             position = 0
             currentSet += 1
-            subView2.setCounterLabel.text = "\(currentSet)/\(totalSet)"
             subView2.setUpView(data: exerciseList[position], exerciseNumber: position)
+            subView2.setCounterLabel.text = "\(currentSet)/\(totalSet)"
+            playVideo()
+            
         }
         else if position == exerciseList.count && currentSet == totalSet{
             closeButton()
@@ -84,21 +99,17 @@ class ExcercisingViewController: UIViewController, ActionSectionDelegate {
     }
     var timerExer = 0
     
-//    func setUpView(data: Exercise){
-//        subView2.exerciseCounterLabel.text = "\(position+1)" + "/" + "\(exerciseList.count)"
-//        if data.exerciseType == "timeBase"{
-//            subView2.exerciseType?.text = data.exerciseTitle
-//            subView2.timeLabel?.text = String(data.repetition)
-//            subView2.second = data.repetition ?? 0
-//            subView2.timerForEachExerCise()
-//        }
-//        else if data.exerciseType == "countBase"{
-//            subView2.exerciseType?.text = "\(data.repetition) \(data.exerciseTitle)" ?? "exercise"
-//            subView2.timeLabel?.text = "-"
-//            subView2.stopTimerforCountBase()
-//        }
-//        
-//    }
+    private func constrainSubView2(){
+        var constraints = [NSLayoutConstraint]()
+        
+//        add
+        constraints.append(subView2.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0 ))
+        constraints.append(subView2.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0 ))
+        constraints.append(subView2.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0 ))
+        constraints.append(subView2.topAnchor.constraint(equalTo: videoContainer.topAnchor, constant: 410 ))
+        
+        NSLayoutConstraint.activate(constraints)
+    }
     
     @objc private func closeButton(){
         let vc = CongratulationViewController()
@@ -106,13 +117,14 @@ class ExcercisingViewController: UIViewController, ActionSectionDelegate {
         navigationController?.pushViewController(vc, animated: true)
     }
     
-    var layers = AVPlayerLayer()
+//    var layers = AVPlayerLayer()
     func playVideo(){
         let player = AVPlayer(url: URL(fileURLWithPath: Bundle.main.path(forResource: exerciseList[position].videoName, ofType: "mov")!))
-        layers.player = player
         layers.frame = videoContainer.bounds
         layers.videoGravity = .resizeAspect
         videoContainer.layer.addSublayer(layers)
+        layers.player = player
+        
         
         player.actionAtItemEnd = .none
         NotificationCenter.default.addObserver(self, selector: #selector(rewindVideo(notification:)), name: .AVPlayerItemDidPlayToEndTime, object: player.currentItem)
