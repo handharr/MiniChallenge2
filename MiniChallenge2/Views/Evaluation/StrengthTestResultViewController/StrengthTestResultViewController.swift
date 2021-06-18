@@ -10,7 +10,7 @@ import UIKit
 class StrengthTestResultViewController: UIViewController {
     
     @IBOutlet weak var resultTableView: UITableView!
-    var pushUPCount = 0
+    public var pushUPCount = 0
     
     let button: UIButton = {
         let button = UIButton(type: .system)
@@ -21,7 +21,6 @@ class StrengthTestResultViewController: UIViewController {
         
         return button
     }()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,6 +62,7 @@ extension StrengthTestResultViewController: UITableViewDelegate, UITableViewData
         } else {
             let gradingCell = tableView.dequeueReusableCell(withIdentifier: GradingCriteriaTableViewCell.getIdentifier(), for: indexPath) as! GradingCriteriaTableViewCell
             gradingCell.setData()
+            gradingCell.workOutCriteria.text = "Push Up (2 Min)"
             return gradingCell
         }
     }

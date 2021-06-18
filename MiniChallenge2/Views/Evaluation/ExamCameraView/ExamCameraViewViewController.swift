@@ -18,27 +18,14 @@ class ExamCameraViewViewController: UIViewController {
     private var startView: StrengthTestLayerStart!
     private var timerCounter = 10 {
         didSet {
-            let sec = String(format: "%02d", timerCounter)
-            timerLabel.text = "00:\(sec)"
-            
-            if timerCounter == 0 {
-                timer.invalidate()
-                self.videoCapture.endCapture()
-                
-                let someView = StrengthTestLayerResult(frame: self.view.bounds)
-                someView.primaryLabel.text = "\(counter)"
-                someView.handleCancel = { [weak self] in
-                    self?.navigationController?.popToRootViewController(animated: true)
-                }
-                someView.handleIncorrect = { [weak self] in
-                    let vc = InputCountExamViewController()
-                    self?.navigationController?.pushViewController(vc, animated: true)
-                }
-                someView.handleDone = { [weak self] in
-                    let vc = StrengthTestResultViewController()
-                    self?.navigationController?.pushViewController(vc, animated: true)
-                }
-                self.view.addSubview(someView)
+            handletimerOut()
+        }
+    }
+    private var counter = 0 {
+        didSet {
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else {return}
+                self.countLabel.text = "\(self.counter)"
             }
         }
     }
@@ -49,27 +36,6 @@ class ExamCameraViewViewController: UIViewController {
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var countLabel: UILabel!
     
-    let incorrectButton: UIButton = {
-        let button = UIButton(type: .system)
-        
-        button.setTitle("Incorrect", for: UIControl.State.normal)
-        button.backgroundColor = .red
-        button.layer.cornerRadius = 8
-
-        button.translatesAutoresizingMaskIntoConstraints = false
-        
-        return button
-    }()
-    
-    private var counter = 0 {
-        didSet {
-            DispatchQueue.main.async { [weak self] in
-                guard let self = self else {return}
-                self.countLabel.text = "\(self.counter)"
-            }
-        }
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -77,8 +43,6 @@ class ExamCameraViewViewController: UIViewController {
         leftLabelContainer.layer.cornerRadius = 8
         
         countLabel.text = "\(counter)"
-        
-//        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(handleCancelButton))
     }
 }
 
@@ -89,7 +53,6 @@ extension ExamCameraViewViewController {
     override func viewDidLayoutSubviews() {
         
         guard let connection =  self.previewLayer?.connection else {return}
-        
         let orientation: UIDeviceOrientation = UIDevice.current.orientation
         
         if connection.isVideoOrientationSupported {
@@ -116,7 +79,6 @@ extension ExamCameraViewViewController {
 
         tabBarController?.tabBar.isHidden = true
         navigationController?.navigationBar.isHidden = true
-        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -173,6 +135,7 @@ extension ExamCameraViewViewController {
 
 //MARK: - Helper Function
 extension ExamCameraViewViewController {
+    
     private func updatePreviewLayer(layer: AVCaptureConnection, orientation: AVCaptureVideoOrientation) {
         
         guard let previewLayer = previewLayer else {return}
@@ -195,6 +158,21 @@ extension ExamCameraViewViewController {
     
     @objc private func handleCountDown() {
         timerCounter -= 1
+    }
+    
+    private func handletimerOut() {
+        let sec = String(format: "%02d", timerCounter)
+        timerLabel.text = "00:\(sec)"
+        
+        if timerCounter == 0 {
+            timer.invalidate()
+            self.videoCapture.endCapture()
+            
+            let someView = StrengthTestLayerResult(frame: self.view.bounds)
+            someView.delegate = self
+            someView.primaryLabel.text = "\(self.counter)"
+            self.view.addSubview(someView)
+        }
     }
 }
 
@@ -225,5 +203,23 @@ extension ExamCameraViewViewController: VideoCaptureDelegate {
         CATransaction.setDisableActions(true)
         overlayLayer.path = pointsPath.cgPath
         CATransaction.commit()
+    }
+}
+
+// MARK: - ResultView Delegate
+extension ExamCameraViewViewController: StrengthTestLayerResultDelegate {
+    func handleIncorrectTapped() {
+        let vc = InputCountExamViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func handleDoneTapped() {
+        let vc = StrengthTestResultViewController()
+        vc.pushUPCount = counter
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func handleCancelTapped() {
+        navigationController?.popToRootViewController(animated: true)
     }
 }

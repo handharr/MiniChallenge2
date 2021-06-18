@@ -7,6 +7,12 @@
 
 import UIKit
 
+protocol StrengthTestLayerResultDelegate: NSObject {
+    func handleIncorrectTapped()
+    func handleDoneTapped()
+    func handleCancelTapped()
+}
+
 class StrengthTestLayerResult: UIView {
     
     let containerView: UIView = {
@@ -86,9 +92,7 @@ class StrengthTestLayerResult: UIView {
         return button
     }()
     
-    var handleIncorrect: (()->Void)?
-    var handleDone: (()->Void)?
-    var handleCancel: (()->Void)?
+    weak var delegate: StrengthTestLayerResultDelegate?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -129,7 +133,7 @@ class StrengthTestLayerResult: UIView {
         constraints.append(tersierLabel.topAnchor.constraint(equalTo: primaryLabel.bottomAnchor))
         constraints.append(tersierLabel.bottomAnchor.constraint(equalTo: containerView.bottomAnchor))
         
-//         incorrectButton Constraints
+        // incorrectButton Constraints
         constraints.append(incorrectButton.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 16))
         constraints.append(incorrectButton.heightAnchor.constraint(equalToConstant: 50))
         constraints.append(incorrectButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -10))
@@ -145,15 +149,18 @@ class StrengthTestLayerResult: UIView {
     }
     
     @objc func handleIncorrectButton() {
-        handleIncorrect?()
+        self.removeFromSuperview()
+        delegate?.handleIncorrectTapped()
     }
     
     @objc func handleDoneButton() {
-        handleDone?()
+        self.removeFromSuperview()
+        delegate?.handleDoneTapped()
     }
     
     @objc func handleCancelButton() {
-        handleCancel?()
+        self.removeFromSuperview()
+        delegate?.handleCancelTapped()
     }
     
     required init?(coder: NSCoder) {

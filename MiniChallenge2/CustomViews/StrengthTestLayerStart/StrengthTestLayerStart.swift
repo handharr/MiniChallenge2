@@ -15,7 +15,7 @@ class StrengthTestLayerStart: UIView {
         label.textAlignment = .center
         label.font = .systemFont(ofSize: 100, weight: .bold)
         label.textColor = .white
-        label.text = "Push Up for 10 Second"
+        label.text = "Push Up for 2 Minutes"
         label.numberOfLines = 0
         
         return label
