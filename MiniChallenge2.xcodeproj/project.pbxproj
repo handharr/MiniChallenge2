@@ -77,6 +77,7 @@
 		7519896E2679DE5800B6230C /* Push up.mov in Resources */ = {isa = PBXBuildFile; fileRef = 7519896B2679DE5700B6230C /* Push up.mov */; };
 		7519896F2679DE5800B6230C /* sit up.mov in Resources */ = {isa = PBXBuildFile; fileRef = 7519896C2679DE5700B6230C /* sit up.mov */; };
 		751989702679DE5800B6230C /* crunches.mov in Resources */ = {isa = PBXBuildFile; fileRef = 7519896D2679DE5800B6230C /* crunches.mov */; };
+		755DA647267AEB6100243BEF /* break_1.mov in Resources */ = {isa = PBXBuildFile; fileRef = 755DA646267AEB6100243BEF /* break_1.mov */; };
 		7DA5DC1E267323E100B6C7EB /* PlanCollectionViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA5DC1C267323E100B6C7EB /* PlanCollectionViewCells.swift */; };
 		7DA5DC1F267323E100B6C7EB /* PlanCollectionViewCells.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DA5DC1D267323E100B6C7EB /* PlanCollectionViewCells.xib */; };
 		861C35D9266DC5F3005ABB7E /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861C35D8266DC5F3005ABB7E /* DummyData.swift */; };
@@ -237,6 +238,7 @@
 		7519896B2679DE5700B6230C /* Push up.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "Push up.mov"; sourceTree = "<group>"; };
 		7519896C2679DE5700B6230C /* sit up.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "sit up.mov"; sourceTree = "<group>"; };
 		7519896D2679DE5800B6230C /* crunches.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = crunches.mov; sourceTree = "<group>"; };
+		755DA646267AEB6100243BEF /* break_1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = break_1.mov; sourceTree = "<group>"; };
 		7DA5DC1C267323E100B6C7EB /* PlanCollectionViewCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanCollectionViewCells.swift; sourceTree = "<group>"; };
 		7DA5DC1D267323E100B6C7EB /* PlanCollectionViewCells.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlanCollectionViewCells.xib; sourceTree = "<group>"; };
 		861C35D8266DC5F3005ABB7E /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
@@ -449,6 +451,7 @@
 		751989662679D70C00B6230C /* video */ = {
 			isa = PBXGroup;
 			children = (
+				755DA646267AEB6100243BEF /* break_1.mov */,
 				7519896D2679DE5800B6230C /* crunches.mov */,
 				7519896B2679DE5700B6230C /* Push up.mov */,
 				7519896C2679DE5700B6230C /* sit up.mov */,
@@ -948,6 +951,7 @@
 				498085A02670C82800E10F40 /* TestResultViewController.xib in Resources */,
 				866BCEC12668FEC200482207 /* MyPlanViewController.xib in Resources */,
 				866BCEE8266919B600482207 /* DetailPlanViewController.xib in Resources */,
+				755DA647267AEB6100243BEF /* break_1.mov in Resources */,
 				8688D5F3266FA23C00081F8F /* DatePlanCollectionViewCell.xib in Resources */,
 				8688D5F8266FB55D00081F8F /* ExcerciseDetailPlanCollectionViewCell.xib in Resources */,
 				751989702679DE5800B6230C /* crunches.mov in Resources */,

@@ -13,6 +13,10 @@ class CongratulationViewController: UIViewController {
     @IBOutlet weak var congrateImage: UIImageView!
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var congratulationMessageView: CongratulationMessageView!
+    @IBOutlet weak var completeLabel: UILabel!
+    @IBOutlet weak var planName: UILabel!
+    @IBOutlet weak var dayLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
     
     var timeString = ""
     lazy var messageView:CongratulationMessageView = {
@@ -23,9 +27,11 @@ class CongratulationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        subView.timeString = timeString
-        self.view.addSubview(messageView)
+//        self.view.addSubview(messageView)
+        self.navigationItem.hidesBackButton = true
         doneButton.layer.cornerRadius = 8
-        messageView.setUpView()
+        timeLabel.text = timeString
+//        messageView.setUpView()
 
     }
     
