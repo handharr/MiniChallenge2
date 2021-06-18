@@ -60,9 +60,6 @@ class ExcercisingViewController: UIViewController, ActionSectionDelegate {
         constrainSubView2()
         subView2.totalExercise = exerciseList.count
         
-//        actionContainer.setUpNewView(
-//        nextExer()
-        
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(quitAlertVC))
         timeSpend()
         
@@ -74,8 +71,8 @@ class ExcercisingViewController: UIViewController, ActionSectionDelegate {
     }
     
     func configureExercise(){
-        exerciseList.append(Exercise(exerciseTitle: "Crunches", repetition: 30, videoName: "crunches", exerciseType:"timeBase"))
-        exerciseList.append(Exercise(exerciseTitle: "break", repetition: 10, videoName: "break_1", exerciseType:"timeBase"))
+        exerciseList.append(Exercise(exerciseTitle: "Crunches", repetition: 15, videoName: "crunches", exerciseType:"timeBase"))
+        exerciseList.append(Exercise(exerciseTitle: "break", repetition: 15, videoName: "break_1", exerciseType:"timeBase"))
         exerciseList.append(Exercise(exerciseTitle: "PushUp", repetition: 8, videoName: "Push up", exerciseType:"countBase"))
         exerciseList.append(Exercise(exerciseTitle: "break", repetition: 10, videoName: "break_1", exerciseType:"timeBase"))
         exerciseList.append(Exercise(exerciseTitle: "SitUp", repetition: 8, videoName: "sit up", exerciseType:"countBase"))
@@ -84,15 +81,15 @@ class ExcercisingViewController: UIViewController, ActionSectionDelegate {
     func nextExer(){
         if position < exerciseList.count{
             subView2.setUpView(data: exerciseList[position], exerciseNumber: position)
-//            subView2.nextExerciseLabel.text = "\(exerciseList[position+1].exerciseTitle)"
             playVideo()
         }
         else if position == exerciseList.count && currentSet < totalSet{
             position = 0
             currentSet += 1
-            subView2.setCounterLabel.text = "\(currentSet)/\(totalSet)"
             subView2.setUpView(data: exerciseList[position], exerciseNumber: position)
-//            subView2.nextExerciseLabel.text = "\(exerciseList[position+1].exerciseTitle)"
+            subView2.setCounterLabel.text = "\(currentSet)/\(totalSet)"
+            playVideo()
+            
         }
         else if position == exerciseList.count && currentSet == totalSet{
             closeButton()

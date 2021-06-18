@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 protocol ActionSectionDelegate:AnyObject {
     func nextExercise()
@@ -31,6 +32,7 @@ class ActionSectionView: UIView {
     var exerciseData:Exercise?
     var exerciseNum:Int?
     var totalExercise = 0
+    var audio: AVAudioPlayer?
     
     
     var delegate:ActionSectionDelegate?
@@ -103,9 +105,25 @@ class ActionSectionView: UIView {
     @objc func timerClass(){
         second -= 1
         timeLabel?.text = "\(second)"
-        if second == 0{
+        if second == 11{
+            timerSound()
+        }
+        else if second == 0{
             timer?.invalidate()
             delegate?.nextExercise()
+        }
+    }
+    
+    func timerSound(){
+        let pathSound = Bundle.main.path(forResource: "timerCountdown", ofType: "wav")!
+        let url = URL(fileURLWithPath: pathSound)
+        
+        do{
+            audio = try AVAudioPlayer(contentsOf: url)
+            audio?.play()
+        }
+        catch{
+            print(error)
         }
     }
 }
