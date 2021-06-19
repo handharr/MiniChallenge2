@@ -25,8 +25,13 @@ class ProfileViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         profileSection = Profile.returnProfileSection()
-        profileData = Profile.returnProfileData(Profile.profile)()
+        if UserDefaults.standard.bool(forKey: "healthSyncswitch"){
+            profileData = Profile.returnProfileData(Profile.profile)()
+        } else {
+            profileData = Profile.returnProfileEmpty(Profile.profile)()
+        }
         table.reloadData()
     }
     
@@ -124,7 +129,7 @@ extension ProfileViewController: UITableViewDataSource{
 
 extension ProfileViewController: profileSyncDelegate{
     func syncDidTapped(isSwitched: Bool) {
-        if !isSwitched{
+        if isSwitched{
             profileSection = Profile.returnProfileSection()
             profileData = Profile.returnProfileData(Profile.profile)()
         }
@@ -134,6 +139,11 @@ extension ProfileViewController: profileSyncDelegate{
         let sectionToReload = 0
         let indexSet: IndexSet = [sectionToReload]
 
-        self.table.reloadSections(indexSet, with: .none)
+        DispatchQueue.main.async {
+            UIView.setAnimationsEnabled(false)
+            self.table.beginUpdates()
+            self.table.reloadSections(indexSet, with: .fade)
+            self.table.endUpdates()
+        }
     }
 }

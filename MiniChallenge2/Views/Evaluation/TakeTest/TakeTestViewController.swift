@@ -172,7 +172,6 @@ extension TakeTestViewController: WCSessionDelegate{
     }
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        //yang pertama direach
-        print("iPhone Session Success")
+
     }
 }
