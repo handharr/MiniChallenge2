@@ -15,7 +15,6 @@ class InterfaceCardioController: WKInterfaceController{
     @IBOutlet weak var distanceLabel: WKInterfaceLabel!
     
     let scene = SKScene(size: CGSize(width: 120, height: 120))
-    var delegate : RunningSessionDelegate?
     var isRunning : Bool = true
     var session : WCSession = WCSession.default
     
@@ -83,7 +82,9 @@ class InterfaceCardioController: WKInterfaceController{
             try self.session.updateApplicationContext(data)
         }catch{ }
         NotificationCenter.default.post(name: NSNotification.Name("Skip Triggered"), object: nil)
-        self.dismiss()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [unowned self] in
+            self.dismiss()
+        }
     }
     
     override func willActivate() {

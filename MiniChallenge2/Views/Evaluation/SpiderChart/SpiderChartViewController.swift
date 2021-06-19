@@ -57,13 +57,12 @@ class SpiderChartViewController: UIViewController {
         view.backgroundColor = .clear
         spiderView.delegate = self
         setData()
-        self.spiderView.animate(yAxisDuration: 2)
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        self.spiderView.animate(yAxisDuration: 2)
-//    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.spiderView.animate(yAxisDuration: 2)
+    }
 
     func setData(){
         let setData1 = RadarChartDataSet(entries: dataEntry)

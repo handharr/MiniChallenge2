@@ -18,8 +18,6 @@ class WorkoutSessionInterfaceController: WKInterfaceController{
     @IBOutlet weak var calories: WKInterfaceLabel!
     @IBOutlet weak var averageSpeed: WKInterfaceLabel!
     
-    
-    var watchInterface = InterfaceController()
     var watchSession: WCSession = WCSession.default
     
     let healthStore = HKHealthStore()
@@ -248,22 +246,10 @@ class WorkoutSessionInterfaceController: WKInterfaceController{
         
         NotificationCenter.default.post(name: NSNotification.Name("runningDistance"), object: self)
         
-        if self.heartrate >= 1.6 {
+        if self.distance >= 1.6 {
             self.dismiss()
             self.endWorkout()
         }
-    }
-}
-
-extension WorkoutSessionInterfaceController: RunningSessionDelegate {
-    func stopDidTapped(isRunning: Bool) {
-        if isRunning {
-            self.pauseWorkout()
-        } else {
-            resumeWorkout()
-        }
-    }
-    func workoutDidCancel() {
     }
 }
 
@@ -274,12 +260,9 @@ extension WorkoutSessionInterfaceController: HKWorkoutSessionDelegate {
         if toState == .ended {
             
             if self.elapsedSeconds < 59 {
-                builder.endCollection(withEnd: Date()) { (success, error) in
-                    self.builder.finishWorkout { (workout, error) in
-                        self.resetWorkout()
-                    }
-                }
-                return
+                builder.discardWorkout()
+                self.resetWorkout()
+                print("Data masuk!!!")
             }
             else {
                 builder.endCollection(withEnd: Date()) { (success, error) in
@@ -288,7 +271,6 @@ extension WorkoutSessionInterfaceController: HKWorkoutSessionDelegate {
                     }
                 }
             }
-            
         }
     }
     
@@ -329,7 +311,10 @@ extension WorkoutSessionInterfaceController: WCSessionDelegate{
     
     func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
         if let receivedData = applicationContext["quit"] as? String{
-            self.dismiss()
+            self.endWorkout()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [unowned self] in
+                self.dismiss()
+            }
             print(receivedData)
         }
     }
