@@ -12,8 +12,10 @@ protocol profileSyncDelegate{
 }
 
 class ProfileHealthToggleTableViewCells: UITableViewCell {
-    var isSwitched : Bool = true
+    var isSwitched : Bool = UserDefaults.standard.bool(forKey: "healthSyncswitch")
     var delegate : profileSyncDelegate?
+    
+    @IBOutlet weak var syncSwitch: UISwitch!
     
     static func getNib() -> UINib{
         return UINib(nibName: "\(ProfileHealthToggleTableViewCells.self)", bundle: nil)
@@ -25,7 +27,7 @@ class ProfileHealthToggleTableViewCells: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        syncSwitch.isOn = UserDefaults.standard.bool(forKey: "healthSyncswitch")
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -35,7 +37,16 @@ class ProfileHealthToggleTableViewCells: UITableViewCell {
     }
     
     @IBAction func healthSyncTapped(_ sender: Any) {
-        delegate?.syncDidTapped(isSwitched: isSwitched)
-        isSwitched = !isSwitched
+        UserDefaults.standard.setValue(!UserDefaults.standard.bool(forKey: "healthSyncswitch"), forKey: "healthSyncswitch")
+        
+        if UserDefaults.standard.bool(forKey: "healthSyncswitch") {
+            HealthModel.setUpHealthRequest {
+                self.delegate?.syncDidTapped(isSwitched: UserDefaults.standard.bool(forKey: "healthSyncswitch"))
+            }
+        }
+        else {
+            self.delegate?.syncDidTapped(isSwitched: UserDefaults.standard.bool(forKey: "healthSyncswitch"))
+        }
+
     }
 }

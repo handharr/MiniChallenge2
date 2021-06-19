@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Profile {
+class Profile: Codable {
     public static var profile = Profile()
     
     private var dateOfBirth : String = "Not Retrived"
@@ -19,10 +19,16 @@ class Profile {
         return profile
     }
     
-    func setData(dateOfBirth: String, sex: String, weight: String, height: String){
+    func setData(dateOfBirth: String, sex: String){
         self.dateOfBirth = dateOfBirth
         self.sex = sex
+    }
+    
+    func setWeight(weight : String){
         self.weight = weight
+    }
+    
+    func setHeight(height : String){
         self.height = height
     }
     
@@ -32,7 +38,8 @@ class Profile {
     }
     
     func returnProfileData() -> [String]{
-        let data = [self.dateOfBirth, self.sex, self.weight, self.height]
+        let profile = ProfileCodable.getProfile()
+        let data = [profile.dateOfBirth, profile.sex, profile.weight, profile.height]
         return data
     }
     
