@@ -25,7 +25,7 @@ class StrengthTestLayerStart: UIView {
         super.init(frame: frame)
         
         addSubview(label)
-        backgroundColor = .black.withAlphaComponent(0.6)
+        backgroundColor = UIColor.black.withAlphaComponent(0.6)
     }
     
     override func layoutSubviews() {

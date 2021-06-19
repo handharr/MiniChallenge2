@@ -12,21 +12,52 @@ import WatchConnectivity
 class InterfaceCardioController: WKInterfaceController{
     @IBOutlet weak var interfaceScene: WKInterfaceSKScene!
     @IBOutlet weak var pausePlayButton: WKInterfaceButton!
+    @IBOutlet weak var distanceLabel: WKInterfaceLabel!
     
+    let scene = SKScene(size: CGSize(width: 120, height: 120))
     var delegate : RunningSessionDelegate?
     var isRunning : Bool = true
     var session : WCSession = WCSession.default
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
+        setUpData()
+        setUpNotification()
+        setTitle("")
+    }
+        
+    func setUpNotification(){
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "runningDistance"), object: nil, queue: OperationQueue.main) { (notification) in
+            let workoutVC = notification.object as! WorkoutSessionInterfaceController
             
-        let scene = SKScene(size: CGSize(width: 120, height: 120))
+            self.scene.removeAllChildren()
+            
+            let fraction: CGFloat = CGFloat(workoutVC.distance/1.6)
+            let data = -CGFloat.pi * 2 * fraction
+            let data2 = CGFloat.pi/2
+            let path = UIBezierPath(arcCenter: .zero,
+                                     radius: 50,
+                                     startAngle: data2,
+                                     endAngle: data + data2,
+                                     clockwise: false).cgPath
+            let newShapeNode = SKShapeNode(path: path)
+            newShapeNode.strokeColor = .sweetBrown
+            newShapeNode.lineWidth = 12
+            newShapeNode.lineCap = .round
+            newShapeNode.position = CGPoint(x: self.scene.size.width / 2, y: self.scene.size.height / 2)
+            newShapeNode.name = "circularProgress"
+            self.scene.addChild(newShapeNode)
+            self.distanceLabel.setText(String(format: "%.2f", workoutVC.distance))
+        }
+    }
+    
+    func setUpData(){
         scene.scaleMode = .aspectFit
         scene.scene?.backgroundColor = .clear
         interfaceScene.presentScene(scene)
 
 
-        let fraction: CGFloat = 1.3/1.6
+        let fraction: CGFloat = 0/1.6
         let data = -CGFloat.pi * 2 * fraction
 
         let data2 = CGFloat.pi/2
@@ -35,28 +66,14 @@ class InterfaceCardioController: WKInterfaceController{
                                  startAngle: data2,
                                  endAngle: data + data2,
                                  clockwise: false).cgPath
-        let backgroundPath = UIBezierPath(arcCenter: .zero,
-                                 radius: 50,
-                                 startAngle: 0,
-                                 endAngle: CGFloat.pi * 2,
-                                 clockwise: false).cgPath
-
 
         let shapeNode = SKShapeNode(path: path)
-        let backgroundNode = SKShapeNode(path: backgroundPath)
-
-        backgroundNode.strokeColor = UIColor(red: 52/255, green: 52/255, blue: 52/255, alpha: 1)
-        backgroundNode.fillColor = .clear
-        backgroundNode.lineWidth = 12
-        backgroundNode.lineCap = .round
-        backgroundNode.position = CGPoint(x: scene.size.width / 2, y: scene.size.height / 2)
-
         shapeNode.strokeColor = .sweetBrown
         shapeNode.lineWidth = 12
         shapeNode.lineCap = .round
         shapeNode.position = CGPoint(x: scene.size.width / 2, y: scene.size.height / 2)
+        shapeNode.name = "circularProgress"
 
-        scene.addChild(backgroundNode)
         scene.addChild(shapeNode)
     }
     
@@ -77,6 +94,7 @@ class InterfaceCardioController: WKInterfaceController{
     
     override func didDeactivate() {
         super.didDeactivate()
+        scene.removeFromParent()
     }
 
     @IBAction func pauseTapped() { 
@@ -86,7 +104,6 @@ class InterfaceCardioController: WKInterfaceController{
             }
         } else {
             DispatchQueue.main.async {
-//                self.pausePlayButton.setBackgroundImage(#imageLiteral(resourceName: "playbutto3"))
                 self.pausePlayButton.setBackgroundImageNamed("pausebutton3")
             }
         }

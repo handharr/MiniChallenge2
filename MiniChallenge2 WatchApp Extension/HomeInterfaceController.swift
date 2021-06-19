@@ -10,8 +10,6 @@ import Foundation
 import WatchConnectivity
 
 class HomeInterfaceController: WKInterfaceController {
-        
-//    var watchSession : WCSession = WCSession.default
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)

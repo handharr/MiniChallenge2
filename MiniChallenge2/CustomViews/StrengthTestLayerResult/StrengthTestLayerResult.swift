@@ -97,7 +97,7 @@ class StrengthTestLayerResult: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        backgroundColor = .black.withAlphaComponent(0.7)
+        backgroundColor = UIColor.black.withAlphaComponent(0.7)
         addSubview(containerView)
         
         containerView.addSubview(primaryLabel)

@@ -60,7 +60,7 @@
                                             <items>
                                                 <group width="1" alignment="center" layout="vertical" id="ur6-d8-Nz2">
                                                     <items>
-                                                        <label width="1" alignment="center" text="1,3" textAlignment="center" id="y18-YV-ajc">
+                                                        <label width="1" alignment="center" text="0.0" textAlignment="center" id="y18-YV-ajc">
                                                             <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
                                                         </label>
                                                     </items>
@@ -80,6 +80,7 @@
                         </group>
                     </items>
                     <connections>
+                        <outlet property="distanceLabel" destination="y18-YV-ajc" id="FOg-Q4-cgn"/>
                         <outlet property="interfaceScene" destination="2J4-Cl-Whu" id="0vo-xY-qfN"/>
                         <outlet property="pausePlayButton" destination="yHR-Ef-MkG" id="edb-Xi-pWI"/>
                     </connections>

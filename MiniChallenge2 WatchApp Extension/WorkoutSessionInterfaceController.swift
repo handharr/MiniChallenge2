@@ -41,9 +41,10 @@ class WorkoutSessionInterfaceController: WKInterfaceController{
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         self.becomeCurrentPage()
-//        watchInterface.delegate = self
         setUpData()
         requestAuthorization()
+        setTitle("")
+        
         
         NotificationCenter.default.addObserver(self, selector: #selector(pauseTriggered), name: NSNotification.Name("Pause Triggered"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(skipTriggered), name: NSNotification.Name("Skip Triggered"), object: nil)
@@ -204,9 +205,7 @@ class WorkoutSessionInterfaceController: WKInterfaceController{
             case HKQuantityType.quantityType(forIdentifier: .heartRate):
                 /// - Tag: SetLabel
                 let heartRateUnit = HKUnit.count().unitDivided(by: HKUnit.minute())
-//                print("Heart Rate Unit: " + "\(heartRateUnit)")
                 let value = statistics.mostRecentQuantity()?.doubleValue(for: heartRateUnit)
-//                print("Heart Rate Value: " + "\(value)")
                 let roundedValue = Double( round( 1 * value! ) / 1 )
                 self.heartrate = roundedValue
                 
@@ -220,12 +219,14 @@ class WorkoutSessionInterfaceController: WKInterfaceController{
                 DispatchQueue.main.async {
                     self.calories.setText(String(format: "%.1f", self.activeCalories))
                 }
-//                let voUnit = (HKUnit.liter().unitDivided(by: HKUnit.pound())).unitDivided(by: HKUnit.minute())
             case HKQuantityType.quantityType(forIdentifier: .distanceWalkingRunning):
                 let meterUnit = HKUnit.meter()
                 let value = statistics.sumQuantity()?.doubleValue(for: meterUnit)
                 let roundedValue = Double( round( 1 * value! ) / 1 )/1000
                 self.distance = roundedValue
+                if self.distance >= 1.6 {
+                    self.distance = 1.6
+                }
                 DispatchQueue.main.async {
                     self.distanceRunning.setText(String(format: "%.2f", roundedValue))
                 }
@@ -243,8 +244,14 @@ class WorkoutSessionInterfaceController: WKInterfaceController{
                 "runningSpeed": self.speed,
                 "runningDistance": self.distance
             ])
-            print("distance=> \(self.distance)")
         }catch{}
+        
+        NotificationCenter.default.post(name: NSNotification.Name("runningDistance"), object: self)
+        
+        if self.heartrate >= 1.6 {
+            self.dismiss()
+            self.endWorkout()
+        }
     }
 }
 
@@ -297,7 +304,6 @@ extension WorkoutSessionInterfaceController: HKLiveWorkoutBuilderDelegate {
     }
     
     func workoutBuilder(_ workoutBuilder: HKLiveWorkoutBuilder, didCollectDataOf collectedTypes: Set<HKSampleType>) {
-//        print("collected type: \(collectedTypes)")
         //mengecek tipe koleksi apa aja yang sudah kita dapatkan dari reading dan updating dari healthStore
         for type in collectedTypes {
             //mengecek apakah collectedType yang kita dapatkan adalah quantity(diskrit dan bukan subjektif) atau bukan
