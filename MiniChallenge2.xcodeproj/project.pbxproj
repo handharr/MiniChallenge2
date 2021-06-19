@@ -126,6 +126,8 @@
 		86EFA78726766113007E7158 /* TakeTestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86EFA78526766113007E7158 /* TakeTestTableViewCell.xib */; };
 		86F8E603267A0CE0003E694D /* Pushup.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 86F8E602267A0CE0003E694D /* Pushup.mlmodel */; settings = {ATTRIBUTES = (codegen, ); }; };
 		86F8E604267A0CE0003E694D /* Pushup.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 86F8E602267A0CE0003E694D /* Pushup.mlmodel */; settings = {ATTRIBUTES = (codegen, ); }; };
+		86FBFC36267DEA20009159AF /* SelectDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FBFC34267DEA20009159AF /* SelectDayViewController.swift */; };
+		86FBFC37267DEA20009159AF /* SelectDayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86FBFC35267DEA20009159AF /* SelectDayViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -292,6 +294,8 @@
 		86EFA78426766113007E7158 /* TakeTestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeTestTableViewCell.swift; sourceTree = "<group>"; };
 		86EFA78526766113007E7158 /* TakeTestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TakeTestTableViewCell.xib; sourceTree = "<group>"; };
 		86F8E602267A0CE0003E694D /* Pushup.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Pushup.mlmodel; sourceTree = "<group>"; };
+		86FBFC34267DEA20009159AF /* SelectDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDayViewController.swift; sourceTree = "<group>"; };
+		86FBFC35267DEA20009159AF /* SelectDayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectDayViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -649,6 +653,7 @@
 		866BCED92669192B00482207 /* MyPlan */ = {
 			isa = PBXGroup;
 			children = (
+				86FBFC33267DE9FA009159AF /* SelectDay */,
 				866BCEE9266919D500482207 /* Excercising */,
 				866BCEE4266919A900482207 /* DetailPlan */,
 				866BCEDF2669197400482207 /* ExcerciseReport */,
@@ -870,6 +875,15 @@
 			path = TakeTestTableViewCells;
 			sourceTree = "<group>";
 		};
+		86FBFC33267DE9FA009159AF /* SelectDay */ = {
+			isa = PBXGroup;
+			children = (
+				86FBFC34267DEA20009159AF /* SelectDayViewController.swift */,
+				86FBFC35267DEA20009159AF /* SelectDayViewController.xib */,
+			);
+			path = SelectDay;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1036,6 +1050,7 @@
 				49875FDD266FAF5D0060BE6E /* HistoryTableViewCell.xib in Resources */,
 				7519896A2679D7C400B6230C /* ExcercisingViewController.xib in Resources */,
 				7519896F2679DE5800B6230C /* sit up.mov in Resources */,
+				86FBFC37267DEA20009159AF /* SelectDayViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1068,6 +1083,7 @@
 				861E0709267BBA030064FC49 /* StrengthTestResultViewController.swift in Sources */,
 				866BCEFD26691B8100482207 /* CardioTestViewController.swift in Sources */,
 				866BCEE22669198B00482207 /* ExcerciseReportViewController.swift in Sources */,
+				86FBFC36267DEA20009159AF /* SelectDayViewController.swift in Sources */,
 				86D6DA1026771E2100488252 /* ExamCameraViewViewController.swift in Sources */,
 				4922C6992675B1910026CDD3 /* UIAlertController+.swift in Sources */,
 				49875FD8266FAF170060BE6E /* History.swift in Sources */,
