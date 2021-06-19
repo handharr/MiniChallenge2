@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectDayViewController" customModule="MiniChallenge2" customModuleProvider="target">
+            <connections>
+                <outlet property="stackLabel" destination="VCo-vk-CHe" id="GlP-tv-lis"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VCo-vk-CHe">
+                    <rect key="frame" x="16" y="415" width="382" height="66"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hq-2y-fX9" userLabel="sunday">
+                            <rect key="frame" x="0.0" y="0.0" width="47.5" height="66"/>
+                            <color key="backgroundColor" systemColor="systemGray5Color"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                            <state key="normal" title="S">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="handleButtonTapped:" destination="-1" eventType="touchUpInside" id="ibv-Ru-Ov9"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZG-iv-OM1" userLabel="monday">
+                            <rect key="frame" x="55.5" y="0.0" width="48" height="66"/>
+                            <color key="backgroundColor" systemColor="systemGray5Color"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                            <state key="normal" title="M">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="handleButtonTapped:" destination="-1" eventType="touchUpInside" id="VAS-zT-izD"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehP-iI-5Dl" userLabel="tuesday">
+                            <rect key="frame" x="111.5" y="0.0" width="47.5" height="66"/>
+                            <color key="backgroundColor" systemColor="systemGray5Color"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                            <state key="normal" title="T">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="handleButtonTapped:" destination="-1" eventType="touchUpInside" id="1JO-3u-wld"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWq-0D-FYY" userLabel="wednesday">
+                            <rect key="frame" x="167" y="0.0" width="48" height="66"/>
+                            <color key="backgroundColor" systemColor="systemGray5Color"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                            <state key="normal" title="W">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="handleButtonTapped:" destination="-1" eventType="touchUpInside" id="06s-MS-kI5"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gk6-5h-nQN" userLabel="thursday">
+                            <rect key="frame" x="223" y="0.0" width="47.5" height="66"/>
+                            <color key="backgroundColor" systemColor="systemGray5Color"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                            <state key="normal" title="T">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="handleButtonTapped:" destination="-1" eventType="touchUpInside" id="bL7-XK-SlZ"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgW-Ou-ZE3" userLabel="friday">
+                            <rect key="frame" x="278.5" y="0.0" width="48" height="66"/>
+                            <color key="backgroundColor" systemColor="systemGray5Color"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                            <state key="normal" title="F">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="handleButtonTapped:" destination="-1" eventType="touchUpInside" id="kSp-Ed-CJh"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MA8-py-za3" userLabel="saturday">
+                            <rect key="frame" x="334.5" y="0.0" width="47.5" height="66"/>
+                            <color key="backgroundColor" systemColor="systemGray5Color"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                            <state key="normal" title="S">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="handleButtonTapped:" destination="-1" eventType="touchUpInside" id="1ZK-Gn-WB1"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="66" id="tTe-Ph-bsC"/>
+                    </constraints>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your exercise day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPT-Dv-pun">
+                    <rect key="frame" x="44.5" y="333.5" width="325.5" height="33.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No day selected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFO-1I-iRC">
+                    <rect key="frame" x="136.5" y="505" width="141.5" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" red="0.72077780960000004" green="0.34606999160000002" blue="0.30192941429999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="SPT-Dv-pun" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="3bb-e3-dq1"/>
+                <constraint firstItem="VCo-vk-CHe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="BEi-SI-wx4"/>
+                <constraint firstItem="VCo-vk-CHe" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="YGa-Jz-a0Z"/>
+                <constraint firstItem="EFO-1I-iRC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ddx-YD-vQO"/>
+                <constraint firstItem="EFO-1I-iRC" firstAttribute="top" secondItem="VCo-vk-CHe" secondAttribute="bottom" constant="24" id="eBE-id-6qP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VCo-vk-CHe" secondAttribute="trailing" constant="16" id="hCf-Tb-EAS"/>
+                <constraint firstItem="VCo-vk-CHe" firstAttribute="top" secondItem="SPT-Dv-pun" secondAttribute="bottom" constant="48" id="ppl-vx-jdd"/>
+                <constraint firstItem="VCo-vk-CHe" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="ve3-9E-jCf"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="79"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -18,14 +18,14 @@ class MyPlanViewController: UIViewController {
         super.viewDidLoad()
 
         title = "My Plan"
-//        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .fastForward, target: self, action: #selector(goToCardioTest))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .fastForward, target: self, action: #selector(goToCardioTest))
         
         setCollectionView()
     }
     
     @objc private func goToCardioTest() {
 //        let vc = ExamCameraViewViewController()
-        let vc = StrengthTestResultViewController()
+        let vc = SelectDayViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -97,7 +97,10 @@ extension MyPlanViewController: UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
         
+        guard let item = plansData?[indexPath.section][indexPath.row] else { return }
+        
         let vc = DetailPlanViewController()
+        vc.onGoing = item.onGoing
         navigationController?.pushViewController(vc, animated: true)
     }
     

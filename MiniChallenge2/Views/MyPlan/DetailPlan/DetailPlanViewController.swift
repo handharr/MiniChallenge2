@@ -17,6 +17,7 @@ class DetailPlanViewController: UIViewController {
     // Data's
     private var pakets: [PaketModel] = []
     private var excercises: [ExerciseModel] = []
+    var onGoing = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -138,8 +139,14 @@ extension DetailPlanViewController: UICollectionViewDelegate, UICollectionViewDa
         } else {
             let startButton = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: SectionButtonCollectionView.identifier, for: indexPath) as! SectionButtonCollectionView
             startButton.navigate = { [weak self] in
-                let vc = ExcercisingViewController()
-                self?.navigationController?.pushViewController(vc, animated: true)
+                
+                if self?.onGoing == false {
+                    let vc = SelectDayViewController()
+                    self?.navigationController?.pushViewController(vc, animated: true)
+                } else {
+                    let vc = ExcercisingViewController()
+                    self?.navigationController?.pushViewController(vc, animated: true)
+                }
             }
             return startButton
         }
