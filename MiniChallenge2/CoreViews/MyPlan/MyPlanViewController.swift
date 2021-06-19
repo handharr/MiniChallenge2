@@ -97,7 +97,10 @@ extension MyPlanViewController: UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
         
+        guard let item = plansData?[indexPath.section][indexPath.row] else { return }
+        
         let vc = DetailPlanViewController()
+        vc.onGoing = item.onGoing
         navigationController?.pushViewController(vc, animated: true)
     }
     

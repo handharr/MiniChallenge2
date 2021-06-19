@@ -72,7 +72,9 @@ class SelectDayViewController: UIViewController {
                                        message: "Are you sure you want to start this plan?\nAny ongoing plan would be replaced.",
                                        preferredStyle: .actionSheet)
             ac.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-            ac.addAction(UIAlertAction(title: "Yes", style: .default, handler: nil))
+            ac.addAction(UIAlertAction(title: "Yes", style: .default, handler: { [weak self] _ in
+                self?.navigationController?.popToRootViewController(animated: true)
+            }))
             
             present(ac, animated: true)
         } else {
