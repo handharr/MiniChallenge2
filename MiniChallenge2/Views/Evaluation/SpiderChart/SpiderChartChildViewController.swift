@@ -39,8 +39,6 @@ class SpiderChartChildViewController: UIViewController {
         view.addSubview(spiderChartChildView.view)
         spiderChartChildView.didMove(toParent: self)
         setConstraint()
-        
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -46,15 +46,38 @@ class HealthModel{
                         self.hasRequestedHealthData = defaults.bool(forKey: "RequestedHealthData")
                     }
                 }
+                readMostRecentSample()
                 navigating()
+                
             })
         }
-        readMostRecentSample()
+    }
+    
+    static func getReadableBiologicalSex(biologicalSex: HKBiologicalSex?) -> String{
+        var biologicalSexTest = "Not Retrived"
+        
+        if biologicalSex != nil {
+            switch biologicalSex!.rawValue{
+                case 0:
+                    biologicalSexTest = ""
+                case 1:
+                    biologicalSexTest = "Female"
+                case 2:
+                    biologicalSexTest = "Male"
+                case 3:
+                    biologicalSexTest = "Other"
+                default:
+                    biologicalSexTest = ""
+            }
+        }
+        
+        return biologicalSexTest
     }
     
     private static func readData() -> (String, String){
         var age : Int?
-        var sex : String = ""
+        var sex : HKBiologicalSex?
+        var sexData : String = "Not Retrived"
         do{
             let birthDay = try healthStore.dateOfBirthComponents()
             let calendar = Calendar.current
@@ -64,10 +87,13 @@ class HealthModel{
         
         do{
             let getSex = try healthStore.biologicalSex()
-            sex = "\(getSex)"
+            sex = getSex.biologicalSex
+            if let data = sex {
+                sexData = self.getReadableBiologicalSex(biologicalSex: data)
+            }
         }catch{}
         
-        return (age: String(age ?? 2), sex: sex)
+        return (age: String(age ?? 0), sex: sexData)
     }
     
     static func readMostRecentSample(){
@@ -82,6 +108,7 @@ class HealthModel{
             
             if let result = results?.last as? HKQuantitySample {
                 weight = "\(result.quantity)"
+                Profile.profile.setWeight(weight: weight)
             }
         }
         
@@ -91,12 +118,15 @@ class HealthModel{
             
             if let result = results?.last as? HKQuantitySample {
                 height = "\(result.quantity)"
+                Profile.profile.setHeight(height: height)
             }
         }
         
         healthStore.execute(queryWeight)
         healthStore.execute(queryHeight)
         
-        Profile.profile.setData(dateOfBirth: readData().0, sex: readData().1, weight: weight, height: height)
+        Profile.profile.setData(dateOfBirth: readData().0, sex: readData().1)
+        ProfileCodable.saveProfile()
+        UserDefaults.standard.setValue(true, forKey: "healthSyncswitch")
     }
 }

@@ -52,6 +52,7 @@
 		4994ACAF26772C5900127044 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4994ACAE26772C5900127044 /* Profile.swift */; };
 		4994ACBA26772F9E00127044 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4994ACB826772F9E00127044 /* ProfileViewController.swift */; };
 		4994ACBB26772F9E00127044 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4994ACB926772F9E00127044 /* ProfileViewController.xib */; };
+		49988366267E0F140018AF65 /* ProfileCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49988365267E0F140018AF65 /* ProfileCodable.swift */; };
 		4E459BD62676FAB0008DB2D8 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 4E459BD52676FAB0008DB2D8 /* FirebaseAnalytics */; };
 		4E459BD82676FAB0008DB2D8 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 4E459BD72676FAB0008DB2D8 /* FirebaseDatabase */; };
 		4E459BDA2676FAB0008DB2D8 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 4E459BD92676FAB0008DB2D8 /* FirebaseStorage */; };
@@ -222,6 +223,7 @@
 		4994ACAE26772C5900127044 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		4994ACB826772F9E00127044 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4994ACB926772F9E00127044 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		49988365267E0F140018AF65 /* ProfileCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCodable.swift; sourceTree = "<group>"; };
 		4E459BDD2677196F008DB2D8 /* PlanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanModel.swift; sourceTree = "<group>"; };
 		4E459BDF267721F6008DB2D8 /* Databases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Databases.swift; sourceTree = "<group>"; };
 		4E459BE32677497C008DB2D8 /* HistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryModel.swift; sourceTree = "<group>"; };
@@ -576,6 +578,7 @@
 				4E459BF12678477F008DB2D8 /* PaketModel.swift */,
 				4994ACAE26772C5900127044 /* Profile.swift */,
 				496C2B68267846DF00333F56 /* HealthModel.swift */,
+				49988365267E0F140018AF65 /* ProfileCodable.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1111,6 +1114,7 @@
 				498085982670B91900E10F40 /* CardioTableViewCell.swift in Sources */,
 				86D6DA0B267717F900488252 /* InputCountExamViewController.swift in Sources */,
 				86C5EF082676289600A290EC /* SectionButtonCollectionView.swift in Sources */,
+				49988366267E0F140018AF65 /* ProfileCodable.swift in Sources */,
 				7519895B2679D47D00B6230C /* VideoSectionView.swift in Sources */,
 				86EFA78626766113007E7158 /* TakeTestTableViewCell.swift in Sources */,
 				4942EDD52672615300444DC8 /* UIView+.swift in Sources */,
