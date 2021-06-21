@@ -221,8 +221,13 @@ extension CardioTestViewController: WCSessionDelegate{
             }
         } else if let data = applicationContext["skipped"] as? String{
             DispatchQueue.main.async {
-                self.navigationController?.popToRootViewController(animated: true)
-                print(data)
+                let newData = History(evaluationType: .cardio, time: self.timerLabel.text)
+                History.addData(newData: newData)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [unowned self] in
+                    self.navigationController?.popToRootViewController(animated: true)
+                    print(data)
+                }
+                
             }
         }
     }

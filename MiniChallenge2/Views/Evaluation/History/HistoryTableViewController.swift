@@ -47,6 +47,7 @@ class HistoryTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = TestResultViewController()
+        vc.index = indexPath.row
         navigationController?.pushViewController(vc, animated: true)
     }
     

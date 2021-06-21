@@ -69,12 +69,12 @@ extension EvaluationViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "historyCell", for: indexPath) as! HistoryTableViewCell
-        cell.setData(history: data[indexPath.row])
+        cell.setData(history: History.getData()[indexPath.row])
         return cell
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        return History.getData().count
     }
 }
 
@@ -86,6 +86,7 @@ extension EvaluationViewController: UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = TestResultViewController()
+        vc.index = indexPath.row
         navigationController?.pushViewController(vc, animated: true)
     }
     

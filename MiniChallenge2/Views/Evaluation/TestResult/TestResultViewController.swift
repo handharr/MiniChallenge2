@@ -10,7 +10,8 @@ import UIKit
 class TestResultViewController: UIViewController {
     
     var tables : [UITableView] = []
-    var dataCount = 4
+    var dataCount = 1
+    var index : Int = 0
     
     lazy var scrollView : UIScrollView = {
         self.setUpTable()
@@ -135,6 +136,7 @@ extension TestResultViewController: UITableViewDataSource{
         
         if indexPath.section == 0{
             let resultCell = tableView.dequeueReusableCell(withIdentifier: CardioTableViewCell.getIdentifier(), for: indexPath) as! CardioTableViewCell
+            resultCell.setUpData(index: index)
             return resultCell
         }
         

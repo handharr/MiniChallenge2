@@ -15,8 +15,13 @@ class CardioTableViewCell: UITableViewCell {
     @IBOutlet weak var testDate: UILabel!
     @IBOutlet weak var cellContainer: UIView!
     
-    func setUpData(){
-        self.runningTime.text = "06:31"
+    func setUpData(index: Int){
+        let data = History.getData()
+        let dataIndex = data[index]
+        self.runningTime.text = dataIndex.time
+        self.testDate.text = dataIndex.date
+        self.vo2MaxResult.text = dataIndex.evaluationType?.calculateVO2Max()
+        self.testResult.text = dataIndex.evaluationType?.calculateResult()
     }
     
     static func getNib() -> UINib {

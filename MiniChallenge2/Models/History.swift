@@ -43,18 +43,35 @@ enum evaluationType: String, CaseIterable{
             return "Excellent"
         }
     }
+    
+    func calculateVO2Max() -> String{
+        switch self{
+        case .cardio:
+            return "31.7"
+        case .upperBody:
+            return "31.7"
+        case .lowerBody:
+            return "31.7"
+        case .core:
+            return "31.7"
+        case .strength:
+            return "31.7"
+        }
+    }
 }
 
 struct History{
-    let id: String = UUID().uuidString
+    private let id: String = UUID().uuidString
     var evaluationType : evaluationType?
-    var resultValue: Int?
+    var time: String?
     var date : String = ""
     
-    init(evaluationType: evaluationType, result: Int?) {
+    public static var data = [History]()
+    
+    init(evaluationType: evaluationType, time: String?) {
         self.date = dateFormatter()
         self.evaluationType = evaluationType
-        resultValue = result
+        self.time = time
     }
     
     private func dateFormatter() -> String{
@@ -67,19 +84,11 @@ struct History{
     }
     
     static func getData() -> [History]{
-        let data : [History] = [
-            History(evaluationType: .cardio, result: 23),
-            History(evaluationType: .core, result: 23),
-            History(evaluationType: .lowerBody, result: 23),
-            History(evaluationType: .upperBody, result: 23),
-            History(evaluationType: .strength, result: 23),
-            History(evaluationType: .upperBody, result: 23),
-            History(evaluationType: .cardio, result: 23),
-            History(evaluationType: .strength, result: 23),
-            History(evaluationType: .core, result: 23),
-            History(evaluationType: .upperBody, result: 23)
-        ]
         return data
+    }
+    
+    static func addData(newData: History){
+        data.append(newData)
     }
     
 }

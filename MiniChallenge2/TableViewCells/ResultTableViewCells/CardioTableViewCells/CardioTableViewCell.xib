@@ -192,7 +192,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="cellContainer" destination="6oM-qr-3m7" id="Igx-ww-T4b"/>
-                <outlet property="runningTime" destination="jFn-0H-hVe" id="pB7-l3-Vo8"/>
+                <outlet property="runningTime" destination="0bC-uF-RoE" id="kWb-0a-FgO"/>
                 <outlet property="testDate" destination="m91-fL-S6y" id="id8-C3-hU3"/>
                 <outlet property="testResult" destination="q8B-Gi-fML" id="eCe-eg-y76"/>
                 <outlet property="vo2MaxResult" destination="jFn-0H-hVe" id="Zen-iJ-A8a"/>

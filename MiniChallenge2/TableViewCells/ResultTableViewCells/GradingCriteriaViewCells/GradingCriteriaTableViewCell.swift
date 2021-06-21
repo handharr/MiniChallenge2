@@ -25,11 +25,11 @@ class GradingCriteriaTableViewCell: UITableViewCell {
     }
     
     func setData(){
-        self.workOutCriteria.text = "Tricep Dip (2 Min)"
-        self.excellentCriteria.text = "≥ 25"
-        self.goodCriteria.text = "20 - 24"
-        self.averageCriteria.text = "15 - 19"
-        self.needWorkCriteria.text = "≤ 15"
+        self.workOutCriteria.text = "VO2 Max"
+        self.excellentCriteria.text = "≥ 39"
+        self.goodCriteria.text = "35 - 38"
+        self.averageCriteria.text = "31 - 34"
+        self.needWorkCriteria.text = "≤ 31"
     }
     
     override func awakeFromNib() {

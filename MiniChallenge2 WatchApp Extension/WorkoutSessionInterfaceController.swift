@@ -259,10 +259,9 @@ extension WorkoutSessionInterfaceController: HKWorkoutSessionDelegate {
                         from fromState: HKWorkoutSessionState, date: Date) {
         if toState == .ended {
             
-            if self.elapsedSeconds < 59 {
+            if self.elapsedSeconds < 10 {
                 builder.discardWorkout()
                 self.resetWorkout()
-                print("Data masuk!!!")
             }
             else {
                 builder.endCollection(withEnd: Date()) { (success, error) in
