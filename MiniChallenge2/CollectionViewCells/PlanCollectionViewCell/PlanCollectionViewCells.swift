@@ -46,14 +46,7 @@ class PlanCollectionViewCells: UICollectionViewCell {
         descriptionLabel.text = model.desc
         subtitleLabel.text = "\(model.workoutPerDay) workout/days"
         
-        switch model.name {
-        case "All in One Plan":
-            backgroundImageView.image = UIImage(named: "plan-image-1")
-        case "Strength Plan":
-            backgroundImageView.image = UIImage(named: "plan-image-2")
-        default:
-            backgroundImageView.image = UIImage(named: "plan-image-3")
-        }
+        backgroundImageView.image = UIImage(named: model.thumbnailImage)!
     }
     
     override func prepareForReuse() {

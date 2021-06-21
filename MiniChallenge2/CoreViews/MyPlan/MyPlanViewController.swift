@@ -128,7 +128,7 @@ extension MyPlanViewController: UICollectionViewDelegate, UICollectionViewDataSo
                 let item = NSCollectionLayoutItem(
                     layoutSize: .init(
                         widthDimension: .fractionalWidth(1),
-                        heightDimension: .fractionalHeight(1)
+                        heightDimension: .absolute(225)
                     )
                 )
                 
@@ -136,7 +136,7 @@ extension MyPlanViewController: UICollectionViewDelegate, UICollectionViewDataSo
                 let group = NSCollectionLayoutGroup.horizontal(
                     layoutSize: .init(
                         widthDimension: .fractionalWidth(1),
-                        heightDimension: .estimated(205)
+                        heightDimension: .estimated(225)
                     ),
                     subitem: item,
                     count: 1
@@ -164,7 +164,7 @@ extension MyPlanViewController: UICollectionViewDelegate, UICollectionViewDataSo
                 let item = NSCollectionLayoutItem(
                     layoutSize: .init(
                         widthDimension: .fractionalWidth(1),
-                        heightDimension: .fractionalHeight(1)
+                        heightDimension: .absolute(225)
                     )
                 )
                 item.contentInsets = .init(top: 2, leading: 0, bottom: 2, trailing: 8 )

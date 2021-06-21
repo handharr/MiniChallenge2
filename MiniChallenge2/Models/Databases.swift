@@ -46,10 +46,9 @@ extension Databases{
                     let time = exerciseObject?["time"]
                     let video = exerciseObject?["video"]
                   
-                    
             
                     let exercise = ExerciseModel(name: name as! String, thumbnail: thumbnail as! String, video: video as! String, time: time as! Int, category: category as! String, paketid: paketid as! String)
-                    print("ini keynya \(exercises.key)")
+//                    print("ini keynya \(exercises.key)")
                     allExercises.append(exercise)
                 }
             }
